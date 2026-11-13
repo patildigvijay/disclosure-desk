@@ -23,18 +23,29 @@ EQUITY_WORDS = ("stock", "option")
 
 
 def norm_name(text):
-    t = unicodedata.normalize("NFKD", text or "").encode("ascii", "ignore").decode().lower()
+    t = re.sub(r"['’]", "", text or "")  # O'Halleran and O’Halleran -> ohalleran
+    t = unicodedata.normalize("NFKD", t).encode("ascii", "ignore").decode().lower()
     t = re.sub(r"\b(hon|jr|sr|ii|iii|iv|mr|mrs|ms|dr)\b\.?", " ", t)
     return re.sub(r"[^a-z ]", " ", t).split()
 
 
 # ---------- members and committees ----------
 
+TERMS_FROM = "2021-01-01"  # seats held since then are matched (trades go back to 2021)
+
+
 class Members:
-    def __init__(self, legislators, membership, committees=()):
+    def __init__(self, legislators, membership, committees=(), historical=()):
         today = date.today().isoformat()
         self.people = []
-        for p in legislators:
+        # Current members, plus former members who served since TERMS_FROM, so their past
+        # trades still match. Each person can be matched on any seat held since then
+        # (e.g. a House member who is now a senator).
+        for p, current in [(p, True) for p in legislators] + [(p, False) for p in historical]:
+            seats = [(t["type"], t["state"], t.get("district")) for t in p["terms"]
+                     if str(t.get("end", "")) >= TERMS_FROM]
+            if not seats:
+                continue
             term = p["terms"][-1]
             n = p["name"]
             self.people.append({
@@ -44,8 +55,10 @@ class Members:
                 "state": term["state"],
                 "district": term.get("district"),
                 "party": term.get("party", ""),
+                "current": current,
+                "seats": seats,
                 "leadership": [r["title"] for r in p.get("leadership_roles", [])
-                               if not r.get("end") or str(r["end"]) >= today],
+                               if current and (not r.get("end") or str(r["end"]) >= today)],
                 "last": norm_name(n.get("last")),
                 "firsts": set(norm_name(" ".join(filter(None, [n.get("first"), n.get("nickname"),
                                                               n.get("middle")])))),
@@ -63,6 +76,8 @@ class Members:
     def rows(self):
         """One row per current member, for data/members.csv (used by the website)."""
         for p in self.people:
+            if not p["current"]:
+                continue
             cids = sorted(c for c in self.committees.get(p["bioguide"], []) if len(c) == 4)
             yield {
                 "bioguide": p["bioguide"], "name": p["name"],
@@ -76,32 +91,39 @@ class Members:
     @classmethod
     def load(cls, s=None, folder=None):
         """Load from a local folder (tests) or download (and cache) from GitHub."""
+        loader = getattr(yaml, "CSafeLoader", yaml.SafeLoader)  # C loader: the historical file is 9 MB
+
         def read(name):
             if folder:
-                return yaml.safe_load(open(folder / name, encoding="utf-8"))
+                path = folder / name
+                return yaml.load(open(path, encoding="utf-8"), Loader=loader) if path.exists() else []
             CACHE.mkdir(parents=True, exist_ok=True)
             text = get(s, f"{GH}/{name}").text
             (CACHE / name).write_text(text, encoding="utf-8")
-            return yaml.safe_load(text)
+            return yaml.load(text, Loader=loader)
         return cls(read("legislators-current.yaml"), read("committee-membership-current.yaml"),
-                   read("committees-current.yaml"))
+                   read("committees-current.yaml"), read("legislators-historical.yaml"))
 
     def match(self, chamber, last_name, first_name="", state="", district=""):
-        """Return the matching current member dict, or None."""
+        """Return the matching member dict (current, or former since TERMS_FROM), or None."""
         kind = "rep" if chamber == "House" else "sen"
         last = norm_name(last_name)
         firsts = set(norm_name(first_name))
-        pool = [p for p in self.people if p["type"] == kind]
+        pool = [p for p in self.people if any(st[0] == kind for st in p["seats"])]
 
         def last_ok(p):
             return p["last"] == last or (p["last"] and p["last"][-1:] == last[-1:])
 
+        def held(p, st=None, dist="any"):
+            return any(t == kind and (st is None or s == st) and (dist == "any" or d == dist)
+                       for t, s, d in p["seats"])
+
         if kind == "rep" and state:
             dist = int(district) if str(district).isdigit() else None
-            seat = [p for p in pool if p["state"] == state and p["district"] == dist and last_ok(p)]
+            seat = [p for p in pool if held(p, state, dist) and last_ok(p)]
             if len(seat) == 1:
                 return seat[0]
-        cands = [p for p in pool if last_ok(p) and (not state or p["state"] == state)]
+        cands = [p for p in pool if last_ok(p) and (not state or held(p, state))]
         if len(cands) > 1 and firsts:
             cands = [p for p in cands if p["firsts"] & firsts] or cands
         return cands[0] if len(cands) == 1 else None

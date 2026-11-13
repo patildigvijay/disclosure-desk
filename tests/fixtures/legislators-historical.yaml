@@ -1,0 +1,154 @@
+- id:
+    bioguide: C000174
+  name:
+    first: Thomas
+    middle: Richard
+    last: Carper
+    official_full: Thomas R. Carper
+  terms:
+  - type: sen
+    start: '2007-01-04'
+    end: '2013-01-03'
+    state: DE
+    class: 1
+    party: Democrat
+    url: http://carper.senate.gov
+    address: 513 HART SENATE OFFICE BUILDING WASHINGTON DC 20510
+    phone: 202-224-2441
+    fax: 202-228-2190
+    contact_form: http://www.carper.senate.gov/contact/
+    office: 513 Hart Senate Office Building
+  - type: sen
+    start: '2013-01-03'
+    end: '2019-01-03'
+    state: DE
+    party: Democrat
+    class: 1
+    url: https://www.carper.senate.gov/public
+    address: 513 Hart Senate Office Building Washington DC 20510
+    phone: 202-224-2441
+    fax: 202-228-2190
+    contact_form: http://www.carper.senate.gov/public/index.cfm/email-senator-carper
+    office: 513 Hart Senate Office Building
+    state_rank: senior
+    rss_url: http://www.carper.senate.gov/public/index.cfm/rss/feed
+  - type: sen
+    start: '2019-01-03'
+    end: '2025-01-03'
+    state: DE
+    class: 1
+    party: Democrat
+    state_rank: senior
+    url: https://www.carper.senate.gov
+    rss_url: http://www.carper.senate.gov/public/index.cfm/rss/feed
+    contact_form: https://www.carper.senate.gov/contact/
+    address: 513 Hart Senate Office Building Washington DC 20510
+    office: 513 Hart Senate Office Building
+    phone: 202-224-2441
+- id:
+    bioguide: M001135
+  name:
+    first: Kathy
+    middle: Ellen
+    last: Manning
+    official_full: Kathy E. Manning
+  terms:
+  - type: rep
+    start: '2021-01-03'
+    end: '2023-01-03'
+    state: NC
+    district: 6
+    party: Democrat
+    address: 415 Cannon House Office Building Washington DC 20515-3306
+    office: 415 Cannon House Office Building
+    phone: 202-225-3065
+    url: https://manning.house.gov
+  - type: rep
+    start: '2023-01-03'
+    end: '2025-01-03'
+    state: NC
+    district: 6
+    party: Democrat
+    url: https://manning.house.gov
+    address: 307 Cannon House Office Building Washington DC 20515-3306
+    office: 307 Cannon House Office Building
+    phone: 202-225-3065
+- id:
+    bioguide: G000596
+  name:
+    first: Marjorie
+    middle: Taylor
+    last: Greene
+    official_full: Marjorie Taylor Greene
+  terms:
+  - type: rep
+    start: '2021-01-03'
+    end: '2023-01-03'
+    state: GA
+    district: 14
+    party: Republican
+    address: 1023 Longworth House Office Building Washington DC 20515-1014
+    office: 1023 Longworth House Office Building
+    phone: 202-225-5211
+    url: https://greene.house.gov
+  - type: rep
+    start: '2023-01-03'
+    end: '2025-01-03'
+    state: GA
+    district: 14
+    party: Republican
+    url: https://greene.house.gov
+    address: 403 Cannon House Office Building Washington DC 20515-1014
+    office: 403 Cannon House Office Building
+    phone: 202-225-5211
+  - type: rep
+    start: '2025-01-03'
+    end: '2026-01-05'
+    state: GA
+    district: 14
+    party: Republican
+    url: https://greene.house.gov
+    address: 2201 Rayburn House Office Building Washington DC 20515-1014
+    office: 2201 Rayburn House Office Building
+    phone: 202-225-5211
+- id:
+    bioguide: M001190
+  name:
+    first: Markwayne
+    last: Mullin
+    official_full: Markwayne Mullin
+  terms:
+  - type: rep
+    start: '2019-01-03'
+    end: '2021-01-03'
+    state: OK
+    district: 2
+    party: Republican
+    phone: 202-225-2701
+    address: 2421 Rayburn House Office Building Washington DC 20515-3602
+    office: 2421 Rayburn House Office Building
+    url: https://mullin.house.gov
+    rss_url: http://mullin.house.gov/news/rss.aspx
+  - type: rep
+    start: '2021-01-03'
+    end: '2023-01-03'
+    state: OK
+    district: 2
+    party: Republican
+    url: https://mullin.house.gov
+    rss_url: http://mullin.house.gov/news/rss.aspx
+    address: 2421 Rayburn House Office Building Washington DC 20515-3602
+    office: 2421 Rayburn House Office Building
+    phone: 202-225-2701
+  - type: sen
+    start: '2023-01-03'
+    end: '2026-03-23'
+    state: OK
+    class: 2
+    state_rank: junior
+    party: Republican
+    url: https://www.mullin.senate.gov
+    contact_form: https://www.mullin.senate.gov/contact/
+    address: 330 Hart Senate Office Building Washington DC 20510
+    office: 330 Hart Senate Office Building
+    phone: 202-224-4721

@@ -24,7 +24,7 @@ TRADE_FIELDS = [
 ]
 FILING_FIELDS = [
     "chamber", "filing_id", "filer_name", "state", "district", "filing_date",
-    "kind", "source_url", "status", "n_trades", "error", "processed_at",
+    "kind", "source_url", "status", "n_trades", "error", "processed_at", "parser", "attempts",
 ]
 
 # Official STOCK Act value ranges (min, max). max=None means "over".

@@ -18,12 +18,20 @@ from common import (ASSET_CODES, get, norm_owner, norm_ticker, norm_tx_type,
 
 BASE = "https://disclosures-clerk.house.gov"
 DATE_RE = re.compile(r"^\d{2}/\d{2}/\d{4}$")
-CODE_RE = re.compile(r"\[([A-Z]{2})\]")
-TICKER_RE = re.compile(r"\(([A-Z][A-Z0-9.\-]{0,9})\)\s*\[[A-Z]{2}\]")
+# Bump when the rules parser changes: House filings read by an older version are read again.
+PARSER_VERSION = "2"
+# Some 2022-era PDFs use a font that turns a few capitals into lower case at random
+# (b, d, g, l, u): "FIlINg STATuS", "(gOOgl)", "[gS]". Codes and tickers allow those letters.
+MANGLED = "bdglu"
+CODE_RE = re.compile(rf"\[([A-Z{MANGLED}]{{2}})\]")
+TICKER_RE = re.compile(rf"\((?=[^)]*[A-Z])([A-Z{MANGLED}][A-Z0-9.\-{MANGLED}]{{0,9}})\)\s*\[[A-Z{MANGLED}]{{2}}\]")
 # Detail lines under each asset: Filing Status, Subholding Of, Description, Comments, Location.
-# The PDF font only exposes the label initials, e.g. "F S : New", "S O : IRA", "D : ...";
-# the other letters come through as NUL characters, which are stripped first.
-DETAIL_RE = re.compile(r"^(F\s*S|S\s*O|D|C|L)\s*:\s*")  # L = location
+# 2026 PDFs only expose the label initials, e.g. "F S : New", "S O : IRA", "D : ..." (the other
+# letters come through as NUL characters, stripped first). Older PDFs spell the label out,
+# in any case: "FILING STATUS:", "SubHOLdINg OF:", "DESCRIPTION:".
+DETAIL_RE = re.compile(r"^(F\s*S|S\s*O|D|C|L|(?i:filing\s+status|sub\s*holding\s+of|description|comments?|location))\s*:\s*")
+DETAIL_KEYS = {"filingstatus": "FS", "subholdingof": "SO", "description": "D", "comment": "C",
+               "comments": "C", "location": "L"}
 TABLE_END_RE = re.compile(r"^(\* For the complete list|I P O|Initial Public Offering|C S$|Certification)")
 
 
@@ -167,7 +175,8 @@ def parse_pdf(pdf_bytes):
         for d in r["details"]:
             m = DETAIL_RE.match(d)
             if m:
-                details[re.sub(r"\s", "", m.group(1))] = d[m.end():].strip()
+                label = re.sub(r"\s", "", m.group(1))
+                details[DETAIL_KEYS.get(label.lower(), label)] = d[m.end():].strip()
             elif details:
                 last = list(details)[-1]
                 details[last] = f"{details[last]} {d}"
@@ -182,7 +191,7 @@ def parse_pdf(pdf_bytes):
             "owner": norm_owner(" ".join(r["owner"])),
             "asset_name": re.sub(r"\s+", " ", name).strip(" -"),
             "ticker": norm_ticker(tick.group(1) if tick else ""),
-            "asset_type": ASSET_CODES.get(code.group(1), code.group(1)) if code else "",
+            "asset_type": ASSET_CODES.get(code.group(1).upper(), code.group(1).upper()) if code else "",
             "tx_type": norm_tx_type(" ".join(r["type"])),
             "tx_date": parse_date(" ".join(r["date"])),
             "notification_date": parse_date(" ".join(r["notif"])),

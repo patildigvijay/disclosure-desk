@@ -9,7 +9,9 @@ NOTE: the site blocks most non-US connections. Run this from a US server
 (GitHub Actions runners are in the US).
 """
 import re
+import time
 
+import requests
 from bs4 import BeautifulSoup
 
 from common import (get, norm_owner, norm_ticker, norm_tx_type, parse_amount,
@@ -86,9 +88,16 @@ def parse_search_row(row):
 
 
 def fetch_ptr(s, url):
-    """GET a PTR page; if the session expired (redirect to the agreement page), renew once."""
-    r = get(s, url)
-    if r.url.rstrip("/") == HOME.rstrip("/"):
+    """GET a PTR page; if the session expired (redirect to the agreement page, or an
+    occasional 403), wait, renew once and try again."""
+    try:
+        r = get(s, url)
+    except requests.HTTPError as e:
+        if e.response is None or e.response.status_code != 403:
+            raise
+        r = None
+    if r is None or r.url.rstrip("/") == HOME.rstrip("/"):
+        time.sleep(10)
         open_session(s)
         r = get(s, url)
     return r.text

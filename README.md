@@ -11,7 +11,7 @@ committee the member sits on.
 | 1. Find new House filings | House Clerk yearly index (`{YEAR}FD.zip`) | XML, filter Periodic Transaction Reports |
 | 2. Read House trades | House PTR PDFs | E-filed (~88%): rules on the PDF text layer. Scanned (~12%): Claude reads the PDF |
 | 3. Find + read Senate trades | Senate eFD search + PTR pages | HTML table. Paper scans queued for review |
-| 4. Member + committees | `unitedstates/congress-legislators` (GitHub) | Match by name + state/district |
+| 4. Member + committees | `unitedstates/congress-legislators` (GitHub) | Match by name + state/district, on any seat held since 2021 (current and former members) |
 | 5. Company sector | SEC ticker list + SEC SIC code | `config/sic_sectors.csv` |
 | 6. Overlap flag | `config/committee_sectors.csv` | Trade sector is one of the member's committee sectors |
 | 7. Checks | `src/validate.py` | Official amount ranges, date order, ticker in SEC list, AI confidence |
@@ -55,12 +55,23 @@ as the methodology.
    - `ANTHROPIC_API_KEY` = your Claude API key (only used for scanned filings)
    - `MARKETSTACK_API_KEY` = add before the site goes public (see "Portfolios and performance")
 4. **Actions → Update trades → Run workflow**, and type `2022-01-01` in the "since" box so
-   portfolios have history. The first run takes 1-3 hours; later runs take minutes.
+   portfolios have history. A run stops starting new filings after 150 minutes and saves;
+   the next run picks up the rest, so the first load spreads over a few runs. Later runs take minutes.
 5. **Settings → Pages** → Source: **Deploy from a branch**, branch `main`, folder `/ (root)` → Save.
    The site is live at `https://YOUR-USERNAME.github.io/REPO-NAME/` within ~2 min.
 6. From then on it runs every 3 hours, commits fresh CSVs, and the site updates itself.
 
 If a source breaks (site layout change, block), the run fails and GitHub emails you.
+
+How runs handle problems:
+
+| Situation | What happens |
+|---|---|
+| One filing errors (server hiccup) | Marked `error`, retried next run; scheduled runs give up after 3 tries, a manual **Run workflow** retries all |
+| More than 5% of filings (min 5) error | Run is marked failed (email) |
+| 3 AI errors in a row (e.g. no API credit left) | AI switched off for the rest of the run, scanned filings wait as `needs_ai`, run marked failed |
+| House rules parser improved (`PARSER_VERSION` in `src/house.py`) | Filings read by the older version are read again automatically, old rows replaced |
+| Older filings still need work | The run looks back to their date by itself; no "since" needed |
 
 Run locally (House only; the Senate site blocks non-US connections):
 
@@ -129,7 +140,7 @@ One file, no build step, no server. It reads the CSVs in `data/` and
 | Item | US$/month |
 |---|---|
 | GitHub Actions (public repo free; private ~500 of 2,000 free minutes) | 0 |
-| Claude for scanned filings (~60/yr House, Sonnet 5.5) | < 1 |
+| Claude for scanned filings (~60/yr House, Sonnet 5.5 at $2/$10 per M tokens, ~$0.04 each) | < 1 |
 | SEC, House, Senate, GitHub data | 0 |
 | Website hosting (GitHub Pages) | 0 |
 | Prices for performance (Marketstack Basic, optional) | 9.99 |
@@ -145,8 +156,10 @@ One file, no build step, no server. It reads the CSVs in `data/` and
 | Sector, overlap, checks, storage, re-runs | Unit + end-to-end tests | ✅ |
 | House PDF rules parser | 24 real 2026 filings, 237 trades, checked field by field (`tests/fixtures/house_real/`) | ✅ |
 | Portfolio estimates, returns vs S&P, price fetching | Unit tests with fixed prices and a fake price API | ✅ |
-| Senate search + PTR parser | Documented format; synthetic page | ⚠️ Confirmed on first US run (fails loudly if wrong) |
-| AI extractor | Mocked API | ⚠️ Confirmed on first run with an API key |
+| Senate search + PTR parser | First live run: 589 filings, 5,783 trades | ✅ |
+| AI extractor | Mocked API. First live run: Sonnet 5.5 rejects forced tool use (fixed: `tool_choice` auto) | ⚠️ Confirm on next run |
+| House parser, 2022-style PDFs (labels spelled out, odd capitals) | Synthetic PDF built from real live-run text | ✅ |
+| Former members, chamber switchers | Real current + historical member data: 26,915 of 26,930 live trades match | ✅ |
 
 Any e-filed House PDF where the rule parser's row count doesn't match the number of asset
 codes in the document is re-read by Claude automatically, so a parser miss becomes a cost
@@ -154,8 +167,9 @@ codes in the document is re-read by Claude automatically, so a parser miss becom
 
 ## Known limits
 
-- Committee seats are **current** assignments, applied to past trades. Fine for 2026;
-  add history before analysing older years.
+- Committee seats are **current** assignments, applied to past trades. Former members have
+  no committee data, so their trades never get an overlap flag. Add history before
+  analysing older years.
 - SIC codes are coarse (e.g. Alphabet is "services-computer programming"). Fix individual
   cases in `config/sic_sectors.csv` or add a ticker override if needed.
 - Amounts are ranges by law. Performance calcs must use range midpoints or counts.

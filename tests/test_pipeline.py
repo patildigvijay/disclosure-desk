@@ -422,3 +422,173 @@ def test_yfinance_source_parses_download(tmp_path, monkeypatch):
     px = prices.load(None, ["BRK.B"], date(2026, 1, 1), today=date(2026, 6, 2))
     assert calls == [["BRK-B", "SPY"]]  # Yahoo spelling requested
     assert px.close_on("BRK.B", date(2026, 6, 2)) == 410.0 and "yfinance" in px.source
+
+
+# ---------- fixes after the first live run ----------
+
+def make_old_ptr_pdf():
+    """2022-style PTR: labels spelled out in odd case, some capitals printed lower case."""
+    buf = io.BytesIO()
+    c = canvas.Canvas(buf, pagesize=letter)
+    c.setFont("Helvetica", 7)
+    t = lambda x, y, s: c.drawString(x, y, s)
+    t(40, 740, "Periodic Transaction Report")
+    xs = dict(id=40, owner=60, asset=100, type=300, date=360, notif=420, amount=480, gains=560)
+    for k, s in [("id", "ID"), ("owner", "Owner"), ("asset", "Asset"), ("type", "Transaction"),
+                 ("date", "Date"), ("notif", "Notification"), ("amount", "Amount"), ("gains", "Cap.")]:
+        t(xs[k], 680, s)
+    t(xs["type"], 672, "Type"); t(xs["notif"], 672, "Date"); t(xs["gains"], 672, "Gains >")
+    t(xs["gains"], 664, "$200?")
+    t(xs["owner"], 640, "SP"); t(xs["asset"], 640, "Alphabet Inc. - Class A (gOOgl) [ST]")
+    t(xs["type"], 640, "P"); t(xs["date"], 640, "02/10/2022"); t(xs["notif"], 640, "02/15/2022")
+    t(xs["amount"], 640, "$15,001 - $50,000")
+    t(xs["asset"], 630, "FIlINg STATuS: New")
+    t(xs["asset"], 620, "DESCRIPTION: Part of my spouse's retirement")
+    t(xs["type"], 610, "Portfolio.")  # wrapped text that lands in the type column
+    t(xs["asset"], 590, "lockheed Martin Corporation (lMT) [ST]"); t(xs["type"], 590, "S")
+    t(xs["date"], 590, "02/11/2022"); t(xs["notif"], 590, "02/15/2022"); t(xs["amount"], 590, "$1,001 - $15,000")
+    t(xs["asset"], 580, "FILINg STATUS: New"); t(xs["asset"], 570, "SubHOLdINg OF: Brokerage")
+    t(xs["asset"], 560, "COMMENTS: Sold all")
+    t(xs["asset"], 540, "US Treasury Bill [gS]"); t(xs["type"], 540, "P")
+    t(xs["date"], 540, "02/12/2022"); t(xs["notif"], 540, "02/15/2022"); t(xs["amount"], 540, "$1,001 - $15,000")
+    t(40, 520, "* For the complete list of asset type abbreviations, please visit https://fd.house.gov/reference/asset-type-codes.aspx.")
+    c.save()
+    return buf.getvalue()
+
+
+def test_house_pdf_parser_old_style_labels():
+    rows, expected = house.parse_pdf(make_old_ptr_pdf())
+    assert expected == 3 and len(rows) == 3
+    g, l, b = rows
+    assert (g["asset_name"], g["ticker"], g["tx_type"]) == ("Alphabet Inc. - Class A", "GOOGL", "Purchase")
+    assert g["comment"] == "D: Part of my spouse's retirement Portfolio."
+    assert (l["ticker"], l["tx_type"], l["comment"]) == ("LMT", "Sale", "SO: Brokerage; C: Sold all")
+    assert b["asset_type"] == "Government Security" and b["ticker"] == ""
+    # Crypto names in brackets are not tickers
+    assert not house.TICKER_RE.search("XRP (Ripple) [CT]")
+
+
+def test_member_matching_former_members_and_switchers(members):
+    assert members.match("House", "Manning", "Kathy", "NC", "06")["bioguide"] == "M001135"   # left 2025
+    assert members.match("Senate", "Thomas R Carper", "Thomas R Carper")["bioguide"] == "C000174"
+    assert members.match("House", "Mullin", "Markwayne", "OK", "02")["bioguide"] == "M001190"  # House, then Senate
+    assert members.match("Senate", "Mullin", "Markwayne")["bioguide"] == "M001190"
+    assert members.match("House", "Curtis", "John", "UT", "03")["bioguide"] == "C001114"     # now a senator
+    assert "M001135" not in {r["bioguide"] for r in members.rows()}  # members page: current only
+
+
+def test_llm_uses_auto_tool_choice_and_fails_cleanly():
+    calls = {}
+
+    def client(content, stop="tool_use"):
+        class FakeMessages:
+            def create(self, **kw):
+                calls.update(kw)
+                return types.SimpleNamespace(content=content, stop_reason=stop)
+        return types.SimpleNamespace(messages=FakeMessages())
+
+    ok = types.SimpleNamespace(type="tool_use", input={"transactions": [], "confidence": 1})
+    llm.extract_pdf(b"%PDF", client=client([types.SimpleNamespace(type="thinking"), ok]))
+    assert calls["tool_choice"] == {"type": "auto"}
+    with pytest.raises(llm.AIError):
+        llm.extract_pdf(b"%PDF", client=client([types.SimpleNamespace(type="text", text="Sorry")]))
+    with pytest.raises(llm.AIError):
+        llm.extract_pdf(b"%PDF", client=client([ok], stop="max_tokens"))
+
+
+def e2e_setup(tmp_path, monkeypatch, members, sectors, years=None):
+    import pipeline
+    buf = io.BytesIO()
+    with zipfile.ZipFile(buf, "w") as z:
+        z.write(FIXTURES / "house_index_sample.xml", "2026FD.xml")
+    pdf = make_ptr_pdf()
+    sectors.cache_path = tmp_path / "sic.csv"
+    monkeypatch.setattr(pipeline, "DATA", tmp_path)
+    monkeypatch.setattr(pipeline, "session", lambda: None)
+    monkeypatch.setattr(pipeline.Members, "load", classmethod(lambda cls, s=None: members))
+    monkeypatch.setattr(pipeline, "Sectors", lambda s: sectors)
+
+    def fetch_index(s, y):
+        if years is not None:
+            years.append(y)
+        return house.parse_index(buf.getvalue()) if y == 2026 else []
+    monkeypatch.setattr(pipeline.house, "fetch_index", fetch_index)
+    monkeypatch.setattr(pipeline, "get", lambda s, url: types.SimpleNamespace(content=pdf))
+    monkeypatch.setattr(pipeline.llm, "available", lambda: False)
+    monkeypatch.setattr(pipeline.prices, "load", lambda *a, **k: None)
+    return pipeline
+
+
+def test_stale_parse_is_reread_and_former_members_rematched(tmp_path, monkeypatch, members, sectors):
+    import csv
+    years = []
+    pipeline = e2e_setup(tmp_path, monkeypatch, members, sectors, years)
+    old = {"chamber": "House", "filing_id": "20034916", "filing_date": "2026-07-10", "status": "parsed",
+           "kind": "efile", "parser": ""}
+    older = {"chamber": "House", "filing_id": "20011111", "filing_date": "2024-05-01", "status": "error",
+             "kind": "efile", "attempts": "1"}
+    common.write_csv(tmp_path / "filings.csv", [old, older], common.FILING_FIELDS)
+    stale = [{"trade_id": f"H-20034916-{i}", "chamber": "House", "filing_id": "20034916", "filing_date": "2026-07-10",
+              "asset_name": "Medtronic FIlINg STATuS: New", "status": "ok"} for i in (1, 2, 3)]
+    carper = {"trade_id": "S-abc-1", "chamber": "Senate", "filing_id": "abc", "filing_date": "2024-03-01",
+              "filer_name": "Thomas R Carper", "bioguide": "", "status": "ok", "ticker": "AAPL", "asset_type": "Stock"}
+    common.write_csv(tmp_path / "trades.csv", stale + [carper], common.TRADE_FIELDS)
+
+    assert pipeline.run(date(2026, 1, 1), ["house"]) == 0
+    assert years[0] == 2024  # looked back to the older filing that still needs work
+    trades = {t["trade_id"]: t for t in csv.DictReader(open(tmp_path / "trades.csv"))}
+    assert "H-20034916-3" not in trades and "FIlINg" not in trades["H-20034916-1"]["asset_name"]
+    assert trades["S-abc-1"]["bioguide"] == "C000174"
+    filings = {r["filing_id"]: r for r in csv.DictReader(open(tmp_path / "filings.csv"))}
+    assert filings["20034916"]["parser"] == f"text-{house.PARSER_VERSION}"
+
+
+def test_errors_retry_limit_and_strict_threshold(tmp_path, monkeypatch, members, sectors):
+    import csv
+    pipeline = e2e_setup(tmp_path, monkeypatch, members, sectors)
+    real = pipeline.parse_house
+
+    def flaky(s, f, use_llm):
+        if f["filing_id"] == "20034916":
+            raise RuntimeError("403 Forbidden")
+        return real(s, f, use_llm)
+    monkeypatch.setattr(pipeline, "parse_house", flaky)
+    status = lambda: {r["filing_id"]: r for r in csv.DictReader(open(tmp_path / "filings.csv"))}["20034916"]
+    for n in (1, 2, 3):
+        assert pipeline.run(date(2026, 1, 1), ["house"], strict=True) == 0  # 1 error: not "too many"
+        assert status()["status"] == "error" and status()["attempts"] == str(n)
+    pipeline.run(date(2026, 1, 1), ["house"])
+    assert status()["attempts"] == "3"  # scheduled runs give up after 3 tries
+    pipeline.run(date(2026, 1, 1), ["house"], retry_errors=True)
+    assert status()["attempts"] == "4"  # a manual run tries again
+
+
+def test_ai_switched_off_after_errors_in_a_row(tmp_path, monkeypatch, members, sectors):
+    import csv
+    pipeline = e2e_setup(tmp_path, monkeypatch, members, sectors)
+    monkeypatch.setattr(pipeline.llm, "available", lambda: True)
+    monkeypatch.setattr(pipeline, "AI_BREAKER", 1)
+
+    def no_credit(pdf):
+        raise llm.AIError("credit balance is too low")
+    monkeypatch.setattr(pipeline.llm, "extract_pdf", no_credit)
+    assert pipeline.run(date(2026, 1, 1), ["house"], strict=True) == 1
+    filings = {r["filing_id"]: r for r in csv.DictReader(open(tmp_path / "filings.csv"))}
+    assert filings["9116142"]["status"] == "error" and filings["20034916"]["status"] == "parsed"
+
+
+def test_senate_fetch_renews_session_on_403(monkeypatch):
+    import requests
+
+    def resp(code, text=""):
+        r = requests.Response()
+        r.status_code, r._content, r.url = code, text.encode(), "https://efdsearch.senate.gov/search/view/ptr/x/"
+        return r
+    answers = [resp(403)] * 3 + [resp(200, "<table></table>")]  # get() itself tries 3 times
+    s = types.SimpleNamespace(get=lambda url, **kw: answers.pop(0))
+    renewed = []
+    monkeypatch.setattr(senate, "open_session", lambda s: renewed.append(1))
+    monkeypatch.setattr(senate.time, "sleep", lambda n: None)
+    monkeypatch.setattr(common.time, "sleep", lambda n: None)
+    assert senate.fetch_ptr(s, "https://efdsearch.senate.gov/search/view/ptr/x/") == "<table></table>"
+    assert renewed == [1]

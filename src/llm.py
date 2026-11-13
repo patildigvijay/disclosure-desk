@@ -46,27 +46,42 @@ PROMPT = (
     "This is a US congressional Periodic Transaction Report (STOCK Act). "
     "Extract EVERY transaction row exactly as written. Do not guess: if a field is "
     "illegible, leave it empty and say so in notes. Ignore the certification and IPO sections. "
-    "For a checked amount box on a paper form, return that box's range."
+    "For a checked amount box on a paper form, return that box's range. "
+    "Return the result by calling the record_transactions tool exactly once, with all rows."
 )
 
 
+class AIError(Exception):
+    """The AI extractor failed (API error, or no usable answer)."""
+
+
 def extract_pdf(pdf_bytes, client=None):
-    """Returns (rows, confidence, notes). Raises if no API key / client."""
-    if client is None:
-        import anthropic
-        client = anthropic.Anthropic()
-    msg = client.messages.create(
-        model=MODEL,
-        max_tokens=8000,
-        tools=[TOOL],
-        tool_choice={"type": "tool", "name": TOOL["name"]},
-        messages=[{"role": "user", "content": [
-            {"type": "document", "source": {"type": "base64", "media_type": "application/pdf",
-                                            "data": base64.b64encode(pdf_bytes).decode()}},
-            {"type": "text", "text": PROMPT},
-        ]}],
-    )
-    data = next(b.input for b in msg.content if getattr(b, "type", "") == "tool_use")
+    """Returns (rows, confidence, notes). Raises AIError if the call fails."""
+    try:
+        if client is None:
+            import anthropic
+            client = anthropic.Anthropic(max_retries=6)  # waits out rate limits
+        # Sonnet 5.5 rejects forced tool use (tool_choice "tool"/"any"), so the tool is
+        # offered with "auto" and the prompt asks for it. Medium effort: this is transcription.
+        msg = client.messages.create(
+            model=MODEL,
+            max_tokens=20000,
+            tools=[TOOL],
+            tool_choice={"type": "auto"},
+            extra_body={"output_config": {"effort": "medium"}},
+            messages=[{"role": "user", "content": [
+                {"type": "document", "source": {"type": "base64", "media_type": "application/pdf",
+                                                "data": base64.b64encode(pdf_bytes).decode()}},
+                {"type": "text", "text": PROMPT},
+            ]}],
+        )
+    except Exception as e:
+        raise AIError(str(e)) from e
+    if getattr(msg, "stop_reason", "") == "max_tokens":
+        raise AIError("answer cut off at max_tokens (filing too long)")
+    data = next((b.input for b in msg.content if getattr(b, "type", "") == "tool_use"), None)
+    if data is None:
+        raise AIError("model did not call the record_transactions tool")
     rows = []
     for t in data.get("transactions", []):
         lo, hi = parse_amount(t.get("amount_range"))

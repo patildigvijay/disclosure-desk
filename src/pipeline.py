@@ -26,7 +26,26 @@ from enrich import Members, Sectors, enrich, load_committee_sectors
 from validate import check
 
 DONE = {"parsed", "review"}  # statuses that are not retried
+MAX_ATTEMPTS = 3   # scheduled runs stop retrying a filing that errored this many times
+AI_BREAKER = 3     # AI errors in a row that switch the AI extractor off for the rest of the run
 MEMBER_FIELDS = ["bioguide", "name", "chamber", "party", "state", "district", "leadership", "committees"]
+
+
+def parsed_with(method):
+    return f"text-{house.PARSER_VERSION}" if method == "text" else method
+
+
+def to_retry(rec, retry_errors=False):
+    """A filing seen before that should be processed again."""
+    status, parser = rec.get("status"), rec.get("parser") or ""
+    if status in DONE:
+        # House filings read by an older version of the rules parser. Blank = before
+        # versioning (all of those were rules-parsed).
+        return rec.get("chamber") == "House" and (parser == "" or
+                                                  (parser.startswith("text-") and parser != parsed_with("text")))
+    if status == "error":
+        return retry_errors or int(rec.get("attempts") or 0) < MAX_ATTEMPTS
+    return status == "needs_ai"
 
 
 def parse_house(s, f, use_llm):
@@ -44,7 +63,7 @@ def parse_house(s, f, use_llm):
             pass  # fall through to AI
     if not use_llm:
         return [], "", None, "needs_ai"
-    rows, conf, _ = llm.extract_pdf(pdf)
+    rows, conf, _ = llm.extract_pdf(pdf)  # raises llm.AIError
     return rows, "ai", conf, "parsed"
 
 
@@ -55,7 +74,9 @@ def parse_senate(s, f, use_llm):
     return rows, "html", None, "parsed"
 
 
-def run(since, chambers, max_filings=None, use_llm=True, strict=False):
+def run(since, chambers, max_filings=None, use_llm=True, strict=False, retry_errors=False,
+        budget_min=150):
+    started = time.monotonic()
     s = session()
     filings_db = {(r["chamber"], r["filing_id"]): r for r in read_csv(DATA / "filings.csv")}
     trades_db = {r["trade_id"]: r for r in read_csv(DATA / "trades.csv")}
@@ -64,35 +85,58 @@ def run(since, chambers, max_filings=None, use_llm=True, strict=False):
     sectors = Sectors(s)
     sectors.load_tickers()  # fail fast (before any state changes) if SEC is unreachable
     use_llm = use_llm and llm.available()
-    failures = []
+    failures, errors = [], []  # source failures; per-filing errors
+
+    # Look back far enough to reach older filings that still need work (errors, stale parses)
+    start = {"House": since, "Senate": since}
+    for r in filings_db.values():
+        if r.get("filing_date") and r.get("chamber") in start and to_retry(r, retry_errors) \
+                and (r["status"] != "needs_ai" or use_llm):
+            start[r["chamber"]] = min(start[r["chamber"]], date.fromisoformat(str(r["filing_date"])))
 
     todo = []
     if "house" in chambers:
         try:
-            for year in range(since.year, date.today().year + 1):
+            for year in range(start["House"].year, date.today().year + 1):
                 todo += [("house", f) for f in house.fetch_index(s, year)
-                         if f["filing_date"] and f["filing_date"] >= since]
+                         if f["filing_date"] and f["filing_date"] >= start["House"]]
         except Exception as e:
             failures.append(f"House index: {e}")
     if "senate" in chambers:
         try:
             senate.open_session(s)
-            todo += [("senate", f) for f in senate.search_ptrs(s, since)]
+            todo += [("senate", f) for f in senate.search_ptrs(s, start["Senate"])]
         except Exception as e:
             failures.append(f"Senate search: {e}")
 
-    todo = [(c, f) for c, f in todo
-            if filings_db.get((f["chamber"], f["filing_id"]), {}).get("status") not in DONE]
-    todo.sort(key=lambda x: x[1]["filing_date"] or date.min)
+    def wanted(f):
+        rec = filings_db.get((f["chamber"], f["filing_id"]))
+        return rec is None or to_retry(rec, retry_errors)
+
+    todo = [(c, f) for c, f in todo if wanted(f)]
+    todo.sort(key=lambda x: x[1]["filing_date"] or date.min, reverse=True)  # newest first
     if max_filings:
         todo = todo[:max_filings]
-    print(f"{len(todo)} new filings to process")
+    print(f"{len(todo)} filings to process (new, retried or re-read)")
 
+    ai_errors_in_row = 0
+    processed = 0
     for chamber, f in todo:
+        if time.monotonic() - started > budget_min * 60:
+            print(f"Time budget of {budget_min} min reached: {len(todo) - processed} filings left for the next run")
+            break
+        processed += 1
+        prev = filings_db.get((f["chamber"], f["filing_id"]), {})
         rec = {**{k: f.get(k, "") for k in FILING_FIELDS}, "processed_at": datetime.now().isoformat(timespec="seconds")}
         try:
             parser = parse_house if chamber == "house" else parse_senate
             rows, method, conf, status = parser(s, f, use_llm)
+            if method == "ai":
+                ai_errors_in_row = 0
+            if status == "parsed":  # replace any trades from an earlier read of this filing
+                prefix = f"{f['chamber'][0]}-{f['filing_id']}-"
+                for k in [k for k in trades_db if k.startswith(prefix)]:
+                    del trades_db[k]
             for i, t in enumerate(rows, 1):
                 t.update(trade_id=f"{f['chamber'][0]}-{f['filing_id']}-{i}", chamber=f["chamber"],
                          filing_id=f["filing_id"], row=i, filer_name=f["filer_name"],
@@ -104,13 +148,27 @@ def run(since, chambers, max_filings=None, use_llm=True, strict=False):
                 trades_db[t["trade_id"]] = t
             if any(t["status"] == "review" for t in rows):
                 status = "review"
-            rec.update(status=status, n_trades=len(rows), error="")
+            rec.update(status=status, n_trades=len(rows), error="", parser=parsed_with(method), attempts=0)
         except Exception as e:
-            rec.update(status="error", n_trades=0, error=str(e)[:300])
-            failures.append(f"{f['chamber']} {f['filing_id']}: {e}")
+            rec.update(status="error", n_trades=0, error=str(e)[:300],
+                       attempts=int(prev.get("attempts") or 0) + 1)
+            errors.append(f"{f['chamber']} {f['filing_id']}: {e}")
             traceback.print_exc()
+            if isinstance(e, llm.AIError):
+                ai_errors_in_row += 1
+                if use_llm and ai_errors_in_row >= AI_BREAKER:
+                    use_llm = False  # e.g. no credit left: stop paying for failing calls
+                    failures.append(f"AI extractor switched off after {AI_BREAKER} errors in a row: {e}")
         filings_db[(f["chamber"], f["filing_id"])] = rec
         time.sleep(0.5)  # be polite to government servers
+
+    # Trades with no member match (e.g. filed before the member data had former members)
+    for t in trades_db.values():
+        if not t.get("bioguide") and t.get("filer_name"):
+            name = t["filer_name"]  # matcher uses its last word as surname, all words as first names
+            enrich(t, {"chamber": t["chamber"], "last_name": name, "first_name": name,
+                       "state": t.get("state", ""), "district": t.get("district", "")},
+                   members, committee_sectors, sectors)
 
     sectors.save()
     trades = sorted(trades_db.values(), key=lambda t: (str(t["filing_date"]), t["trade_id"]), reverse=True)
@@ -147,9 +205,14 @@ def run(since, chambers, max_filings=None, use_llm=True, strict=False):
     print("Filings by status:", summary)
     print("Trades:", len(trades), "| overlap flags:", sum(str(t.get("overlap")) == "True" for t in trades),
           "| in review:", len([t for t in trades if t.get("status") == "review"]))
+    # A few filing errors (a server hiccup) are retried next run; many mean something broke.
+    too_many = len(errors) > max(5, 0.05 * processed)
+    print(f"Filing errors: {len(errors)} of {processed} processed" + (" (too many)" if too_many else ""))
+    for msg in errors[:20]:
+        print("ERROR:", msg, file=sys.stderr)
     for msg in failures:
         print("FAILED:", msg, file=sys.stderr)
-    return 1 if (strict and failures) else 0
+    return 1 if (strict and (failures or too_many)) else 0
 
 
 def main():
@@ -158,10 +221,15 @@ def main():
     ap.add_argument("--chambers", default="house,senate")
     ap.add_argument("--max", type=int, default=None, help="limit filings per run (testing)")
     ap.add_argument("--no-ai", action="store_true", help="never call the AI extractor")
-    ap.add_argument("--strict", action="store_true", help="exit 1 if a chamber could not be fetched")
+    ap.add_argument("--strict", action="store_true",
+                    help="exit 1 if a source could not be fetched, the AI was switched off, or >5%% of filings errored")
+    ap.add_argument("--retry-errors", action="store_true",
+                    help=f"retry errored filings even after {MAX_ATTEMPTS} attempts")
+    ap.add_argument("--budget", type=int, default=150,
+                    help="stop starting new filings after this many minutes; the rest wait for the next run")
     a = ap.parse_args()
     sys.exit(run(datetime.strptime(a.since, "%Y-%m-%d").date(), a.chambers.split(","),
-                 a.max, not a.no_ai, a.strict))
+                 a.max, not a.no_ai, a.strict, a.retry_errors, a.budget))
 
 
 if __name__ == "__main__":
