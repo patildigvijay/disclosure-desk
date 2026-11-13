@@ -1,0 +1,2268 @@
+ticker,cik,sic,sic_desc
+AM,1623925,4922,Natural Gas Transmission
+ET,1276187,4922,Natural Gas Transmission
+NS,,,
+PAA,1070423,4610,Pipe Lines (No Natural Gas)
+SPH,1005210,5900,Retail-Miscellaneous Retail
+CEM,,,
+Z,1617640,7389,"Services-Business Services, NEC"
+IBM,51143,3570,Computer & office Equipment
+HBAN,49196,6021,National Commercial Banks
+T,732717,4813,Telephone Communications (No Radiotelephone)
+CME,1156375,6200,"Security & Commodity Brokers, Dealers, Exchanges & Services"
+NEE,753308,4911,Electric Services
+NOC,1133421,3812,"Search, Detection, Navigation, Guidance, Aeronautical Sys"
+WMT,104169,5331,Retail-Variety Stores
+WRK-V,,,
+DDOG,1561550,7372,Services-Prepackaged Software
+RHP,1040829,6798,Real Estate Investment Trusts
+RNR,913144,6331,"Fire, Marine & Casualty Insurance"
+PNFP,2082866,6021,National Commercial Banks
+ENVA,1529864,6141,Personal Credit Institutions
+CCEP,1650107,2086,Bottled & Canned Soft Drinks & Carbonated Waters
+BKEP,,,
+CLDT,1476045,6798,Real Estate Investment Trusts
+AAPL,320193,3571,Electronic Computers
+PYPL,1633917,7389,"Services-Business Services, NEC"
+QQQ,,,
+ECOM,,,
+CLF,764065,1000,Metal Mining
+BABA,1577552,7389,"Services-Business Services, NEC"
+SSYS,1517396,3577,"Computer Peripheral Equipment, NEC"
+-- IRT,,,
+MSFT,789019,7372,Services-Prepackaged Software
+C,831001,6021,National Commercial Banks
+SMFG,1022837,6029,"Commercial Banks, NEC"
+AMGN,318154,2836,"Biological Products, (No Diagnostic Substances)"
+DOW,1751788,2821,"Plastic Materials, Synth Resins & Nonvulcan Elastomers"
+MS,895421,6211,"Security Brokers, Dealers & Flotation Companies"
+SYY,96021,5140,Wholesale-Groceries & Related Products
+TJX,109198,5651,Retail-Family Clothing Stores
+USB,36104,6021,National Commercial Banks
+GILD,882095,2836,"Biological Products, (No Diagnostic Substances)"
+XOM,2115436,2911,Petroleum Refining
+CVS,64803,5912,Retail-Drug Stores and Proprietary Stores
+BRK-B,1067983,6331,"Fire, Marine & Casualty Insurance"
+BAC,70858,6021,National Commercial Banks
+PII,931015,3790,Miscellaneous Transportation Equipment
+PFE,78003,2834,Pharmaceutical Preparations
+KMB,55785,2670,Converted Paper & Paperboard Prods (No Contaners/Boxes)
+CMCSA,1166691,4841,Cable & Other Pay Television Services
+CSCO,858877,3576,Computer Communications Equipment
+CI,1739940,6324,Hospital & Medical Service Plans
+BK,,,
+KR,56873,5411,Retail-Grocery Stores
+FB,,,
+DVA,927066,8090,"Services-Misc Health & Allied Services, NEC"
+GOOG,1652044,7370,"Services-Computer Programming, Data Processing, Etc."
+VZ,732712,4813,Telephone Communications (No Radiotelephone)
+NVS,1114448,2834,Pharmaceutical Preparations
+WIW,1267902,,
+NVDA,1045810,3674,Semiconductors & Related Devices
+SI,1699350,3841,Surgical & Medical Instruments & Apparatus
+TTE,879764,1311,Crude Petroleum & Natural Gas
+QCOM,804328,3663,Radio & Tv Broadcasting & Communications Equipment
+ARCC,1287750,,
+LMT,936468,3760,Guided Missiles & Space Vehicles & Parts
+MET,1099219,6311,Life Insurance
+AXS,1214816,6331,"Fire, Marine & Casualty Insurance"
+GLAD,1143513,,
+HASI,1561894,6799,"Investors, NEC"
+ETN,1551182,3590,Misc Industrial & Commercial Machinery & Equipment
+ABBV,1551152,2834,Pharmaceutical Preparations
+RTX,101829,3724,Aircraft Engines & Engine Parts
+IRM,1020569,6798,Real Estate Investment Trusts
+APO,1858681,6282,Investment Advice
+LHX,202058,3812,"Search, Detection, Navigation, Guidance, Aeronautical Sys"
+GLW,24741,3357,Drawing & Insulating of  Nonferrous Wire
+INTC,50863,3674,Semiconductors & Related Devices
+V,1403161,7389,"Services-Business Services, NEC"
+DLR,1297996,6798,Real Estate Investment Trusts
+RIO,863064,1000,Metal Mining
+AMT,1053507,6798,Real Estate Investment Trusts
+MOS,1285785,2870,Agricultural Chemicals
+LDP,1548717,,
+AQN,1174169,4911,Electric Services
+AY,,,
+JCI,833444,3585,Air-Cond & Warm Air Heatg Equip & Comm & Indl Refrig Equip
+GMRE,,,
+BMY,14272,2834,Pharmaceutical Preparations
+DIS,1744489,7990,Services-Miscellaneous Amusement & Recreation
+JNJ,200406,2834,Pharmaceutical Preparations
+SQ,,,
+RIVN,1874178,3711,Motor Vehicles & Passenger Car Bodies
+AEE,1002910,4931,Electric & Other Services Combined
+CARR,1783180,3585,Air-Cond & Warm Air Heatg Equip & Comm & Indl Refrig Equip
+COST,909832,5331,Retail-Variety Stores
+D,715957,4911,Electric Services
+DTM,1842022,4922,Natural Gas Transmission
+DTE,936340,4911,Electric Services
+EIX,827052,4911,Electric Services
+EPD,1061219,4922,Natural Gas Transmission
+KYN,1293613,,
+OTIS,1781335,3600,Electronic & Other Electrical Equipment (No Computer Equip)
+TSM,1046179,3674,Semiconductors & Related Devices
+TDC,816761,7372,Services-Prepackaged Software
+WES,1423902,4922,Natural Gas Transmission
+HON,773840,3724,Aircraft Engines & Engine Parts
+SPY,884394,,
+KNOP,1564180,4400,Water Transportation
+GOLD,1591588,5094,"Wholesale-Jewelry, Watches, Precious Stones & Metals"
+X,,,
+WBA,,,
+MMM,66740,3841,Surgical & Medical Instruments & Apparatus
+KO,21344,2080,Beverages
+CVX,93410,2911,Petroleum Refining
+DUK,1326160,4931,Electric & Other Services Combined
+MDT,1613103,3845,Electromedical & Electrotherapeutic Apparatus
+ABC,,,
+CTAS,723254,2320,"Men's & Boys' Furnishgs, Work Clothg, & Allied Garments"
+PEP,77476,2080,Beverages
+PM,1413329,2111,Cigarettes
+PONCX,,,
+PG,80424,2840,"Soap, Detergents, Cleang Preparations, Perfumes, Cosmetics"
+TSN,100493,2015,Poultry Slaughtering and Processing
+XEL,72903,4931,Electric & Other Services Combined
+ABQCX,,,
+FUN,1999001,7900,Services-Amusement & Recreation Services
+CRWD,1535527,7372,Services-Prepackaged Software
+FGSCX,,,
+CLOU,,,
+NWL,814453,3089,"Plastics Products, NEC"
+PEGA,1013857,7374,Services-Computer Processing & Data Preparation
+VTRS,1792044,2834,Pharmaceutical Preparations
+ACN,1467373,7389,"Services-Business Services, NEC"
+ADBE,796343,7372,Services-Prepackaged Software
+AWK,1410636,4941,Water Supply
+LLY,59478,2834,Pharmaceutical Preparations
+MA,1141391,7389,"Services-Business Services, NEC"
+FANG,1539838,1311,Crude Petroleum & Natural Gas
+DCI,29644,3564,Industrial & Commercial Fans & Blowers & Air Purifing Equip
+EXPD,746515,4731,Arrangement of  Transportation of  Freight & Cargo
+IT,749251,8741,Services-Management Services
+HES,,,
+KKR,1404912,6282,Investment Advice
+OLLI,1639300,5331,Retail-Variety Stores
+PPG,79879,2851,"Paints, Varnishes, Lacquers, Enamels & Allied Prods"
+SEDG,1419612,3674,Semiconductors & Related Devices
+UL,217410,2840,"Soap, Detergents, Cleang Preparations, Perfumes, Cosmetics"
+WEX,1309108,7389,"Services-Business Services, NEC"
+VFC,103379,2320,"Men's & Boys' Furnishgs, Work Clothg, & Allied Garments"
+HSIC,1000228,5047,"Wholesale-Medical, Dental & Hospital Equipment & Supplies"
+HSY,47111,2060,Sugar & Confectionery Products
+LIN,1707925,2810,Industrial Inorganic Chemicals
+AMZN,1018724,5961,Retail-Catalog & Mail-Order Houses
+ROAD,1718227,1600,Heavy Construction Other Than Bldg Const - Contractors
+AOS,91142,3630,Household Appliances
+CLX,21076,2842,"Specialty Cleaning, Polishing and Sanitation Preparations"
+HXL,717605,2821,"Plastic Materials, Synth Resins & Nonvulcan Elastomers"
+MCK,927653,5122,"Wholesale-Drugs, Proprietaries & Druggists' Sundries"
+NXPI,1413447,3674,Semiconductors & Related Devices
+SSNC,1402436,7372,Services-Prepackaged Software
+NFLX,1065280,7841,Services-Video Tape Rental
+ROKU,1428439,4841,Cable & Other Pay Television Services
+FE,1031296,4911,Electric Services
+PEAK,,,
+HPQ,47217,3570,Computer & office Equipment
+IMAX,921582,3861,Photographic Equipment & Supplies
+VTR,740260,6798,Real Estate Investment Trusts
+ADM,7084,2070,Fats & Oils
+DISCA,,,
+KMI,1506307,4922,Natural Gas Transmission
+MFC,1086888,6311,Life Insurance
+OXBR,1584831,6331,"Fire, Marine & Casualty Insurance"
+PSXP,,,
+SCHZ,,,
+AMD,2488,3674,Semiconductors & Related Devices
+ADP,8670,7374,Services-Computer Processing & Data Preparation
+CAT,18230,3531,Construction Machinery & Equip
+OXY,797468,1311,Crude Petroleum & Natural Gas
+ARKK,,,
+F,37996,3711,Motor Vehicles & Passenger Car Bodies
+MRO,,,
+LOW,60667,5211,Retail-Lumber & Other Building Materials Dealers
+WFC,72971,6021,National Commercial Banks
+TGT,27419,5331,Retail-Variety Stores
+TSLA,1318605,3711,Motor Vehicles & Passenger Car Bodies
+MAXR,,,
+RPM,110621,2851,"Paints, Varnishes, Lacquers, Enamels & Allied Prods"
+HD,354950,5211,Retail-Lumber & Other Building Materials Dealers
+WST,105770,3841,Surgical & Medical Instruments & Apparatus
+VEEV,1393052,7372,Services-Prepackaged Software
+VMW,,,
+SNA,91440,3420,"Cutlery, Handtools & General Hardware"
+SIVB,,,
+SPGI,64040,7320,"Services-Consumer Credit Reporting, Collection Agencies"
+ROK,1024478,3829,"Measuring & Controlling Devices, NEC"
+REGN,872589,2834,Pharmaceutical Preparations
+LMST,,,
+KEY,91576,6021,National Commercial Banks
+INTU,896878,7372,Services-Prepackaged Software
+GNRC,1474735,3621,Motors & Generators
+FGBI,1408534,6035,"Savings Institution, Federally Chartered"
+FITB,35527,6022,State Commercial Banks
+EXP,918646,3241,"Cement, Hydraulic"
+DEO,835403,2080,Beverages
+CFG,759944,6022,State Commercial Banks
+CE,1306830,2820,"Plastic Material, Synth Resin/Rubber, Cellulos (No Glass)"
+CP,16875,4011,"Railroads, Line-Haul Operating"
+CABO,1632127,4841,Cable & Other Pay Television Services
+BKE,885245,5651,Retail-Family Clothing Stores
+BIO,12208,3826,Laboratory Analytical Instruments
+BMO,927971,6029,"Commercial Banks, NEC"
+TMO,97745,3829,"Measuring & Controlling Devices, NEC"
+RMD,943819,3841,Surgical & Medical Instruments & Apparatus
+RF,1281761,6021,National Commercial Banks
+NDAQ,1120193,6200,"Security & Commodity Brokers, Dealers, Exchanges & Services"
+MRK,310158,2834,Pharmaceutical Preparations
+MASI,,,
+MMC,,,
+MKSI,1049502,3823,"Industrial Instruments For Measurement, Display, and Control"
+HUMA,1818382,2836,"Biological Products, (No Diagnostic Substances)"
+GFI,1172724,1040,Gold and Silver Ores
+DHI,882184,1531,Operative Builders
+CDNS,813672,7372,Services-Prepackaged Software
+AME,1037868,3823,"Industrial Instruments For Measurement, Display, and Control"
+SCCO,1001838,1000,Metal Mining
+NU,1691493,6199,Finance Services
+ABT,1800,2834,Pharmaceutical Preparations
+GE,40545,3600,Electronic & Other Electrical Equipment (No Computer Equip)
+HIG,874766,6331,"Fire, Marine & Casualty Insurance"
+SHYG,,,
+TLT,,,
+IWB,,,
+KMI-W,,,
+IFF,51253,2860,Industrial Organic Chemicals
+JBI,1839839,3442,"Metal Doors, Sash, Frames, Moldings & Trim"
+PBCT,,,
+DVN,1090012,1311,Crude Petroleum & Natural Gas
+EMR,32604,3600,Electronic & Other Electrical Equipment (No Computer Equip)
+PXD,,,
+UNH,731766,6324,Hospital & Medical Service Plans
+WMB,107263,4922,Natural Gas Transmission
+APD,2969,2810,Industrial Inorganic Chemicals
+ETRN,,,
+TACO,2033122,6770,Blank Checks
+BUI,1528988,,
+SYK,310764,3841,Surgical & Medical Instruments & Apparatus
+KHC,1637459,2030,"Canned, Frozen & Preservd Fruit, Veg & Food Specialties"
+BIIB,875045,2836,"Biological Products, (No Diagnostic Substances)"
+BX,1393818,6282,Investment Advice
+CVNA,1690820,5500,Retail-Auto Dealers & Gasoline Stations
+CSTL,1447362,8071,Services-Medical Laboratories
+CCXI,2074973,3569,"General Industrial Machinery & Equipment, NEC"
+CTSH,1058290,7371,Services-Computer Programming Services
+CVET,,,
+DAVA,1656081,7371,Services-Computer Programming Services
+XNGSY,,,
+ETSY,1370637,7389,"Services-Business Services, NEC"
+FIS,1136893,7389,"Services-Business Services, NEC"
+GBCI,868671,6022,State Commercial Banks
+HUBS,1404655,7372,Services-Prepackaged Software
+MRNA,1682852,2836,"Biological Products, (No Diagnostic Substances)"
+MDB,1441816,7372,Services-Prepackaged Software
+ORCL,1341439,7372,Services-Prepackaged Software
+PYCR,,,
+PNGAY,,,
+SHW,89800,5200,"Retail-Building Materials, Hardware, Garden Supply"
+SPXC,88205,3540,Metalworkg Machinery & Equipment
+TCEHY,,,
+TEX,97216,3537,"Industrial Trucks, Tractors, Trailors & Stackers"
+TXN,97476,3674,Semiconductors & Related Devices
+TWKS,,,
+TT,1466258,3822,Auto Controls For Regulating Residential & Comml Environments
+UPS,1090727,4210,Trucking & Courier Services (No Air)
+VBTX,,,
+TGOPY,,,
+VOLVY,,,
+MO,764180,2111,Cigarettes
+AJG,354190,6411,"Insurance Agents, Brokers & Service"
+ASX,1122411,3674,Semiconductors & Related Devices
+BCE,718940,4813,Telephone Communications (No Radiotelephone)
+BLK,2012383,6211,"Security Brokers, Dealers & Flotation Companies"
+BNPQY,,,
+BTI,1303523,2111,Cigarettes
+BTVCY,,,
+AVGO,1730168,3674,Semiconductors & Related Devices
+CODYY,,,
+CCI,1051470,6798,Real Estate Investment Trusts
+DPSGY,,,
+DTEGY,946770,4812,Radiotelephone Communications
+DNHBY,,,
+EMN,915389,2821,"Plastic Materials, Synth Resins & Nonvulcan Elastomers"
+ENLAY,,,
+EVRG,1711269,4931,Electric & Other Services Combined
+FNF,1331875,6361,Title Insurance
+GD,40533,3730,Ship & Boat Building & Repairing
+IBDRY,,,
+MCD,63908,5812,Retail-Eating  Places
+MGDDY,,,
+MDLZ,1103982,2000,Food and Kindred Products
+MURGY,,,
+NSRGY,,,
+NTT,,,
+NNGPF,,,
+PSMMY,,,
+PNC,713676,6021,National Commercial Banks
+PWCDF,,,
+PLD,1045609,6798,Real Estate Investment Trusts
+PRU,1137774,6311,Life Insurance
+PEG,788784,4931,Electric & Other Services Combined
+RHHBY,,,
+SNY,1121404,2834,Pharmaceutical Preparations
+SIEGY,,,
+SMFKY,,,
+SFTBY,,,
+SKHCY,,,
+SO,92122,4911,Electric Services
+SVNLY,,,
+TSCDY,,,
+TKOMY,1169486,6331,"Fire, Marine & Casualty Insurance"
+TM,1094517,3711,Motor Vehicles & Passenger Car Bodies
+TFC,92230,6021,National Commercial Banks
+UGI,884614,4932,Gas & Other Services Combined
+UOVEY,,,
+UPMKF,,,
+VALE,917851,1000,Metal Mining
+WPC,1025378,6798,Real Estate Investment Trusts
+ZURVY,,,
+USAC,1522727,4922,Natural Gas Transmission
+T WBD,,,
+BDX EMBC,,,
+ARKG,,,
+NEO,1077183,8734,Services-Testing Laboratories
+TWST,1581280,2836,"Biological Products, (No Diagnostic Substances)"
+DD IFF,,,
+WBD,,,
+CB,896159,6331,"Fire, Marine & Casualty Insurance"
+CWEN-A,,,
+GSK,1131399,2834,Pharmaceutical Preparations
+GPP,,,
+MMP,,,
+ORI,74260,6351,Surety Insurance
+PSX,1534701,2911,Petroleum Refining
+R,85961,7510,Services-Auto Rental & Leasing (No Drivers)
+SCHH,,,
+SIRE,,,
+USDP,,,
+ASML,937966,3559,"Special Industry Machinery, NEC"
+NOW,1373715,7372,Services-Prepackaged Software
+-- RTX,,,
+Y,,,
+VOD,839923,4812,Radiotelephone Communications
+AMH,1562401,6798,Real Estate Investment Trusts
+VRTX,875320,2834,Pharmaceutical Preparations
+IWM,,,
+SDC,,,
+TLRY,1731348,2833,Medicinal Chemicals & Botanical Products
+UGRO,,,
+SPCE,1706946,4700,Transportation Services
+KLAC,319201,3827,Optical Instruments & Lenses
+SYF,1601712,6199,Finance Services
+UNP,100885,4011,"Railroads, Line-Haul Operating"
+-- WBD,,,
+AHCO,1725255,8082,Services-Home Health Care Services
+IQV,1478242,8731,Services-Commercial Physical & Biological Research
+JPM,19617,6021,National Commercial Banks
+IRT,1466085,6798,Real Estate Investment Trusts
+AAL,6201,4512,"Air Transportation, Scheduled"
+AMAT,6951,3674,Semiconductors & Related Devices
+BA,12927,3721,Aircraft
+DE,315189,3523,Farm Machinery & Equipment
+DOCU,1261333,7372,Services-Prepackaged Software
+FDX,1048911,4513,Air Courier Services
+CRM,1108524,7372,Services-Prepackaged Software
+LUV,92380,4512,"Air Transportation, Scheduled"
+TWTR,,,
+ALGN,1097149,3842,"Orthopedic, Prosthetic & Surgical Appliances & Supplies"
+BKNG,1075531,4700,Transportation Services
+CRNC,1768267,7372,Services-Prepackaged Software
+CHX,,,
+COP,1163165,2911,Petroleum Refining
+EL,1001250,2844,"Perfumes, Cosmetics & Other Toilet Preparations"
+MGY,1698990,1311,Crude Petroleum & Natural Gas
+MAR,1048286,7011,Hotels & Motels
+MTCH,891103,7370,"Services-Computer Programming, Data Processing, Etc."
+MNST,865752,2086,Bottled & Canned Soft Drinks & Carbonated Waters
+NSC,702165,4011,"Railroads, Line-Haul Operating"
+PTEN,889900,1381,Drilling Oil & Gas Wells
+SSDOY,,,
+SBUX,829224,5810,Retail-Eating & Drinking Places
+TPR,1116132,3100,Leather & Leather Products
+UNICY,,,
+ECOL,,,
+SPG,1063761,6798,Real Estate Investment Trusts
+FSK,1422183,,
+LBRDK,,,
+LSXMK,,,
+LMND,1691421,6331,"Fire, Marine & Casualty Insurance"
+TCF HBAN,,,
+FLL,891482,7011,Hotels & Motels
+PLAN,,,
+AR,1433270,1311,Crude Petroleum & Natural Gas
+CPE,,,
+CDEV,,,
+UUUU,1385849,1400,Mining & Quarrying of  Nonmetallic Minerals (No Fuels)
+KOS,1509991,1311,Crude Petroleum & Natural Gas
+NBR,1163739,1381,Drilling Oil & Gas Wells
+NEX,,,
+PTON,1639825,3949,"Sporting & Athletic Goods, NEC"
+SM,893538,1311,Crude Petroleum & Natural Gas
+TELL,,,
+UBER,1543151,7389,"Services-Business Services, NEC"
+UEC,1334933,1090,Miscellaneous Metal Ores
+WYNN,1174922,7011,Hotels & Motels
+AFRM,1820953,6141,Personal Credit Institutions
+GM,1467858,3711,Motor Vehicles & Passenger Car Bodies
+GFS,1709048,3674,Semiconductors & Related Devices
+GS,886982,6211,"Security Brokers, Dealers & Flotation Companies"
+MP,1801368,1000,Metal Mining
+RH,1528849,5712,Retail-Furniture Stores
+UPST,1647639,6199,Finance Services
+BBH,,,
+ICE,1571949,6200,"Security & Commodity Brokers, Dealers, Exchanges & Services"
+TMUS,1283699,4812,Radiotelephone Communications
+UBS,1610520,6021,National Commercial Banks
+DHR,313616,3823,"Industrial Instruments For Measurement, Display, and Control"
+HTGC,1280784,,
+DRE,,,
+NWN,1733998,4924,Natural Gas Distribution
+ABNB,1559720,7340,Services-To Dwellings & Other Buildings
+DASH,1792789,7389,"Services-Business Services, NEC"
+COLD,1455863,6798,Real Estate Investment Trusts
+AVY,8818,2670,Converted Paper & Paperboard Prods (No Contaners/Boxes)
+GXO,1852244,4700,Transportation Services
+VNT,1786842,3824,Totalizing Fluid Meters & Counting Devices
+PAVE,,,
+PPA,,,
+VCSH,,,
+GPN,1123360,7389,"Services-Business Services, NEC"
+CANO,,,
+AMBP,1845097,3411,Metal Cans
+QRTEA,,,
+LBRDA,,,
+FWONK,1560385,4833,Television Broadcasting Stations
+FWONA,1560385,4833,Television Broadcasting Stations
+BATRK,1958140,7900,Services-Amusement & Recreation Services
+CMG,1058090,5812,Retail-Eating  Places
+ABB,,,
+MTBC,,,
+EXAS,,,
+OKE,1039684,4923,Natural Gas Transmisison & Distribution
+FRC,,,
+HELE,916789,3634,Electric Housewares & Fans
+ZBH,1136869,3842,"Orthopedic, Prosthetic & Surgical Appliances & Supplies"
+CHKP,1015922,7372,Services-Prepackaged Software
+FMX,1061736,2086,Bottled & Canned Soft Drinks & Carbonated Waters
+IFNNY,1107457,3674,Semiconductors & Related Devices
+LHCG,,,
+STAG,1479094,6798,Real Estate Investment Trusts
+VRSK,1442145,7374,Services-Computer Processing & Data Preparation
+AGI,1178819,1040,Gold and Silver Ores
+BRBR,1772016,2000,Food and Kindred Products
+NHI,877860,6798,Real Estate Investment Trusts
+EQIX,1101239,6798,Real Estate Investment Trusts
+ILMN,1110803,3826,Laboratory Analytical Instruments
+ISRG,1035267,3842,"Orthopedic, Prosthetic & Surgical Appliances & Supplies"
+SNAP,1564408,7370,"Services-Computer Programming, Data Processing, Etc."
+AZO,866787,5531,Retail-Auto & Home Supply Stores
+STZ,16918,2080,Beverages
+VLO,1035002,2911,Petroleum Refining
+ZTS,1555280,2834,Pharmaceutical Preparations
+BAX,10456,3841,Surgical & Medical Instruments & Apparatus
+FIXD,,,
+TLH,,,
+IVV,,,
+DBRG,,,
+META,1326801,7370,"Services-Computer Programming, Data Processing, Etc."
+ALLY,40729,6022,State Commercial Banks
+EVT,1253327,,
+VTIP,,,
+IBDO,,,
+IBDQ,,,
+AGCO,880266,3523,Farm Machinery & Equipment
+CERN,,,
+CMS,811156,4931,Electric & Other Services Combined
+EMKR,,,
+SBNY,,,
+FMAO,792966,6035,"Savings Institution, Federally Chartered"
+AXP,4962,6199,Finance Services
+HPP,1482512,6500,Real Estate
+SWK,93556,3420,"Cutlery, Handtools & General Hardware"
+ARQT,1787306,2834,Pharmaceutical Preparations
+AVNT,1122976,2821,"Plastic Materials, Synth Resins & Nonvulcan Elastomers"
+COF,927628,6021,National Commercial Banks
+EFX,33185,7320,"Services-Consumer Credit Reporting, Collection Agencies"
+HCA,860730,8062,"Services-General Medical & Surgical Hospitals, NEC"
+ITT,216228,3561,Pumps & Pumping Equipment
+PPRUY,,,
+NTDOY,,,
+SKY,90896,2451,Mobile Homes
+TXRH,1289460,5812,Retail-Eating  Places
+XP,1787425,6211,"Security Brokers, Dealers & Flotation Companies"
+ECL,31462,2840,"Soap, Detergents, Cleang Preparations, Perfumes, Cosmetics"
+ACAD,1070494,2834,Pharmaceutical Preparations
+AGNC,1423689,6798,Real Estate Investment Trusts
+ALLK,,,
+ASB,7789,6022,State Commercial Banks
+BCEL,,,
+AXSM,1579428,2834,Pharmaceutical Preparations
+BRMK,,,
+SAVA,,,
+CIVI,,,
+CTRA,,,
+EXPE,1324424,4700,Transportation Services
+FNB,37808,6021,National Commercial Banks
+FHN,36966,6021,National Commercial Banks
+GNKOQ,,,
+GNK,1326200,4412,Deep Sea Foreign Transportation of  Freight
+GEVO,1392380,2860,Industrial Organic Chemicals
+IIPR,1677576,6500,Real Estate
+KRG,1286043,6798,Real Estate Investment Trusts
+MAC,912242,6798,Real Estate Investment Trusts
+NAT,1000177,4400,Water Transportation
+NWBI,1471265,6021,National Commercial Banks
+OCFC,1004702,6021,National Commercial Banks
+OCGN,1372299,2836,"Biological Products, (No Diagnostic Substances)"
+DOC,765880,6798,Real Estate Investment Trusts
+RC,1527590,6798,Real Estate Investment Trusts
+RWT,930236,6798,Real Estate Investment Trusts
+SBRA,1492298,6798,Real Estate Investment Trusts
+STNG,1483934,4412,Deep Sea Foreign Transportation of  Freight
+RTL,,,
+UBSI,729986,6022,State Commercial Banks
+VTRSV,,,
+SPR,,,
+NGL,1504461,4922,Natural Gas Transmission
+J,52988,1600,Heavy Construction Other Than Bldg Const - Contractors
+ORLY,898173,5531,Retail-Auto & Home Supply Stores
+SCHD,,,
+ARLP,1086600,1221,Bituminous Coal & Lignite Surface Mining
+K,,,
+PBA,1546066,1382,Oil & Gas Field Exploration Services
+UVV,102037,5150,Wholesale-Farm Product Raw Materials
+VIASP,,,
+DD,1666700,2821,"Plastic Materials, Synth Resins & Nonvulcan Elastomers"
+PHG,313216,3844,X-Ray Apparatus & Tubes & Related Irradiation Apparatus
+OZKAP,1569650,,
+DURA,,,
+GOOGL,1652044,7370,"Services-Computer Programming, Data Processing, Etc."
+AMCR,1748790,3990,Miscellaneous Manufacturing Industries
+AIG,5272,6331,"Fire, Marine & Casualty Insurance"
+AMP,820027,6282,Investment Advice
+AON,315293,6411,"Insurance Agents, Brokers & Service"
+APA,1841666,1311,Crude Petroleum & Natural Gas
+BBY,764478,5731,"Retail-Radio, Tv & Consumer Electronics Stores"
+BLDR,1316835,5211,Retail-Lumber & Other Building Materials Dealers
+CAH,721371,5122,"Wholesale-Drugs, Proprietaries & Druggists' Sundries"
+CNC,1071739,6324,Hospital & Medical Service Plans
+CHTR,1091667,4841,Cable & Other Pay Television Services
+CMA,,,
+CCK,1219601,3411,Metal Cans
+DFS,,,
+DPZ,1286681,5140,Wholesale-Groceries & Related Products
+FICO,814547,7389,"Services-Business Services, NEC"
+GIS,40704,2040,Grain Mill Products
+HST,1070750,6798,Real Estate Investment Trusts
+IP,51434,2621,Paper Mills
+LRCX,707549,3559,"Special Industry Machinery, NEC"
+LBTYK,1570585,4841,Cable & Other Pay Television Services
+L,60086,6331,"Fire, Marine & Casualty Insurance"
+LUMN,18926,4813,Telephone Communications (No Radiotelephone)
+MPC,1510295,2911,Petroleum Refining
+MAS,62996,3430,"Heating Equip, Except Elec & Warm Air; & Plumbing Fixtures"
+MU,723125,3674,Semiconductors & Related Devices
+NKE,320187,3021,Rubber & Plastics Footwear
+NVR,906163,1531,Operative Builders
+PKG,75677,2650,Paperboard Containers & Boxes
+PHM,822416,1531,Operative Builders
+DGX,1022079,8071,Services-Medical Laboratories
+RTN,,,
+WHR,106640,3630,Household Appliances
+GWW,277135,5000,Wholesale-Durable Goods
+APHA,,,
+ESGC,,,
+IPWR,1507957,3674,Semiconductors & Related Devices
+CTVA,1755672,0100,Agricultural Production-Crops
+INDB,776901,6022,State Commercial Banks
+DLTR,935703,5331,Retail-Variety Stores
+GO,1771515,5411,Retail-Grocery Stores
+HOLX,,,
+WCC,929008,5063,"Wholesale-Electrical Apparatus & Equipment, Wiring Supplies "
+WSM,719955,5700,"Retail-Home Furniture, Furnishings & Equipment Stores"
+TRUP,1371285,6324,Hospital & Medical Service Plans
+VAIAF,,,
+SCHF,,,
+ULTA,1403568,5990,"Retail-Retail Stores, NEC"
+TIP,,,
+AATC,943034,3829,"Measuring & Controlling Devices, NEC"
+PYPLV,,,
+-- HR,,,
+TXT,217346,3720,Aircraft & Parts
+AMC,1411579,7830,Services-Motion Picture Theaters
+HIL,,,
+XLE,,,
+EXC,1109357,4931,Electric & Other Services Combined
+MEDP,1668397,8731,Services-Commercial Physical & Biological Research
+NOVT,1076930,3690,"Miscellaneous Electrical Machinery, Equipment & Supplies"
+RBA,1046102,7389,"Services-Business Services, NEC"
+ARE,1035443,6798,Real Estate Investment Trusts
+ADI,6281,3674,Semiconductors & Related Devices
+BURL,1579298,5311,Retail-Department Stores
+CBOE,1374310,6200,"Security & Commodity Brokers, Dealers, Exchanges & Services"
+CL,21665,2844,"Perfumes, Cosmetics & Other Toilet Preparations"
+HUBB,48898,3670,Electronic Components & Accessories
+LKQ,1065696,5010,Wholesale-Motor Vehicles & Motor Vehicle Parts & Supplies
+LDOS,1336920,7373,Services-Computer Integrated Systems Design
+SAIC,1571123,7373,Services-Computer Integrated Systems Design
+HRL,48465,2011,Meat Packing Plants
+VIAC,,,
+WM,823768,4953,Refuse Systems
+BKEPP,,,
+SQM,909037,1400,Mining & Quarrying of  Nonmetallic Minerals (No Fuels)
+FAST,815556,5200,"Retail-Building Materials, Hardware, Garden Supply"
+AA,1675149,3334,Primary Production of  Aluminum
+FLNG,1772253,4400,Water Transportation
+GOGL,,,
+IMKTA,50493,5411,Retail-Grocery Stores
+NFG,70145,4924,Natural Gas Distribution
+NEWT,1587987,6021,National Commercial Banks
+SJT,319655,6792,Oil Royalty Traders
+VGR,,,
+ASBC,,,
+ATHA,,,
+CRGY,1866175,1311,Crude Petroleum & Natural Gas
+ESTE,,,
+ENOB,,,
+NOTV,,,
+ISEE,,,
+KOD,1468748,2836,"Biological Products, (No Diagnostic Substances)"
+PLUG,1093691,3620,Electrical Industrial Apparatus
+VTNR,,,
+VRAI,,,
+CRL,1100682,8731,Services-Commercial Physical & Biological Research
+BXP,1037540,6798,Real Estate Investment Trusts
+DRI,940944,5812,Retail-Eating  Places
+REG,910606,6798,Real Estate Investment Trusts
+WY,106535,6798,Real Estate Investment Trusts
+PTC,857005,7372,Services-Prepackaged Software
+EFAV,,,
+XLY,,,
+ABNFX,,,
+RSP,,,
+IDV,,,
+DHS,,,
+PCNNX,,,
+JHCBX,,,
+XLC,,,
+TSCO,916365,5200,"Retail-Building Materials, Hardware, Garden Supply"
+MUB,,,
+OC,1370946,3290,"Abrasive, Asbestos & Misc Nonmetallic Mineral Prods"
+BCRX,882796,2836,"Biological Products, (No Diagnostic Substances)"
+HALO,1159036,2836,"Biological Products, (No Diagnostic Substances)"
+RPD,1560327,7372,Services-Prepackaged Software
+SGSOY,,,
+CHPT,1777393,3690,"Miscellaneous Electrical Machinery, Equipment & Supplies"
+SNV,,,
+MRVL,1835632,3674,Semiconductors & Related Devices
+LGF-B,,,
+SCI,89089,7200,Services-Personal Services
+ALK,766421,4512,"Air Transportation, Scheduled"
+NEM,1164727,1040,Gold and Silver Ores
+WRK,,,
+DGRO,,,
+JEPI,,,
+ONEQ,,,
+IVW,,,
+BUD,1668717,2082,Malt Beverages
+BDX,10795,3841,Surgical & Medical Instruments & Apparatus
+PWR,1050915,1731,Electrical Work
+CF,1324404,2870,Agricultural Chemicals
+NUE,73309,3312,"Steel Works, Blast Furnaces & Rolling Mills (Coke Ovens)"
+KMX,1170010,5500,Retail-Auto Dealers & Gasoline Stations
+ABMD,,,
+ALNY,1178670,2834,Pharmaceutical Preparations
+BHP,811809,1000,Metal Mining
+DXCM,1093557,3841,Surgical & Medical Instruments & Apparatus
+FLYW,1580560,7389,"Services-Business Services, NEC"
+PCTY,1591698,7372,Services-Prepackaged Software
+SAP,1000184,7372,Services-Prepackaged Software
+AORT,784199,3841,Surgical & Medical Instruments & Apparatus
+COIN,1679788,6199,Finance Services
+BSX,885725,3841,Surgical & Medical Instruments & Apparatus
+BR,1383312,7389,"Services-Business Services, NEC"
+CARG,1494259,7374,Services-Computer Processing & Data Preparation
+EPAM,1352010,7371,Services-Computer Programming Services
+HAL,45012,1389,"Oil & Gas Field Services, NEC"
+PGR,80661,6331,"Fire, Marine & Casualty Insurance"
+UI,1511737,3663,Radio & Tv Broadcasting & Communications Equipment
+ROST,745732,5651,Retail-Family Clothing Stores
+CPXWF,2071911,,
+FIVE,1177609,5331,Retail-Variety Stores
+BMN,1832871,,
+MPW,,,
+HQL,884121,,
+NID,,,
+SCHW,316709,6211,"Security Brokers, Dealers & Flotation Companies"
+LNG,3570,4924,Natural Gas Distribution
+SGEN,,,
+TTD,1671933,7370,"Services-Computer Programming, Data Processing, Etc."
+AEP,4904,4911,Electric Services
+BRCM,,,
+INVH,1687229,6510,Real Estate Operators (No Developers) & Lessors
+PPL,922224,4911,Electric Services
+WELL,766704,6798,Real Estate Investment Trusts
+AE,,,
+VCTR,1570827,6282,Investment Advice
+TREX,1069878,2400,Lumber & Wood Products (No Furniture)
+RELX,929869,7389,"Services-Business Services, NEC"
+PAYC,1590955,7372,Services-Prepackaged Software
+GLPI,1575965,6798,Real Estate Investment Trusts
+RACE,1648416,3711,Motor Vehicles & Passenger Car Bodies
+EXR,1289490,6798,Real Estate Investment Trusts
+ELS,895417,6798,Real Estate Investment Trusts
+DQ,1477641,3674,Semiconductors & Related Devices
+CROX,1334036,3021,Rubber & Plastics Footwear
+WIT,1123799,7371,Services-Computer Programming Services
+SEIC,350894,6211,"Security Brokers, Dealers & Flotation Companies"
+TROW,1113169,6282,Investment Advice
+MKTX,1278021,6211,"Security Brokers, Dealers & Flotation Companies"
+IDXX,874716,2835,In Vitro & In Vivo Diagnostic Substances
+GGG,42888,3561,Pumps & Pumping Equipment
+GRMN,1121788,3812,"Search, Detection, Navigation, Guidance, Aeronautical Sys"
+CHD,313927,2840,"Soap, Detergents, Cleang Preparations, Perfumes, Cosmetics"
+FTBFX,,,
+AFL,4977,6321,Accident & Health Insurance
+KBH,795266,1531,Operative Builders
+JOE,745308,6552,Land Subdividers & Developers (No Cemeteries)
+AMLX,1658551,2834,Pharmaceutical Preparations
+AVXL,1314052,2836,"Biological Products, (No Diagnostic Substances)"
+XPRO,2126198,1389,"Oil & Gas Field Services, NEC"
+PLL,,,
+NSP,1000753,7363,Services-Help Supply Services
+SRE,1032208,4932,Gas & Other Services Combined
+QYLD,,,
+SRVR,,,
+BTEC,,,
+BATRA,1958140,7900,Services-Amusement & Recreation Services
+FAS,,,
+USO,1327068,6221,Commodity Contracts Brokers & Dealers
+TAK,1395064,2834,Pharmaceutical Preparations
+GBDC,1476765,,
+CR,1944013,3490,Miscellaneous Fabricated Metal Products
+STX,1137789,3572,Computer Storage Devices
+BALL,9389,3411,Metal Cans
+COUP,,,
+IRBT,,,
+WDAY,1327811,7374,Services-Computer Processing & Data Preparation
+AKRO,,,
+BRK-A,1067983,6331,"Fire, Marine & Casualty Insurance"
+BLFS,,,
+HSAC,,,
+HLX,,,
+HP,46765,1381,Drilling Oil & Gas Wells
+RLMD,1553643,2834,Pharmaceutical Preparations
+TLRN,,,
+PCVX,1649094,2836,"Biological Products, (No Diagnostic Substances)"
+FHYS,,,
+FDEV,,,
+IJR,,,
+EFA,,,
+CORP,,,
+SCHP,,,
+VUG,,,
+VYM,,,
+ATVI,,,
+ALL,899051,6331,"Fire, Marine & Casualty Insurance"
+BIDU,1329099,7370,"Services-Computer Programming, Data Processing, Etc."
+BYND,1655210,2000,Food and Kindred Products
+CTRL,,,
+DAN,26780,3714,Motor Vehicle Parts & Accessories
+DWDP,,,
+EBAY,1065088,7389,"Services-Business Services, NEC"
+SOLO,,,
+FCEL,886128,3620,Electrical Industrial Apparatus
+HFC,,,
+JMP,,,
+AMJ,,,
+TREE,1434621,6163,Loan Brokers
+MLM,916076,1400,Mining & Quarrying of  Nonmetallic Minerals (No Fuels)
+RBLX,1315098,7372,Services-Prepackaged Software
+SPLK,,,
+SUP,,,
+COO,711404,3851,Ophthalmic Goods
+PCLN,,,
+URI,1067701,7359,"Services-Equipment Rental & Leasing, NEC"
+WGO,107687,3716,Motor Homes
+GTLS,,,
+FFIV,1048695,3576,Computer Communications Equipment
+ELAN,1739104,2834,Pharmaceutical Preparations
+COHR,820318,3827,Optical Instruments & Lenses
+MCO,1059556,7320,"Services-Consumer Credit Reporting, Collection Agencies"
+SSLTY,,,
+ZIMV,,,
+ACHC,1520697,8093,"Services-Specialty Outpatient Facilities, NEC"
+APTV,1521332,3714,Motor Vehicle Parts & Accessories
+AVTR,1722482,3826,Laboratory Analytical Instruments
+BBWI,701985,5990,"Retail-Retail Stores, NEC"
+BERY,,,
+BKI,,,
+BAH,1443646,8742,Services-Management Consulting Services
+BFAM,1437578,8351,Services-Child Day Care Services
+BRO,79282,6411,"Insurance Agents, Brokers & Service"
+CZR,1590895,7011,Hotels & Motels
+CTLT,,,
+CDW,1402057,5961,Retail-Catalog & Mail-Order Houses
+CHDN,20212,7948,"Services-Racing, Including Track Operation"
+CLVT,1764046,7374,Services-Computer Processing & Data Preparation
+CWK,1628369,6500,Real Estate
+DSEY,,,
+ESI,1590714,2890,Miscellaneous Chemical Products
+ENTG,1101302,3089,"Plastics Products, NEC"
+GFL,1780232,4953,Refuse Systems
+LESL,,,
+LYV,1335258,7900,Services-Amusement & Recreation Services
+MAT,63276,3942,Dolls & Stuffed Toys
+TAP,24545,2082,Malt Beverages
+PANW,1327567,3577,"Computer Peripheral Equipment, NEC"
+PFGC,1618673,5141,"Wholesale-Groceries, General Line"
+PLNT,1637207,7997,Services-Membership Sports & Recreation Clubs
+QRVO,,,
+RSG,1060391,4953,Refuse Systems
+REZI,1740332,5072,Wholesale-Hardware
+SMG,825542,2870,Agricultural Chemicals
+FOUR,1794669,7389,"Services-Business Services, NEC"
+SYNH,,,
+TDY,1094285,3812,"Search, Detection, Navigation, Guidance, Aeronautical Sys"
+TFX,96943,3841,Surgical & Medical Instruments & Apparatus
+AZEK,,,
+GT,42582,3011,Tires & Inner Tubes
+TRU,1552033,7320,"Services-Consumer Credit Reporting, Collection Agencies"
+USFD,1665918,5140,Wholesale-Groceries & Related Products
+VRT,1674101,3679,"Electronic Components, NEC"
+VICI,1705696,6798,Real Estate Investment Trusts
+XYL,1524472,3561,Pumps & Pumping Equipment
+ZBRA,877212,3560,General Industrial Machinery & Equipment
+LYFT,1759509,7389,"Services-Business Services, NEC"
+PCAR,75362,3711,Motor Vehicles & Passenger Car Bodies
+PK,1617406,7011,Hotels & Motels
+PPC,802481,2015,Poultry Slaughtering and Processing
+TIF,,,
+CLR,,,
+JEF,96223,6211,"Security Brokers, Dealers & Flotation Companies"
+PFF,,,
+AEG,769218,6311,Life Insurance
+CAG,23217,2000,Food and Kindred Products
+FHLC,,,
+FLO,1128928,2000,Food and Kindred Products
+HCRB,,,
+SHY,,,
+DG,29534,5331,Retail-Variety Stores
+ELV,1156039,6324,Hospital & Medical Service Plans
+FISV,798354,7389,"Services-Business Services, NEC"
+AKAM,1086222,7389,"Services-Business Services, NEC"
+GE GEHC,,,
+INSM,1104506,2834,Pharmaceutical Preparations
+SHLS,1831651,3674,Semiconductors & Related Devices
+SUPN,1625297,2834,Pharmaceutical Preparations
+ARCB,894405,4213,Trucking (No Local)
+BLL,,,
+CCLD,1582982,7372,Services-Prepackaged Software
+HLT,1585689,7011,Hotels & Motels
+RNWK,,,
+EA,,,
+WDS,844551,1311,Crude Petroleum & Natural Gas
+AROC,1389050,4922,Natural Gas Transmission
+BORR,1715497,1381,Drilling Oil & Gas Wells
+MNRL,,,
+CHRD,1486159,1311,Crude Petroleum & Natural Gas
+CMTG,1666291,6500,Real Estate
+COGT,1622229,2834,Pharmaceutical Preparations
+INSW-V,,,
+KALV,,,
+KRYS,1711279,2836,"Biological Products, (No Diagnostic Substances)"
+KURA,1422143,2834,Pharmaceutical Preparations
+NESR,1698514,1389,"Oil & Gas Field Services, NEC"
+NTST,1798100,6798,Real Estate Investment Trusts
+PR,1658566,1311,Crude Petroleum & Natural Gas
+SWTX,,,
+GEHC,1932393,3844,X-Ray Apparatus & Tubes & Related Irradiation Apparatus
+FPI,1591670,6798,Real Estate Investment Trusts
+MGM,789570,7011,Hotels & Motels
+ATKR,,,
+TU,868675,4812,Radiotelephone Communications
+SAND,,,
+BSM,1621434,1311,Crude Petroleum & Natural Gas
+EQNR,1140625,2911,Petroleum Refining
+FLR,1124198,1600,Heavy Construction Other Than Bldg Const - Contractors
+CHRS,1512762,2836,"Biological Products, (No Diagnostic Substances)"
+CMPS,1816590,2834,Pharmaceutical Preparations
+JD,1549802,5990,"Retail-Retail Stores, NEC"
+BEKE,1809587,6531,Real Estate Agents & Managers (For Others)
+TME,1744676,4832,Radio Broadcasting Stations
+CG,1527166,6282,Investment Advice
+MKL,1096343,6331,"Fire, Marine & Casualty Insurance"
+TTWO,946581,7372,Services-Prepackaged Software
+ICLR,1060955,8731,Services-Commercial Physical & Biological Research
+PH,76334,3490,Miscellaneous Fabricated Metal Products
+UAA,1336917,2300,Apparel & Other Finishd Prods of  Fabrics & Similar Matl
+ALGM,866291,3674,Semiconductors & Related Devices
+CINF,20286,6331,"Fire, Marine & Casualty Insurance"
+DBSDY,,,
+FCX,831259,1000,Metal Mining
+GMED,1237831,3841,Surgical & Medical Instruments & Apparatus
+HLI,1302215,6282,Investment Advice
+ICFI,1362004,8742,Services-Management Consulting Services
+MTSI,1493594,3674,Semiconductors & Related Devices
+MELI,1099590,7389,"Services-Business Services, NEC"
+MSCI,1408198,7389,"Services-Business Services, NEC"
+PAYX,723531,8700,"Services-Engineering, Accounting, Research, Management"
+SHOP,1594805,7372,Services-Prepackaged Software
+AJINY,,,
+ANET,1596532,3576,Computer Communications Equipment
+ARWR,879407,2834,Pharmaceutical Preparations
+ALPMY,,,
+TEAM,1650372,7372,Services-Prepackaged Software
+BAYRY,,,
+CELH,1341766,2086,Bottled & Canned Soft Drinks & Carbonated Waters
+CNP,1130310,4911,Electric Services
+CHE,19584,8082,Services-Home Health Care Services
+CEG,1868275,4911,Electric Services
+DAL,27904,4512,"Air Transportation, Scheduled"
+DNTUY,,,
+EWBC,1069157,6022,State Commercial Banks
+ESALY,,,
+ENVX,1828318,3690,"Miscellaneous Electrical Machinery, Equipment & Supplies"
+ENPH,1463101,3674,Semiconductors & Related Devices
+EQR,,,
+FANUY,,,
+FATE,1434316,2836,"Biological Products, (No Diagnostic Substances)"
+GVDNY,,,
+HLN,1900304,2844,"Perfumes, Cosmetics & Other Toilet Preparations"
+HTHIY,47710,1600,Heavy Construction Other Than Bldg Const - Contractors
+HZNP,,,
+IDEXY,,,
+JAPSY,,,
+JAZZ,1232524,2834,Pharmaceutical Preparations
+KDDIY,,,
+KDP,1418135,2080,Beverages
+KNBWY,,,
+LOGI,1032975,3577,"Computer Peripheral Equipment, NEC"
+LCID,1811210,3711,Motor Vehicles & Passenger Car Bodies
+MTB,36270,6022,State Commercial Banks
+MSADY,,,
+NICE,1003935,7372,Services-Prepackaged Software
+PSO,938323,2731,Books: Publishing or  Publishing & Printing
+RJF,720005,6211,"Security Brokers, Dealers & Flotation Companies"
+RDSMY,,,
+SRPT,873303,2834,Pharmaceutical Preparations
+SBAC,1034054,6798,Real Estate Investment Trusts
+SBCF,730708,6022,State Commercial Banks
+SVNDY,,,
+SWAV,,,
+SNOW,1640147,7372,Services-Prepackaged Software
+SR,1126956,4924,Natural Gas Distribution
+SOMMY,,,
+SPWR,1838987,1700,Construction - Special Trade Contractors
+STBFY,,,
+TRYIY,,,
+TOSYY,,,
+UAL,100517,4512,"Air Transportation, Scheduled"
+WJRYY,,,
+WPM,1323404,1040,Gold and Silver Ores
+WTRG,78128,4941,Water Supply
+AGX,100591,1700,Construction - Special Trade Contractors
+AAP,1158449,5531,Retail-Auto & Home Supply Stores
+BCC,1328581,5030,Wholesale-Lumber & Other Construction Materials
+CSX,277948,4011,"Railroads, Line-Haul Operating"
+ITW,49826,3560,General Industrial Machinery & Equipment
+LNT,352541,4931,Electric & Other Services Combined
+ADSK,769397,7372,Services-Prepackaged Software
+HAS,46080,3944,"Games, Toys & Children's Vehicles (No Dolls & Bicycles)"
+LAMR,1090425,6798,Real Estate Investment Trusts
+TEL,1385157,5065,"Wholesale-Electronic Parts & Equipment, NEC"
+AAGIY,,,
+APPF,1433195,7372,Services-Prepackaged Software
+CBZ,944148,7389,"Services-Business Services, NEC"
+IBN,1103838,6029,"Commercial Banks, NEC"
+ELUXY,,,
+AONNY,,,
+ASXFY,,,
+ATLKY,,,
+CJPRY,,,
+CHGCY,,,
+CRZBY,,,
+CS,,,
+CSLLY,1274152,,
+DKILY,,,
+DWAHY,,,
+ERIC,717826,3663,Radio & Tv Broadcasting & Communications Equipment
+ESLOY,,,
+FRCOY,,,
+FJTSY,,,
+GRFS,1438569,2834,Pharmaceutical Preparations
+HXGBY,,,
+HOCPY,,,
+HSBC,1089113,6035,"Savings Institution, Federally Chartered"
+IHG,858446,7011,Hotels & Motels
+ITTOY,,,
+JHX,1159152,3272,"Concrete Products, Except Block & Brick"
+JAPAY,,,
+KRYAY,,,
+KKOYY,,,
+MITEY,,,
+MTSFY,,,
+MSLOY,,,
+MONOY,,,
+NCBDY,,,
+NABZY,,,
+NGG,1004315,4922,Natural Gas Transmission
+NOK,924613,3663,Radio & Tv Broadcasting & Communications Equipment
+NRILY,,,
+NTDTY,,,
+OLCLY,,,
+OTSKY,,,
+QABSY,,,
+RTO,930157,8741,Services-Management Services
+SKLTY,,,
+SHECY,,,
+SGIOY,,,
+SGAPY,,,
+SSMXY,,,
+TTNDY,,,
+TELNY,1126113,4813,Telephone Communications (No Radiotelephone)
+TRUMY,,,
+TOELY,,,
+TOTDY,,,
+UCBJY,,,
+O,726728,6798,Real Estate Investment Trusts
+LTRPA,,,
+ADDYY,,,
+ATUS,,,
+NLY,1043219,6798,Real Estate Investment Trusts
+ATO,731802,4924,Natural Gas Distribution
+AVB,,,
+SAN,891478,6029,"Commercial Banks, NEC"
+BCS,312069,6029,"Commercial Banks, NEC"
+BILL,1786352,7372,Services-Prepackaged Software
+BMRN,1048477,2834,Pharmaceutical Preparations
+BLNK,1429764,3690,"Miscellaneous Electrical Machinery, Equipment & Supplies"
+BHKLY,,,
+BDNNY,,,
+CPB,16732,2000,Food and Kindred Products
+CDNA,1217234,8071,Services-Medical Laboratories
+CNHI,,,
+CMWAY,,,
+ED,1047862,4931,Electric & Other Services Combined
+CSGP,1057352,7389,"Services-Business Services, NEC"
+DAR,916540,2070,Fats & Oils
+DB,1159508,6022,State Commercial Banks
+APPS,317788,6794,Patent Owners & Lessors
+DEI,1364250,6798,Real Estate Investment Trusts
+EW,1099800,3842,"Orthopedic, Prosthetic & Surgical Appliances & Supplies"
+EBKDY,,,
+ES,72741,4911,Electric Services
+FSUGY,,,
+GMAB,1434265,2834,Pharmaceutical Preparations
+HE,354707,4911,Electric Services
+HDELY,,,
+IBRX,1326110,2836,"Biological Products, (No Diagnostic Substances)"
+INCY,879169,8731,Services-Commercial Physical & Biological Research
+ING,1039765,6029,"Commercial Banks, NEC"
+IONS,874015,2834,Pharmaceutical Preparations
+JBGS,1689796,6798,Real Estate Investment Trusts
+KRC,1025996,6798,Real Estate Investment Trusts
+KIM,879101,6798,Real Estate Investment Trusts
+LYG,1160106,6029,"Commercial Banks, NEC"
+MQBKY,,,
+VAC,1524358,6531,Real Estate Agents & Managers (For Others)
+MKC,63754,2090,Miscellaneous Food Preparations & Kindred Products
+MRTX,,,
+MUFG,67088,6029,"Commercial Banks, NEC"
+MFG,1335730,6021,National Commercial Banks
+NTRA,1604821,8071,Services-Medical Laboratories
+NWG,844150,6029,"Commercial Banks, NEC"
+NOV,1021860,3533,Oil & Gas Field Machinery & Equipment
+OHI,888491,6798,Real Estate Investment Trusts
+PACW,,,
+RGA,898174,6311,Life Insurance
+RITM,1556593,6798,Real Estate Investment Trusts
+SE,1703399,7380,Services-Miscellaneous Business Services
+SILK,,,
+SKBSY,,,
+SLG,1040971,6798,Real Estate Investment Trusts
+SWX,1692115,4923,Natural Gas Transmisison & Distribution
+STT,93751,6022,State Commercial Banks
+RUN,1469367,1700,Construction - Special Trade Contractors
+SWDBY,,,
+SYIEY,,,
+UNM,5513,6321,Accident & Health Insurance
+VNO,899689,6798,Real Estate Investment Trusts
+WAL,1212545,6022,State Commercial Banks
+WPP,806968,7311,Services-Advertising Agencies
+CMI,26172,3510,Engines & Turbines
+PARA,1826011,7372,Services-Prepackaged Software
+CSII,,,
+ABCB,351569,6022,State Commercial Banks
+LRLCY,,,
+TYG,1268533,,
+BOH,46195,6022,State Commercial Banks
+LGI,1278211,,
+BRKR,1109354,3826,Laboratory Analytical Instruments
+SNDR,1692063,4213,Trucking (No Local)
+DIOD,29002,3674,Semiconductors & Related Devices
+VSH,103730,3670,Electronic Components & Accessories
+UA,1336917,2300,Apparel & Other Finishd Prods of  Fabrics & Similar Matl
+SSD,920371,3420,"Cutlery, Handtools & General Hardware"
+QSR,1618756,5812,Retail-Eating  Places
+RRC,315852,1311,Crude Petroleum & Natural Gas
+PAM,1469395,4911,Electric Services
+NDSN,72331,3569,"General Industrial Machinery & Equipment, NEC"
+MPWR,1280452,3674,Semiconductors & Related Devices
+MTD,1037646,3826,Laboratory Analytical Instruments
+FLT,,,
+ALLE,1579241,7381,"Services-Detective, Guard & Armored Car Services"
+GNTX,355811,3714,Motor Vehicle Parts & Accessories
+CBSH,22356,6022,State Commercial Banks
+CRUS,772406,3674,Semiconductors & Related Devices
+APH,820313,3678,Electronic Connectors
+A,1090872,3826,Laboratory Analytical Instruments
+BHF,1685040,6311,Life Insurance
+LPLA,1397911,6200,"Security & Commodity Brokers, Dealers, Exchanges & Services"
+ROP,882835,3823,"Industrial Instruments For Measurement, Display, and Control"
+CEMCF,,,
+FDN,,,
+QQXT,,,
+JGCCF,,,
+MJDLF,,,
+MLYNF,,,
+NCMGF,,,
+OGFGF,,,
+PDS,1013605,1381,Drilling Oil & Gas Wells
+VIV-V,,,
+TSCDF,,,
+TKC,1071321,4813,Telephone Communications (No Radiotelephone)
+WOLWF,,,
+AUY,,,
+U,1810806,7372,Services-Prepackaged Software
+CCCS,,,
+PINS,1506293,7370,"Services-Computer Programming, Data Processing, Etc."
+ESS,920522,6798,Real Estate Investment Trusts
+WRB,11544,6331,"Fire, Marine & Casualty Insurance"
+AKR,899629,6798,Real Estate Investment Trusts
+ALB,915913,2821,"Plastic Materials, Synth Resins & Nonvulcan Elastomers"
+AAT,1500217,6798,Real Estate Investment Trusts
+FOLD,,,
+ARRY,1820721,3674,Semiconductors & Related Devices
+CAR,723612,7510,Services-Auto Rental & Leasing (No Drivers)
+CADE,,,
+CPT,906345,6798,Real Estate Investment Trusts
+YOU,1856314,7372,Services-Prepackaged Software
+COLB,887343,6022,State Commercial Banks
+CMSQY,,,
+CONN,,,
+DISH,,,
+DNB,,,
+EDIT,1650664,2836,"Biological Products, (No Diagnostic Substances)"
+ESRT,1541401,6798,Real Estate Investment Trusts
+FCNCA,798941,6022,State Commercial Banks
+GTLB,1653482,7372,Services-Prepackaged Software
+HQY,1428336,7389,"Services-Business Services, NEC"
+HUN,1307954,2800,Chemicals & Allied Products
+INSP,1609550,3841,Surgical & Medical Instruments & Apparatus
+PODD,1145197,3841,Surgical & Medical Instruments & Apparatus
+JKHY,779152,7373,Services-Computer Integrated Systems Design
+JLL,1037976,6531,Real Estate Agents & Managers (For Others)
+KRTX,,,
+LC,,,
+LNC,59558,6311,Life Insurance
+LPSN,,,
+MDGL,1157601,2834,Pharmaceutical Preparations
+MRVI,1823239,2834,Pharmaceutical Preparations
+MLKN,66382,2520,Office Furniture
+MOH,1179929,6324,Hospital & Medical Service Plans
+NYCB,,,
+NTNX,1618732,7372,Services-Prepackaged Software
+OLPX,,,
+OGS,1587732,4924,Natural Gas Distribution
+OPEN,1801169,6531,Real Estate Agents & Managers (For Others)
+OUT,1579877,6798,Real Estate Investment Trusts
+QTWO,1410384,7372,Services-Prepackaged Software
+QS,1811414,3690,"Miscellaneous Electrical Machinery, Equipment & Supplies"
+RNG,1384905,7374,Services-Computer Processing & Data Preparation
+THO,730263,3716,Motor Homes
+VAL,314808,1381,Drilling Oil & Gas Wells
+VCYT,1384101,8071,Services-Medical Laboratories
+W,1616707,5961,Retail-Catalog & Mail-Order Houses
+WBS,,,
+WFAFY,,,
+WTW,1140536,6411,"Insurance Agents, Brokers & Service"
+ZS,1713683,7371,Services-Computer Programming Services
+FSLR,1274494,3674,Semiconductors & Related Devices
+FOXF,1424929,3751,"Motorcycles, Bicycles & Parts"
+SLGN,849869,3411,Metal Cans
+UTZ,1739566,2090,Miscellaneous Food Preparations & Kindred Products
+FQAL,,,
+EOG,821189,1311,Crude Petroleum & Natural Gas
+TOTZF,,,
+AQUA,,,
+KEYS,1601046,3823,"Industrial Instruments For Measurement, Display, and Control"
+MSI,68505,3663,Radio & Tv Broadcasting & Communications Equipment
+ON,1097864,3674,Semiconductors & Related Devices
+FTNT,1262039,3577,"Computer Peripheral Equipment, NEC"
+IYY,,,
+IWD,,,
+NEP,,,
+SSB,764038,6022,State Commercial Banks
+CRT,881787,6792,Oil Royalty Traders
+BP,313807,2911,Petroleum Refining
+AGR,,,
+DECK,910521,3021,Rubber & Plastics Footwear
+ETR,65984,4911,Electric Services
+IPG,,,
+MAA,912595,6798,Real Estate Investment Trusts
+NNN,751364,6798,Real Estate Investment Trusts
+ODFL,878927,4213,Trucking (No Local)
+SON,91767,2650,Paperboard Containers & Boxes
+FIP,1899883,4011,"Railroads, Line-Haul Operating"
+TDG,1260221,3728,"Aircraft Parts & Auxiliary Equipment, NEC"
+USPH,885978,8000,Services-Health Services
+SIRI,908937,4832,Radio Broadcasting Stations
+GLD,1222333,6221,Commodity Contracts Brokers & Dealers
+GL,320335,6311,Life Insurance
+NSA,,,
+LULU,1397187,2300,Apparel & Other Finishd Prods of  Fabrics & Similar Matl
+NTLA,1652130,2835,In Vitro & In Vivo Diagnostic Substances
+KD,1867072,7373,Services-Computer Integrated Systems Design
+AZTA,933974,3559,"Special Industry Machinery, NEC"
+BAP,1001290,6029,"Commercial Banks, NEC"
+HLIO,1024795,3490,Miscellaneous Fabricated Metal Products
+HMN,850141,6331,"Fire, Marine & Casualty Insurance"
+IART,917520,3841,Surgical & Medical Instruments & Apparatus
+SNPS,883241,7372,Services-Prepackaged Software
+BROS,1866581,5810,Retail-Eating & Drinking Places
+ARGO,,,
+CCL,815097,4400,Water Transportation
+CC,1627223,2800,Chemicals & Allied Products
+FTV,1659166,3823,"Industrial Instruments For Measurement, Display, and Control"
+IR,1699150,3560,General Industrial Machinery & Equipment
+BWXT,1486957,3510,Engines & Turbines
+WSO,105016,5070,Wholesale-Hardware & Plumbing & Heating Equipment & Supplies
+DNBBY,,,
+NNGRY,,,
+FMBA,,,
+ANTM,,,
+BAYZF,,,
+BBT,1108134,6036,"Savings Institutions, Not Federally Chartered"
+CAE,1173382,3690,"Miscellaneous Electrical Machinery, Equipment & Supplies"
+DOV,29905,3530,"Construction, Mining & Materials Handling Machinery & Equip"
+RDS-B,,,
+UTX,,,
+AMKBY,,,
+ABBNY,1091587,3613,Switchgear & Switchboard Apparatus
+AAVMY,,,
+AHEXY,,,
+ATEYY,1158838,3674,Semiconductors & Related Devices
+ADYEY,,,
+ANYYY,,,
+ADC,917251,6798,Real Estate Investment Trusts
+EADSY,,,
+AKZOY,3124,2800,Chemicals & Allied Products
+ALC,1167379,3851,Ophthalmic Goods
+ALEX,,,
+ALFVY,,,
+ALIZY,,,
+AYX,,,
+AMADY,,,
+AMCX,1514991,4841,Cable & Other Pay Television Services
+NGLOY,,,
+ANZGY,,,
+ARGX,1697862,2836,"Biological Products, (No Diagnostic Substances)"
+ARKAY,,,
+AHKSY,,,
+ASHTY,,,
+ASAZY,,,
+AZN,901832,2834,Pharmaceutical Preparations
+AVVIY,1140022,6311,Life Insurance
+AXAHY,,,
+BMRRY,1671235,,
+BAESY,895564,,
+BBVA,842180,6029,"Commercial Banks, NEC"
+BDRFY,,,
+BGNE,,,
+BELFB,729580,3677,"Electronic Coils, Transformers & Other Inductors"
+BXBLY,,,
+BNTGY,,,
+BRDCY,,,
+BTLCY,,,
+BEPC,1791863,4911,Electric Services
+BURBY,,,
+BVVBY,,,
+CAJPY,16988,3861,Photographic Equipment & Supplies
+CGEMY,,,
+CCOEY,,,
+CTRE,1590717,6798,Real Estate Investment Trusts
+CZMWY,,,
+CLLNY,,,
+CIEN,936395,3661,Telephone & Telegraph Apparatus
+CHEOY,,,
+CLPBY,,,
+CBU,723188,6021,National Commercial Banks
+CMPGY,,,
+CRARY,,,
+CRH,849395,3241,"Cement, Hydraulic"
+CUBE,1298675,6798,Real Estate Investment Trusts
+DNPLY,,,
+DFKCY,,,
+DLICY,,,
+DSNKY,,,
+DTRUY,,,
+DANOY,,,
+DASTY,,,
+DNZOY,,,
+DBOEY,,,
+DHLGY,,,
+DRH,1298946,6798,Real Estate Investment Trusts
+DSCSY,,,
+DQJCY,,,
+DRPRY,,,
+DSDVY,,,
+ENTA,1177648,2834,Pharmaceutical Preparations
+EDPFY,1039610,4911,Electric Services
+ENGIY,,,
+EPOKY,,,
+EPR,1045450,6798,Real Estate Investment Trusts
+EPRT,1728951,6798,Real Estate Investment Trusts
+EVBG,,,
+FN,1408710,3661,Telephone & Telegraph Apparatus
+FERG,2011641,5070,Wholesale-Hardware & Plumbing & Heating Equipment & Supplies
+FRRVY,,,
+FBP,1057706,6022,State Commercial Banks
+FCPT,1650132,6798,Real Estate Investment Trusts
+FMS,1333141,8090,"Services-Misc Health & Allied Services, NEC"
+FUJIY,,,
+GASNY,,,
+GBERY,,,
+GNGBY,,,
+GTY,1052752,6500,Real Estate
+HVRRY,,,
+HDB,1144967,6029,"Commercial Banks, NEC"
+HEI-A,46619,3724,Aircraft Engines & Engine Parts
+HEINY,,,
+HENOY,,,
+HESAY,,,
+HCMLY,,,
+HMC,715153,3711,Motor Vehicles & Passenger Car Bodies
+HKXCY,,,
+HHC,,,
+HSQVY,,,
+ICHR,1652535,3674,Semiconductors & Related Devices
+ICL,941221,2870,Agricultural Chemicals
+IMBBY,,,
+IFJPY,,,
+ISNPY,,,
+ISUZY,,,
+JSAIY,,,
+JRONY,,,
+JTKWY,,,
+KBCSY,,,
+KGFHY,,,
+KGSPY,,,
+KNRRY,,,
+KMTUY,,,
+ADRNY,,,
+KSRYY,,,
+KUBTY,,,
+KHNGY,,,
+KLIC,56978,3674,Semiconductors & Related Devices
+AIQUY,,,
+LSRCY,,,
+LGRDY,,,
+LBTYA,1570585,4841,Cable & Other Pay Television Services
+LSI,,,
+JSGRY,,,
+LZAGY,,,
+LVMUY,,,
+MTHRY,,,
+MKTAY,,,
+MZDAY,,,
+MDIBY,,,
+MBGYY,,,
+MKKGY,,,
+MSSMY,,,
+MIELY,,,
+MHGVY,,,
+MTUAY,,,
+MRAAY,,,
+NTES,1110646,7372,Services-Prepackaged Software
+NCMGY,,,
+NEXOY,,,
+NXRT,1620393,6798,Real Estate Investment Trusts
+NJDCY,,,
+NINOY,,,
+NTTYY,769594,4813,Telephone Communications (No Radiotelephone)
+NSANY,,,
+NDEKY,,,
+NMR,1163653,6211,"Security Brokers, Dealers & Flotation Companies"
+NRDBY,,,
+NVO,353278,2834,Pharmaceutical Preparations
+OCDDY,,,
+OLYMY,,,
+OMRNY,,,
+OPHLY,,,
+DNNGY,,,
+OVCHY,,,
+PD,1568100,7372,Services-Prepackaged Software
+PANDY,,,
+PARAA,,,
+PEB,1474098,6798,Real Estate Investment Trusts
+PRNDY,,,
+PECO,1476204,6798,Real Estate Investment Trusts
+PHIN,1968915,3714,Motor Vehicle Parts & Accessories
+PLTK,1828016,7374,Services-Computer Processing & Data Preparation
+PROSY,,,
+PUK,1116578,6311,Life Insurance
+PRYMY,,,
+PSA,1393311,6798,Real Estate Investment Trusts
+PUBGY,,,
+QBIEY,,,
+QDEL,1906324,2835,In Vitro & In Vivo Diagnostic Substances
+RANJY,,,
+RLAY,1812364,2836,"Biological Products, (No Diagnostic Substances)"
+ROIC,,,
+RNMBY,,,
+RLJ,1511337,6798,Real Estate Investment Trusts
+KKPNY,,,
+RPT,1614806,6798,Real Estate Investment Trusts
+SAFRY,,,
+SALRY,,,
+SAXPY,,,
+IOT,1642896,7373,Services-Computer Integrated Systems Design
+SDVKY,,,
+SOAGY,1715801,,
+BFS,907254,6798,Real Estate Investment Trusts
+SBGSY,,,
+SKHSY,,,
+SMNNY,,,
+SMNEY,,,
+SMMNY,1738519,,
+SXYAY,,,
+SBGI,1971213,4833,Television Broadcasting Stations
+SINGY,,,
+SPXCY,,,
+SKFRY,,,
+SGH,,,
+SMCAY,,,
+SNN,845982,3842,"Orthopedic, Prosthetic & Surgical Appliances & Supplies"
+SCGLY,,,
+SOBKY,,,
+SKHHY,,,
+SONVY,,,
+SONY,313838,3651,Household Audio & Video Equipment
+SPKKY,,,
+SSEZY,,,
+STLA,1605484,3711,Motor Vehicles & Passenger Car Bodies
+STM,932787,3674,Semiconductors & Related Devices
+SMTOY,95227,8880,American Depositary Receipts
+SUTNY,,,
+INN,1497645,6798,Real Estate Investment Trusts
+SUHJY,,,
+SHO,1295810,7011,Hotels & Motels
+SZKMY,,,
+SWRAY,,,
+SSREY,,,
+SCMWY,1069336,4813,Telephone Communications (No Radiotelephone)
+TNDM,1438133,3841,Surgical & Medical Instruments & Apparatus
+SKT,899715,6798,Real Estate Investment Trusts
+TTDKY,,,
+TEF,,,
+TLPFY,,,
+TLGPY,,,
+TMSNY,,,
+TEZNY,,,
+TKAMY,,,
+TMICY,,,
+TRIP,1526520,7370,"Services-Computer Programming, Data Processing, Etc."
+UDR,74208,6798,Real Estate Investment Trusts
+UMICY,,,
+UUGRY,,,
+UPMMY,,,
+UE,1611547,6500,Real Estate
+UBA,,,
+VACNY,,,
+VEOEY,,,
+VCISY,,,
+VWAPY,,,
+VWAGY,,,
+VLVLY,,,
+WRDLY,,,
+YAMHY,,,
+YARIY,1279956,8880,American Depositary Receipts
+YASKY,,,
+YUMC,1673358,5812,Retail-Eating  Places
+ZLNDY,,,
+PDM,1042776,6512,Opeators of  Nonresidential Buildings
+LPX,60519,2400,Lumber & Wood Products (No Furniture)
+CSPCY,,,
+HSHCY,,,
+LAD,1023128,5500,Retail-Auto Dealers & Gasoline Stations
+SPOT,1639920,4832,Radio Broadcasting Stations
+ELF,1600033,2844,"Perfumes, Cosmetics & Other Toilet Preparations"
+SHV,,,
+KVUE,1944048,2844,"Perfumes, Cosmetics & Other Toilet Preparations"
+AGAE,,,
+AI,1577526,7372,Services-Prepackaged Software
+INOD,903651,7374,Services-Computer Processing & Data Preparation
+SWKS,4127,3674,Semiconductors & Related Devices
+RMBS,917273,3674,Semiconductors & Related Devices
+SOFI,1818874,6199,Finance Services
+RY,1000275,6029,"Commercial Banks, NEC"
+FEP,,,
+BBEU,,,
+EME,105634,1731,Electrical Work
+TIMB,1826168,4813,Telephone Communications (No Radiotelephone)
+WCN,1318220,4953,Refuse Systems
+LLYVA,2078416,7900,Services-Amusement & Recreation Services
+LSXMA,,,
+LLYVK,2078416,7900,Services-Amusement & Recreation Services
+WTT,,,
+FDS,1013237,7370,"Services-Computer Programming, Data Processing, Etc."
+SIGCY,,,
+WTKWY,861967,,
+NTRS,73124,6022,State Commercial Banks
+LH,920148,8071,Services-Medical Laboratories
+AMLP,,,
+TWLO,1447669,7372,Services-Prepackaged Software
+JNJ KVUE,,,
+VO,,,
+VOO,,,
+CASY,726958,5500,Retail-Auto Dealers & Gasoline Stations
+DORM,868780,3714,Motor Vehicle Parts & Accessories
+FAF,1472787,6361,Title Insurance
+POR,784977,4911,Electric Services
+RGLD,85535,6795,Mineral Royalty Traders
+SUI,912593,6798,Real Estate Investment Trusts
+WAT,1000697,3826,Laboratory Analytical Instruments
+RCL,884887,4400,Water Transportation
+FI,,,
+ALGT,1362468,4512,"Air Transportation, Scheduled"
+CYRX,1124524,2834,Pharmaceutical Preparations
+INTA,1565687,7372,Services-Prepackaged Software
+NCLTY,1801729,,
+NVZMY,,,
+PHR,1412408,7389,"Services-Business Services, NEC"
+RBC,1324948,3562,Ball & Roller Bearings
+SHYF,,,
+VIAV,912093,3674,Semiconductors & Related Devices
+BTO,925683,,
+YUM,1041061,5812,Retail-Eating  Places
+NTR,1725964,2870,Agricultural Chemicals
+RVNC,,,
+GPCR,1888886,2834,Pharmaceutical Preparations
+BNS,9631,6022,State Commercial Banks
+AES,874761,4991,Cogeneration Services & Small Power Producers
+NFE,1749723,4924,Natural Gas Distribution
+EMXC,,,
+AXON,1069183,3480,"Ordnance & Accessories, (No Vehicles/Guided Missiles)"
+HWM,4281,3350,Rolling Drawing & Extruding of  Nonferrous Metals
+ALG,897077,3523,Farm Machinery & Equipment
+DCO,30305,3728,"Aircraft Parts & Auxiliary Equipment, NEC"
+JBL,898293,3672,Printed Circuit Boards
+PRIM,1361538,1623,"Water, Sewer, Pipeline, Comm & Power Line Construction"
+RVLV,1746618,5961,Retail-Catalog & Mail-Order Houses
+UFPI,912767,2421,"Sawmills & Planting Mills, General"
+GPK,1408075,2650,Paperboard Containers & Boxes
+WU,1365135,7389,"Services-Business Services, NEC"
+MCHP,827054,3674,Semiconductors & Related Devices
+WMS,1604028,3086,Plastics Foam Products
+CMP,1227654,1400,Mining & Quarrying of  Nonmetallic Minerals (No Fuels)
+INSW,1679049,4400,Water Transportation
+TCMD,1027838,3841,Surgical & Medical Instruments & Apparatus
+IGSB,,,
+VLTO,1967680,3825,Instruments For Meas & Testing of  Electricity & Elec Signals
+DT,1773383,7372,Services-Prepackaged Software
+EVVTY,,,
+CMBS,,,
+AGZ,,,
+GBIL,,,
+GIGB,,,
+JMBS,,,
+MBB,,,
+PCH,,,
+SHEL,1306965,1311,Crude Petroleum & Natural Gas
+-- TAC,,,
+FMC,37785,2800,Chemicals & Allied Products
+BNTX,1776985,2836,"Biological Products, (No Diagnostic Substances)"
+LOPE,1434588,8200,Services-Educational Services
+COCO,1482981,2080,Beverages
+TPH,,,
+UMBF,101382,6021,National Commercial Banks
+PPLT,1460235,6221,Commodity Contracts Brokers & Dealers
+PALL,1459862,6221,Commodity Contracts Brokers & Dealers
+ACI,1646972,5411,Retail-Grocery Stores
+HEI,46619,3724,Aircraft Engines & Engine Parts
+VAXX,,,
+AMEH,,,
+SFM,1575515,5411,Retail-Grocery Stores
+FRPT,1611647,2040,Grain Mill Products
+CYBR,,,
+BMI,9092,3824,Totalizing Fluid Meters & Counting Devices
+INST,,,
+FCFS,840489,5900,Retail-Miscellaneous Retail
+EXLS,1297989,7389,"Services-Business Services, NEC"
+VIG,,,
+USFR,,,
+MAG,,,
+S,1583708,7372,Services-Prepackaged Software
+DELL,1571996,3571,Electronic Computers
+SCHX,,,
+VUZI,1463972,3663,Radio & Tv Broadcasting & Communications Equipment
+SSBK,,,
+SLF,1097362,6311,Life Insurance
+ENB,895728,4610,Pipe Lines (No Natural Gas)
+AGIO,1439222,2834,Pharmaceutical Preparations
+ABG,1144980,5500,Retail-Auto Dealers & Gasoline Stations
+ASC,1577437,4412,Deep Sea Foreign Transportation of  Freight
+SBLK,1386716,4412,Deep Sea Foreign Transportation of  Freight
+ALTM,,,
+PWP,1777835,6199,Finance Services
+AESI,1984060,1311,Crude Petroleum & Natural Gas
+BRP,,,
+NI,1111711,4931,Electric & Other Services Combined
+ITIP,,,
+ERJ,,,
+MGA,749098,3714,Motor Vehicle Parts & Accessories
+SCZ,,,
+CWEN,1567683,4911,Electric Services
+IEF,,,
+HLMN,1822492,3420,"Cutlery, Handtools & General Hardware"
+FNA,,,
+ZTO,1677250,4210,Trucking & Courier Services (No Air)
+LSCC,855658,3674,Semiconductors & Related Devices
+PAC,1347557,4581,"Airports, Flying Fields & Airport Terminal Services"
+QLYS,1107843,7372,Services-Prepackaged Software
+CCJ,1009001,1090,Miscellaneous Metal Ores
+IEX,832101,3561,Pumps & Pumping Equipment
+SOLV,1964738,3841,Surgical & Medical Instruments & Apparatus
+SLB,87347,1389,"Oil & Gas Field Services, NEC"
+COKE,317540,2086,Bottled & Canned Soft Drinks & Carbonated Waters
+NVST,1757073,3843,Dental Equipment & Supplies
+AMSF,1018979,6331,"Fire, Marine & Casualty Insurance"
+BWIN,1781755,6411,"Insurance Agents, Brokers & Service"
+PERI,1338940,7371,Services-Computer Programming Services
+SBFM,1402328,2834,Pharmaceutical Preparations
+XBI,,,
+TER,97210,3825,Instruments For Meas & Testing of  Electricity & Elec Signals
+INFY,1067491,7371,Services-Computer Programming Services
+CPRT,900075,5500,Retail-Auto Dealers & Gasoline Stations
+FEI,,,
+IBKR,1381197,6211,"Security Brokers, Dealers & Flotation Companies"
+AEIS,927003,3679,"Electronic Components, NEC"
+ABEV,1565025,2080,Beverages
+ATRC,1323885,3841,Surgical & Medical Instruments & Apparatus
+BOOT,1610250,5661,Retail-Shoe Stores
+CENTA,887733,5190,Wholesale-Miscellaneous Nondurable Goods
+GBOOY,,,
+ITCI,,,
+MTDR,1520006,1311,Crude Petroleum & Natural Gas
+MTX,891014,2810,Industrial Inorganic Chemicals
+PPBI,,,
+TLK,1001807,4813,Telephone Communications (No Radiotelephone)
+STRL,874238,1600,Heavy Construction Other Than Bldg Const - Contractors
+SF,720672,6211,"Security Brokers, Dealers & Flotation Companies"
+DSGX,1050140,7372,Services-Prepackaged Software
+MDY,936958,,
+NMVZX,,,
+VEA,,,
+DALCX,,,
+GEM,,,
+IXNZF,,,
+ONEW,1772921,5531,Retail-Auto & Home Supply Stores
+IWF,,,
+TRP,1232384,4922,Natural Gas Transmission
+TD,947263,6029,"Commercial Banks, NEC"
+WEC,783325,4931,Electric & Other Services Combined
+CPNG,1834584,5961,Retail-Catalog & Mail-Order Houses
+TECK,886986,1400,Mining & Quarrying of  Nonmetallic Minerals (No Fuels)
+CEQP ET,,,
+COR,1140859,5122,"Wholesale-Drugs, Proprietaries & Druggists' Sundries"
+TRMB,864749,3829,"Measuring & Controlling Devices, NEC"
+HTLD,799233,4213,Trucking (No Local)
+LZB,57131,2510,Household Furniture
+MICRD,,,
+STE,1757898,3842,"Orthopedic, Prosthetic & Surgical Appliances & Supplies"
+AXTA,1616862,2851,"Paints, Varnishes, Lacquers, Enamels & Allied Prods"
+FNFV-V,,,
+FOXA,1754301,4833,Television Broadcasting Stations
+HUM,49071,6324,Hospital & Medical Service Plans
+LVS,1300514,7011,Hotels & Motels
+SKX,,,
+THC,70318,8062,"Services-General Medical & Surgical Hospitals, NEC"
+TKO,1973266,7900,Services-Amusement & Recreation Services
+VOYA,1535929,6311,Life Insurance
+WAB,943452,3743,Railroad Equipment
+HL,719413,1400,Mining & Quarrying of  Nonmetallic Minerals (No Fuels)
+LINE,1868159,6798,Real Estate Investment Trusts
+SOHO,,,
+GPC,40987,5013,Wholesale-Motor Vehicle Supplies & New Parts
+CHUY,,,
+FWRG,1789940,5812,Retail-Eating  Places
+WNRP,,,
+CNS,1284812,6282,Investment Advice
+CRNX,,,
+ARMK,1584509,5812,Retail-Eating  Places
+AMTM,2011286,7389,"Services-Business Services, NEC"
+LSXMK SIRI,,,
+VNQI,,,
+TPYP,,,
+EMLP,,,
+WWSYX,,,
+IEI,,,
+TBLL,,,
+FTGC,,,
+EFC,1411342,6500,Real Estate
+EPAC,6955,3590,Misc Industrial & Commercial Machinery & Equipment
+GTES,1718512,3560,General Industrial Machinery & Equipment
+ICUI,883984,3841,Surgical & Medical Instruments & Apparatus
+TCBI,1077428,6022,State Commercial Banks
+LRN,1157408,8200,Services-Educational Services
+WY-Z,,,
+CSL,790051,3060,"Fabricated Rubber Products, NEC"
+LEG,,,
+LW,1679273,2030,"Canned, Frozen & Preservd Fruit, Veg & Food Specialties"
+IVZ,914208,6282,Investment Advice
+TRV,86312,6331,"Fire, Marine & Casualty Insurance"
+NGD,,,
+VSAT,797721,4899,"Communications Services, NEC"
+GEV,1996810,3600,Electronic & Other Electrical Equipment (No Computer Equip)
+HURA,1498382,2834,Pharmaceutical Preparations
+PCLPX,,,
+HIYS,,,
+APP,1751008,7370,"Services-Computer Programming, Data Processing, Etc."
+DJT,1849635,7370,"Services-Computer Programming, Data Processing, Etc."
+PDRDF,,,
+SNRE,,,
+VWO,,,
+AAXJ,,,
+IEFA,,,
+IEMG,,,
+EZU,,,
+MNDY,1845338,7372,Services-Prepackaged Software
+EQC,,,
+VNQ,,,
+CFSSX,,,
+GICIX,,,
+PDBC,,,
+EBS,1367644,2834,Pharmaceutical Preparations
+VRSN,1014473,7371,Services-Computer Programming Services
+CDRE,1860543,3842,"Orthopedic, Prosthetic & Surgical Appliances & Supplies"
+PGNY,1551306,8090,"Services-Misc Health & Allied Services, NEC"
+THR,,,
+ROL,84839,7340,Services-To Dwellings & Other Buildings
+TEM,1717115,7370,"Services-Computer Programming, Data Processing, Etc."
+VST,1692819,4911,Electric Services
+BEN,38777,6282,Investment Advice
+AHL-C,,,
+IBIT,1980994,6221,Commodity Contracts Brokers & Dealers
+PRMB,2042694,2080,Beverages
+MTZ,15615,1623,"Water, Sewer, Pipeline, Comm & Power Line Construction"
+CRDO,1807794,3674,Semiconductors & Related Devices
+AIT,109563,5080,"Wholesale-Machinery, Equipment & Supplies"
+NRG,1013871,4911,Electric Services
+RUM,1830081,7370,"Services-Computer Programming, Data Processing, Etc."
+GDDY,1609711,7373,Services-Computer Integrated Systems Design
+RLI,84246,6331,"Fire, Marine & Casualty Insurance"
+PAR,708821,3578,Calculating & Accounting Machines (No Electronic Computers)
+CNI,16868,4011,"Railroads, Line-Haul Operating"
+APG,1796209,7340,Services-To Dwellings & Other Buildings
+CACI,16058,7373,Services-Computer Integrated Systems Design
+XRAY,818479,3843,Dental Equipment & Supplies
+LNTH,1521036,2835,In Vitro & In Vivo Diagnostic Substances
+PCG,1004980,4931,Electric & Other Services Combined
+PLTR,1321655,7372,Services-Prepackaged Software
+TCTZF,,,
+SJM,91419,2033,"Canned, Fruits, Veg, Preserves, Jams & Jellies"
+ALE,,,
+JNPR,,,
+SMCI,1375365,3571,Electronic Computers
+AAON,824142,3585,Air-Cond & Warm Air Heatg Equip & Comm & Indl Refrig Equip
+ANSS,,,
+CLH,822818,4955,Hazardous Waste Management
+FIX,1035983,1731,Electrical Work
+DBX,1467623,7372,Services-Prepackaged Software
+IBP,1580905,1520,General Bldg Contractors - Residential Bldgs
+MANH,1056696,7372,Services-Prepackaged Software
+PSTG,,,
+HOOD,1783879,6211,"Security Brokers, Dealers & Flotation Companies"
+SAIA,1177702,4213,Trucking (No Local)
+WSC,1647088,7350,Services-Miscellaneous Equipment Rental & Leasing
+ZM,1585521,7370,"Services-Computer Programming, Data Processing, Etc."
+HOG,793952,3751,"Motorcycles, Bicycles & Parts"
+OKTA,1660134,7372,Services-Prepackaged Software
+CMPO,,,
+ORMP,1176309,2834,Pharmaceutical Preparations
+VAW,,,
+BRK,,,
+ARINA,,,
+BITB,1763415,6221,Commodity Contracts Brokers & Dealers
+XYZ,1512673,7372,Services-Prepackaged Software
+HURC,315374,3823,"Industrial Instruments For Measurement, Display, and Control"
+URNM,,,
+LITP,,,
+NET,1477333,7372,Services-Prepackaged Software
+PI,1114995,3679,"Electronic Components, NEC"
+ACGL,947484,6331,"Fire, Marine & Casualty Insurance"
+BC,14930,3510,Engines & Turbines
+EXPO,851520,8742,Services-Management Consulting Services
+BUSE,314489,6022,State Commercial Banks
+HOPE,1128361,6021,National Commercial Banks
+LEN,920760,1520,General Bldg Contractors - Residential Bldgs
+MSTR,1050446,6199,Finance Services
+MRP,2017206,6500,Real Estate
+NVT,1720635,3550,Special Industry Machinery (No Metalworking Machinery)
+PRI,1475922,6311,Life Insurance
+SNDK,2023554,3572,Computer Storage Devices
+ALAB,1736297,3674,Semiconductors & Related Devices
+RDDT,1713445,7374,Services-Computer Processing & Data Preparation
+SMCYY,,,
+DOX,1062579,7371,Services-Computer Programming Services
+BWA,908255,3714,Motor Vehicle Parts & Accessories
+HII,1501585,3730,Ship & Boat Building & Repairing
+MAGN,41719,2621,Paper Mills
+CNM,1856525,5099,"Wholesale-Durable Goods, NEC"
+CPAY,1175454,7389,"Services-Business Services, NEC"
+FBIN,1519751,2430,"Millwood, Veneer, Plywood, & Structural Wood Members"
+RVTY,31791,3826,Laboratory Analytical Instruments
+TPX,,,
+VIK,1745201,4400,Water Transportation
+BJ,1531152,5331,Retail-Variety Stores
+TECH,842023,2836,"Biological Products, (No Diagnostic Substances)"
+DAY,,,
+TTC,737758,3524,Lawn & Garden Tractors & Home Lawn & Gardens Equip
+ANCTF,,,
+BCLYF,312069,6029,"Commercial Banks, NEC"
+CNTY,911147,7011,Hotels & Motels
+GDEN,,,
+TNC,97134,3580,Refrigeration & Service Industry Machinery
+ARES,1176948,6282,Investment Advice
+HRI,1364479,7350,Services-Miscellaneous Equipment Rental & Leasing
+HIW,921082,6798,Real Estate Investment Trusts
+HNI,48287,2522,Office Furniture (No Wood)
+HOMB,1331520,6022,State Commercial Banks
+IDA,1057877,4911,Electric Services
+LAZ,1311370,6282,Investment Advice
+LGIH,1580670,1531,Operative Builders
+LFUS,889331,3613,Switchgear & Switchboard Apparatus
+UCB,857855,6022,State Commercial Banks
+VICR,751978,3679,"Electronic Components, NEC"
+WDC,106040,3572,Computer Storage Devices
+TW,1758730,6200,"Security & Commodity Brokers, Dealers, Exchanges & Services"
+SONO,1314727,3651,Household Audio & Video Equipment
+PRKS,1564902,7990,Services-Miscellaneous Amusement & Recreation
+ZOOM,,,
+BKR,1701605,3533,Oil & Gas Field Machinery & Equipment
+CNQ,1017413,1311,Crude Petroleum & Natural Gas
+CFRUY,,,
+MHVIY,,,
+SU,311337,2911,Petroleum Refining
+UNCRY,,,
+GIC,945114,5084,Wholesale-Industrial Machinery & Equipment
+INVA,1080014,2834,Pharmaceutical Preparations
+SDZNY,,,
+TBPH,,,
+BEEP,1847874,6500,Real Estate
+ALKT,1529274,7372,Services-Prepackaged Software
+ARIS,1964504,1040,Gold and Silver Ores
+BDRFF,,,
+CPRI,1530721,3100,Leather & Leather Products
+DXC,1688568,7374,Services-Computer Processing & Data Preparation
+RNMBF,,,
+SLAB,1038074,3674,Semiconductors & Related Devices
+SPHR,1795250,7900,Services-Amusement & Recreation Services
+ZION,109380,6021,National Commercial Banks
+FRO,913290,4412,Deep Sea Foreign Transportation of  Freight
+EXE,895126,1311,Crude Petroleum & Natural Gas
+EQT,33213,1311,Crude Petroleum & Natural Gas
+OMC,29989,7311,Services-Advertising Agencies
+TPL,1811074,6792,Oil Royalty Traders
+GEN,849399,7372,Services-Prepackaged Software
+LECO,59527,3540,Metalworkg Machinery & Equipment
+RGEN,730272,2836,"Biological Products, (No Diagnostic Substances)"
+BCPC,9326,2800,Chemicals & Allied Products
+CATY,861842,6022,State Commercial Banks
+PATK,76605,3714,Motor Vehicle Parts & Accessories
+BLBD,1589526,3713,Truck & Bus Bodies
+JBHT,728535,4213,Trucking (No Local)
+JBTM,1433660,3550,Special Industry Machinery (No Metalworking Machinery)
+PNR,77360,3550,Special Industry Machinery (No Metalworking Machinery)
+RS,861884,5051,Wholesale-Metals Service Centers & of fices
+SW,2005951,2650,Paperboard Containers & Boxes
+TXNM,1108426,4911,Electric Services
+HYG,,,
+COLPAL,,,
+USIG,,,
+ENGQF,,,
+NTDOF,,,
+RSNHF,1447391,,
+SEI,1697500,3533,Oil & Gas Field Machinery & Equipment
+SMFNF,1022837,6029,"Commercial Banks, NEC"
+LYB,1489393,2860,Industrial Organic Chemicals
+ONTO,704532,3829,"Measuring & Controlling Devices, NEC"
+AEO,919012,5651,Retail-Family Clothing Stores
+CWST,911177,4953,Refuse Systems
+CNO,1224608,6321,Accident & Health Insurance
+THG,944695,6331,"Fire, Marine & Casualty Insurance"
+OGE,1021635,4911,Electric Services
+RUSHB,1012019,5500,Retail-Auto Dealers & Gasoline Stations
+UVSP,102212,6022,State Commercial Banks
+ESTC,1707753,7372,Services-Prepackaged Software
+GWRE,1528396,7372,Services-Prepackaged Software
+LAZR,,,
+CRCL,1876042,6199,Finance Services
+TTAN,1638826,7372,Services-Prepackaged Software
+XIACF,1748830,,
+XONE,,,
+BSCV,,,
+FTRE,1965040,8071,Services-Medical Laboratories
+SFNC,90498,6021,National Commercial Banks
+SPB,109177,3690,"Miscellaneous Electrical Machinery, Equipment & Supplies"
+VTS,1944558,1311,Crude Petroleum & Natural Gas
+WTM,776867,6331,"Fire, Marine & Casualty Insurance"
+ANGO,1275187,3841,Surgical & Medical Instruments & Apparatus
+DNUT,1857154,5400,Retail-Food Stores
+ARM,1973239,3674,Semiconductors & Related Devices
+BMNR,1829311,6199,Finance Services
+IREN,1878848,6199,Finance Services
+SOUN,1840856,7372,Services-Prepackaged Software
+ETRN EQT,,,
+AMED,,,
+ATR,896622,3089,"Plastics Products, NEC"
+MT,1243429,3312,"Steel Works, Blast Furnaces & Rolling Mills (Coke Ovens)"
+AWI,7431,3089,"Plastics Products, NEC"
+ALV,1034670,3714,Motor Vehicle Parts & Accessories
+BKH,1130464,4911,Electric Services
+BCO,78890,4731,Arrangement of  Transportation of  Freight & Cargo
+BRKL,,,
+BF-B,14693,2080,Beverages
+CNH,1567094,3531,Construction Machinery & Equip
+CDP,860546,6798,Real Estate Investment Trusts
+CUZ,25232,6798,Real Estate Investment Trusts
+CW,26324,3590,Misc Industrial & Commercial Machinery & Equipment
+CYTK,1061983,2834,Pharmaceutical Preparations
+DKS,1089063,5940,Retail-Miscellaneous Shopping Goods Stores
+DLB,1308547,6794,Patent Owners & Lessors
+DUOL,1562088,7372,Services-Prepackaged Software
+EC,1444406,1311,Crude Petroleum & Natural Gas
+EIG,1379041,6331,"Fire, Marine & Casualty Insurance"
+EHC,785161,8060,Services-Hospitals
+EQH,1333986,6411,"Insurance Agents, Brokers & Service"
+ESNT,1448893,6351,Surety Insurance
+EG,1095073,6331,"Fire, Marine & Casualty Insurance"
+EVTC,1559865,7374,Services-Computer Processing & Data Preparation
+FFIN,36029,6022,State Commercial Banks
+FHB,36377,6022,State Commercial Banks
+FR,921825,6798,Real Estate Investment Trusts
+FBRT,1562528,6798,Real Estate Investment Trusts
+GME,1326380,5734,Retail-Computer & Computer Software Stores
+GATX,40211,4700,Transportation Services
+GNW,1276520,6311,Life Insurance
+GPI,1031203,5500,Retail-Auto Dealers & Gasoline Stations
+HPE,1645590,3570,Computer & office Equipment
+HTH,1265131,6022,State Commercial Banks
+H,1468174,7011,Hotels & Motels
+INGR,1046257,2040,Grain Mill Products
+LSTR,853816,4213,Trucking (No Local)
+LI,1791706,3711,Motor Vehicles & Passenger Car Bodies
+LXP,910108,6798,Real Estate Investment Trusts
+MMSI,856982,3841,Surgical & Medical Instruments & Apparatus
+MTG,876437,6351,Surety Insurance
+MORN,1289419,6282,Investment Advice
+FIZZ,69891,2086,Bottled & Canned Soft Drinks & Carbonated Waters
+NBIX,914475,2836,"Biological Products, (No Diagnostic Substances)"
+NYT,71691,2711,Newspapers: Publishing or  Publishing & Printing
+NJR,356309,4924,Natural Gas Distribution
+NOG,1104485,1311,Crude Petroleum & Natural Gas
+NWE,1993004,4931,Electric & Other Services Combined
+NCLH,1513761,4400,Water Transportation
+SMR,1822966,3443,Fabricated Plate Work (Boiler Shops)
+OVV,1792580,1311,Crude Petroleum & Natural Gas
+PDD,1737806,7389,"Services-Business Services, NEC"
+PEN,1321732,3841,Surgical & Medical Instruments & Apparatus
+PHI,78150,4813,Telephone Communications (No Radiotelephone)
+PFG,1126328,6321,Accident & Health Insurance
+PRGS,876167,7372,Services-Prepackaged Software
+ROIV,1635088,2834,Pharmaceutical Preparations
+SEE,,,
+SIGI,230557,6331,"Fire, Marine & Casualty Insurance"
+SGI,1206264,2510,Household Furniture
+SBSI,705432,6022,State Commercial Banks
+STWD,1465128,6798,Real Estate Investment Trusts
+TRGP,1389170,4922,Natural Gas Transmission
+TMHC,,,
+MIDD,769520,3580,Refrigeration & Service Industry Machinery
+TKR,98362,3562,Ball & Roller Bearings
+TNL,1361658,7011,Hotels & Motels
+TRN,99780,3743,Railroad Equipment
+TCOM,1269238,7389,"Services-Business Services, NEC"
+UTHR,1082554,2834,Pharmaceutical Preparations
+VRE,,,
+VNOM,2074176,1311,Crude Petroleum & Natural Gas
+WDFC,105132,2890,Miscellaneous Chemical Products
+WSFS,828944,6021,National Commercial Banks
+XPO,1166003,4700,Transportation Services
+BLDP,1453015,3620,Electrical Industrial Apparatus
+BE,1664703,3620,Electrical Industrial Apparatus
+CLNE,1368265,4932,Gas & Other Services Combined
+KPLT,1785424,7359,"Services-Equipment Rental & Leasing, NEC"
+PL,1836833,3663,Radio & Tv Broadcasting & Communications Equipment
+DSKYF,,,
+GPOR,874499,1311,Crude Petroleum & Natural Gas
+RAL,2041385,3823,"Industrial Instruments For Measurement, Display, and Control"
+SMEGF,1830056,,
+RARE,1515673,2834,Pharmaceutical Preparations
+ONON,1858985,3021,Rubber & Plastics Footwear
+KEX,56047,4400,Water Transportation
+APPL,,,
+OWL,1823945,6282,Investment Advice
+PAGP,1581990,4610,Pipe Lines (No Natural Gas)
+GAP,39911,5651,Retail-Family Clothing Stores
+ASTH,1083446,8742,Services-Management Consulting Services
+HY,1173514,3537,"Industrial Trucks, Tractors, Trailors & Stackers"
+PSKY,,,
+BBIO,1743881,2834,Pharmaceutical Preparations
+CHRW,1043277,4731,Arrangement of  Transportation of  Freight & Cargo
+CVLT,1169561,7372,Services-Prepackaged Software
+HESAF,,,
+LB,1995807,6792,Oil Royalty Traders
+MBFJF,67088,6029,"Commercial Banks, NEC"
+SMTC,88941,3674,Semiconductors & Related Devices
+STRC,1050446,6199,Finance Services
+CNSWF,,,
+CRWV,1769628,7372,Services-Prepackaged Software
+HRB,12659,7200,Services-Personal Services
+IMO,49938,2911,Petroleum Refining
+KNX,1492691,4213,Trucking (No Local)
+RRX,82811,3569,"General Industrial Machinery & Equipment, NEC"
+TYL,860731,7372,Services-Prepackaged Software
+VMC,1396009,1400,Mining & Quarrying of  Nonmetallic Minerals (No Fuels)
+ACIW,935036,7372,Services-Prepackaged Software
+BHLB,,,
+BBAI,1836981,7372,Services-Prepackaged Software
+BL,1666134,7372,Services-Prepackaged Software
+FLEX,866374,3672,Printed Circuit Boards
+FCN,887936,8742,Services-Management Consulting Services
+HIMS,1773751,8011,Services-Offices & Clinics of  Doctors of  Medicine
+CART,1579091,7389,"Services-Business Services, NEC"
+EMRZX,,,
+SLV,1330568,6221,Commodity Contracts Brokers & Dealers
+RNWGX,,,
+DOCS,1516513,7371,Services-Computer Programming Services
+IHF,,,
+AMX,1129137,4813,Telephone Communications (No Radiotelephone)
+AHCHY,,,
+ASMVY,,,
+BDORY,,,
+BBSEY,,,
+BDVSY,,,
+CX,1076378,3241,"Cement, Hydraulic"
+CICHY,,,
+CIHKY,,,
+EGIEY,,,
+GOFPY,,,
+HEGIY,,,
+HIMX,1342338,3674,Semiconductors & Related Devices
+KPCPY,,,
+KB,1445930,6029,"Commercial Banks, NEC"
+KCDMY,,,
+KT,892450,4813,Telephone Communications (No Radiotelephone)
+LNVGY,,,
+LTGHY,1569963,,
+MGYOY,,,
+NDBKY,,,
+PBR,1119639,1311,Crude Petroleum & Natural Gas
+PIAIF,,,
+PTAIY,,,
+PPERY,,,
+PUTKY,,,
+SLLDY,,,
+SHG,1263043,6021,National Commercial Banks
+SHTDY,,,
+SGBLY,,,
+TX,1342874,3312,"Steel Works, Blast Furnaces & Rolling Mills (Coke Ovens)"
+TCYMY,,,
+PETRY,,,
+VDMCY,,,
+AJINF,,,
+MHVYF,,,
+SARO,2025410,3724,Aircraft Engines & Engine Parts
+UNCFF,,,
+CLS,1030894,3672,Printed Circuit Boards
+FQVLF,,,
+SN,1957132,3630,Household Appliances
+TOL,794170,1531,Operative Builders
+PEBO,318300,6022,State Commercial Banks
+FNV,1456346,1040,Gold and Silver Ores
+XMEX,,,
+INPAP,51434,2621,Paper Mills
+CON,2014596,8093,"Services-Specialty Outpatient Facilities, NEC"
+MAN,871763,7363,Services-Help Supply Services
+MGPI,835011,5180,"Wholesale-Beer, Wine & Distilled Alcoholic Beverages"
+OPCH,1014739,8082,Services-Home Health Care Services
+GNPX,1595248,2834,Pharmaceutical Preparations
+EIPI,,,
+AVAV,1368622,3721,Aircraft
+BABAF,1577552,7389,"Services-Business Services, NEC"
+AZSEY,,,
+DBSDF,,,
+IBDSF,,,
+SBGSF,,,
+SKWD,1519449,6331,"Fire, Marine & Casualty Insurance"
+SATS,1920406,6199,Finance Services
+OSK,775158,3711,Motor Vehicles & Passenger Car Bodies
+OGN,1821825,2834,Pharmaceutical Preparations
+GH,1576280,8071,Services-Medical Laboratories
+VWUAX,,,
+VWUSX,,,
+CBRL,1067294,5812,Retail-Eating  Places
+Q,2058873,3674,Semiconductors & Related Devices
+SOLS,2064953,2800,Chemicals & Allied Products
+RNWAX,,,
+BYDDF,1445162,,
+CSW,1624794,2891,Adhesives & Sealants
+LGN,2052568,1700,Construction - Special Trade Contractors
+WBI,2064947,1389,"Oil & Gas Field Services, NEC"
+BSCP,,,
+BSCQ,,,
+ERIE,922621,6411,"Insurance Agents, Brokers & Service"
+AFG,1042046,6331,"Fire, Marine & Casualty Insurance"
+AZPN,,,
+AIZ,1267238,6399,"Insurance Carriers, NEC"
+DY,67215,1623,"Water, Sewer, Pipeline, Comm & Power Line Construction"
+GLOB,1557860,7374,Services-Computer Processing & Data Preparation
+DINO,1915657,4610,Pipe Lines (No Natural Gas)
+ICON,1995574,4412,Deep Sea Foreign Transportation of  Freight
+PVH,78239,2320,"Men's & Boys' Furnishgs, Work Clothg, & Allied Garments"
+UHID,,,
+UHS,352915,8062,"Services-General Medical & Surgical Hospitals, NEC"
+HCN,,,
+KRE,,,
+SPYM,,,
+RFI,891290,,
+CBSI,,,
+XLU,,,
+XLP,,,
+XLV,,,
+SNREY,,,
+ASHGY,,,
+SFL,1289877,4412,Deep Sea Foreign Transportation of  Freight
+VSNT,2067876,4833,Television Broadcasting Stations
+VSEC,102752,8711,Services-Engineering Services
+CRS,17843,3312,"Steel Works, Blast Furnaces & Rolling Mills (Coke Ovens)"
+AMKR,1047127,3674,Semiconductors & Related Devices
+FBK,1649749,6022,State Commercial Banks
+FINMF,,,
+LGND,886163,2834,Pharmaceutical Preparations
+PAAS,771992,1040,Gold and Silver Ores
+SHAK,1620533,5810,Retail-Eating & Drinking Places
+STLD,1022671,3312,"Steel Works, Blast Furnaces & Rolling Mills (Coke Ovens)"
+OTCM,,,
+SMPL,1702744,2000,Food and Kindred Products
+DBLEX,,,
+NTAP,1002047,3572,Computer Storage Devices
+EMB,,,
+XTWO,,,
+FSS,277509,3711,Motor Vehicles & Passenger Car Bodies
+FSV,1637810,6500,Real Estate
+MICC,2071668,2024,Ice Cream & Frozen Desserts
+DRS,1833756,3812,"Search, Detection, Navigation, Guidance, Aeronautical Sys"
+SPYB,,,
+MUA,901243,,
+SMA,1585389,6798,Real Estate Investment Trusts
+FOX,1754301,4833,Television Broadcasting Stations
+MIAX,1438472,6211,"Security Brokers, Dealers & Flotation Companies"
+IONQ,1824920,7373,Services-Computer Integrated Systems Design
+SNDA,1043000,8050,Services-Nursing & Personal Care Facilities
+UHALB,,,
+DMLP,1172358,1311,Crude Petroleum & Natural Gas
+KRP,1657788,1311,Crude Petroleum & Natural Gas
+VG,2007855,4924,Natural Gas Distribution
+PTA,1793882,,
+ENBP,1437479,6021,National Commercial Banks
+FULT,700564,6021,National Commercial Banks
+TCNNF,,,
+GIL,1061894,2300,Apparel & Other Finishd Prods of  Fabrics & Similar Matl
+LITE,1633978,3669,"Communications Equipment, NEC"
+NWS,1564708,2711,Newspapers: Publishing or  Publishing & Printing
+ST,1477294,3823,"Industrial Instruments For Measurement, Display, and Control"
+SNEJF,313838,3651,Household Audio & Video Equipment
+VOYG,1788060,3760,Guided Missiles & Space Vehicles & Parts
+SFGYY,2084022,,
+CODI,1345126,2510,Household Furniture
+FTAI,1590364,7350,Services-Miscellaneous Equipment Rental & Leasing
+IAG,1203464,1040,Gold and Silver Ores
+SOUHY,,,
+WTSHF,,,
+VLY,714310,6021,National Commercial Banks
+RYCEY,,,
+ETOR,1493318,6211,"Security Brokers, Dealers & Flotation Companies"
+REXR,1571283,6798,Real Estate Investment Trusts
+FSSL,2065812,,
+BNPQF,,,
+GEHCV,,,
+SFTBF,1065521,,
+THLEF,,,
+TOELF,,,
+BEP,1533232,4911,Electric Services
+XFIV,,,
+QNT,2110105,7373,Services-Computer Integrated Systems Design
+CECO,3197,3564,Industrial & Commercial Fans & Blowers & Air Purifing Equip
+SPCX,1181412,7370,"Services-Computer Programming, Data Processing, Etc."
+MTN,812011,7990,Services-Miscellaneous Amusement & Recreation
+IGV,,,
+HONAV,,,
+ESAB,1877322,3569,"General Industrial Machinery & Equipment, NEC"
+USOU,,,
+BG,1996862,2070,Fats & Oils
+TEVA,818686,2834,Pharmaceutical Preparations
+IX,1070304,6159,Miscellaneous Business Credit Institution
+NBIS,1513845,7370,"Services-Computer Programming, Data Processing, Etc."
+AER,1378789,7359,"Services-Equipment Rental & Leasing, NEC"
+ESLT,1027664,3728,"Aircraft Parts & Auxiliary Equipment, NEC"
+POOL,945841,5090,Wholesale-Misc Durable Goods
+MRSH,62709,6411,"Insurance Agents, Brokers & Service"
+FRT,34903,6798,Real Estate Investment Trusts
+ACM,868857,8711,Services-Engineering Services
+LTH,1869198,7997,Services-Membership Sports & Recreation Clubs
+MFP,2088281,3580,Refrigeration & Service Industry Machinery
+-- AMCR,,,
+GOOGM,1652044,7370,"Services-Computer Programming, Data Processing, Etc."
+GOOGN,1652044,7370,"Services-Computer Programming, Data Processing, Etc."
+SAIL,2030781,7372,Services-Prepackaged Software
+TOST,1650164,7374,Services-Computer Processing & Data Preparation
+MBGL,2090312,7389,"Services-Business Services, NEC"
+HONA,2089271,3724,Aircraft Engines & Engine Parts
+ALKS,1520262,2834,Pharmaceutical Preparations
+COMP,1563190,6531,Real Estate Agents & Managers (For Others)
+MSB,65172,6795,Mineral Royalty Traders
+PRAX,1689548,2834,Pharmaceutical Preparations
+ESE,866706,3669,"Communications Equipment, NEC"
+SIG,832988,5944,Retail-Jewelry Stores
+MOG-A,67887,3590,Misc Industrial & Commercial Machinery & Equipment
+SKHY,2120882,3674,Semiconductors & Related Devices
+AVUV,,,
+RA,1655099,,
+CXT,25445,3490,Miscellaneous Fabricated Metal Products
+ETV,1322436,,
+AIO,1778114,,
+BHE,863436,3672,Printed Circuit Boards
+OXM,75288,2320,"Men's & Boys' Furnishgs, Work Clothg, & Allied Garments"
+WUXIF,,,
+YETI,1670592,3949,"Sporting & Athletic Goods, NEC"
+NG,1173420,1040,Gold and Silver Ores
+OLN,74303,2800,Chemicals & Allied Products
+RIG,1451505,1381,Drilling Oil & Gas Wells
+NOKBF,924613,3663,Radio & Tv Broadcasting & Communications Equipment
+WSBC,203596,6021,National Commercial Banks
+STLN,1799191,8011,Services-Offices & Clinics of  Doctors of  Medicine
+MICR,,,
+MRAAF,1450468,,
