@@ -1,0 +1,6 @@
+__pycache__/
+.pytest_cache/
+*.tmp
+data/cache/*.yaml
+data/cache/sec_tickers.json
+data/cache/prices/
