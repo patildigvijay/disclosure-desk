@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Disclosure Desk</title>
+<meta name="description" content="What members of the US Congress own and trade, from their official disclosures. Free.">
+<style>
+:root {
+  /* Layout: Dataroma-style. White page, navy menu bar, boxed tables with grey title strips.
+     Home: members list on the left, stat boxes on the right. One light theme by design. */
+  --paper: #ffffff;
+  --ink: #1b1f24;
+  --muted: #5f6b7a;
+  --rule: #d5dce5;
+  --strip: #e9eff6;
+  --stripe: #f7f9fb;
+  --accent: #0b4ea2;
+  --bar: #1f3a5f;
+  --up: #1a7f37;
+  --down: #c62828;
+  --flag: #8a5a00;
+  --flag-bg: #fdf1d6;
+  --body: Verdana, Geneva, Tahoma, Arial, sans-serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { background: var(--paper); color: var(--ink); font: 12.5px/1.45 var(--body); }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+a:focus-visible, button:focus-visible, input:focus-visible, th:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.demo { background: var(--flag-bg); color: var(--flag); padding: 5px 16px; font-weight: bold; text-align: center; }
+.top { max-width: 1180px; margin: 0 auto; padding: 12px 16px 8px; display: flex; align-items: flex-end; gap: 16px; flex-wrap: wrap; }
+.brand { font: bold 24px/1 Georgia, "Times New Roman", serif; color: var(--bar); letter-spacing: 0.02em; }
+.brand:hover { text-decoration: none; }
+.tag { color: var(--muted); padding-bottom: 2px; }
+.navbar { background: var(--bar); }
+.navin { max-width: 1180px; margin: 0 auto; padding: 0 16px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+nav { display: flex; flex-wrap: wrap; flex: 1; }
+nav a { color: #fff; padding: 8px 12px; font-weight: bold; }
+nav a:hover { background: rgb(255 255 255 / 0.12); text-decoration: none; }
+nav a.on { background: #fff; color: var(--bar); }
+.search { position: relative; padding: 5px 0; }
+.search input { width: 220px; padding: 4px 8px; border: 1px solid #9fb0c6; font: inherit; }
+.search ul { position: absolute; right: 0; top: 100%; margin: 0; padding: 2px 0; list-style: none; width: 290px; background: #fff; border: 1px solid var(--rule); z-index: 5; box-shadow: 0 4px 12px rgb(0 0 0 / 0.15); }
+.search li a { display: block; padding: 5px 8px; color: var(--ink); }
+.search li a:hover, .search li a.hl { background: var(--strip); text-decoration: none; }
+.search li small { color: var(--muted); }
+
+main { max-width: 1180px; margin: 0 auto; padding: 12px 16px 30px; display: grid; gap: 12px; }
+h1 { font: bold 19px/1.25 var(--body); margin: 0; text-wrap: balance; }
+h2 { font: bold 12.5px/1.3 var(--body); text-wrap: balance; }
+.lede { color: var(--muted); margin: 3px 0 0; max-width: 90ch; }
+.panel { border: 1px solid var(--rule); padding: 8px 10px; min-width: 0; background: #fff; }
+.panel > h2 { margin: -8px -10px 6px; padding: 6px 10px; background: var(--strip); border-bottom: 1px solid var(--rule); }
+.bench { background: var(--stripe); border: 1px solid var(--rule); padding: 6px 10px; }
+.home { display: grid; grid-template-columns: minmax(0, 400px) minmax(0, 1fr); gap: 12px; align-items: start; }
+.blocks { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; align-items: start; }
+.wide { grid-column: 1 / -1; }
+@media (max-width: 1000px) { .home { grid-template-columns: 1fr; } }
+@media (max-width: 700px) { .blocks { grid-template-columns: 1fr; } .search, .search input { width: 100%; } }
+
+.stats { display: flex; flex-wrap: wrap; gap: 6px 22px; margin-top: 8px; }
+.stats div { display: grid; }
+.stats b { font-size: 16px; font-variant-numeric: tabular-nums; }
+.stats > div > span { color: var(--muted); font-size: 11.5px; }
+.tabs { display: flex; gap: 4px; margin: 2px 0 8px; }
+.tabs button { font: inherit; padding: 3px 10px; border: 1px solid var(--rule); background: #fff; color: var(--accent); cursor: pointer; }
+.tabs button[aria-pressed="true"] { background: var(--bar); border-color: var(--bar); color: #fff; }
+
+.scroll { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; }
+th, td { text-align: left; padding: 4px 6px; border-bottom: 1px solid #e6ebf1; vertical-align: top; }
+th { background: #f3f6f9; border-bottom: 1px solid var(--rule); font-weight: bold; white-space: nowrap; }
+th[data-i] { cursor: pointer; user-select: none; color: var(--accent); }
+th[aria-sort="ascending"]::after { content: " \25B2"; font-size: 8px; }
+th[aria-sort="descending"]::after { content: " \25BC"; font-size: 8px; }
+tbody tr:nth-child(even) { background: var(--stripe); }
+tbody tr:hover { background: #eef4fb; }
+.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.rank { color: var(--muted); width: 2.2em; }
+.date { font-variant-numeric: tabular-nums; white-space: nowrap; color: var(--muted); }
+.co { color: var(--muted); margin-left: 5px; }
+.tk { font-weight: bold; }
+.up { color: var(--up); } .down { color: var(--down); }
+.act { font-weight: bold; }
+.act.Buy, .act.Add { color: var(--up); } .act.Sell, .act.Reduce { color: var(--down); }
+.chip { display: inline-block; padding: 0 5px; font-size: 11px; border: 1px solid var(--rule); color: var(--muted); white-space: nowrap; }
+.chip.flag, .chip.late { background: var(--flag-bg); color: var(--flag); border-color: #f0d9a4; }
+.pty { font-size: 10.5px; font-weight: bold; padding: 0 3px; border: 1px solid currentColor; margin-left: 5px; white-space: nowrap; }
+.pty.R { color: #b0413e; } .pty.D { color: #2f5fb3; } .pty.I { color: var(--muted); }
+.who { white-space: nowrap; }
+.muted { color: var(--muted); }
+.more { margin-top: 4px; background: none; border: 0; padding: 3px 0; color: var(--accent); font: bold 12px var(--body); cursor: pointer; }
+.note { color: var(--muted); font-size: 11.5px; margin: 6px 0 0; }
+.meta { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 6px; }
+.prose { max-width: 80ch; }
+.prose p, .prose li { margin: 0 0 7px; }
+.prose h2 { margin: 10px 0 4px; }
+footer { max-width: 1180px; margin: 0 auto; padding: 8px 16px 24px; color: var(--muted); font-size: 11.5px; border-top: 1px solid var(--rule); }
+.empty { color: var(--muted); padding: 8px 0; margin: 0; }
+</style>
+</head>
+<body>
+<div id="demo" class="demo" hidden>DEMO DATA: fictional members, trades and prices, for layout only</div>
+<header>
+  <div class="top">
+    <a class="brand" href="#home">DISCLOSURE DESK</a>
+    <span class="tag">What Congress owns and trades, from official filings</span>
+  </div>
+  <div class="navbar"><div class="navin">
+    <nav id="nav">
+      <a href="#home">Home</a>
+      <a href="#members">Members</a>
+      <a href="#activity">Activity</a>
+      <a href="#grand">Grand portfolio</a>
+      <a href="#late">Late filers</a>
+      <a href="#method">Method</a>
+    </nav>
+    <div class="search">
+      <label for="q" hidden>Search a member or ticker</label>
+      <input id="q" type="search" placeholder="Member or ticker" autocomplete="off">
+      <ul id="sugg" hidden></ul>
+    </div>
+  </div></div>
+</header>
+<main id="app"><p class="empty">Loading filings...</p></main>
+<footer id="foot"></footer>
+
+<script>
+"use strict";
+const S = { trades: [], members: new Map(), ports: new Map(), holds: [], committees: [], meta: {}, asOf: "", demo: false, perf: false, chamber: "All" };
+const TABLES = {};
+
+/* ---------- data ---------- */
+function parseCSV(text) {
+  const rows = []; let row = [], f = "", q = false;
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i];
+    if (q) { if (c === '"') { if (text[i + 1] === '"') { f += '"'; i++; } else q = false; } else f += c; }
+    else if (c === '"') q = true;
+    else if (c === ",") { row.push(f); f = ""; }
+    else if (c === "\n") { row.push(f); rows.push(row); row = []; f = ""; }
+    else if (c !== "\r") f += c;
+  }
+  if (f !== "" || row.length) { row.push(f); rows.push(row); }
+  const head = rows.shift() || [];
+  return rows.filter(r => r.length > 1 || r[0] !== "").map(r => Object.fromEntries(head.map((h, i) => [h, r[i] ?? ""])));
+}
+
+async function load() {
+  const emb = document.getElementById("embedded-data");
+  let raw;
+  if (emb) { raw = JSON.parse(emb.textContent); S.demo = !!raw.demo; }
+  else {
+    const get = u => fetch(u, { cache: "no-cache" }).then(r => (r.ok ? r.text() : ""));
+    const names = ["trades", "members", "holdings", "portfolios", "committee_sectors"];
+    const urls = ["data/trades.csv", "data/members.csv", "data/holdings.csv", "data/portfolios.csv", "config/committee_sectors.csv"];
+    const texts = await Promise.all(urls.map(get));
+    raw = Object.fromEntries(names.map((n, i) => [n, texts[i]]));
+    raw.meta = await fetch("data/meta.json", { cache: "no-cache" }).then(r => (r.ok ? r.json() : {})).catch(() => ({}));
+  }
+  for (const m of parseCSV(raw.members || "")) S.members.set(m.bioguide, m);
+  S.committees = parseCSV(raw.committee_sectors || "");
+  S.trades = parseCSV(raw.trades || "").filter(t => t.status === "ok").map(normTrade);
+  S.trades.sort((a, b) => b.filing_date.localeCompare(a.filing_date) || a.trade_id.localeCompare(b.trade_id));
+  S.asOf = S.trades.reduce((m, t) => (t.filing_date > m ? t.filing_date : m), "");
+  S.holds = parseCSV(raw.holdings || "").map(h => ({ ...h, value: +h.est_value || 0, weight: +h.weight || 0, tkey: tkey(h.ticker), overlap: h.overlap === "True" }));
+  for (const p of parseCSV(raw.portfolios || "")) {
+    for (const k of ["holdings", "est_value", "top10_weight", "trades", "return_12m", "spy_12m", "excess_12m", "copy_return_12m", "copy_spy_12m", "buys_12m"])
+      p[k] = p[k] === "" || p[k] == null ? null : +p[k];
+    S.ports.set(p.member_key, p);
+  }
+  S.perf = [...S.ports.values()].some(p => p.return_12m != null);
+  S.meta = raw.meta || {};
+}
+
+function normTrade(t) {
+  t.min = Number(t.amount_min) || 0;
+  t.max = t.amount_max ? Number(t.amount_max) : null;
+  t.mid = t.max == null ? t.min : (t.min + t.max) / 2;
+  t.overlap = t.overlap === "True";
+  t.late = t.late === "True";
+  t.lag = t.filing_lag_days === "" ? null : Number(t.filing_lag_days);
+  t.key = t.bioguide || "x-" + slug(t.filer_name);
+  t.tkey = tkey(t.ticker);
+  t.buy = t.tx_type === "Purchase";
+  t.sell = t.tx_type.startsWith("Sale");
+  return t;
+}
+
+/* ---------- formatting ---------- */
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const slug = s => String(s || "").toLowerCase().normalize("NFKD").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+const tkey = s => String(s || "").toUpperCase().replace(/[^A-Z0-9]/g, "-");
+const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+const fdate = d => (d ? `${MONTHS[+d.slice(5, 7) - 1]} ${+d.slice(8, 10)}, ${d.slice(0, 4)}` : "");
+const short$ = n => (n >= 1e6 ? `$${+(n / 1e6).toFixed(n % 1e6 ? 1 : 0)}M` : n >= 1e3 ? `$${Math.round(n / 1e3)}K` : `$${n}`);
+const money = n => (n >= 1e9 ? `$${(n / 1e9).toFixed(1)}B` : n >= 1e6 ? `$${(n / 1e6).toFixed(1)}M` : n >= 1e3 ? `$${Math.round(n / 1e3)}K` : `$${Math.round(n || 0)}`);
+const amt = t => (!t.min ? "&mdash;" : t.max == null ? `Over ${short$(t.min - 1)}` : t.max === t.min ? short$(t.min) : `${short$(t.min)}&ndash;${short$(t.max)}`);
+const pct1 = n => (n == null ? "&mdash;" : `${n.toFixed(1)}%`);
+const signed = n => (n == null ? "&mdash;" : `<span class="${n >= 0 ? "up" : "down"}">${n > 0 ? "+" : ""}${n.toFixed(1)}%</span>`);
+const partyLetter = p => (String(p).startsWith("Rep") ? "R" : String(p).startsWith("Dem") ? "D" : p ? "I" : "");
+function seat(m) {
+  const d = m.chamber === "House" && m.district !== "" && m.district != null ? "-" + String(m.district).padStart(2, "0") : "";
+  return `${partyLetter(m.party || "")}-${m.state || ""}${d}`;
+}
+const INFO = new Map(), FIRST = new Map(), COMPANY = new Map();
+function info(key) {
+  if (INFO.has(key)) return INFO.get(key);
+  if (!FIRST.size) for (const t of S.trades) if (!FIRST.has(t.key)) FIRST.set(t.key, t);
+  const p = S.ports.get(key) || {};
+  const t = FIRST.get(key) || {};
+  const m = S.members.get(p.bioguide || t.bioguide || key) || {};
+  INFO.set(key, {
+    key, name: m.name || p.name || t.filer_name || key, party: m.party || p.party || t.party || "",
+    state: m.state || p.state || t.state || "", chamber: m.chamber || p.chamber || t.chamber || "",
+    district: m.district ?? p.district ?? t.district ?? "", committees: m.committees || "", leadership: m.leadership || "",
+  });
+  return INFO.get(key);
+}
+function who(key) {
+  const i = info(key);
+  return `<span class="who"><a href="#member-${esc(key)}">${esc(i.name)}</a><span class="pty ${partyLetter(i.party)}">${esc(seat(i))}</span></span>`;
+}
+function companyOf(k) {
+  if (!COMPANY.size) { for (const t of S.trades) if (t.ticker && !COMPANY.has(t.tkey)) COMPANY.set(t.tkey, t.asset_name); for (const h of S.holds) COMPANY.set(h.tkey, h.asset_name); }
+  return COMPANY.get(k) || "";
+}
+const stock = (k, ticker) => `<a class="tk" href="#stock-${esc(k)}">${esc(ticker)}</a><span class="co">${esc(companyOf(k))}</span>`;
+function txLabel(t) {
+  const label = t.buy ? "Buy" : t.tx_type === "Sale (Partial)" ? "Reduce" : t.sell ? "Sell" : t.tx_type;
+  return `<span class="act ${label}">${esc(label)}</span>`;
+}
+const parseHeld = s => String(s || "").split(";").filter(Boolean).map(x => { const [o, w] = x.split("="); return [o, +w]; });
+const heldBy = s => parseHeld(s).map(([o, w]) => (w === 100 ? esc(o) : `${esc(o)} ${w}%`)).join(", ");
+const lag = t => (t.lag == null ? "&mdash;" : t.late ? `<span class="chip late" title="Filed more than 45 days after the trade">${t.lag} d</span>` : `${t.lag} d`);
+const src = t => (t.source_url ? `<a href="${esc(t.source_url)}" target="_blank" rel="noopener">Filing</a>` : "");
+
+/* ---------- tables: sortable, with "show more" ---------- */
+let seq = 0;
+function table(cols, rows, opt = {}) {
+  const id = "t" + ++seq;
+  TABLES[id] = { cols, rows, sort: opt.sort ?? -1, dir: opt.dir || "descending", show: opt.show || 0, sortable: opt.sortable !== false };
+  const head = cols.map((c, i) => `<th class="${c.cls || ""}" ${TABLES[id].sortable && c.v ? `data-i="${i}" tabindex="0"` : ""} ${i === TABLES[id].sort ? `aria-sort="${TABLES[id].dir}"` : ""}>${c.label}</th>`).join("");
+  const more = TABLES[id].show && rows.length > TABLES[id].show
+    ? `<button class="more" data-more="${id}" aria-expanded="false">Show ${Math.min(rows.length, opt.max || rows.length) - TABLES[id].show} more &#9662;</button>` : "";
+  TABLES[id].max = opt.max || rows.length;
+  return rows.length
+    ? `<div class="scroll"><table id="${id}"><thead><tr>${head}</tr></thead><tbody>${body(id)}</tbody></table></div>${more}`
+    : `<p class="empty">${opt.empty || "Nothing to show yet."}</p>`;
+}
+function body(id) {
+  const T = TABLES[id];
+  let rows = T.rows;
+  if (T.sort >= 0) {
+    const v = T.cols[T.sort].v, k = T.dir === "ascending" ? 1 : -1;
+    rows = [...rows].sort((a, b) => { const x = v(a), y = v(b); return (x > y ? 1 : x < y ? -1 : 0) * k; });
+  }
+  return rows.slice(0, T.open || !T.show ? T.max || rows.length : T.show).map((r, n) =>
+    `<tr>${T.cols.map(c => `<td class="${c.cls || ""}">${c.html ? c.html(r, n) : esc(c.v(r))}</td>`).join("")}</tr>`).join("");
+}
+document.addEventListener("click", e => {
+  const th = e.target.closest("th[data-i]");
+  if (th) return sortBy(th);
+  const b = e.target.closest("button[data-more]");
+  if (b) {
+    const T = TABLES[b.dataset.more]; T.open = !T.open;
+    document.getElementById(b.dataset.more).tBodies[0].innerHTML = body(b.dataset.more);
+    b.setAttribute("aria-expanded", T.open);
+    b.innerHTML = T.open ? "Show less &#9652;" : `Show ${Math.min(T.rows.length, T.max) - T.show} more &#9662;`;
+  }
+});
+document.addEventListener("keydown", e => { const th = e.target.closest && e.target.closest("th[data-i]"); if (th && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); sortBy(th); } });
+function sortBy(th) {
+  const t = th.closest("table"), T = TABLES[t.id], i = +th.dataset.i;
+  T.dir = T.sort === i && T.dir === "descending" ? "ascending" : "descending";
+  T.sort = i;
+  t.querySelectorAll("th").forEach(h => h.removeAttribute("aria-sort"));
+  th.setAttribute("aria-sort", T.dir);
+  t.tBodies[0].innerHTML = body(t.id);
+}
+
+/* ---------- aggregates ---------- */
+function within(days) {
+  if (!S.asOf) return [];
+  const cut = new Date(S.asOf); cut.setDate(cut.getDate() - days);
+  const c = cut.toISOString().slice(0, 10);
+  return S.trades.filter(t => t.filing_date > c);
+}
+function byStock(holds) {
+  const g = new Map();
+  for (const h of holds) {
+    if (!g.has(h.tkey)) g.set(h.tkey, { tkey: h.tkey, ticker: h.ticker, sector: h.sector, owners: 0, value: 0, sumW: 0, maxW: 0 });
+    const s = g.get(h.tkey); s.owners++; s.value += h.value; s.sumW += h.weight; s.maxW = Math.max(s.maxW, h.weight);
+  }
+  return [...g.values()];
+}
+function flows(trades, pick) {
+  const g = new Map();
+  for (const t of trades.filter(pick).filter(t => t.ticker)) {
+    if (!g.has(t.tkey)) g.set(t.tkey, { tkey: t.tkey, ticker: t.ticker, members: new Set(), n: 0, value: 0 });
+    const s = g.get(t.tkey); s.members.add(t.key); s.n++; s.value += t.mid;
+  }
+  return [...g.values()].map(s => ({ ...s, people: s.members.size })).sort((a, b) => b.people - a.people || b.value - a.value);
+}
+const ranked = () => [...S.ports.values()].filter(p => p.return_12m != null).sort((a, b) => b.return_12m - a.return_12m);
+
+/* ---------- column helpers ---------- */
+const colStock = { label: "Stock", v: s => s.ticker, html: s => stock(s.tkey, s.ticker) };
+const colRank = { label: "#", cls: "rank", html: (_, n) => n + 1 };
+
+/* ---------- pages ---------- */
+function pageHome() {
+  const all = byStock(S.holds), m90 = within(90);
+  const left = S.perf
+    ? `<h2>Best performers, last 12 months</h2>${table([
+        colRank,
+        { label: "Member", v: p => p.name, html: p => who(p.member_key) },
+        { label: "Return", cls: "num", v: p => p.return_12m, html: p => signed(p.return_12m) },
+        { label: "vs S&amp;P (same dates)", cls: "num", v: p => p.excess_12m, html: p => signed(p.excess_12m) },
+      ], ranked(), { show: 25, sortable: false })}
+      <p class="note">Estimated return on stocks they bought in the last 12 months, from the trade date. <a href="#method">How it's worked out</a>.</p>`
+    : `<h2>Members with disclosed trades</h2>${table([
+        { label: "Member", v: p => p.name, html: p => who(p.member_key) },
+        { label: "Stocks", cls: "num", v: p => p.holdings },
+        { label: "Updated", cls: "date", v: p => p.last_filed, html: p => fdate(p.last_filed) },
+      ], [...S.ports.values()].sort((a, b) => b.last_filed.localeCompare(a.last_filed)), { show: 25, sortable: false })}
+      <p class="note">Performance rankings appear once a licensed price feed is connected.</p>`;
+  const block = (title, cols, rows, show = 10, max = 50, cls = "") => `<div class="panel ${cls}"><h2>${title}</h2>${table(cols, rows, { show, max, sortable: false })}</div>`;
+  return `
+  <section><h1>What Congress owns and trades</h1>
+    <p class="lede">Estimated portfolios of members of Congress and their families, built from the trades they disclose under the STOCK Act. Data as of ${fdate(S.asOf) || "&mdash;"}.</p></section>
+  ${S.meta.spy_12m != null ? `<div class="bench">S&amp;P 500, last 12 months: <b>${signed(S.meta.spy_12m)}</b> <span class="muted">&middot; Each member's "vs S&amp;P" compares their buys with the S&amp;P over the same dates. <a href="#method">Why</a></span></div>` : ""}
+  <section class="home">
+    <div class="panel">${left}</div>
+    <div class="blocks">
+      ${block("Top 10 most owned stocks", [colRank, colStock, { label: "Owners", cls: "num", v: s => s.owners }],
+        [...all].sort((a, b) => b.owners - a.owners || b.value - a.value))}
+      ${block("Top 10 stocks by %", [colRank, colStock, { label: "Owners", cls: "num", v: s => s.owners },
+          { label: "Avg %", cls: "num", v: s => s.sumW / s.owners, html: s => pct1(s.sumW / s.owners) }],
+        [...all].sort((a, b) => b.sumW - a.sumW))}
+      ${block("Top big bets <span class=\"muted\">(owned by 2+ members)</span>", [colStock,
+          { label: "Max %", cls: "num", v: s => s.maxW, html: s => pct1(s.maxW) },
+          { label: "Owners", cls: "num", v: s => s.owners }],
+        all.filter(s => s.owners >= 2).sort((a, b) => b.maxW - a.maxW))}
+      ${block("Top 10 buys, last 90 days", [colRank, colStock,
+          { label: "Buyers", cls: "num", v: s => s.people },
+          { label: "Est. $", cls: "num", v: s => s.value, html: s => money(s.value) }],
+        flows(m90, t => t.buy))}
+      ${block("Top 10 sells, last 90 days", [colRank, colStock,
+          { label: "Sellers", cls: "num", v: s => s.people },
+          { label: "Est. $", cls: "num", v: s => s.value, html: s => money(s.value) }],
+        flows(m90, t => t.sell))}
+      ${block("Latest filings", [
+          { label: "Filed", cls: "date", v: t => t.filing_date, html: t => fdate(t.filing_date) },
+          { label: "Member", v: t => t.filer_name, html: t => who(t.key) },
+          { label: "", html: txLabel }, { label: "Stock", html: t => (t.ticker ? `<a class="tk" href="#stock-${esc(t.tkey)}">${esc(t.ticker)}</a>` : esc(t.asset_name)) },
+          { label: "Amount", cls: "num", html: amt }],
+        S.trades, 10, 40, "wide")}
+    </div>
+  </section>`;
+}
+
+function pageMember(key) {
+  const p = S.ports.get(key), trades = S.trades.filter(t => t.key === key);
+  if (!p && !trades.length && !S.members.has(key)) return notFound("No member found.");
+  const i = info(key), holds = S.holds.filter(h => h.member_key === key).sort((a, b) => b.weight - a.weight);
+  const roles = i.leadership.split("; ").filter(Boolean);
+  const first = trades.reduce((m, t) => (!m || t.tx_date < m ? t.tx_date : m), "");
+  const stat = (v, l) => `<div><b>${v}</b><span>${l}</span></div>`;
+  const split = {}, total = holds.reduce((s, h) => s + h.value, 0);
+  for (const h of holds) for (const [o, w] of parseHeld(h.held_by)) split[o] = (split[o] || 0) + h.value * w / 100;
+  const splitText = Object.entries(split).sort((a, b) => b[1] - a[1]).map(([o, v]) => `${esc(o)} ${Math.round((100 * v) / total)}%`).join(" &middot; ");
+  const header = `<section class="panel">
+    <h1>${esc(i.name)}<span class="pty ${partyLetter(i.party)}">${esc(seat(i))}</span></h1>
+    <p class="lede">${esc(i.chamber)}${i.committees ? " · " + esc(i.committees) : ""}</p>
+    ${roles.length ? `<div class="meta">${roles.map(r => `<span class="chip">${esc(r)}</span>`).join("")}</div>` : ""}
+    <div class="stats">
+      ${stat(holds.length, "Stocks held")}
+      ${stat(money(holds.reduce((s, h) => s + h.value, 0)), "Est. portfolio")}
+      ${stat(pct1(holds.slice(0, 10).reduce((s, h) => s + h.weight, 0)), "In top 10")}
+      ${p && p.return_12m != null ? stat(signed(p.return_12m), "12-month return") : ""}
+      ${p && p.return_12m != null ? stat(signed(p.excess_12m), `vs S&amp;P (same dates: ${p.spy_12m > 0 ? "+" : ""}${p.spy_12m}%)`) : ""}
+      ${p && p.copy_return_12m != null ? stat(signed(p.copy_return_12m), "If copied on filing date") : ""}
+      ${stat(trades.length, "Disclosed trades")}
+    </div>
+    ${splitText ? `<p class="note">Held by: ${splitText}. Spouse and dependent-child trades are reported in the member's own filings and counted here.</p>` : ""}</section>`;
+  if (!trades.length) return header + `<section class="panel"><p class="empty">No stock trades disclosed by this member or their family in our data.</p></section>`;
+  return header + `
+  <section class="panel"><h2>Portfolio</h2>${table([
+      colStock,
+      { label: "% of portfolio", cls: "num", v: h => h.weight, html: h => pct1(h.weight) },
+      { label: "Held by", v: h => h.held_by, html: h => heldBy(h.held_by) },
+      { label: "Recent activity", v: h => h.last_tx, html: h => `<span class="act ${esc(h.last_action)}">${esc(h.last_action)}</span> <span class="date">${fdate(h.last_tx)}</span>` },
+      { label: "Est. value", cls: "num", v: h => h.value, html: h => money(h.value) },
+      { label: "Sector", v: h => h.sector || "" },
+      { label: "Committee overlap", v: h => (h.overlap ? 1 : 0), html: h => (h.overlap ? `<span class="chip flag" title="${esc(h.overlap_committees)}">Overlap</span>` : "") },
+    ], holds, { sort: 1, empty: "No current stock positions in the disclosed trades." })}
+    <p class="note">Estimated from disclosed stock trades${first ? " since " + fdate(first) : ""}. Share counts are not disclosed; values use the midpoint of each reported range${holds[0] && holds[0].valued_at !== "cost" ? ", valued at the latest close" : ", at cost"}. Holdings bought before then and never traded do not show.</p></section>
+  <section class="panel"><h2>Trade history</h2>${table([
+      { label: "Filed", cls: "date", v: t => t.filing_date, html: t => fdate(t.filing_date) },
+      { label: "Traded", cls: "date", v: t => t.tx_date, html: t => fdate(t.tx_date) },
+      { label: "", html: txLabel },
+      { label: "Stock", v: t => t.ticker || t.asset_name, html: t => (t.ticker ? stock(t.tkey, t.ticker) : esc(t.asset_name)) },
+      { label: "Owner", v: t => t.owner },
+      { label: "Amount", cls: "num", v: t => t.mid, html: amt },
+      { label: "Days to file", cls: "num", v: t => t.lag ?? -1, html: lag },
+      { label: "Source", html: src },
+    ], trades, { show: 25 })}</section>`;
+}
+
+function pageStock(k) {
+  const holds = S.holds.filter(h => h.tkey === k).sort((a, b) => b.weight - a.weight);
+  const trades = S.trades.filter(t => t.tkey === k);
+  if (!holds.length && !trades.length) return notFound("No disclosures found for this ticker.");
+  const ticker = (holds[0] || trades[0]).ticker, sector = (holds[0] || trades[0]).sector;
+  return `<section class="panel"><h1><span class="tk">${esc(ticker)}</span> ${esc(companyOf(k))}</h1>
+    <p class="lede">${esc(sector || "Sector not classified")}</p>
+    <div class="stats"><div><b>${holds.length}</b><span>Members holding</span></div>
+      <div><b>${money(holds.reduce((s, h) => s + h.value, 0))}</b><span>Combined est. value</span></div>
+      <div><b>${trades.filter(t => t.buy).length} / ${trades.filter(t => t.sell).length}</b><span>Buys / sells disclosed</span></div></div></section>
+  <section class="panel"><h2>Who owns it</h2>${table([
+      { label: "Member", v: h => info(h.member_key).name, html: h => who(h.member_key) },
+      { label: "% of their portfolio", cls: "num", v: h => h.weight, html: h => pct1(h.weight) },
+      { label: "Recent activity", v: h => h.last_tx, html: h => `<span class="act ${esc(h.last_action)}">${esc(h.last_action)}</span> <span class="date">${fdate(h.last_tx)}</span>` },
+      { label: "Est. value", cls: "num", v: h => h.value, html: h => money(h.value) },
+    ], holds, { sort: 1, empty: "No member currently holds it in the disclosed trades." })}</section>
+  <section class="panel"><h2>Trades</h2>${table([
+      { label: "Filed", cls: "date", v: t => t.filing_date, html: t => fdate(t.filing_date) },
+      { label: "Member", v: t => t.filer_name, html: t => who(t.key) },
+      { label: "", html: txLabel },
+      { label: "Amount", cls: "num", v: t => t.mid, html: amt },
+      { label: "Traded", cls: "date", v: t => t.tx_date, html: t => fdate(t.tx_date) },
+      { label: "Source", html: src },
+    ], trades, { show: 25 })}</section>`;
+}
+
+function pageMembers() {
+  const keys = new Set([...S.members.keys(), ...S.ports.keys()]);
+  const rows = [...keys].map(k => {
+    const p = S.ports.get(k) || {}, i = info(k);
+    return { key: k, name: i.name, chamber: i.chamber, state: i.state, holdings: p.holdings ?? 0, est: p.est_value ?? 0,
+             ret: p.return_12m ?? null, ex: p.excess_12m ?? null, copy: p.copy_return_12m ?? null, trades: p.trades ?? 0, last: p.last_filed || "" };
+  }).filter(r => S.chamber === "All" || r.chamber === S.chamber);
+  const perfCols = S.perf ? [
+    { label: "12-month return", cls: "num", v: r => r.ret ?? -1e9, html: r => signed(r.ret) },
+    { label: "vs S&amp;P (same dates)", cls: "num", v: r => r.ex ?? -1e9, html: r => signed(r.ex) },
+    { label: "Copied on filing", cls: "num", v: r => r.copy ?? -1e9, html: r => signed(r.copy) },
+  ] : [];
+  const tab = c => `<button type="button" data-chamber="${c}" aria-pressed="${S.chamber === c}">${c}</button>`;
+  return `<section><h1>Members of Congress</h1><p class="lede">${rows.length} members${S.chamber === "All" ? " of the House and Senate" : " of the " + S.chamber}, with their spouse and dependent children's trades counted under their name. Click a column to sort.</p></section>
+  <div class="tabs">${["All", "House", "Senate"].map(tab).join("")}</div>
+  <section class="panel">${table([
+    { label: "Member", v: r => r.name, html: r => who(r.key) },
+    { label: "Chamber", v: r => r.chamber },
+    { label: "Stocks held", cls: "num", v: r => r.holdings, html: r => (r.trades ? r.holdings : "&mdash;") },
+    { label: "Est. portfolio", cls: "num", v: r => r.est, html: r => (r.trades ? money(r.est) : "&mdash;") },
+    ...perfCols,
+    { label: "Trades", cls: "num", v: r => r.trades },
+    { label: "Last filed", cls: "date", v: r => r.last, html: r => fdate(r.last) },
+  ], rows, { sort: 3, show: 100 })}</section>`;
+}
+document.addEventListener("click", e => {
+  const b = e.target.closest("button[data-chamber]");
+  if (b) { S.chamber = b.dataset.chamber; route(); }
+});
+
+function pageActivity() {
+  return `<section><h1>Activity</h1><p class="lede">Every disclosed trade, newest filing first.</p></section>
+  <section class="panel">${table([
+    { label: "Filed", cls: "date", v: t => t.filing_date, html: t => fdate(t.filing_date) },
+    { label: "Member", v: t => t.filer_name, html: t => who(t.key) },
+    { label: "", v: t => t.tx_type, html: txLabel },
+    { label: "Stock", v: t => t.ticker || t.asset_name, html: t => (t.ticker ? stock(t.tkey, t.ticker) : esc(t.asset_name)) },
+    { label: "Owner", v: t => t.owner },
+    { label: "Amount", cls: "num", v: t => t.mid, html: amt },
+    { label: "Traded", cls: "date", v: t => t.tx_date, html: t => fdate(t.tx_date) },
+    { label: "Days to file", cls: "num", v: t => t.lag ?? -1, html: lag },
+    { label: "Source", html: src },
+  ], S.trades, { show: 100, max: 2000 })}
+  <p class="note">Showing up to 2,000 trades here; every trade is on its member's page.</p></section>`;
+}
+
+function pageGrand() {
+  const all = byStock(S.holds), total = all.reduce((s, x) => s + x.value, 0), m90 = within(90);
+  const b = new Map(flows(m90, t => t.buy).map(s => [s.tkey, s.people])), sl = new Map(flows(m90, t => t.sell).map(s => [s.tkey, s.people]));
+  return `<section><h1>Grand portfolio</h1><p class="lede">Every stock held across all members' estimated portfolios combined.</p></section>
+  <section class="panel">${table([
+    colStock,
+    { label: "Sector", v: s => s.sector || "" },
+    { label: "Owners", cls: "num", v: s => s.owners },
+    { label: "Combined est. value", cls: "num", v: s => s.value, html: s => money(s.value) },
+    { label: "% of all", cls: "num", v: s => s.value, html: s => pct1(total ? (100 * s.value) / total : 0) },
+    { label: "Buyers, 90 d", cls: "num", v: s => b.get(s.tkey) || 0 },
+    { label: "Sellers, 90 d", cls: "num", v: s => sl.get(s.tkey) || 0 },
+  ], all, { sort: 2, show: 100 })}</section>`;
+}
+
+function pageLate() {
+  const late = S.trades.filter(t => t.late);
+  const g = new Map();
+  for (const t of S.trades) { if (!g.has(t.key)) g.set(t.key, { key: t.key, n: 0, late: 0, max: 0 }); const s = g.get(t.key); s.n++; if (t.late) { s.late++; s.max = Math.max(s.max, t.lag); } }
+  return `<section><h1>Late filers</h1><p class="lede">The STOCK Act requires a report within 45 days of a trade.</p></section>
+  <section class="home">
+    <div class="panel"><h2>Members ranked</h2>${table([
+      { label: "Member", v: s => info(s.key).name, html: s => who(s.key) },
+      { label: "Late", cls: "num", v: s => s.late },
+      { label: "Of", cls: "num", v: s => s.n },
+      { label: "Longest", cls: "num", v: s => s.max, html: s => s.max + " d" },
+    ], [...g.values()].filter(s => s.late), { sort: 1, show: 25, empty: "No late filings." })}</div>
+    <div class="panel"><h2>Latest late filings</h2>${table([
+      { label: "Filed", cls: "date", v: t => t.filing_date, html: t => fdate(t.filing_date) },
+      { label: "Member", v: t => t.filer_name, html: t => who(t.key) },
+      { label: "", html: txLabel },
+      { label: "Stock", v: t => t.ticker, html: t => (t.ticker ? `<a class="tk" href="#stock-${esc(t.tkey)}">${esc(t.ticker)}</a>` : esc(t.asset_name)) },
+      { label: "Days to file", cls: "num", v: t => t.lag, html: lag },
+      { label: "Source", html: src },
+    ], late, { show: 25, empty: "No late filings." })}</div>
+  </section>`;
+}
+
+function pageMethod() {
+  return `<section class="prose"><h1>Method</h1><p class="lede">Everything here comes from public records. Every trade links to its original filing.</p></section>
+  <section class="home">
+    <div class="panel prose">
+      <h2>Sources</h2>
+      <ul>
+        <li>Trades: House Periodic Transaction Reports (Clerk of the House) and Senate Electronic Financial Disclosures.</li>
+        <li>Committee seats and leadership roles: the public-domain congress-legislators dataset.</li>
+        <li>Company sectors: the SEC industry (SIC) code of each company.</li>
+        <li>Daily closing prices for performance figures: ${esc(S.meta.price_source || "not connected")}.</li>
+      </ul>
+      <h2>Portfolios are estimates</h2>
+      <p>Members disclose each trade with a dollar range, not a share count. A position's size uses the midpoint of each range: buys add, partial sales reduce, a full sale closes it. Only individual stocks are included. Stocks bought before the start of our data and never traded since do not show.</p>
+      <h2>Performance</h2>
+      <p>For each member: every stock they bought in the last 12 months, held until today or until they sold it all, weighted by the midpoint of the range, compared with the S&amp;P 500 over the same days. That is why each member's S&amp;P figure is different: someone who bought in January is measured against the S&amp;P from January, someone who bought last month against last month. One fixed 12-month S&amp;P figure would make a recent buyer look worse than they did. The plain 12-month S&amp;P return is shown on the home page for context. "If copied on filing date" starts each position on the day the trade became public, which is what a follower could have done. Members with fewer than 3 purchases are not ranked.</p>
+      <h2>Committee overlap and late filings</h2>
+      <p>A holding is flagged when its sector falls under a committee the member sits on (table on this page). A flag marks a potential conflict of interest worth reading about, not evidence of wrongdoing. Late means filed more than 45 days after the trade.</p>
+      <p class="note">Not financial advice. This site reports public disclosures and does not recommend buying or selling any security. Found an error? Report it and we'll correct it.</p>
+    </div>
+    <div class="panel"><h2>Committee to sector map</h2>${table([
+      { label: "Committee", v: r => r.committee_name },
+      { label: "Sectors", v: r => r.sectors, html: r => esc(r.sectors.split("|").join(", ")) },
+    ], S.committees, { empty: "Mapping not loaded." })}</div>
+  </section>`;
+}
+
+const notFound = msg => `<section><h1>Not found</h1><p class="lede">${esc(msg)} <a href="#home">Back to home</a></p></section>`;
+
+/* ---------- routing ---------- */
+function route() {
+  const h = decodeURIComponent(location.hash.slice(1)) || "home";
+  for (const k in TABLES) delete TABLES[k];
+  let html, nav = h;
+  if (h.startsWith("member-")) { html = pageMember(h.slice(7)); nav = "members"; }
+  else if (h.startsWith("stock-")) { html = pageStock(h.slice(6)); nav = "grand"; }
+  else html = ({ home: pageHome, members: pageMembers, activity: pageActivity, grand: pageGrand,
+                 late: pageLate, method: pageMethod }[h] || (() => notFound("Page not found.")))();
+  document.getElementById("app").innerHTML = html;
+  document.querySelectorAll("#nav a").forEach(a => a.classList.toggle("on", a.getAttribute("href") === "#" + nav));
+  window.scrollTo(0, 0);
+}
+
+/* ---------- search ---------- */
+function setupSearch() {
+  const q = document.getElementById("q"), ul = document.getElementById("sugg");
+  const items = () => {
+    const seen = new Set(), out = [];
+    for (const k of new Set([...S.members.keys(), ...S.ports.keys()])) { const i = info(k); out.push({ href: "#member-" + k, label: i.name, sub: i.chamber }); }
+    for (const t of S.trades) if (t.ticker && !seen.has(t.tkey)) { seen.add(t.tkey); out.push({ href: "#stock-" + t.tkey, label: t.ticker, sub: t.asset_name }); }
+    return out;
+  };
+  let hits = [];
+  q.addEventListener("input", () => {
+    const s = q.value.trim().toLowerCase();
+    hits = s ? items().filter(i => i.label.toLowerCase().includes(s) || String(i.sub).toLowerCase().includes(s)).slice(0, 8) : [];
+    ul.innerHTML = hits.map((i, n) => `<li><a href="${esc(i.href)}" class="${n ? "" : "hl"}">${esc(i.label)} <small>${esc(i.sub)}</small></a></li>`).join("");
+    ul.hidden = !hits.length;
+  });
+  q.addEventListener("keydown", e => { if (e.key === "Enter" && hits[0]) { location.hash = hits[0].href; q.value = ""; ul.hidden = true; } });
+  ul.addEventListener("click", () => { q.value = ""; ul.hidden = true; });
+  document.addEventListener("click", e => { if (!e.target.closest(".search")) ul.hidden = true; });
+}
+
+load().then(() => {
+  document.getElementById("demo").hidden = !S.demo;
+  document.getElementById("foot").innerHTML = `Data as of ${fdate(S.asOf) || "&mdash;"} · ${S.trades.length.toLocaleString()} trades · Sources: House Clerk, Senate eFD, SEC, congress-legislators · Not financial advice.`;
+  setupSearch();
+  window.addEventListener("hashchange", route);
+  route();
+}).catch(err => {
+  document.getElementById("app").innerHTML = `<p class="empty">Could not load the data files (${esc(err.message)}). If you opened this file directly from your computer, view it through the hosted site instead.</p>`;
+});
+</script>
+</body>
+</html>

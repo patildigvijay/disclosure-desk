@@ -1,0 +1,74 @@
+sic_from,sic_to,sector
+100,999,Consumer Staples
+1000,1099,Materials
+1200,1399,Energy
+1400,1499,Materials
+1500,1799,Industrials
+2000,2199,Consumer Staples
+2200,2399,Consumer Discretionary
+2400,2499,Materials
+2500,2599,Consumer Discretionary
+2600,2699,Materials
+2700,2799,Communications
+2800,2829,Materials
+2830,2839,Health Care
+2840,2849,Consumer Staples
+2850,2899,Materials
+2900,2999,Energy
+3000,3099,Materials
+3100,3199,Consumer Discretionary
+3200,3399,Materials
+3400,3479,Industrials
+3480,3489,Defense & Aerospace
+3490,3569,Industrials
+3570,3579,Technology
+3580,3629,Industrials
+3630,3639,Consumer Discretionary
+3640,3659,Industrials
+3660,3679,Technology
+3680,3709,Industrials
+3710,3716,Consumer Discretionary
+3717,3719,Industrials
+3720,3729,Defense & Aerospace
+3730,3732,Defense & Aerospace
+3733,3759,Industrials
+3760,3769,Defense & Aerospace
+3770,3794,Industrials
+3795,3795,Defense & Aerospace
+3796,3811,Industrials
+3812,3812,Defense & Aerospace
+3813,3839,Technology
+3840,3851,Health Care
+3852,3899,Technology
+3900,3999,Consumer Discretionary
+4000,4799,Transportation
+4800,4899,Communications
+4900,4999,Utilities
+5000,5121,Industrials
+5122,5122,Health Care
+5123,5139,Industrials
+5140,5149,Consumer Staples
+5150,5199,Industrials
+5200,5399,Consumer Discretionary
+5400,5499,Consumer Staples
+5500,5911,Consumer Discretionary
+5912,5912,Consumer Staples
+5913,5999,Consumer Discretionary
+6000,6323,Financials
+6324,6324,Health Care
+6325,6499,Financials
+6500,6599,Real Estate
+6700,6719,Financials
+6720,6729,Fund
+6730,6797,Financials
+6798,6798,Real Estate
+6799,6799,Financials
+7000,7299,Consumer Discretionary
+7300,7369,Industrials
+7370,7379,Technology
+7380,7799,Industrials
+7800,7999,Communications
+8000,8099,Health Care
+8100,8299,Consumer Discretionary
+8300,8699,Industrials
+8700,8799,Industrials

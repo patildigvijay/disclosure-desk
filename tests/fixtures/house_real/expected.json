@@ -1,0 +1,2420 @@
+{
+ "20022577": [
+  {
+   "owner": "Self",
+   "ticker": "SPCX",
+   "asset_type": "Other",
+   "tx_type": "Purchase",
+   "tx_date": "2026-06-15",
+   "notification_date": "2026-06-17",
+   "amount_min": 50001,
+   "amount_max": 100000
+  }
+ ],
+ "20033734": [
+  {
+   "owner": "Self",
+   "ticker": "EFC",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2025-12-30",
+   "notification_date": "2026-01-05",
+   "amount_min": 1001,
+   "amount_max": 15000
+  }
+ ],
+ "20033830": [
+  {
+   "owner": "Self",
+   "ticker": "ASHGY",
+   "asset_type": "Stock",
+   "tx_type": "Exchange",
+   "tx_date": "2025-12-10",
+   "notification_date": "2026-01-07",
+   "amount_min": 15001,
+   "amount_max": 50000
+  },
+  {
+   "owner": "Self",
+   "ticker": "ASHGY",
+   "asset_type": "Stock",
+   "tx_type": "Exchange",
+   "tx_date": "2025-12-10",
+   "notification_date": "2026-01-07",
+   "amount_min": 15001,
+   "amount_max": 50000
+  },
+  {
+   "owner": "Self",
+   "ticker": "ASHGY",
+   "asset_type": "Stock",
+   "tx_type": "Exchange",
+   "tx_date": "2025-12-10",
+   "notification_date": "2026-01-07",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "ASHGY",
+   "asset_type": "Stock",
+   "tx_type": "Exchange",
+   "tx_date": "2025-12-10",
+   "notification_date": "2026-01-07",
+   "amount_min": 1001,
+   "amount_max": 15000
+  }
+ ],
+ "20033881": [
+  {
+   "owner": "Self",
+   "ticker": "",
+   "asset_type": "Private Fund",
+   "tx_type": "Purchase",
+   "tx_date": "2026-01-07",
+   "notification_date": "2026-01-29",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "",
+   "asset_type": "Private Fund",
+   "tx_type": "Purchase",
+   "tx_date": "2026-01-07",
+   "notification_date": "2026-01-29",
+   "amount_min": 1001,
+   "amount_max": 15000
+  }
+ ],
+ "20033918": [
+  {
+   "owner": "Self",
+   "ticker": "AAPL",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-01-16",
+   "notification_date": "2026-01-30",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "IBP",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-01-16",
+   "notification_date": "2026-01-30",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "JPM",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-01-29",
+   "notification_date": "2026-01-30",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "KR",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-01-16",
+   "notification_date": "2026-01-30",
+   "amount_min": 1001,
+   "amount_max": 15000
+  }
+ ],
+ "20033946": [
+  {
+   "owner": "Self",
+   "ticker": "",
+   "asset_type": "Government Security",
+   "tx_type": "Purchase",
+   "tx_date": "2026-01-08",
+   "notification_date": "2026-02-04",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "",
+   "asset_type": "Government Security",
+   "tx_type": "Purchase",
+   "tx_date": "2026-01-26",
+   "notification_date": "2026-02-04",
+   "amount_min": 1001,
+   "amount_max": 15000
+  }
+ ],
+ "20034106": [
+  {
+   "owner": "Self",
+   "ticker": "MMM",
+   "asset_type": "Stock",
+   "tx_type": "Sale (Partial)",
+   "tx_date": "2026-02-02",
+   "notification_date": "2026-03-01",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "MMM",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-02-04",
+   "notification_date": "2026-03-01",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "AMD",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-02-02",
+   "notification_date": "2026-03-01",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "AAPL",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-02-02",
+   "notification_date": "2026-03-01",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "T",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-02-12",
+   "notification_date": "2026-03-01",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "BA",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-02-02",
+   "notification_date": "2026-03-01",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "AVGO",
+   "asset_type": "Stock",
+   "tx_type": "Sale (Partial)",
+   "tx_date": "2026-02-12",
+   "notification_date": "2026-03-01",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "BXP",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-02-20",
+   "notification_date": "2026-03-01",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "CSCO",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-02-02",
+   "notification_date": "2026-03-01",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "CMI",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-02-04",
+   "notification_date": "2026-03-01",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "EXE",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-02-17",
+   "notification_date": "2026-03-01",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "EXR",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-02-12",
+   "notification_date": "2026-03-01",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "DINO",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-02-20",
+   "notification_date": "2026-03-01",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "HUM",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-02-10",
+   "notification_date": "2026-03-01",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "ICLR",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-02-12",
+   "notification_date": "2026-03-01",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "ICE",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-02-12",
+   "notification_date": "2026-03-01",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "IBM",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-02-02",
+   "notification_date": "2026-03-01",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "INTU",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-02-02",
+   "notification_date": "2026-03-01",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "DRS",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-02-02",
+   "notification_date": "2026-03-01",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "MKC",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-02-02",
+   "notification_date": "2026-03-01",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "META",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-02-12",
+   "notification_date": "2026-03-01",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "MSFT",
+   "asset_type": "Stock",
+   "tx_type": "Sale (Partial)",
+   "tx_date": "2026-02-02",
+   "notification_date": "2026-03-01",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "PEP",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-02-05",
+   "notification_date": "2026-03-01",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "PM",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-02-05",
+   "notification_date": "2026-03-01",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "PG",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-02-02",
+   "notification_date": "2026-03-01",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "PEG",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-02-17",
+   "notification_date": "2026-03-01",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "REGN",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-02-12",
+   "notification_date": "2026-03-01",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "CRM",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-02-02",
+   "notification_date": "2026-03-01",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "TSM",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-02-02",
+   "notification_date": "2026-03-01",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "TTWO",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-02-12",
+   "notification_date": "2026-03-01",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "TRV",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-02-20",
+   "notification_date": "2026-03-01",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "URI",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-02-02",
+   "notification_date": "2026-03-01",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "VST",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-02-17",
+   "notification_date": "2026-03-01",
+   "amount_min": 1001,
+   "amount_max": 15000
+  }
+ ],
+ "20034201": [
+  {
+   "owner": "Self",
+   "ticker": "AMZN",
+   "asset_type": "Stock",
+   "tx_type": "Sale (Partial)",
+   "tx_date": "2026-03-16",
+   "notification_date": "2026-03-16",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "AAPL",
+   "asset_type": "Stock",
+   "tx_type": "Sale (Partial)",
+   "tx_date": "2026-03-16",
+   "notification_date": "2026-03-16",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "T",
+   "asset_type": "Stock",
+   "tx_type": "Sale (Partial)",
+   "tx_date": "2026-03-16",
+   "notification_date": "2026-03-16",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "BRK.B",
+   "asset_type": "Stock",
+   "tx_type": "Sale (Partial)",
+   "tx_date": "2026-03-16",
+   "notification_date": "2026-03-16",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "",
+   "asset_type": "Other",
+   "tx_type": "Sale (Partial)",
+   "tx_date": "2026-03-16",
+   "notification_date": "2026-03-16",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "",
+   "asset_type": "Other",
+   "tx_type": "Sale (Partial)",
+   "tx_date": "2026-03-16",
+   "notification_date": "2026-03-16",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "PYPL",
+   "asset_type": "Stock",
+   "tx_type": "Sale (Partial)",
+   "tx_date": "2026-03-16",
+   "notification_date": "2026-03-16",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "SPYB",
+   "asset_type": "Stock",
+   "tx_type": "Sale (Partial)",
+   "tx_date": "2026-03-16",
+   "notification_date": "2026-03-16",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "SPYB",
+   "asset_type": "Stock",
+   "tx_type": "Sale (Partial)",
+   "tx_date": "2026-03-16",
+   "notification_date": "2026-03-16",
+   "amount_min": 1001,
+   "amount_max": 15000
+  }
+ ],
+ "20034556": [
+  {
+   "owner": "Self",
+   "ticker": "AMT",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-05-11",
+   "notification_date": "2026-05-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "CVS",
+   "asset_type": "Stock",
+   "tx_type": "Sale (Partial)",
+   "tx_date": "2025-11-21",
+   "notification_date": "2025-12-05",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "INTC",
+   "asset_type": "Stock",
+   "tx_type": "Sale (Partial)",
+   "tx_date": "2026-05-07",
+   "notification_date": "2026-05-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "PWR",
+   "asset_type": "Stock",
+   "tx_type": "Sale (Partial)",
+   "tx_date": "2026-05-07",
+   "notification_date": "2026-05-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "TMO",
+   "asset_type": "Stock",
+   "tx_type": "Sale (Partial)",
+   "tx_date": "2026-05-07",
+   "notification_date": "2026-05-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  }
+ ],
+ "20034712": [
+  {
+   "owner": "Self",
+   "ticker": "PG",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-05-15",
+   "notification_date": "2026-06-04",
+   "amount_min": 1001,
+   "amount_max": 15000
+  }
+ ],
+ "20034727": [
+  {
+   "owner": "Joint",
+   "ticker": "",
+   "asset_type": "Corporate Bond",
+   "tx_type": "Purchase",
+   "tx_date": "2026-05-28",
+   "notification_date": "2026-05-28",
+   "amount_min": 500001,
+   "amount_max": 1000000
+  }
+ ],
+ "20034748": [
+  {
+   "owner": "Spouse",
+   "ticker": "DELL",
+   "asset_type": "Stock",
+   "tx_type": "Sale (Partial)",
+   "tx_date": "2026-06-04",
+   "notification_date": "2026-06-04",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Spouse",
+   "ticker": "META",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-06-04",
+   "notification_date": "2026-06-04",
+   "amount_min": 1001,
+   "amount_max": 15000
+  }
+ ],
+ "20034749": [
+  {
+   "owner": "Dependent",
+   "ticker": "COR",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-05-06",
+   "notification_date": "2026-05-31",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "COR",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-05-06",
+   "notification_date": "2026-05-31",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Dependent",
+   "ticker": "GILD",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-05-06",
+   "notification_date": "2026-05-31",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "GILD",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-05-06",
+   "notification_date": "2026-05-31",
+   "amount_min": 1001,
+   "amount_max": 15000
+  }
+ ],
+ "20034920": [
+  {
+   "owner": "Self",
+   "ticker": "",
+   "asset_type": "Private Stock",
+   "tx_type": "Exchange",
+   "tx_date": "2026-06-07",
+   "notification_date": "2026-06-07",
+   "amount_min": 100001,
+   "amount_max": 250000
+  }
+ ],
+ "20034949": [
+  {
+   "owner": "Spouse",
+   "ticker": "SPCX",
+   "asset_type": "Other",
+   "tx_type": "Purchase",
+   "tx_date": "2026-06-12",
+   "notification_date": "2026-06-12",
+   "amount_min": 15001,
+   "amount_max": 50000
+  }
+ ],
+ "20035024": [
+  {
+   "owner": "Self",
+   "ticker": "GOOG",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-06-01",
+   "notification_date": "2026-06-01",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "AMZN",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-06-01",
+   "notification_date": "2026-06-01",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "AAPL",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-06-01",
+   "notification_date": "2026-06-01",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "",
+   "asset_type": "Other",
+   "tx_type": "Sale",
+   "tx_date": "2026-06-01",
+   "notification_date": "2026-06-01",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "META",
+   "asset_type": "Option",
+   "tx_type": "Purchase",
+   "tx_date": "2026-04-28",
+   "notification_date": "2026-04-28",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "META",
+   "asset_type": "Option",
+   "tx_type": "Sale",
+   "tx_date": "2026-05-05",
+   "notification_date": "2026-05-05",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "META",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-06-01",
+   "notification_date": "2026-06-01",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "USOU",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-06-01",
+   "notification_date": "2026-06-01",
+   "amount_min": 1001,
+   "amount_max": 15000
+  }
+ ],
+ "20035186": [
+  {
+   "owner": "Joint",
+   "ticker": "GOOGM",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-07-24",
+   "notification_date": "2026-08-06",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Joint",
+   "ticker": "GOOGN",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-07-23",
+   "notification_date": "2026-08-06",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Joint",
+   "ticker": "GOOGN",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-07-24",
+   "notification_date": "2026-08-06",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Joint",
+   "ticker": "GTLS",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-07-17",
+   "notification_date": "2026-08-06",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Joint",
+   "ticker": "CRWD",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-07-15",
+   "notification_date": "2026-08-06",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Joint",
+   "ticker": "CCI",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-07-23",
+   "notification_date": "2026-08-06",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Joint",
+   "ticker": "FN",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-07-14",
+   "notification_date": "2026-08-06",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Joint",
+   "ticker": "IBM",
+   "asset_type": "Stock",
+   "tx_type": "Sale (Partial)",
+   "tx_date": "2026-07-15",
+   "notification_date": "2026-08-06",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Joint",
+   "ticker": "IBM",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-07-16",
+   "notification_date": "2026-08-06",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Joint",
+   "ticker": "MNST",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-07-17",
+   "notification_date": "2026-08-06",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Joint",
+   "ticker": "NICE",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-07-20",
+   "notification_date": "2026-08-06",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Joint",
+   "ticker": "PANW",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-07-16",
+   "notification_date": "2026-08-06",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Joint",
+   "ticker": "SAIL",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-07-20",
+   "notification_date": "2026-08-06",
+   "amount_min": 1001,
+   "amount_max": 15000
+  }
+ ],
+ "20035190": [
+  {
+   "owner": "Self",
+   "ticker": "ACN",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-07-17",
+   "notification_date": "2026-08-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "ADBE",
+   "asset_type": "Stock",
+   "tx_type": "Sale (Partial)",
+   "tx_date": "2026-07-24",
+   "notification_date": "2026-08-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "AMD",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-07-17",
+   "notification_date": "2026-08-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "AVAV",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-07-02",
+   "notification_date": "2026-08-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "BABA",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-07-24",
+   "notification_date": "2026-08-14",
+   "amount_min": 100001,
+   "amount_max": 250000
+  },
+  {
+   "owner": "Self",
+   "ticker": "ALKS",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-07-30",
+   "notification_date": "2026-08-14",
+   "amount_min": 15001,
+   "amount_max": 50000
+  },
+  {
+   "owner": "Self",
+   "ticker": "ABCB",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-07-10",
+   "notification_date": "2026-08-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "APP",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-07-17",
+   "notification_date": "2026-08-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "AORT",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-07-16",
+   "notification_date": "2026-08-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "BCPC",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-07-10",
+   "notification_date": "2026-08-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "BCRX",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-07-10",
+   "notification_date": "2026-08-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "COIN",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-07-17",
+   "notification_date": "2026-08-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "CMCSA",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-07-17",
+   "notification_date": "2026-08-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "COMP",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-07-16",
+   "notification_date": "2026-08-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "STZ",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-07-17",
+   "notification_date": "2026-08-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "CRDO",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-07-02",
+   "notification_date": "2026-08-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "CRNX",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-07-30",
+   "notification_date": "2026-08-14",
+   "amount_min": 15001,
+   "amount_max": 50000
+  },
+  {
+   "owner": "Self",
+   "ticker": "CRWD",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-07-17",
+   "notification_date": "2026-08-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "CSW",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-07-16",
+   "notification_date": "2026-08-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "DCO",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-07-10",
+   "notification_date": "2026-08-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "DD",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-07-17",
+   "notification_date": "2026-08-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "EA",
+   "asset_type": "Stock",
+   "tx_type": "Sale (Partial)",
+   "tx_date": "2026-07-17",
+   "notification_date": "2026-08-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "EPAC",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-07-10",
+   "notification_date": "2026-08-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "EPAC",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-07-16",
+   "notification_date": "2026-08-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "FN",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-07-16",
+   "notification_date": "2026-08-14",
+   "amount_min": 15001,
+   "amount_max": 50000
+  },
+  {
+   "owner": "Self",
+   "ticker": "FDX",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-07-21",
+   "notification_date": "2026-08-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "FERG",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-07-16",
+   "notification_date": "2026-08-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "GBCI",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-07-21",
+   "notification_date": "2026-08-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "HQY",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-07-10",
+   "notification_date": "2026-08-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "HMN",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-07-10",
+   "notification_date": "2026-08-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "HLI",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-07-16",
+   "notification_date": "2026-08-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "IRT",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-07-10",
+   "notification_date": "2026-08-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "IBM",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-07-17",
+   "notification_date": "2026-08-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "KVUE",
+   "asset_type": "Stock",
+   "tx_type": "Sale (Partial)",
+   "tx_date": "2026-07-17",
+   "notification_date": "2026-08-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "LAMR",
+   "asset_type": "Stock",
+   "tx_type": "Sale (Partial)",
+   "tx_date": "2026-07-16",
+   "notification_date": "2026-08-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "LITE",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-07-17",
+   "notification_date": "2026-08-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "MTSI",
+   "asset_type": "Stock",
+   "tx_type": "Sale (Partial)",
+   "tx_date": "2026-07-16",
+   "notification_date": "2026-08-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "MRVL",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-07-17",
+   "notification_date": "2026-08-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "MSB",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-07-31",
+   "notification_date": "2026-08-14",
+   "amount_min": 15001,
+   "amount_max": 50000
+  },
+  {
+   "owner": "Self",
+   "ticker": "MSFT",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-07-17",
+   "notification_date": "2026-08-14",
+   "amount_min": 15001,
+   "amount_max": 50000
+  },
+  {
+   "owner": "Self",
+   "ticker": "MTX",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-07-10",
+   "notification_date": "2026-08-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "NHI",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-07-10",
+   "notification_date": "2026-08-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "NSA",
+   "asset_type": "Stock",
+   "tx_type": "Exchange",
+   "tx_date": "2026-07-23",
+   "notification_date": "2026-08-14",
+   "amount_min": 15001,
+   "amount_max": 50000
+  },
+  {
+   "owner": "Self",
+   "ticker": "NVDA",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-07-17",
+   "notification_date": "2026-08-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "PLTR",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-07-17",
+   "notification_date": "2026-08-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "PSKY",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-07-17",
+   "notification_date": "2026-08-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "PRAX",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-07-30",
+   "notification_date": "2026-08-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "PGR",
+   "asset_type": "Stock",
+   "tx_type": "Sale (Partial)",
+   "tx_date": "2026-07-17",
+   "notification_date": "2026-08-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "RBC",
+   "asset_type": "Stock",
+   "tx_type": "Sale (Partial)",
+   "tx_date": "2026-07-16",
+   "notification_date": "2026-08-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "SAIL",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-07-21",
+   "notification_date": "2026-08-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "SMTC",
+   "asset_type": "Stock",
+   "tx_type": "Sale (Partial)",
+   "tx_date": "2026-07-21",
+   "notification_date": "2026-08-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "SMTC",
+   "asset_type": "Stock",
+   "tx_type": "Sale (Partial)",
+   "tx_date": "2026-07-16",
+   "notification_date": "2026-08-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "SKWD",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-07-16",
+   "notification_date": "2026-08-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "SKWD",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-07-10",
+   "notification_date": "2026-08-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "SFM",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-07-16",
+   "notification_date": "2026-08-14",
+   "amount_min": 15001,
+   "amount_max": 50000
+  },
+  {
+   "owner": "Self",
+   "ticker": "SPXC",
+   "asset_type": "Stock",
+   "tx_type": "Sale (Partial)",
+   "tx_date": "2026-07-16",
+   "notification_date": "2026-08-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "SF",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-07-10",
+   "notification_date": "2026-08-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "TTD",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-07-17",
+   "notification_date": "2026-08-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "COCO",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-07-10",
+   "notification_date": "2026-08-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "USPH",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-07-16",
+   "notification_date": "2026-08-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "UBER",
+   "asset_type": "Stock",
+   "tx_type": "Sale (Partial)",
+   "tx_date": "2026-07-17",
+   "notification_date": "2026-08-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "PCVX",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-07-16",
+   "notification_date": "2026-08-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "VZ",
+   "asset_type": "Stock",
+   "tx_type": "Sale (Partial)",
+   "tx_date": "2026-07-17",
+   "notification_date": "2026-08-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "VIAV",
+   "asset_type": "Stock",
+   "tx_type": "Sale (Partial)",
+   "tx_date": "2026-07-21",
+   "notification_date": "2026-08-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "WDC",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-07-17",
+   "notification_date": "2026-08-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "ZTS",
+   "asset_type": "Stock",
+   "tx_type": "Sale (Partial)",
+   "tx_date": "2026-07-17",
+   "notification_date": "2026-08-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  }
+ ],
+ "20035191": [
+  {
+   "owner": "Spouse",
+   "ticker": "",
+   "asset_type": "Other",
+   "tx_type": "Purchase",
+   "tx_date": "2026-07-29",
+   "notification_date": "2026-07-31",
+   "amount_min": 1000001,
+   "amount_max": null
+  },
+  {
+   "owner": "Spouse",
+   "ticker": "",
+   "asset_type": "Government Security",
+   "tx_type": "Sale",
+   "tx_date": "2026-07-22",
+   "notification_date": "2026-07-31",
+   "amount_min": 250001,
+   "amount_max": 500000
+  },
+  {
+   "owner": "Spouse",
+   "ticker": "",
+   "asset_type": "Government Security",
+   "tx_type": "Sale (Partial)",
+   "tx_date": "2026-07-24",
+   "notification_date": "2026-07-31",
+   "amount_min": 500001,
+   "amount_max": 1000000
+  },
+  {
+   "owner": "Spouse",
+   "ticker": "",
+   "asset_type": "Government Security",
+   "tx_type": "Sale",
+   "tx_date": "2026-07-24",
+   "notification_date": "2026-07-31",
+   "amount_min": 50001,
+   "amount_max": 100000
+  },
+  {
+   "owner": "Spouse",
+   "ticker": "",
+   "asset_type": "Government Security",
+   "tx_type": "Sale",
+   "tx_date": "2026-07-24",
+   "notification_date": "2026-07-31",
+   "amount_min": 500001,
+   "amount_max": 1000000
+  },
+  {
+   "owner": "Spouse",
+   "ticker": "",
+   "asset_type": "Government Security",
+   "tx_type": "Purchase",
+   "tx_date": "2026-07-01",
+   "notification_date": "2026-07-31",
+   "amount_min": 100001,
+   "amount_max": 250000
+  },
+  {
+   "owner": "Spouse",
+   "ticker": "",
+   "asset_type": "Government Security",
+   "tx_type": "Purchase",
+   "tx_date": "2026-07-30",
+   "notification_date": "2026-07-31",
+   "amount_min": 50001,
+   "amount_max": 100000
+  },
+  {
+   "owner": "Spouse",
+   "ticker": "",
+   "asset_type": "Other",
+   "tx_type": "Purchase",
+   "tx_date": "2026-07-28",
+   "notification_date": "2026-07-31",
+   "amount_min": 50001,
+   "amount_max": 100000
+  },
+  {
+   "owner": "Spouse",
+   "ticker": "",
+   "asset_type": "Government Security",
+   "tx_type": "Sale (Partial)",
+   "tx_date": "2026-07-23",
+   "notification_date": "2026-07-31",
+   "amount_min": 50001,
+   "amount_max": 100000
+  },
+  {
+   "owner": "Spouse",
+   "ticker": "",
+   "asset_type": "Government Security",
+   "tx_type": "Purchase",
+   "tx_date": "2026-07-27",
+   "notification_date": "2026-07-31",
+   "amount_min": 50001,
+   "amount_max": 100000
+  },
+  {
+   "owner": "Spouse",
+   "ticker": "",
+   "asset_type": "Government Security",
+   "tx_type": "Sale (Partial)",
+   "tx_date": "2026-07-28",
+   "notification_date": "2026-07-31",
+   "amount_min": 15001,
+   "amount_max": 50000
+  },
+  {
+   "owner": "Spouse",
+   "ticker": "",
+   "asset_type": "Government Security",
+   "tx_type": "Purchase",
+   "tx_date": "2026-07-27",
+   "notification_date": "2026-07-31",
+   "amount_min": 1000001,
+   "amount_max": null
+  },
+  {
+   "owner": "Spouse",
+   "ticker": "",
+   "asset_type": "Government Security",
+   "tx_type": "Sale (Partial)",
+   "tx_date": "2026-07-28",
+   "notification_date": "2026-07-31",
+   "amount_min": 50001,
+   "amount_max": 100000
+  },
+  {
+   "owner": "Spouse",
+   "ticker": "",
+   "asset_type": "Government Security",
+   "tx_type": "Sale (Partial)",
+   "tx_date": "2026-07-28",
+   "notification_date": "2026-07-31",
+   "amount_min": 1000001,
+   "amount_max": null
+  },
+  {
+   "owner": "Spouse",
+   "ticker": "",
+   "asset_type": "Other",
+   "tx_type": "Purchase",
+   "tx_date": "2026-07-22",
+   "notification_date": "2026-07-31",
+   "amount_min": 15001,
+   "amount_max": 50000
+  }
+ ],
+ "20035365": [
+  {
+   "owner": "Self",
+   "ticker": "ALL",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-08-12",
+   "notification_date": "2026-08-12",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "EQIX",
+   "asset_type": "Stock",
+   "tx_type": "Purchase",
+   "tx_date": "2026-08-07",
+   "notification_date": "2026-08-07",
+   "amount_min": 1001,
+   "amount_max": 15000
+  }
+ ],
+ "20035489": [
+  {
+   "owner": "Spouse",
+   "ticker": "",
+   "asset_type": "Private Fund",
+   "tx_type": "Purchase",
+   "tx_date": "2026-08-31",
+   "notification_date": "2026-09-09",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Spouse",
+   "ticker": "",
+   "asset_type": "Other",
+   "tx_type": "Purchase",
+   "tx_date": "2026-08-28",
+   "notification_date": "2026-09-09",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Spouse",
+   "ticker": "",
+   "asset_type": "Corporate Bond",
+   "tx_type": "Sale",
+   "tx_date": "2026-08-19",
+   "notification_date": "2026-09-09",
+   "amount_min": 500001,
+   "amount_max": 1000000
+  },
+  {
+   "owner": "Spouse",
+   "ticker": "",
+   "asset_type": "Corporate Bond",
+   "tx_type": "Purchase",
+   "tx_date": "2026-09-01",
+   "notification_date": "2026-09-09",
+   "amount_min": 500001,
+   "amount_max": 1000000
+  }
+ ],
+ "20035563": [
+  {
+   "owner": "Spouse",
+   "ticker": "ABT",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-10-02",
+   "notification_date": "2026-10-05",
+   "amount_min": 50001,
+   "amount_max": 100000
+  },
+  {
+   "owner": "Spouse",
+   "ticker": "GOOG",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-10-02",
+   "notification_date": "2026-10-05",
+   "amount_min": 100001,
+   "amount_max": 250000
+  },
+  {
+   "owner": "Spouse",
+   "ticker": "AMZN",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-10-02",
+   "notification_date": "2026-10-05",
+   "amount_min": 100001,
+   "amount_max": 250000
+  },
+  {
+   "owner": "Self",
+   "ticker": "AMZN",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-10-27",
+   "notification_date": "2026-10-27",
+   "amount_min": 15001,
+   "amount_max": 50000
+  },
+  {
+   "owner": "Spouse",
+   "ticker": "AAPL",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-10-02",
+   "notification_date": "2026-10-05",
+   "amount_min": 250001,
+   "amount_max": 500000
+  },
+  {
+   "owner": "Self",
+   "ticker": "BRK.B",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-10-15",
+   "notification_date": "2026-10-15",
+   "amount_min": 15001,
+   "amount_max": 50000
+  },
+  {
+   "owner": "Self",
+   "ticker": "CVX",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-10-14",
+   "notification_date": "2026-10-14",
+   "amount_min": 15001,
+   "amount_max": 50000
+  },
+  {
+   "owner": "Spouse",
+   "ticker": "CMG",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-10-02",
+   "notification_date": "2026-10-05",
+   "amount_min": 15001,
+   "amount_max": 50000
+  },
+  {
+   "owner": "Spouse",
+   "ticker": "COST",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-10-02",
+   "notification_date": "2026-10-05",
+   "amount_min": 250001,
+   "amount_max": 500000
+  },
+  {
+   "owner": "Self",
+   "ticker": "COST",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-10-13",
+   "notification_date": "2026-10-13",
+   "amount_min": 100001,
+   "amount_max": 250000
+  },
+  {
+   "owner": "Self",
+   "ticker": "XOM",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-10-14",
+   "notification_date": "2026-10-14",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "HD",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-10-22",
+   "notification_date": "2026-10-22",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "HON",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-10-01",
+   "notification_date": "2026-10-02",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "IBM",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-10-20",
+   "notification_date": "2026-10-21",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "LOW",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-10-22",
+   "notification_date": "2026-10-22",
+   "amount_min": 15001,
+   "amount_max": 50000
+  },
+  {
+   "owner": "Spouse",
+   "ticker": "MA",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-10-02",
+   "notification_date": "2026-10-05",
+   "amount_min": 15001,
+   "amount_max": 50000
+  },
+  {
+   "owner": "Spouse",
+   "ticker": "MCD",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-10-02",
+   "notification_date": "2026-10-05",
+   "amount_min": 15001,
+   "amount_max": 50000
+  },
+  {
+   "owner": "Spouse",
+   "ticker": "MCD",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-10-27",
+   "notification_date": "2026-10-27",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Spouse",
+   "ticker": "MSFT",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-10-02",
+   "notification_date": "2026-10-05",
+   "amount_min": 250001,
+   "amount_max": 500000
+  },
+  {
+   "owner": "Spouse",
+   "ticker": "NVDA",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-10-02",
+   "notification_date": "2026-10-02",
+   "amount_min": 15001,
+   "amount_max": 50000
+  },
+  {
+   "owner": "Self",
+   "ticker": "PEP",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-10-21",
+   "notification_date": "2026-10-21",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "PG",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-10-08",
+   "notification_date": "2026-10-13",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Self",
+   "ticker": "REZI",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-10-21",
+   "notification_date": "2026-10-21",
+   "amount_min": 344.99,
+   "amount_max": 344.99
+  },
+  {
+   "owner": "Self",
+   "ticker": "SOLS",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-10-21",
+   "notification_date": "2026-10-21",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Spouse",
+   "ticker": "SBUX",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-10-02",
+   "notification_date": "2026-10-05",
+   "amount_min": 15001,
+   "amount_max": 50000
+  },
+  {
+   "owner": "Spouse",
+   "ticker": "TSLA",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-10-02",
+   "notification_date": "2026-10-05",
+   "amount_min": 15001,
+   "amount_max": 50000
+  },
+  {
+   "owner": "Spouse",
+   "ticker": "TJX",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-10-02",
+   "notification_date": "2026-10-05",
+   "amount_min": 15001,
+   "amount_max": 50000
+  },
+  {
+   "owner": "Spouse",
+   "ticker": "TJX",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-10-02",
+   "notification_date": "2026-10-02",
+   "amount_min": 15001,
+   "amount_max": 50000
+  },
+  {
+   "owner": "Spouse",
+   "ticker": "VZ",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-10-02",
+   "notification_date": "2026-10-05",
+   "amount_min": 15001,
+   "amount_max": 50000
+  },
+  {
+   "owner": "Spouse",
+   "ticker": "V",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-10-02",
+   "notification_date": "2026-10-05",
+   "amount_min": 15001,
+   "amount_max": 50000
+  },
+  {
+   "owner": "Spouse",
+   "ticker": "WMT",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-10-02",
+   "notification_date": "2026-10-05",
+   "amount_min": 50001,
+   "amount_max": 100000
+  },
+  {
+   "owner": "Self",
+   "ticker": "DIS",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-10-28",
+   "notification_date": "2026-10-28",
+   "amount_min": 1001,
+   "amount_max": 15000
+  }
+ ],
+ "20035588": [
+  {
+   "owner": "Joint",
+   "ticker": "CVX",
+   "asset_type": "Stock",
+   "tx_type": "Sale (Partial)",
+   "tx_date": "2026-09-23",
+   "notification_date": "2026-10-02",
+   "amount_min": 15001,
+   "amount_max": 50000
+  },
+  {
+   "owner": "Joint",
+   "ticker": "CB",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-09-23",
+   "notification_date": "2026-10-02",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Joint",
+   "ticker": "DVN",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-09-23",
+   "notification_date": "2026-10-02",
+   "amount_min": 50001,
+   "amount_max": 100000
+  },
+  {
+   "owner": "Joint",
+   "ticker": "DVN",
+   "asset_type": "Stock",
+   "tx_type": "Sale (Partial)",
+   "tx_date": "2026-09-23",
+   "notification_date": "2026-10-02",
+   "amount_min": 15001,
+   "amount_max": 50000
+  },
+  {
+   "owner": "Joint",
+   "ticker": "EMR",
+   "asset_type": "Stock",
+   "tx_type": "Sale (Partial)",
+   "tx_date": "2026-09-17",
+   "notification_date": "2026-10-02",
+   "amount_min": 15001,
+   "amount_max": 50000
+  },
+  {
+   "owner": "Joint",
+   "ticker": "",
+   "asset_type": "Government Security",
+   "tx_type": "Purchase",
+   "tx_date": "2026-09-18",
+   "notification_date": "2026-10-02",
+   "amount_min": 15001,
+   "amount_max": 50000
+  },
+  {
+   "owner": "Joint",
+   "ticker": "HD",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-09-23",
+   "notification_date": "2026-10-02",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Joint",
+   "ticker": "LIN",
+   "asset_type": "Stock",
+   "tx_type": "Sale (Partial)",
+   "tx_date": "2026-09-17",
+   "notification_date": "2026-10-02",
+   "amount_min": 15001,
+   "amount_max": 50000
+  },
+  {
+   "owner": "Joint",
+   "ticker": "LMT",
+   "asset_type": "Stock",
+   "tx_type": "Sale (Partial)",
+   "tx_date": "2026-09-17",
+   "notification_date": "2026-10-02",
+   "amount_min": 15001,
+   "amount_max": 50000
+  },
+  {
+   "owner": "Joint",
+   "ticker": "LMT",
+   "asset_type": "Stock",
+   "tx_type": "Sale (Partial)",
+   "tx_date": "2026-09-17",
+   "notification_date": "2026-10-02",
+   "amount_min": 15001,
+   "amount_max": 50000
+  },
+  {
+   "owner": "Joint",
+   "ticker": "LMT",
+   "asset_type": "Stock",
+   "tx_type": "Sale (Partial)",
+   "tx_date": "2026-09-23",
+   "notification_date": "2026-10-02",
+   "amount_min": 15001,
+   "amount_max": 50000
+  },
+  {
+   "owner": "Joint",
+   "ticker": "LMT",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-09-23",
+   "notification_date": "2026-10-02",
+   "amount_min": 15001,
+   "amount_max": 50000
+  },
+  {
+   "owner": "Joint",
+   "ticker": "LOW",
+   "asset_type": "Stock",
+   "tx_type": "Sale (Partial)",
+   "tx_date": "2026-09-17",
+   "notification_date": "2026-10-02",
+   "amount_min": 1001,
+   "amount_max": 15000
+  },
+  {
+   "owner": "Joint",
+   "ticker": "MRSH",
+   "asset_type": "Stock",
+   "tx_type": "Sale (Partial)",
+   "tx_date": "2026-09-17",
+   "notification_date": "2026-10-02",
+   "amount_min": 50001,
+   "amount_max": 100000
+  },
+  {
+   "owner": "Joint",
+   "ticker": "MRSH",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-09-23",
+   "notification_date": "2026-10-02",
+   "amount_min": 50001,
+   "amount_max": 100000
+  },
+  {
+   "owner": "Joint",
+   "ticker": "",
+   "asset_type": "Government Security",
+   "tx_type": "Purchase",
+   "tx_date": "2026-09-18",
+   "notification_date": "2026-10-02",
+   "amount_min": 15001,
+   "amount_max": 50000
+  },
+  {
+   "owner": "Joint",
+   "ticker": "NEE",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-10-02",
+   "notification_date": "2026-10-02",
+   "amount_min": 15001,
+   "amount_max": 50000
+  },
+  {
+   "owner": "Joint",
+   "ticker": "",
+   "asset_type": "Government Security",
+   "tx_type": "Purchase",
+   "tx_date": "2026-09-21",
+   "notification_date": "2026-10-02",
+   "amount_min": 15001,
+   "amount_max": 50000
+  },
+  {
+   "owner": "Joint",
+   "ticker": "",
+   "asset_type": "Government Security",
+   "tx_type": "Purchase",
+   "tx_date": "2026-09-21",
+   "notification_date": "2026-10-02",
+   "amount_min": 50001,
+   "amount_max": 100000
+  },
+  {
+   "owner": "Joint",
+   "ticker": "ROK",
+   "asset_type": "Stock",
+   "tx_type": "Sale (Partial)",
+   "tx_date": "2026-09-17",
+   "notification_date": "2026-10-02",
+   "amount_min": 15001,
+   "amount_max": 50000
+  },
+  {
+   "owner": "Joint",
+   "ticker": "SBUX",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-09-23",
+   "notification_date": "2026-10-02",
+   "amount_min": 15001,
+   "amount_max": 50000
+  },
+  {
+   "owner": "Joint",
+   "ticker": "",
+   "asset_type": "Government Security",
+   "tx_type": "Purchase",
+   "tx_date": "2026-09-18",
+   "notification_date": "2026-10-02",
+   "amount_min": 15001,
+   "amount_max": 50000
+  },
+  {
+   "owner": "Joint",
+   "ticker": "UNH",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-09-23",
+   "notification_date": "2026-10-02",
+   "amount_min": 15001,
+   "amount_max": 50000
+  },
+  {
+   "owner": "Joint",
+   "ticker": "AIO",
+   "asset_type": "Stock",
+   "tx_type": "Sale",
+   "tx_date": "2026-09-23",
+   "notification_date": "2026-10-02",
+   "amount_min": 15001,
+   "amount_max": 50000
+  }
+ ],
+ "20035652": [
+  {
+   "owner": "Spouse",
+   "ticker": "",
+   "asset_type": "Government Security",
+   "tx_type": "Purchase",
+   "tx_date": "2026-09-18",
+   "notification_date": "2026-10-14",
+   "amount_min": 15001,
+   "amount_max": 50000
+  },
+  {
+   "owner": "Spouse",
+   "ticker": "",
+   "asset_type": "Government Security",
+   "tx_type": "Purchase",
+   "tx_date": "2026-09-16",
+   "notification_date": "2026-10-14",
+   "amount_min": 50001,
+   "amount_max": 100000
+  }
+ ]
+}

@@ -1,0 +1,8 @@
+requests>=2.31
+pdfplumber>=0.11
+beautifulsoup4>=4.12
+PyYAML>=6.0
+anthropic>=0.40
+pytest>=8.0
+reportlab>=4.0
+yfinance>=0.2.50

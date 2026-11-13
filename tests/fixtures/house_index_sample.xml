@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Real rows copied from the House 2026FD.zip index (fetched 13 Nov 2026). -->
+<FinancialDisclosure>
+  <Member>
+    <Prefix />
+    <Last>Aaron</Last>
+    <First>Richard</First>
+    <Suffix />
+    <FilingType>W</FilingType>
+    <StateDst>MI04</StateDst>
+    <Year>2026</Year>
+    <FilingDate>4/15/2026</FilingDate>
+    <DocID>8068</DocID>
+  </Member>
+  <Member>
+    <Prefix />
+    <Last>Abdulle</Last>
+    <First>Abdisallam</First>
+    <Suffix />
+    <FilingType>C</FilingType>
+    <StateDst>MN02</StateDst>
+    <Year>2026</Year>
+    <FilingDate>6/11/2026</FilingDate>
+    <DocID>10078673</DocID>
+  </Member>
+  <Member>
+    <Prefix>Hon.</Prefix>
+    <Last>Wittman</Last>
+    <First>Robert J.</First>
+    <Suffix />
+    <FilingType>P</FilingType>
+    <StateDst>VA01</StateDst>
+    <Year>2026</Year>
+    <FilingDate>7/10/2026</FilingDate>
+    <DocID>20034916</DocID>
+  </Member>
+  <Member>
+    <Prefix>Hon.</Prefix>
+    <Last>Yakym</Last>
+    <First>Rudy C.</First>
+    <Suffix>III</Suffix>
+    <FilingType>P</FilingType>
+    <StateDst>IN02</StateDst>
+    <Year>2026</Year>
+    <FilingDate>10/20/2026</FilingDate>
+    <DocID>20035691</DocID>
+  </Member>
+  <Member>
+    <Prefix>Hon.</Prefix>
+    <Last>Khanna</Last>
+    <First>Rohit</First>
+    <Suffix />
+    <FilingType>P</FilingType>
+    <StateDst>CA17</StateDst>
+    <Year>2026</Year>
+    <FilingDate>9/2/2026</FilingDate>
+    <DocID>9116142</DocID>
+  </Member>
+</FinancialDisclosure>
