@@ -13,19 +13,24 @@ on:
 permissions:
   contents: write
 
+# One run at a time: a long catch-up run makes the next scheduled run wait instead of clashing.
+concurrency:
+  group: update-trades
+  cancel-in-progress: false
+
 jobs:
   update:
     runs-on: ubuntu-latest
     timeout-minutes: 300
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
           cache: pip
       - run: pip install -r requirements.txt
       - name: Restore price cache (kept out of the public repo)
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: data/cache/prices
           key: prices-${{ github.run_id }}
@@ -39,12 +44,17 @@ jobs:
           ANTHROPIC_MODEL: claude-sonnet-5-5
         run: |
           SINCE="${{ github.event.inputs.since }}"
-          python src/pipeline.py --strict ${SINCE:+--since $SINCE} || echo "FAILED=1" >> "$GITHUB_ENV"
+          # Manual runs ("Run workflow") also retry filings that already failed 3 times
+          RETRY="${{ github.event_name == 'workflow_dispatch' && '--retry-errors' || '' }}"
+          python src/pipeline.py --strict $RETRY ${SINCE:+--since $SINCE} || echo "FAILED=1" >> "$GITHUB_ENV"
       - name: Commit data
         run: |
           git config user.name "trades-bot"
           git config user.email "trades-bot@users.noreply.github.com"
-          git add data/
+          # Publish results only. Caches stay out of the public repo (Yahoo prices are for
+          # personal use only); this also removes any that were committed before.
+          git rm -r --cached --quiet --ignore-unmatch data/cache/prices data/cache/sec_tickers.json 'data/cache/*.yaml'
+          git add data/*.csv data/meta.json data/cache/sic.csv
           git diff --cached --quiet || git commit -m "Data update $(date -u +%F' '%H:%M)"
           git push
       - name: Fail loudly if a source broke (GitHub emails you)
