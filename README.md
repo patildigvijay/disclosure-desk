@@ -69,7 +69,9 @@ How runs handle problems:
 |---|---|
 | One filing errors (server hiccup) | Marked `error`, retried next run; scheduled runs give up after 3 tries, a manual **Run workflow** retries all |
 | More than 5% of filings (min 5) error | Run is marked failed (email) |
-| 3 AI errors in a row (e.g. no API credit left) | AI switched off for the rest of the run, scanned filings wait as `needs_ai`, run marked failed |
+| AI API hiccups (5xx, overloaded, rate limit) 3 times in a row | AI paused 10 min, affected filings wait as `needs_ai` (no attempt counted); after 3 pauses AI is off for the run and the run is marked failed |
+| AI API unusable (bad key, no credit, wrong model) | AI off for the rest of the run, filings wait as `needs_ai`, run marked failed |
+| AI cost | Each run's log ends with `AI: N calls, tokens, about $X` |
 | House rules parser improved (`PARSER_VERSION` in `src/house.py`) | Filings read by the older version are read again automatically, old rows replaced |
 | Older filings still need work | The run looks back to their date by itself; no "since" needed |
 

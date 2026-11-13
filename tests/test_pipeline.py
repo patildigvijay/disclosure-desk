@@ -224,6 +224,29 @@ def test_validation_rules(sectors):
 
 # ---------- AI extractor (mocked: no API key here) ----------
 
+def fake_client(content, stop="tool_use", calls=None, usage=(1000, 500)):
+    """Stands in for anthropic.Anthropic(): messages.stream(...) -> final message."""
+    msg = types.SimpleNamespace(content=content, stop_reason=stop,
+                                usage=types.SimpleNamespace(input_tokens=usage[0], output_tokens=usage[1]))
+
+    class Stream:
+        def __enter__(self):
+            return self
+
+        def __exit__(self, *a):
+            return False
+
+        def get_final_message(self):
+            return msg
+
+    class FakeMessages:
+        def stream(self, **kw):
+            if calls is not None:
+                calls.update(kw)
+            return Stream()
+    return types.SimpleNamespace(messages=FakeMessages())
+
+
 def test_llm_extract_normalises_output():
     block = types.SimpleNamespace(type="tool_use", input={
         "transactions": [{"owner": "SP", "asset_name": "Microsoft Corp", "ticker": "msft",
@@ -231,13 +254,7 @@ def test_llm_extract_normalises_output():
                           "notification_date": "03/06/2026", "amount_range": "$50,001 - $100,000"}],
         "confidence": 0.97, "notes": ""})
     calls = {}
-
-    class FakeMessages:
-        def create(self, **kw):
-            calls.update(kw)
-            return types.SimpleNamespace(content=[block])
-
-    rows, conf, _ = llm.extract_pdf(b"%PDF-1.4 fake", client=types.SimpleNamespace(messages=FakeMessages()))
+    rows, conf, _ = llm.extract_pdf(b"%PDF-1.4 fake", client=fake_client([block], calls=calls))
     assert conf == 0.97 and calls["model"] == llm.MODEL
     r = rows[0]
     assert (r["owner"], r["ticker"], r["asset_type"], r["tx_type"]) == ("Spouse", "MSFT", "Stock", "Sale (Partial)")
@@ -479,21 +496,29 @@ def test_member_matching_former_members_and_switchers(members):
 
 def test_llm_uses_auto_tool_choice_and_fails_cleanly():
     calls = {}
-
-    def client(content, stop="tool_use"):
-        class FakeMessages:
-            def create(self, **kw):
-                calls.update(kw)
-                return types.SimpleNamespace(content=content, stop_reason=stop)
-        return types.SimpleNamespace(messages=FakeMessages())
-
     ok = types.SimpleNamespace(type="tool_use", input={"transactions": [], "confidence": 1})
-    llm.extract_pdf(b"%PDF", client=client([types.SimpleNamespace(type="thinking"), ok]))
-    assert calls["tool_choice"] == {"type": "auto"}
-    with pytest.raises(llm.AIError):
-        llm.extract_pdf(b"%PDF", client=client([types.SimpleNamespace(type="text", text="Sorry")]))
-    with pytest.raises(llm.AIError):
-        llm.extract_pdf(b"%PDF", client=client([ok], stop="max_tokens"))
+    before = llm.USAGE["out"]
+    llm.extract_pdf(b"%PDF", client=fake_client([types.SimpleNamespace(type="text", text="note"), ok], calls=calls))
+    assert calls["tool_choice"] == {"type": "auto"} and calls["thinking"] == {"type": "between_tools"}
+    assert calls["max_tokens"] == 64000 and llm.USAGE["out"] == before + 500
+    with pytest.raises(llm.AIError) as e:
+        llm.extract_pdf(b"%PDF", client=fake_client([types.SimpleNamespace(type="text", text="Sorry")]))
+    assert e.value.kind == "filing"
+    with pytest.raises(llm.AIError) as e:
+        llm.extract_pdf(b"%PDF", client=fake_client([ok], stop="max_tokens"))
+    assert e.value.kind == "filing"
+
+
+@pytest.mark.parametrize("status,text,kind", [
+    (503, "credential validation failed", "transient"), (500, "Unable to complete", "transient"),
+    (529, "Overloaded", "transient"), (429, "rate limit", "transient"),
+    (401, "invalid x-api-key", "fatal"), (400, "Your credit balance is too low", "fatal"),
+    (404, "model not found", "fatal"), (400, "Could not process PDF", "filing"),
+])
+def test_ai_error_kinds(status, text, kind):
+    class Err(Exception):
+        status_code = status
+    assert llm.error_kind(Err(text)) == kind
 
 
 def e2e_setup(tmp_path, monkeypatch, members, sectors, years=None):
@@ -563,18 +588,34 @@ def test_errors_retry_limit_and_strict_threshold(tmp_path, monkeypatch, members,
     assert status()["attempts"] == "4"  # a manual run tries again
 
 
-def test_ai_switched_off_after_errors_in_a_row(tmp_path, monkeypatch, members, sectors):
+def test_ai_switched_off_on_fatal_error(tmp_path, monkeypatch, members, sectors):
+    import csv
+    pipeline = e2e_setup(tmp_path, monkeypatch, members, sectors)
+    monkeypatch.setattr(pipeline.llm, "available", lambda: True)
+
+    def no_credit(pdf):
+        raise llm.AIError("credit balance is too low", "fatal")
+    monkeypatch.setattr(pipeline.llm, "extract_pdf", no_credit)
+    assert pipeline.run(date(2026, 1, 1), ["house"], strict=True) == 1  # failed: you get an email
+    filings = {r["filing_id"]: r for r in csv.DictReader(open(tmp_path / "filings.csv"))}
+    assert filings["9116142"]["status"] == "needs_ai" and filings["20034916"]["status"] == "parsed"
+
+
+def test_ai_paused_on_api_hiccups(tmp_path, monkeypatch, members, sectors):
     import csv
     pipeline = e2e_setup(tmp_path, monkeypatch, members, sectors)
     monkeypatch.setattr(pipeline.llm, "available", lambda: True)
     monkeypatch.setattr(pipeline, "AI_BREAKER", 1)
+    calls = []
 
-    def no_credit(pdf):
-        raise llm.AIError("credit balance is too low")
-    monkeypatch.setattr(pipeline.llm, "extract_pdf", no_credit)
-    assert pipeline.run(date(2026, 1, 1), ["house"], strict=True) == 1
+    def outage(pdf):
+        calls.append(1)
+        raise llm.AIError("503 credential validation failed", "transient")
+    monkeypatch.setattr(pipeline.llm, "extract_pdf", outage)
+    assert pipeline.run(date(2026, 1, 1), ["house"], strict=True) == 0  # a hiccup is not a failure
     filings = {r["filing_id"]: r for r in csv.DictReader(open(tmp_path / "filings.csv"))}
-    assert filings["9116142"]["status"] == "error" and filings["20034916"]["status"] == "parsed"
+    assert filings["9116142"]["status"] == "needs_ai" and filings["9116142"]["attempts"] in ("", "0")
+    assert len(calls) == 1
 
 
 def test_senate_fetch_renews_session_on_403(monkeypatch):

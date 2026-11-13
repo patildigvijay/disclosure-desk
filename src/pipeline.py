@@ -27,7 +27,9 @@ from validate import check
 
 DONE = {"parsed", "review"}  # statuses that are not retried
 MAX_ATTEMPTS = 3   # scheduled runs stop retrying a filing that errored this many times
-AI_BREAKER = 3     # AI errors in a row that switch the AI extractor off for the rest of the run
+AI_BREAKER = 3     # API hiccups in a row (after the SDK's own retries) that pause the AI extractor
+AI_PAUSE_MIN = 10  # ... for this many minutes
+AI_MAX_PAUSES = 3  # ... and after this many pauses it is off for the rest of the run
 MEMBER_FIELDS = ["bioguide", "name", "chamber", "party", "state", "district", "leadership", "committees"]
 
 
@@ -119,7 +121,7 @@ def run(since, chambers, max_filings=None, use_llm=True, strict=False, retry_err
         todo = todo[:max_filings]
     print(f"{len(todo)} filings to process (new, retried or re-read)")
 
-    ai_errors_in_row = 0
+    ai_hiccups, ai_pauses, ai_paused_until = 0, 0, 0.0
     processed = 0
     for chamber, f in todo:
         if time.monotonic() - started > budget_min * 60:
@@ -130,9 +132,9 @@ def run(since, chambers, max_filings=None, use_llm=True, strict=False, retry_err
         rec = {**{k: f.get(k, "") for k in FILING_FIELDS}, "processed_at": datetime.now().isoformat(timespec="seconds")}
         try:
             parser = parse_house if chamber == "house" else parse_senate
-            rows, method, conf, status = parser(s, f, use_llm)
+            rows, method, conf, status = parser(s, f, use_llm and time.monotonic() >= ai_paused_until)
             if method == "ai":
-                ai_errors_in_row = 0
+                ai_hiccups = 0
             if status == "parsed":  # replace any trades from an earlier read of this filing
                 prefix = f"{f['chamber'][0]}-{f['filing_id']}-"
                 for k in [k for k in trades_db if k.startswith(prefix)]:
@@ -149,16 +151,33 @@ def run(since, chambers, max_filings=None, use_llm=True, strict=False, retry_err
             if any(t["status"] == "review" for t in rows):
                 status = "review"
             rec.update(status=status, n_trades=len(rows), error="", parser=parsed_with(method), attempts=0)
+        except llm.AIError as e:
+            if e.kind == "filing":
+                rec.update(status="error", n_trades=0, error=str(e)[:300],
+                           attempts=int(prev.get("attempts") or 0) + 1)
+                errors.append(f"{f['chamber']} {f['filing_id']}: {e}")
+            else:
+                # Not this filing's fault: it waits for a later run, no attempt counted
+                rec.update(status="needs_ai", n_trades=0, error=str(e)[:300], attempts=prev.get("attempts", 0))
+                print(f"AI API problem on {f['chamber']} {f['filing_id']}: {e}", file=sys.stderr)
+                if e.kind == "fatal":  # bad key, no credit, wrong model
+                    use_llm = False
+                    failures.append(f"AI extractor switched off: {e}")
+                else:
+                    ai_hiccups += 1
+                    if ai_hiccups >= AI_BREAKER:
+                        ai_hiccups, ai_pauses = 0, ai_pauses + 1
+                        if ai_pauses >= AI_MAX_PAUSES:
+                            use_llm = False
+                            failures.append(f"AI extractor switched off after {ai_pauses} pauses: {e}")
+                        else:
+                            ai_paused_until = time.monotonic() + AI_PAUSE_MIN * 60
+                            print(f"AI paused {AI_PAUSE_MIN} min after {AI_BREAKER} API errors in a row")
         except Exception as e:
             rec.update(status="error", n_trades=0, error=str(e)[:300],
                        attempts=int(prev.get("attempts") or 0) + 1)
             errors.append(f"{f['chamber']} {f['filing_id']}: {e}")
             traceback.print_exc()
-            if isinstance(e, llm.AIError):
-                ai_errors_in_row += 1
-                if use_llm and ai_errors_in_row >= AI_BREAKER:
-                    use_llm = False  # e.g. no credit left: stop paying for failing calls
-                    failures.append(f"AI extractor switched off after {AI_BREAKER} errors in a row: {e}")
         filings_db[(f["chamber"], f["filing_id"])] = rec
         time.sleep(0.5)  # be polite to government servers
 
@@ -208,6 +227,8 @@ def run(since, chambers, max_filings=None, use_llm=True, strict=False, retry_err
     # A few filing errors (a server hiccup) are retried next run; many mean something broke.
     too_many = len(errors) > max(5, 0.05 * processed)
     print(f"Filing errors: {len(errors)} of {processed} processed" + (" (too many)" if too_many else ""))
+    u = llm.USAGE
+    print(f"AI: {u['calls']} calls, {u['in']:,} input + {u['out']:,} output tokens, about ${llm.cost_usd()}")
     for msg in errors[:20]:
         print("ERROR:", msg, file=sys.stderr)
     for msg in failures:
