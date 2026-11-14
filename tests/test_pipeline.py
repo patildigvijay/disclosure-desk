@@ -494,25 +494,53 @@ def test_member_matching_former_members_and_switchers(members):
     assert "M001135" not in {r["bioguide"] for r in members.rows()}  # members page: current only
 
 
+def make_pages_pdf(n):
+    buf = io.BytesIO()
+    c = canvas.Canvas(buf, pagesize=letter)
+    for i in range(n):
+        c.drawString(72, 720, f"page {i + 1}")
+        c.showPage()
+    c.save()
+    return buf.getvalue()
+
+
 def test_llm_uses_auto_tool_choice_and_fails_cleanly():
     calls = {}
     ok = types.SimpleNamespace(type="tool_use", input={"transactions": [], "confidence": 1})
-    before = llm.USAGE["out"]
-    llm.extract_pdf(b"%PDF", client=fake_client([types.SimpleNamespace(type="text", text="note"), ok], calls=calls))
-    assert calls["tool_choice"] == {"type": "auto"} and calls["thinking"] == {"type": "between_tools"}
-    assert calls["max_tokens"] == 64000 and llm.USAGE["out"] == before + 500
+    before = dict(llm.USAGE)
+    llm.extract_pdf(make_pages_pdf(2), client=fake_client([types.SimpleNamespace(type="text", text="note"), ok], calls=calls))
+    assert calls["model"] == "claude-haiku-5-5" and "thinking" not in calls  # between_tools is Sonnet-only
+    assert calls["tool_choice"] == {"type": "auto"} and calls["max_tokens"] == 2 * 6000 + 2000
+    assert llm.USAGE["out"] == before["out"] + 500
+    assert abs(llm.USAGE["usd"] - before["usd"] - (1000 * 0.10 + 500 * 0.50) / 1e6) < 1e-9  # Haiku rates
     with pytest.raises(llm.AIError) as e:
-        llm.extract_pdf(b"%PDF", client=fake_client([types.SimpleNamespace(type="text", text="Sorry")]))
+        llm.extract_pdf(make_pages_pdf(1), client=fake_client([types.SimpleNamespace(type="text", text="Sorry")]))
     assert e.value.kind == "filing"
     with pytest.raises(llm.AIError) as e:
-        llm.extract_pdf(b"%PDF", client=fake_client([ok], stop="max_tokens"))
-    assert e.value.kind == "filing"
+        llm.extract_pdf(make_pages_pdf(1), client=fake_client([ok], stop="max_tokens"))
+    assert e.value.kind == "too_long"
+
+
+def test_llm_reads_long_scans_in_chunks():
+    assert [p for _, p in llm.split_pdf(make_pages_pdf(12))] == [5, 5, 2]
+    row = {"asset_name": "Apple Inc", "tx_type": "P", "tx_date": "01/05/2022", "amount_range": "$1,001 - $15,000"}
+    answers = [0.9, 0.6, 0.8]
+    sent = []
+
+    class Messages:
+        def stream(self, **kw):
+            sent.append(kw["max_tokens"])
+            conf = answers[len(sent) - 1]
+            return fake_client([types.SimpleNamespace(type="tool_use", input={"transactions": [row], "confidence": conf})]
+                               ).messages.stream(**kw)
+    rows, conf, _ = llm.extract_pdf(make_pages_pdf(12), client=types.SimpleNamespace(messages=Messages()))
+    assert len(rows) == 3 and conf == 0.6 and sent == [32000, 32000, 14000]
 
 
 @pytest.mark.parametrize("status,text,kind", [
     (503, "credential validation failed", "transient"), (500, "Unable to complete", "transient"),
     (529, "Overloaded", "transient"), (429, "rate limit", "transient"),
-    (401, "invalid x-api-key", "fatal"), (400, "Your credit balance is too low", "fatal"),
+    (401, "invalid x-api-key", "fatal"), (400, "Your credit balance is too low", "no_credit"),
     (404, "model not found", "fatal"), (400, "Could not process PDF", "filing"),
 ])
 def test_ai_error_kinds(status, text, kind):
@@ -616,6 +644,55 @@ def test_ai_paused_on_api_hiccups(tmp_path, monkeypatch, members, sectors):
     filings = {r["filing_id"]: r for r in csv.DictReader(open(tmp_path / "filings.csv"))}
     assert filings["9116142"]["status"] == "needs_ai" and filings["9116142"]["attempts"] in ("", "0")
     assert len(calls) == 1
+
+
+def test_ai_no_credit_waits_without_failing(tmp_path, monkeypatch, members, sectors):
+    import csv
+    pipeline = e2e_setup(tmp_path, monkeypatch, members, sectors)
+    monkeypatch.setattr(pipeline.llm, "available", lambda: True)
+
+    def no_credit(pdf):
+        raise llm.AIError("Your credit balance is too low", "no_credit")
+    monkeypatch.setattr(pipeline.llm, "extract_pdf", no_credit)
+    assert pipeline.run(date(2026, 1, 1), ["house"], strict=True) == 0  # no email every 3 hours
+    filings = {r["filing_id"]: r for r in csv.DictReader(open(tmp_path / "filings.csv"))}
+    assert filings["9116142"]["status"] == "needs_ai"
+
+
+def test_ai_monthly_budget(tmp_path, monkeypatch, members, sectors):
+    import csv
+    import json
+    pipeline = e2e_setup(tmp_path, monkeypatch, members, sectors)
+    monkeypatch.setattr(pipeline.llm, "available", lambda: True)
+    month = date.today().strftime("%Y-%m")
+    (tmp_path / "ai_spend.json").write_text(json.dumps({month: 3.0}))
+    monkeypatch.setenv("AI_MONTHLY_BUDGET", "3")
+    called = []
+    monkeypatch.setattr(pipeline.llm, "extract_pdf", lambda pdf: called.append(1) or ([], 1.0, ""))
+    assert pipeline.run(date(2026, 1, 1), ["house"], strict=True) == 0
+    assert called == []  # budget used up: no paid calls
+    filings = {r["filing_id"]: r for r in csv.DictReader(open(tmp_path / "filings.csv"))}
+    assert filings["9116142"]["status"] == "needs_ai"
+    monkeypatch.setenv("AI_MONTHLY_BUDGET", "4")
+    pipeline.run(date(2026, 1, 1), ["house"])
+    assert called == [1]
+    assert json.loads((tmp_path / "ai_spend.json").read_text())[month] >= 3.0
+
+
+def test_ai_answer_too_long_goes_to_review_once(tmp_path, monkeypatch, members, sectors):
+    import csv
+    pipeline = e2e_setup(tmp_path, monkeypatch, members, sectors)
+    monkeypatch.setattr(pipeline.llm, "available", lambda: True)
+    called = []
+
+    def too_long(pdf):
+        called.append(1)
+        raise llm.AIError("answer cut off", "too_long")
+    monkeypatch.setattr(pipeline.llm, "extract_pdf", too_long)
+    pipeline.run(date(2026, 1, 1), ["house"])
+    pipeline.run(date(2026, 1, 1), ["house"])
+    filings = {r["filing_id"]: r for r in csv.DictReader(open(tmp_path / "filings.csv"))}
+    assert filings["9116142"]["status"] == "needs_review" and called == [1]  # paid once, not again
 
 
 def test_senate_fetch_renews_session_on_403(monkeypatch):

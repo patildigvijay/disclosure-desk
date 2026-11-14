@@ -70,8 +70,11 @@ How runs handle problems:
 | One filing errors (server hiccup) | Marked `error`, retried next run; scheduled runs give up after 3 tries, a manual **Run workflow** retries all |
 | More than 5% of filings (min 5) error | Run is marked failed (email) |
 | AI API hiccups (5xx, overloaded, rate limit) 3 times in a row | AI paused 10 min, affected filings wait as `needs_ai` (no attempt counted); after 3 pauses AI is off for the run and the run is marked failed |
-| AI API unusable (bad key, no credit, wrong model) | AI off for the rest of the run, filings wait as `needs_ai`, run marked failed |
-| AI cost | Each run's log ends with `AI: N calls, tokens, about $X` |
+| AI API unusable (bad key, wrong model) | AI off for the rest of the run, filings wait as `needs_ai`, run marked failed |
+| AI credit used up | AI off for the run, filings wait as `needs_ai`; **not** a run failure (no email every 3 hours) |
+| AI monthly budget reached (`AI_MONTHLY_BUDGET`, default $3, in the workflow) | No more AI calls that month; filings wait as `needs_ai`. Spend per month is kept in `data/ai_spend.json` |
+| AI answer cut off even in 5-page chunks | Filing goes to `needs_review`; never retried (it was paid for) |
+| AI cost | Each run's log ends with `AI: N calls, tokens, about $X (model); <month> so far $Y of $Z budget` |
 | House rules parser improved (`PARSER_VERSION` in `src/house.py`) | Filings read by the older version are read again automatically, old rows replaced |
 | Older filings still need work | The run looks back to their date by itself; no "since" needed |
 
@@ -142,7 +145,7 @@ One file, no build step, no server. It reads the CSVs in `data/` and
 | Item | US$/month |
 |---|---|
 | GitHub Actions (public repo free; private ~500 of 2,000 free minutes) | 0 |
-| Claude for scanned filings (~60/yr House, Sonnet 5.5 at $2/$10 per M tokens, ~$0.04 each) | < 1 |
+| Claude for scanned filings (Haiku 5.5 at $0.10/$0.50 per M tokens; capped by `AI_MONTHLY_BUDGET`, default $3) | ≤ 3 |
 | SEC, House, Senate, GitHub data | 0 |
 | Website hosting (GitHub Pages) | 0 |
 | Prices for performance (Marketstack Basic, optional) | 9.99 |
@@ -159,7 +162,7 @@ One file, no build step, no server. It reads the CSVs in `data/` and
 | House PDF rules parser | 24 real 2026 filings, 237 trades, checked field by field (`tests/fixtures/house_real/`) | ✅ |
 | Portfolio estimates, returns vs S&P, price fetching | Unit tests with fixed prices and a fake price API | ✅ |
 | Senate search + PTR parser | First live run: 589 filings, 5,783 trades | ✅ |
-| AI extractor | Mocked API. First live run: Sonnet 5.5 rejects forced tool use (fixed: `tool_choice` auto) | ⚠️ Confirm on next run |
+| AI extractor | Live on Sonnet 5.5 (Nov 2026): 387 calls, $42.53, avg 70 rows per scanned filing (Khanna and McCaul file hundreds of trades on paper), most rows below the 0.9 confidence bar so they sit in review. Now Haiku 5.5, 5-page chunks, monthly budget | ⚠️ Confirm Haiku on next run |
 | House parser, 2022-style PDFs (labels spelled out, odd capitals) | Synthetic PDF built from real live-run text | ✅ |
 | Former members, chamber switchers | Real current + historical member data: 26,915 of 26,930 live trades match | ✅ |
 

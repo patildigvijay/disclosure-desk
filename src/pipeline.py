@@ -10,6 +10,7 @@ Outputs (data/):
 """
 import argparse
 import json
+import os
 import sys
 import time
 import traceback
@@ -30,6 +31,7 @@ MAX_ATTEMPTS = 3   # scheduled runs stop retrying a filing that errored this man
 AI_BREAKER = 3     # API hiccups in a row (after the SDK's own retries) that pause the AI extractor
 AI_PAUSE_MIN = 10  # ... for this many minutes
 AI_MAX_PAUSES = 3  # ... and after this many pauses it is off for the rest of the run
+AI_MONTHLY_BUDGET = 3.0  # USD of AI per calendar month (env AI_MONTHLY_BUDGET overrides); spend kept in data/ai_spend.json
 MEMBER_FIELDS = ["bioguide", "name", "chamber", "party", "state", "district", "leadership", "committees"]
 
 
@@ -87,6 +89,12 @@ def run(since, chambers, max_filings=None, use_llm=True, strict=False, retry_err
     sectors = Sectors(s)
     sectors.load_tickers()  # fail fast (before any state changes) if SEC is unreachable
     use_llm = use_llm and llm.available()
+    month = date.today().strftime("%Y-%m")
+    spend_path = DATA / "ai_spend.json"
+    spend = json.loads(spend_path.read_text()) if spend_path.exists() else {}
+    spent_before = float(spend.get(month, 0))
+    budget = float(os.environ.get("AI_MONTHLY_BUDGET") or AI_MONTHLY_BUDGET)
+    budget_hit = False
     failures, errors = [], []  # source failures; per-filing errors
 
     # Look back far enough to reach older filings that still need work (errors, stale parses)
@@ -132,7 +140,13 @@ def run(since, chambers, max_filings=None, use_llm=True, strict=False, retry_err
         rec = {**{k: f.get(k, "") for k in FILING_FIELDS}, "processed_at": datetime.now().isoformat(timespec="seconds")}
         try:
             parser = parse_house if chamber == "house" else parse_senate
-            rows, method, conf, status = parser(s, f, use_llm and time.monotonic() >= ai_paused_until)
+            ai_ok = use_llm and time.monotonic() >= ai_paused_until
+            if ai_ok and spent_before + llm.USAGE["usd"] >= budget:
+                ai_ok = False  # scanned filings wait (needs_ai) until next month's budget
+                if not budget_hit:
+                    budget_hit = True
+                    print(f"AI budget of ${budget:.2f} for {month} reached: scanned filings wait")
+            rows, method, conf, status = parser(s, f, ai_ok)
             if method == "ai":
                 ai_hiccups = 0
             if status == "parsed":  # replace any trades from an earlier read of this filing
@@ -156,11 +170,17 @@ def run(since, chambers, max_filings=None, use_llm=True, strict=False, retry_err
                 rec.update(status="error", n_trades=0, error=str(e)[:300],
                            attempts=int(prev.get("attempts") or 0) + 1)
                 errors.append(f"{f['chamber']} {f['filing_id']}: {e}")
+            elif e.kind == "too_long":  # paid for and still cut off: a person looks at it, no retry
+                rec.update(status="needs_review", n_trades=0, error=str(e)[:300])
+                print(f"AI answer too long on {f['chamber']} {f['filing_id']}: {e}", file=sys.stderr)
             else:
                 # Not this filing's fault: it waits for a later run, no attempt counted
                 rec.update(status="needs_ai", n_trades=0, error=str(e)[:300], attempts=prev.get("attempts", 0))
                 print(f"AI API problem on {f['chamber']} {f['filing_id']}: {e}", file=sys.stderr)
-                if e.kind == "fatal":  # bad key, no credit, wrong model
+                if e.kind == "no_credit":  # top up in the Claude Console; not a run failure
+                    use_llm = False
+                    print("AI credit used up: scanned filings wait until credit is added", file=sys.stderr)
+                elif e.kind == "fatal":  # bad key or wrong model
                     use_llm = False
                     failures.append(f"AI extractor switched off: {e}")
                 else:
@@ -228,7 +248,10 @@ def run(since, chambers, max_filings=None, use_llm=True, strict=False, retry_err
     too_many = len(errors) > max(5, 0.05 * processed)
     print(f"Filing errors: {len(errors)} of {processed} processed" + (" (too many)" if too_many else ""))
     u = llm.USAGE
-    print(f"AI: {u['calls']} calls, {u['in']:,} input + {u['out']:,} output tokens, about ${llm.cost_usd()}")
+    spend[month] = round(spent_before + u["usd"], 4)
+    spend_path.write_text(json.dumps(spend, indent=1))
+    print(f"AI: {u['calls']} calls, {u['in']:,} input + {u['out']:,} output tokens, about ${llm.cost_usd()} "
+          f"({llm.MODEL}); {month} so far ${spend[month]:.2f} of ${budget:.2f} budget")
     for msg in errors[:20]:
         print("ERROR:", msg, file=sys.stderr)
     for msg in failures:

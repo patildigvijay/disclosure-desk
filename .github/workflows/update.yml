@@ -41,7 +41,8 @@ jobs:
           SCRAPER_USER_AGENT: ${{ secrets.SCRAPER_USER_AGENT }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           MARKETSTACK_API_KEY: ${{ secrets.MARKETSTACK_API_KEY }}
-          ANTHROPIC_MODEL: claude-sonnet-5-5
+          ANTHROPIC_MODEL: claude-haiku-5-5   # scanned filings; ~20x cheaper than Sonnet
+          AI_MONTHLY_BUDGET: "3"              # USD per month; scanned filings wait once it's used
         run: |
           SINCE="${{ github.event.inputs.since }}"
           # Manual runs ("Run workflow") also retry filings that already failed 3 times
@@ -54,8 +55,10 @@ jobs:
           # Publish results only. Caches stay out of the public repo (Yahoo prices are for
           # personal use only); this also removes any that were committed before.
           git rm -r --cached --quiet --ignore-unmatch data/cache/prices data/cache/sec_tickers.json 'data/cache/*.yaml'
-          git add data/*.csv data/meta.json data/cache/sic.csv
+          git add data/*.csv data/*.json data/cache/sic.csv
           git diff --cached --quiet || git commit -m "Data update $(date -u +%F' '%H:%M)"
+          # Code may have been pushed while this run was going: put the data commit on top
+          git pull --rebase --no-edit origin main
           git push
       - name: Fail loudly if a source broke (GitHub emails you)
         if: env.FAILED == '1'
