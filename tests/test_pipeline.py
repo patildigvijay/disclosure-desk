@@ -847,3 +847,31 @@ def test_name_matched_tickers_fill_scanned_trades(tmp_path, monkeypatch, members
     app = ai["APPLOVIN CORPORATION CMN CLASS A"]
     assert (app["ticker"], app["asset_type"], app["sector"]) == ("APP", "Stock", "Technology")
     assert ai["SPDR S&P 500 ETF Trust"]["ticker"] == ""  # funds are left alone
+
+
+def test_alpaca_prices_paging_and_bad_symbols(tmp_path, monkeypatch):
+    import prices
+    monkeypatch.setenv("ALPACA_KEY_ID", "k")
+    monkeypatch.setenv("ALPACA_SECRET", "s")
+    monkeypatch.delenv("MARKETSTACK_API_KEY", raising=False)
+    monkeypatch.setattr(prices, "CACHE", tmp_path)
+    monkeypatch.setattr(prices, "STATE", tmp_path / "_state.json")
+    monkeypatch.setattr(prices.time, "sleep", lambda n: None)
+    asked = []
+
+    def fake_get(url, params, headers, timeout):
+        syms = params["symbols"].split(",")
+        asked.append((tuple(syms), params.get("page_token")))
+        assert headers["APCA-API-KEY-ID"] == "k" and params["feed"] == "sip" and params["end"] == "2026-06-01"
+        if "ZZZZ" in syms:  # Alpaca rejects the whole request for one unknown symbol
+            return types.SimpleNamespace(status_code=422, raise_for_status=lambda: None)
+        page2 = params.get("page_token") == "p2"
+        bars = {sy: [{"t": "2026-06-0%dT04:00:00Z" % (2 if page2 else 1), "c": 10.0 + page2}] for sy in syms}
+        body = {"bars": bars, "next_page_token": None if page2 else "p2"}
+        return types.SimpleNamespace(status_code=200, json=lambda: body, raise_for_status=lambda: None)
+    assert prices.source() == "alpaca"
+    px = prices.load(types.SimpleNamespace(get=fake_get), ["BRK.B", "ZZZZ", "-- WBD"], date(2026, 1, 1),
+                     today=date(2026, 6, 2))
+    assert ("-- WBD",) not in [a for a, _ in asked]          # malformed ticker never sent
+    assert px.close_on("BRK.B", date(2026, 6, 2)) == 11.0 and px.close_on("SPY", date(2026, 6, 1)) == 10.0
+    assert "Alpaca" in px.source

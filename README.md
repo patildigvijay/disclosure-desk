@@ -102,8 +102,9 @@ Performance needs daily prices. Two sources, chosen automatically:
 
 | Source | When | Licence |
 |---|---|---|
-| Yahoo Finance via `yfinance` (free) | No `MARKETSTACK_API_KEY` set | Personal use only: testing and private use |
-| Marketstack Basic ($9.99/month) | `MARKETSTACK_API_KEY` set | Lists commercial use; confirm public display in writing |
+| Marketstack Basic ($9.99/month) | `MARKETSTACK_API_KEY` set (wins over the others) | Lists commercial use; confirm public display in writing |
+| Alpaca market data, free plan | `ALPACA_KEY_ID` + `ALPACA_SECRET` set | Official API, all-exchange daily bars since 2016; free plan for testing and private review |
+| Yahoo Finance via `yfinance` (free) | Neither set | Unofficial; throttled from GitHub's servers since Nov 2026; personal use only |
 
 Set `PRICE_SOURCE=none` to switch performance off. The Method page names the source in use
 (`data/meta.json`). Figures:

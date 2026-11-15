@@ -1,9 +1,12 @@
 """Daily closing prices for performance figures.
 
-Two sources:
-- Marketstack (paid, lists commercial use): used when MARKETSTACK_API_KEY is set.
-- Yahoo Finance via the free yfinance library: used otherwise. Yahoo's terms are personal
-  use only, so this is for testing; add the Marketstack key before the site goes public.
+Sources, first one configured wins:
+- Marketstack (paid, lists commercial use): MARKETSTACK_API_KEY.
+- Alpaca market data, free plan (official API; all-exchange daily bars since 2016 except the
+  latest 15 minutes): ALPACA_KEY_ID + ALPACA_SECRET. Free plan = testing / private review.
+- Yahoo Finance via the free yfinance library: otherwise. Unofficial, throttled from cloud
+  servers, personal use only.
+Add a source that permits public display before the site goes public.
 Set PRICE_SOURCE=none to turn performance figures off.
 
 Prices are fetched at most once a day and cached in data/cache/prices/ (git-ignored, so raw
@@ -13,6 +16,8 @@ prices are never published in the repo). Marketstack budget (Basic = 10,000 requ
 import csv
 import json
 import os
+import re
+import time
 from collections import defaultdict
 from datetime import date, timedelta
 
@@ -20,16 +25,21 @@ from common import DATA, get
 from portfolio import BENCHMARK, Prices
 
 API = "https://api.marketstack.com/v2/eod"
+ALPACA_BARS = "https://data.alpaca.markets/v2/stocks/bars"
+ALPACA_SYMBOL = re.compile(r"^[A-Z]{1,5}(\.[A-Z]{1,2})?$")  # AAPL, BRK.B; skips misread tickers like "-- WBD"
 CACHE = DATA / "cache" / "prices"
 STATE = CACHE / "_state.json"
 BATCH = 100
 FULL_EVERY_DAYS = 7
-LABELS = {"marketstack": "Marketstack", "yfinance": "Yahoo Finance via yfinance (testing only)"}
+LABELS = {"marketstack": "Marketstack", "alpaca": "Alpaca market data, free plan (testing only)",
+          "yfinance": "Yahoo Finance via yfinance (testing only)"}
 
 
 def source():
     if os.environ.get("MARKETSTACK_API_KEY"):
         return "marketstack"
+    if os.environ.get("ALPACA_KEY_ID") and os.environ.get("ALPACA_SECRET"):
+        return "alpaca"
     return os.environ.get("PRICE_SOURCE", "yfinance").lower()
 
 
@@ -63,6 +73,47 @@ def _marketstack(s, key, symbols, frm, to):
         offset += int(page.get("count", 0))
         if not page.get("count") or offset >= int(page.get("total", 0)):
             return out
+
+
+def _alpaca(s, symbols, frm, to):
+    """{symbol: {date: close}}, split- and dividend-adjusted, 100 symbols a request, all pages.
+    Up to yesterday: the free plan refuses the latest 15 minutes. A batch Alpaca rejects
+    (unknown symbol) is split in two until the bad symbol is found and skipped."""
+    headers = {"APCA-API-KEY-ID": os.environ["ALPACA_KEY_ID"], "APCA-API-SECRET-KEY": os.environ["ALPACA_SECRET"]}
+    out = defaultdict(dict)
+
+    def fetch(batch):
+        token, tries = None, 0
+        while True:
+            params = {"symbols": ",".join(batch), "timeframe": "1Day", "start": frm.isoformat(),
+                      "end": (to - timedelta(days=1)).isoformat(), "adjustment": "all", "feed": "sip",
+                      "limit": 10000}
+            if token:
+                params["page_token"] = token
+            r = s.get(ALPACA_BARS, params=params, headers=headers, timeout=60)
+            if (r.status_code == 429 or r.status_code >= 500) and tries < 5:
+                tries += 1
+                time.sleep(5 * tries)
+                continue
+            if r.status_code in (400, 404, 422):
+                if len(batch) > 1:
+                    fetch(batch[:len(batch) // 2])
+                    fetch(batch[len(batch) // 2:])
+                return
+            r.raise_for_status()  # 401/403 = bad key: the caller keeps cached prices and logs it
+            body = r.json()
+            for sym, bars in (body.get("bars") or {}).items():
+                for b in bars:
+                    out[sym.upper()][date.fromisoformat(b["t"][:10])] = float(b["c"])
+            token = body.get("next_page_token")
+            if not token:
+                return
+            time.sleep(0.35)  # free plan: 200 requests a minute
+
+    symbols = [x for x in symbols if ALPACA_SYMBOL.match(x)]
+    for i in range(0, len(symbols), BATCH):
+        fetch(symbols[i:i + BATCH])
+    return out
 
 
 def _yfinance(symbols, frm, to):
@@ -116,6 +167,8 @@ def load(s, tickers, start, today=None):
             try:
                 if src == "yfinance":
                     got = _yfinance(tks, frm, today)
+                elif src == "alpaca":
+                    got = _alpaca(s, tks, frm, today)
                 else:
                     got = {}
                     for i in range(0, len(tks), BATCH):

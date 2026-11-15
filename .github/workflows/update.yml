@@ -46,6 +46,8 @@ jobs:
           SCRAPER_USER_AGENT: ${{ secrets.SCRAPER_USER_AGENT }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           MARKETSTACK_API_KEY: ${{ secrets.MARKETSTACK_API_KEY }}
+          ALPACA_KEY_ID: ${{ secrets.ALPACA_KEY_ID }}   # free price data for private review
+          ALPACA_SECRET: ${{ secrets.ALPACA_SECRET }}
           ANTHROPIC_MODEL: claude-haiku-5-5   # scanned filings; ~20x cheaper than Sonnet
           AI_MONTHLY_BUDGET: "3"              # USD per month; scanned filings wait once it's used
         run: |
