@@ -92,6 +92,7 @@ tbody tr:hover { background: #eef4fb; }
 .pty { font-size: 10.5px; font-weight: bold; padding: 0 3px; border: 1px solid currentColor; margin-left: 5px; white-space: nowrap; }
 .pty.R { color: #b0413e; } .pty.D { color: #2f5fb3; } .pty.I { color: var(--muted); }
 .who { white-space: nowrap; }
+.home .panel .who { white-space: normal; }  /* long names wrap in the narrow home panels */
 .muted { color: var(--muted); }
 .more { margin-top: 4px; background: none; border: 0; padding: 3px 0; color: var(--accent); font: bold 12px var(--body); cursor: pointer; }
 .note { color: var(--muted); font-size: 11.5px; margin: 6px 0 0; }
@@ -199,6 +200,8 @@ const slug = s => String(s || "").toLowerCase().normalize("NFKD").replace(/[^a-z
 const tkey = s => String(s || "").toUpperCase().replace(/[^A-Z0-9]/g, "-");
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 const fdate = d => (d ? `${MONTHS[+d.slice(5, 7) - 1]} ${+d.slice(8, 10)}, ${d.slice(0, 4)}` : "");
+// Narrow columns: no year when it's the current year
+const fshort = d => (d && d.slice(0, 4) === String(new Date().getFullYear()) ? fdate(d).slice(0, -6) : fdate(d));
 const short$ = n => (n >= 1e6 ? `$${+(n / 1e6).toFixed(n % 1e6 ? 1 : 0)}M` : n >= 1e3 ? `$${Math.round(n / 1e3)}K` : `$${n}`);
 const money = n => (n >= 1e9 ? `$${(n / 1e9).toFixed(1)}B` : n >= 1e6 ? `$${(n / 1e6).toFixed(1)}M` : n >= 1e3 ? `$${Math.round(n / 1e3)}K` : `$${Math.round(n || 0)}`);
 const amt = t => (!t.min ? "&mdash;" : t.max == null ? `Over ${short$(t.min - 1)}` : t.max === t.min ? short$(t.min) : `${short$(t.min)}&ndash;${short$(t.max)}`);
@@ -328,7 +331,7 @@ function pageHome() {
     : `<h2>Members with disclosed trades</h2>${table([
         { label: "Member", v: p => p.name, html: p => who(p.member_key) },
         { label: "Stocks", cls: "num", v: p => p.holdings },
-        { label: "Updated", cls: "date", v: p => p.last_filed, html: p => fdate(p.last_filed) },
+        { label: "Updated", cls: "date", v: p => p.last_filed, html: p => fshort(p.last_filed) },
       ], [...S.ports.values()].sort((a, b) => b.last_filed.localeCompare(a.last_filed)), { show: 25, sortable: false })}
       <p class="note">Performance rankings appear once a licensed price feed is connected.</p>`;
   const block = (title, cols, rows, show = 10, max = 50, cls = "") => `<div class="panel ${cls}"><h2>${title}</h2>${table(cols, rows, { show, max, sortable: false })}</div>`;

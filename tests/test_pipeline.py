@@ -815,3 +815,35 @@ def test_site_file_and_backlog_continuation(tmp_path, monkeypatch, members, sect
     assert len(site) == sum(t["status"] == "ok" for t in full) and all(t["status"] == "ok" for t in site)
     meta = json.loads((tmp_path / "meta.json").read_text())
     assert meta["trades_shown"] == len(site) and meta["trades_held"] == len(full) - len(site)
+
+
+def test_ticker_from_company_name_only_when_unambiguous():
+    from enrich import name_key
+    titles = {"APP": "AppLovin Corp", "GOOGL": "Alphabet Inc.", "GOOG": "Alphabet Inc.", "JPM": "JPMORGAN CHASE & CO",
+              "SJM": "SMUCKER J M CO", "MSFT": "MICROSOFT CORP", "XYZA": "Acme Holdings Inc /DE/", "XYZB": "ACME HOLDINGS"}
+    ciks = {"APP": 1, "GOOGL": 2, "GOOG": 2, "JPM": 3, "SJM": 4, "MSFT": 5, "XYZA": 6, "XYZB": 7}
+    sec = Sectors(tickers=ciks, sic_cache={}, titles=titles)
+    assert name_key("APPLOVIN CORPORATION CMN CLASS A") == name_key("AppLovin Corp") == "applovin"
+    assert sec.ticker_for_name("APPLOVIN CORPORATION CMN CLASS A") == "APP"
+    assert sec.ticker_for_name("J.P. Morgan Chase & Co. Common Stock") == "JPM"
+    assert sec.ticker_for_name("The J. M. Smucker Company") == "SJM"
+    assert sec.ticker_for_name("Alphabet Inc. - Class A") == ""            # two tickers: can't tell which
+    assert sec.ticker_for_name("Acme Holdings") == ""                      # two companies share the name
+    assert sec.ticker_for_name("Microsoft Corp 2.4% Notes due 2026") == ""  # not the company's stock
+
+
+def test_name_matched_tickers_fill_scanned_trades(tmp_path, monkeypatch, members):
+    import csv
+    sec = Sectors(tickers={"APP": 1, "SPY": 2}, titles={"APP": "AppLovin Corp", "SPY": "SPDR S&P 500 ETF TRUST"},
+                  sic_cache={"APP": {"ticker": "APP", "sic": "7372"}, "SPY": {"ticker": "SPY", "sic": "6726"}})
+    pipeline = e2e_setup(tmp_path, monkeypatch, members, sec)
+    monkeypatch.setattr(pipeline.llm, "available", lambda: True)
+    row = {"owner": "DC", "ticker": "", "asset_type": "", "tx_type": "Sale", "tx_date": date(2026, 1, 5),
+           "notification_date": None, "amount_min": 1001, "amount_max": 15000, "comment": "", "double_read": "agree"}
+    rows = [{**row, "asset_name": "APPLOVIN CORPORATION CMN CLASS A"}, {**row, "asset_name": "SPDR S&P 500 ETF Trust"}]
+    monkeypatch.setattr(pipeline.llm, "extract_pdf", lambda pdf: ([dict(r) for r in rows], 0.4, ""))
+    pipeline.run(date(2026, 1, 1), ["house"])
+    ai = {t["asset_name"]: t for t in csv.DictReader(open(tmp_path / "trades.csv")) if t["parse_method"] == "ai"}
+    app = ai["APPLOVIN CORPORATION CMN CLASS A"]
+    assert (app["ticker"], app["asset_type"], app["sector"]) == ("APP", "Stock", "Technology")
+    assert ai["SPDR S&P 500 ETF Trust"]["ticker"] == ""  # funds are left alone

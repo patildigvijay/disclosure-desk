@@ -24,7 +24,7 @@ import prices
 import senate
 from common import (DATA, FILING_FIELDS, TRADE_FIELDS, amount_label, amount_ok, get, read_csv,
                     session, write_csv)
-from enrich import Members, Sectors, enrich, load_committee_sectors
+from enrich import Members, Sectors, enrich, load_committee_sectors, set_sector
 from validate import check
 
 DONE = {"parsed", "review"}  # statuses that are not retried
@@ -247,6 +247,20 @@ def run(since, chambers, max_filings=None, use_llm=True, strict=False, retry_err
             enrich(t, {"chamber": t["chamber"], "last_name": name, "first_name": name,
                        "state": t.get("state", ""), "district": t.get("district", "")},
                    members, committee_sectors, sectors)
+
+    # Trades with a company name but no ticker (common in scanned filings): exact SEC name match
+    named = 0
+    for t in trades_db.values():
+        a = t.get("asset_type") or ""
+        if t.get("ticker") or not t.get("asset_name") or FUND_WORDS.search(t["asset_name"]) \
+                or not (a == "" or (a.startswith("Stock") and "Option" not in a)):
+            continue
+        tk = sectors.ticker_for_name(t["asset_name"])
+        if tk:
+            t.update(ticker=tk, asset_type=a or "Stock")
+            set_sector(t, members.committees.get(t.get("bioguide"), []), committee_sectors, sectors)
+            named += 1
+    print(f"Tickers found from company names: {named}")
 
     sectors.save()
     trades = sorted(trades_db.values(), key=lambda t: (str(t["filing_date"]), t["trade_id"]), reverse=True)

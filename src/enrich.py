@@ -9,6 +9,7 @@ import json
 import re
 import time
 import unicodedata
+from collections import defaultdict
 from datetime import date
 
 import yaml
@@ -140,12 +141,36 @@ def load_committee_sectors():
 
 # ---------- tickers and sectors ----------
 
+# Words that don't identify a company: legal forms and share-class wording.
+NAME_NOISE = {"inc", "incorporated", "corp", "corporation", "co", "company", "ltd", "limited", "plc", "llc", "lp",
+              "the", "cmn", "common", "stock", "stk", "shares", "share", "ordinary", "com", "new", "class", "cl",
+              "adr", "ads", "sponsored", "sa", "nv", "ag", "se", "holding"}
+
+
+def _name_words(name):
+    t = re.sub(r"/[a-z]{2,3}/", " ", unicodedata.normalize("NFKD", name or "").lower())  # SEC's "/DE/"
+    return [w for w in re.findall(r"[a-z0-9]+", t.replace("&", " ")) if w not in NAME_NOISE]
+
+
+def name_key(name):
+    """'APPLOVIN CORPORATION CMN CLASS A' and 'AppLovin Corp' -> 'applovin' (single letters dropped)."""
+    return "".join(w for w in _name_words(name) if len(w) > 1)
+
+
+def name_keys(name):
+    """Both spellings of a name: single letters dropped ('SMUCKER J M' = 'J. M. Smucker') and
+    kept in place ('J.P. Morgan Chase' = 'JPMORGAN CHASE')."""
+    return {k for k in (name_key(name), "".join(_name_words(name))) if len(k) >= 4}
+
+
 class Sectors:
-    def __init__(self, s=None, tickers=None, sic_cache=None):
+    def __init__(self, s=None, tickers=None, sic_cache=None, titles=None):
         self.s = s
         self.ranges = [(int(r["sic_from"]), int(r["sic_to"]), r["sector"])
                        for r in read_csv(CONFIG / "sic_sectors.csv")]
         self.tickers = tickers  # ticker -> cik
+        self.titles = titles or {}  # ticker -> SEC company name
+        self._names = None
         self.cache_path = CACHE / "sic.csv"
         self.sic = sic_cache if sic_cache is not None else {
             r["ticker"]: r for r in read_csv(self.cache_path)}
@@ -156,7 +181,28 @@ class Sectors:
             data = get(self.s, SEC_TICKERS).json()
             (CACHE / "sec_tickers.json").write_text(json.dumps(data), encoding="utf-8")
             self.tickers = {v["ticker"].upper(): int(v["cik_str"]) for v in data.values()}
+            self.titles = {v["ticker"].upper(): v.get("title", "") for v in data.values()}
         return self.tickers
+
+    def ticker_for_name(self, name):
+        """Ticker for a company name, only when it's unambiguous: the name matches exactly one
+        SEC company (after dropping legal forms and share-class words) and that company has
+        exactly one ticker. Otherwise "" (e.g. Alphabet has GOOGL and GOOG)."""
+        self.load_tickers()
+        if self._names is None:
+            ciks, tickers = defaultdict(set), defaultdict(set)
+            for tk, title in self.titles.items():
+                cik = self.tickers.get(tk)
+                for key in name_keys(title):
+                    ciks[key].add(cik)
+                tickers[cik].add(tk)
+            self._names = (ciks, tickers)
+        ciks, tickers = self._names
+        found = set().union(*(ciks.get(k, set()) for k in name_keys(name))) if name_keys(name) else set()
+        if len(found) != 1:
+            return ""
+        options = tickers[next(iter(found))]
+        return next(iter(options)) if len(options) == 1 else ""
 
     @staticmethod
     def sec_form(ticker):
@@ -210,6 +256,11 @@ def enrich(trade, filing, members, committee_sectors, sectors):
     trade.update(bioguide=m["bioguide"] if m else "", party=m["party"] if m else "",
                  state=filing.get("state") or (m["state"] if m else ""),
                  member_committees="|".join(sorted(c for c in cids if len(c) == 4)))
+    return set_sector(trade, cids, committee_sectors, sectors)
+
+
+def set_sector(trade, cids, committee_sectors, sectors):
+    """Sector of the security and committee overlap, for a member's committee ids."""
     sector = ""
     if trade.get("ticker") and is_equity(trade.get("asset_type")):
         _, sector = sectors.lookup(trade["ticker"])
