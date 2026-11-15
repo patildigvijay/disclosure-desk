@@ -78,7 +78,7 @@ How runs handle problems:
 | AI answer cut off even in 5-page chunks | Filing goes to `needs_review`; never retried (it was paid for) |
 | Scanned filing read by AI | Read **twice**; a trade goes on the site only if both reads agree on owner, security, type, date and amount **and** it passes the checks (`double_read` column). Mismatches go to review as `reads_differ` |
 | AI reading improved (`AI_VERSION` in `src/pipeline.py`) | Filings read by the older version are read again automatically |
-| One-off monthly budget (`AI_BUDGETS` in `src/pipeline.py`) | Nov 2026: $10 for the double-read re-check of ~500 House scans + 78 Senate paper filings |
+| One-off monthly budget (`AI_BUDGETS` in `src/pipeline.py`) | Nov 2026: $12 for the double-read re-check of ~500 House scans + 78 Senate paper filings |
 | AI cost | Each run's log ends with `AI: N calls, tokens, about $X (model); <month> so far $Y of $Z budget` |
 | House rules parser improved (`PARSER_VERSION` in `src/house.py`) | Filings read by the older version are read again automatically, old rows replaced |
 | Older filings still need work | The run looks back to their date by itself; no "since" needed |
