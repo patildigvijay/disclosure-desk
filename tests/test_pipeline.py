@@ -508,7 +508,8 @@ def test_llm_uses_auto_tool_choice_and_fails_cleanly():
     calls = {}
     ok = types.SimpleNamespace(type="tool_use", input={"transactions": [], "confidence": 1})
     before = dict(llm.USAGE)
-    llm.extract_pdf(make_pages_pdf(2), client=fake_client([types.SimpleNamespace(type="text", text="note"), ok], calls=calls))
+    llm.extract_pdf(make_pages_pdf(2), client=fake_client([types.SimpleNamespace(type="text", text="note"), ok], calls=calls),
+                    reads=1)
     assert calls["model"] == "claude-haiku-5-5" and "thinking" not in calls  # between_tools is Sonnet-only
     assert calls["tool_choice"] == {"type": "auto"} and calls["max_tokens"] == 2 * 6000 + 2000
     assert llm.USAGE["out"] == before["out"] + 500
@@ -533,7 +534,7 @@ def test_llm_reads_long_scans_in_chunks():
             conf = answers[len(sent) - 1]
             return fake_client([types.SimpleNamespace(type="tool_use", input={"transactions": [row], "confidence": conf})]
                                ).messages.stream(**kw)
-    rows, conf, _ = llm.extract_pdf(make_pages_pdf(12), client=types.SimpleNamespace(messages=Messages()))
+    rows, conf, _ = llm.extract_pdf(make_pages_pdf(12), client=types.SimpleNamespace(messages=Messages()), reads=1)
     assert len(rows) == 3 and conf == 0.6 and sent == [32000, 32000, 14000]
 
 
@@ -665,6 +666,7 @@ def test_ai_monthly_budget(tmp_path, monkeypatch, members, sectors):
     pipeline = e2e_setup(tmp_path, monkeypatch, members, sectors)
     monkeypatch.setattr(pipeline.llm, "available", lambda: True)
     month = date.today().strftime("%Y-%m")
+    monkeypatch.setattr(pipeline, "AI_BUDGETS", {})  # no one-off month override in this test
     (tmp_path / "ai_spend.json").write_text(json.dumps({month: 3.0}))
     monkeypatch.setenv("AI_MONTHLY_BUDGET", "3")
     called = []
@@ -710,3 +712,86 @@ def test_senate_fetch_renews_session_on_403(monkeypatch):
     monkeypatch.setattr(common.time, "sleep", lambda n: None)
     assert senate.fetch_ptr(s, "https://efdsearch.senate.gov/search/view/ptr/x/") == "<table></table>"
     assert renewed == [1]
+
+
+# ---------- double read, Senate paper, AI clean-up (15 Nov) ----------
+
+def ai_answer(rows, conf=0.4):
+    return types.SimpleNamespace(type="tool_use", input={"transactions": rows, "confidence": conf})
+
+
+def test_double_read_marks_agreement_and_checks_use_it():
+    a = {"owner": "SP", "asset_name": "Apple Inc", "ticker": "AAPL", "tx_type": "P", "tx_date": "01/05/22",
+         "amount_range": "1,001 - 15,000"}
+    b = {**a, "asset_name": "Microsoft", "ticker": "MSFT"}
+    read2_b = {**b, "tx_date": "01/06/2022"}  # second read disagrees on the date
+    replies = [[a, b], [a, read2_b]]
+
+    class Messages:
+        def stream(self, **kw):
+            return fake_client([ai_answer(replies.pop(0))]).messages.stream(**kw)
+    rows, conf, _ = llm.extract_pdf(make_pages_pdf(1), client=types.SimpleNamespace(messages=Messages()))
+    assert [r["double_read"] for r in rows] == ["agree", "differ"]
+    assert rows[0]["tx_date"] == date(2022, 1, 5) and (rows[0]["amount_min"], rows[0]["amount_max"]) == (1001, 15000)
+    ok = check({**rows[0], "tx_type": "Purchase"}, date(2022, 2, 1), confidence=conf)
+    bad = check({**rows[1], "tx_type": "Purchase"}, date(2022, 2, 1), confidence=conf)
+    assert ok["status"] == "ok"  # low self-score, but two reads agree
+    assert bad["status"] == "review" and "reads_differ" in bad["issues"]
+    single = check({**rows[0], "double_read": "", "tx_type": "Purchase"}, date(2022, 2, 1), confidence=conf)
+    assert "low_confidence" in single["issues"]  # one read: the old rule still applies
+
+
+def test_normalisers_for_scanned_values():
+    assert common.parse_amount("1,001 - 15,000") == (1001, 15000)
+    assert common.parse_amount("$1,000 - $15,000") == (1001, 15000)   # common misread
+    assert common.parse_amount("$344.99") == (344.99, 344.99)
+    assert common.parse_date("01/05/22") == date(2022, 1, 5)
+    assert common.parse_date("Jan 5, 2022") == date(2022, 1, 5)
+    assert common.norm_tx_type("Sold") == "Sale" and common.norm_tx_type("buy") == "Purchase"
+
+
+def test_old_ai_reads_and_senate_paper_are_picked_up_again():
+    import pipeline
+    h = {"chamber": "House", "status": "review"}
+    assert pipeline.to_retry({**h, "parser": "ai"})            # single read: re-read twice
+    assert not pipeline.to_retry({**h, "parser": f"ai-{pipeline.AI_VERSION}"})
+    assert not pipeline.to_retry({**h, "parser": f"text-{house.PARSER_VERSION}"})
+    sp = {"chamber": "Senate", "status": "needs_review", "kind": "paper", "error": ""}
+    assert pipeline.to_retry(sp)
+    assert not pipeline.to_retry({**sp, "error": "answer cut off at 32000 tokens"})  # paid once, not again
+    assert not pipeline.to_retry({"chamber": "Senate", "status": "parsed", "parser": "html"})
+
+
+def test_senate_paper_images_found_and_read(monkeypatch):
+    import pipeline
+    page = """<html><img src="/static/img/logo.png"><div class="filing">
+      <img class="filingImage" src="https://efd-media-public.senate.gov/media/2023/01/000/abc_1.gif">
+      <img class="filingImage" src="https://efd-media-public.senate.gov/media/2023/01/000/abc_2.gif">
+      </div></html>"""
+    url = "https://efdsearch.senate.gov/search/view/paper/ABC/"
+    assert [u.rsplit("/", 1)[-1] for u in senate.paper_image_urls(page, url)] == ["abc_1.gif", "abc_2.gif"]
+    monkeypatch.setattr(pipeline.senate, "fetch_ptr", lambda s, u: page)
+    monkeypatch.setattr(pipeline, "get", lambda s, u: types.SimpleNamespace(content=b"GIF89a", headers={}))
+    seen = {}
+
+    def read(images):
+        seen["images"] = images
+        return [{"asset_name": "Apple"}], 0.5, ""
+    monkeypatch.setattr(pipeline.llm, "extract_images", read)
+    rows, method, conf, status = pipeline.parse_senate(None, {"kind": "paper", "source_url": url}, True)
+    assert (method, status, len(rows)) == ("ai", "parsed", 1)
+    assert [m for _, m in seen["images"]] == ["image/gif", "image/gif"]
+    assert pipeline.parse_senate(None, {"kind": "paper", "source_url": url}, False)[3] == "needs_review"
+
+
+def test_ai_rows_with_sec_ticker_count_as_stock(tmp_path, monkeypatch, members, sectors):
+    import csv
+    pipeline = e2e_setup(tmp_path, monkeypatch, members, sectors)
+    monkeypatch.setattr(pipeline.llm, "available", lambda: True)
+    row = {"owner": "", "ticker": "AAPL", "asset_type": "", "tx_type": "Purchase", "tx_date": date(2026, 1, 5),
+           "notification_date": None, "amount_min": 1001, "amount_max": 15000, "comment": "", "double_read": "agree"}
+    rows = [{**row, "asset_name": "Apple Inc"}, {**row, "asset_name": "SPDR S&P 500 ETF Trust", "ticker": "SPY"}]
+    monkeypatch.setattr(pipeline.llm, "extract_pdf", lambda pdf: ([dict(r) for r in rows], 0.4, ""))
+    pipeline.run(date(2026, 1, 1), ["house"])
+    ai = [t for t in csv.DictReader(open(tmp_path / "trades.csv")) if t["parse_method"] == "ai"]
+    assert sorted((t["ticker"], t["asset_type"], t["status"]) for t in ai) == [("AAPL", "Stock", "ok"), ("SPY", "", "ok")]

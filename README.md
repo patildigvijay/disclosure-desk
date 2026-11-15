@@ -74,6 +74,9 @@ How runs handle problems:
 | AI credit used up | AI off for the run, filings wait as `needs_ai`; **not** a run failure (no email every 3 hours) |
 | AI monthly budget reached (`AI_MONTHLY_BUDGET`, default $3, in the workflow) | No more AI calls that month; filings wait as `needs_ai`. Spend per month is kept in `data/ai_spend.json` |
 | AI answer cut off even in 5-page chunks | Filing goes to `needs_review`; never retried (it was paid for) |
+| Scanned filing read by AI | Read **twice**; a trade goes on the site only if both reads agree on owner, security, type, date and amount **and** it passes the checks (`double_read` column). Mismatches go to review as `reads_differ` |
+| AI reading improved (`AI_VERSION` in `src/pipeline.py`) | Filings read by the older version are read again automatically |
+| One-off monthly budget (`AI_BUDGETS` in `src/pipeline.py`) | Nov 2026: $10 for the double-read re-check of ~500 House scans + 78 Senate paper filings |
 | AI cost | Each run's log ends with `AI: N calls, tokens, about $X (model); <month> so far $Y of $Z budget` |
 | House rules parser improved (`PARSER_VERSION` in `src/house.py`) | Filings read by the older version are read again automatically, old rows replaced |
 | Older filings still need work | The run looks back to their date by itself; no "since" needed |
@@ -162,7 +165,8 @@ One file, no build step, no server. It reads the CSVs in `data/` and
 | House PDF rules parser | 24 real 2026 filings, 237 trades, checked field by field (`tests/fixtures/house_real/`) | ✅ |
 | Portfolio estimates, returns vs S&P, price fetching | Unit tests with fixed prices and a fake price API | ✅ |
 | Senate search + PTR parser | First live run: 589 filings, 5,783 trades | ✅ |
-| AI extractor | Live on Sonnet 5.5 (Nov 2026): 387 calls, $42.53, avg 70 rows per scanned filing (Khanna and McCaul file hundreds of trades on paper), most rows below the 0.9 confidence bar so they sit in review. Now Haiku 5.5, 5-page chunks, monthly budget | ⚠️ Confirm Haiku on next run |
+| AI extractor | Sonnet 5.5 (Nov 2026): 387 calls, $42.53. Haiku 5.5 run #9: 105 filings, 152 calls, $0.49, 0 errors, but 93% of rows held back (self-confidence ~0.4, dates/amounts in odd formats). Now: double read, stricter answer format, tolerant date/amount parsing | ⚠️ Confirm agreement rate on next runs |
+| Senate paper reader | Page images from the eFD paper view, read by AI. eFD blocks non-US visitors, so the page layout is unconfirmed | ⚠️ Confirm on first US run |
 | House parser, 2022-style PDFs (labels spelled out, odd capitals) | Synthetic PDF built from real live-run text | ✅ |
 | Former members, chamber switchers | Real current + historical member data: 26,915 of 26,930 live trades match | ✅ |
 
@@ -178,6 +182,6 @@ codes in the document is re-read by Claude automatically, so a parser miss becom
 - SIC codes are coarse (e.g. Alphabet is "services-computer programming"). Fix individual
   cases in `config/sic_sectors.csv` or add a ticker override if needed.
 - Amounts are ranges by law. Performance calcs must use range midpoints or counts.
-- Senate paper filings are listed in `review.csv` with links, not parsed (rare).
+- Senate paper filings (page images) are read by AI, double-read like House scans. Until the first live run confirms the eFD page layout, a failure shows as a filing error naming the cause.
 - Wording on the site: report facts ("bought $15K–$50K of LMT while on Armed Services"),
   never "insider trading".

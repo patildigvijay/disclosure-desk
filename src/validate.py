@@ -5,7 +5,7 @@ Hard issues send the trade to the review queue. Warnings are kept as facts.
 from common import amount_ok
 
 HARD = {"no_asset", "no_tx_date", "tx_after_filing", "notified_before_tx",
-        "amount_not_official", "bad_tx_type", "low_confidence"}
+        "amount_not_official", "bad_tx_type", "low_confidence", "reads_differ"}
 TX_TYPES = {"Purchase", "Sale", "Sale (Partial)", "Exchange"}
 LATE_DAYS = 45
 MIN_CONFIDENCE = 0.9
@@ -27,7 +27,11 @@ def check(trade, filing_date, sectors=None, confidence=None):
         issues.append("amount_not_official")
     if trade.get("tx_type") not in TX_TYPES:
         issues.append("bad_tx_type")
-    if confidence is not None and confidence < MIN_CONFIDENCE:
+    # AI rows read twice: two matching reads replace the model's own confidence score
+    # (which ran around 0.4 even on clean scans); a mismatch always goes to review.
+    if trade.get("double_read") == "differ":
+        issues.append("reads_differ")
+    elif confidence is not None and confidence < MIN_CONFIDENCE and trade.get("double_read") != "agree":
         issues.append("low_confidence")
     if sectors and trade.get("ticker") and not sectors.known(trade["ticker"]):
         issues.append("ticker_not_in_sec_list")  # warning: funds, foreign and delisted tickers

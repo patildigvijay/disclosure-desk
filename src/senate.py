@@ -135,3 +135,32 @@ def parse_ptr_html(html):
             "comment": "" if comment in ("--", "") else comment,
         })
     return out
+
+
+IMAGE_TYPES = {"gif": "image/gif", "png": "image/png", "jpg": "image/jpeg", "jpeg": "image/jpeg",
+               "webp": "image/webp"}
+
+
+def paper_image_urls(html, page_url):
+    """Page images of a scanned (paper) filing, in page order. The eFD paper view shows each
+    page as an <img>; site chrome (logos, icons) is skipped. Not yet seen live: eFD blocks
+    non-US visitors, so the first US run confirms it (no images found -> filing error)."""
+    from urllib.parse import urljoin
+    soup = BeautifulSoup(html, "html.parser")
+    urls = []
+    for img in soup.find_all("img"):
+        src = (img.get("src") or "").strip()
+        ext = src.split("?")[0].rsplit(".", 1)[-1].lower()
+        if not src or ext not in IMAGE_TYPES or re.search(r"logo|seal|icon|/static/", src, re.I):
+            continue
+        url = urljoin(page_url, src)
+        if url not in urls:
+            urls.append(url)
+    return urls
+
+
+def media_type(url, content_type=""):
+    ct = (content_type or "").split(";")[0].strip().lower()
+    if ct in IMAGE_TYPES.values():
+        return ct
+    return IMAGE_TYPES.get(url.split("?")[0].rsplit(".", 1)[-1].lower(), "image/gif")

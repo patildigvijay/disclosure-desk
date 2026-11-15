@@ -11,6 +11,7 @@ Outputs (data/):
 import argparse
 import json
 import os
+import re
 import sys
 import time
 import traceback
@@ -32,21 +33,38 @@ AI_BREAKER = 3     # API hiccups in a row (after the SDK's own retries) that pau
 AI_PAUSE_MIN = 10  # ... for this many minutes
 AI_MAX_PAUSES = 3  # ... and after this many pauses it is off for the rest of the run
 AI_MONTHLY_BUDGET = 3.0  # USD of AI per calendar month (env AI_MONTHLY_BUDGET overrides); spend kept in data/ai_spend.json
+AI_BUDGETS = {"2026-11": 10.0}  # one-off months: Nov 2026 catch-up (double-read re-check + Senate paper), approved 15 Nov
+AI_VERSION = "2"  # bump when AI reading changes: filings read by an older version are read again
+FUND_WORDS = re.compile(r"\b(etf|fund|trust|index|bond|notes?|treasury|option|call|put)\b", re.I)
 MEMBER_FIELDS = ["bioguide", "name", "chamber", "party", "state", "district", "leadership", "committees"]
 
 
 def parsed_with(method):
-    return f"text-{house.PARSER_VERSION}" if method == "text" else method
+    if method == "text":
+        return f"text-{house.PARSER_VERSION}"
+    if method == "ai":
+        return f"ai-{AI_VERSION}"
+    return method
+
+
+def is_old_read(parser):
+    """Read by an older rules parser or an older AI reading ("" = before versioning, "ai" = single read)."""
+    if parser in ("", "ai"):
+        return True
+    kind = parser.split("-")[0]
+    return kind in ("text", "ai") and parser != parsed_with(kind)
 
 
 def to_retry(rec, retry_errors=False):
     """A filing seen before that should be processed again."""
     status, parser = rec.get("status"), rec.get("parser") or ""
     if status in DONE:
-        # House filings read by an older version of the rules parser. Blank = before
-        # versioning (all of those were rules-parsed).
-        return rec.get("chamber") == "House" and (parser == "" or
-                                                  (parser.startswith("text-") and parser != parsed_with("text")))
+        # House filings read by an older rules parser or older AI reading; Senate AI reads too
+        return (rec.get("chamber") == "House" and is_old_read(parser)) or \
+               (rec.get("chamber") == "Senate" and parser.startswith("ai") and is_old_read(parser))
+    if status == "needs_review":
+        # Senate paper filings waited here before they had an AI reader; cut-off answers don't come back
+        return rec.get("chamber") == "Senate" and rec.get("kind") == "paper" and not rec.get("error")
     if status == "error":
         return retry_errors or int(rec.get("attempts") or 0) < MAX_ATTEMPTS
     return status == "needs_ai"
@@ -72,8 +90,18 @@ def parse_house(s, f, use_llm):
 
 
 def parse_senate(s, f, use_llm):
-    if f["kind"] == "paper":
-        return [], "", None, "needs_review"  # scanned images; v1 queues these with their link
+    if f["kind"] == "paper":  # scanned page images, read by AI
+        if not use_llm:
+            return [], "", None, "needs_review"
+        urls = senate.paper_image_urls(senate.fetch_ptr(s, f["source_url"]), f["source_url"])
+        if not urls:
+            raise RuntimeError("no page images found on the Senate paper filing page")
+        images = []
+        for u in urls:
+            r = get(s, u)
+            images.append((r.content, senate.media_type(u, r.headers.get("Content-Type", ""))))
+        rows, conf, _ = llm.extract_images(images)
+        return rows, "ai", conf, "parsed"
     rows = senate.parse_ptr_html(senate.fetch_ptr(s, f["source_url"]))
     return rows, "html", None, "parsed"
 
@@ -93,7 +121,7 @@ def run(since, chambers, max_filings=None, use_llm=True, strict=False, retry_err
     spend_path = DATA / "ai_spend.json"
     spend = json.loads(spend_path.read_text()) if spend_path.exists() else {}
     spent_before = float(spend.get(month, 0))
-    budget = float(os.environ.get("AI_MONTHLY_BUDGET") or AI_MONTHLY_BUDGET)
+    budget = AI_BUDGETS.get(month) or float(os.environ.get("AI_MONTHLY_BUDGET") or AI_MONTHLY_BUDGET)
     budget_hit = False
     failures, errors = [], []  # source failures; per-filing errors
 
@@ -101,7 +129,7 @@ def run(since, chambers, max_filings=None, use_llm=True, strict=False, retry_err
     start = {"House": since, "Senate": since}
     for r in filings_db.values():
         if r.get("filing_date") and r.get("chamber") in start and to_retry(r, retry_errors) \
-                and (r["status"] != "needs_ai" or use_llm):
+                and (r["status"] not in ("needs_ai", "needs_review") or use_llm):
             start[r["chamber"]] = min(start[r["chamber"]], date.fromisoformat(str(r["filing_date"])))
 
     todo = []
@@ -159,6 +187,9 @@ def run(since, chambers, max_filings=None, use_llm=True, strict=False, retry_err
                          district=f.get("district", ""), filing_date=f["filing_date"],
                          source_url=f["source_url"], parse_method=method, confidence=conf,
                          amount_range=amount_label(t["amount_min"], t["amount_max"]))
+                if method == "ai" and not t["asset_type"] and t["ticker"] \
+                        and not FUND_WORDS.search(t["asset_name"]) and sectors.known(t["ticker"]):
+                    t["asset_type"] = "Stock"  # paper forms have no type codes; an SEC-listed company ticker is a stock
                 enrich(t, f, members, committee_sectors, sectors)
                 check(t, f["filing_date"], sectors, conf)
                 trades_db[t["trade_id"]] = t

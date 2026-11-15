@@ -6,6 +6,8 @@ Needs ANTHROPIC_API_KEY in the environment. Model is set by ANTHROPIC_MODEL.
 import base64
 import io
 import os
+import re
+from collections import Counter
 
 from common import (ASSET_CODES, norm_owner, norm_ticker, norm_tx_type, parse_amount,
                     parse_date)
@@ -16,6 +18,7 @@ MODEL = os.environ.get("ANTHROPIC_MODEL") or "claude-haiku-5-5"
 PRICES = {"claude-haiku-5-5": (0.10, 0.50), "claude-sonnet-5-5": (2.0, 10.0)}
 PAGES_PER_CALL = 5       # long scans are sent in chunks so no answer gets cut off
 TOKENS_PER_PAGE = 6000   # answer room per page (~40 rows); a 5-page chunk gets 32k
+READS = 2                # each chunk is read twice; a row goes live only if both reads agree
 
 TOOL = {
     "name": "record_transactions",
@@ -28,14 +31,15 @@ TOOL = {
                 "items": {
                     "type": "object",
                     "properties": {
-                        "owner": {"type": "string", "description": "As written: blank/Self, SP, JT, DC"},
+                        "owner": {"type": "string", "description": "SP, JT, DC, or empty for the filer"},
                         "asset_name": {"type": "string"},
                         "ticker": {"type": "string", "description": "Ticker if shown, else empty"},
                         "asset_type": {"type": "string", "description": "Code in brackets e.g. ST, OP, or type text"},
-                        "tx_type": {"type": "string", "description": "P, S, S (partial), E, or full words"},
-                        "tx_date": {"type": "string", "description": "MM/DD/YYYY"},
+                        "tx_type": {"type": "string", "description": "One of: P, S, S (partial), E"},
+                        "tx_date": {"type": "string", "description": "MM/DD/YYYY with 4-digit year"},
                         "notification_date": {"type": "string", "description": "MM/DD/YYYY or empty"},
-                        "amount_range": {"type": "string", "description": "Exactly as written, e.g. $1,001 - $15,000"},
+                        "amount_range": {"type": "string",
+                                         "description": "The official range, e.g. $1,001 - $15,000, or the exact amount if one is written"},
                         "comment": {"type": "string"},
                     },
                     "required": ["asset_name", "tx_type", "tx_date", "amount_range"],
@@ -53,6 +57,9 @@ PROMPT = (
     "Extract EVERY transaction row exactly as written. Do not guess: if a field is "
     "illegible, leave it empty and say so in notes. Ignore the certification and IPO sections. "
     "For a checked amount box on a paper form, return that box's range. "
+    "Normalise as you copy: dates as MM/DD/YYYY with a 4-digit year; tx_type as P, S, "
+    "S (partial) or E (a checkmark in a column means that column's type); owner as SP, JT, DC "
+    "or empty for the filer; amounts as the official range written out, e.g. $1,001 - $15,000. "
     "Return the result by calling the record_transactions tool exactly once, with all rows."
 )
 
@@ -111,18 +118,24 @@ def split_pdf(pdf_bytes, per_call=PAGES_PER_CALL):
     return chunks
 
 
-def _call(client, pdf_bytes, pages):
+def pdf_block(pdf_bytes):
+    return {"type": "document", "source": {"type": "base64", "media_type": "application/pdf",
+                                           "data": base64.b64encode(pdf_bytes).decode()}}
+
+
+def image_block(image_bytes, media_type):
+    return {"type": "image", "source": {"type": "base64", "media_type": media_type,
+                                        "data": base64.b64encode(image_bytes).decode()}}
+
+
+def _call(client, blocks, pages):
     request = dict(
         model=MODEL,
         max_tokens=TOKENS_PER_PAGE * pages + 2000,
         tools=[TOOL],
         # Sonnet 5.5 rejects forced tool use (tool_choice "tool"/"any"): offer the tool, ask for it.
         tool_choice={"type": "auto"},
-        messages=[{"role": "user", "content": [
-            {"type": "document", "source": {"type": "base64", "media_type": "application/pdf",
-                                            "data": base64.b64encode(pdf_bytes).decode()}},
-            {"type": "text", "text": PROMPT},
-        ]}],
+        messages=[{"role": "user", "content": blocks + [{"type": "text", "text": PROMPT}]}],
     )
     if MODEL.startswith("claude-sonnet-5-5"):
         # No up-front thinking: this is transcription, and thinking is billed as output.
@@ -149,38 +162,76 @@ def _call(client, pdf_bytes, pages):
     return data
 
 
-def extract_pdf(pdf_bytes, client=None):
-    """Returns (rows, confidence, notes). Raises AIError if a call fails.
-    Long PDFs are read in chunks of PAGES_PER_CALL pages; confidence is the lowest chunk's."""
+def _rows(data):
+    out = []
+    for t in data.get("transactions", []):
+        lo, hi = parse_amount(t.get("amount_range"))
+        code = (t.get("asset_type") or "").strip("[] ").upper()
+        out.append({
+            "owner": norm_owner(t.get("owner")),
+            "asset_name": (t.get("asset_name") or "").strip(),
+            "ticker": norm_ticker(t.get("ticker")),
+            "asset_type": ASSET_CODES.get(code, t.get("asset_type", "")),
+            "tx_type": norm_tx_type(t.get("tx_type")),
+            "tx_date": parse_date(t.get("tx_date")),
+            "notification_date": parse_date(t.get("notification_date")),
+            "amount_min": lo,
+            "amount_max": hi,
+            "comment": (t.get("comment") or "").strip(),
+        })
+    return out
+
+
+def row_key(r):
+    """What two reads must agree on: owner, security, type, date, amount."""
+    name = re.sub(r"[^a-z0-9]", "", r["asset_name"].lower())[:12]
+    return (r["owner"], r["ticker"] or name, r["tx_type"], r["tx_date"], r["amount_min"], r["amount_max"])
+
+
+def mark_agreement(first, second):
+    """Sets double_read on each row of the first read: "agree" if the second read has the same row."""
+    left = Counter(row_key(r) for r in second)
+    for r in first:
+        k = row_key(r)
+        r["double_read"] = "agree" if left[k] > 0 else "differ"
+        left[k] -= 1 if left[k] > 0 else 0
+    return first
+
+
+def extract(chunks, client=None, reads=READS):
+    """chunks: [(content_blocks, n_pages)]. Returns (rows, confidence, notes).
+    Each chunk is read `reads` times; rows come from the first read, marked against the second.
+    Confidence is the lowest of the first reads. Raises AIError if a call fails."""
     if client is None:
         import anthropic
         client = anthropic.Anthropic(max_retries=6)  # waits out short rate limits / hiccups
-    try:
-        chunks = split_pdf(pdf_bytes)
-    except Exception:  # unreadable by pypdf: send it whole and let the model try
-        chunks = [(pdf_bytes, PAGES_PER_CALL)]
     rows, confs, notes = [], [], []
-    for chunk, pages in chunks:
-        data = _call(client, chunk, pages)
-        confs.append(float(data.get("confidence", 0) or 0))
-        if data.get("notes"):
-            notes.append(data["notes"])
-        for t in data.get("transactions", []):
-            lo, hi = parse_amount(t.get("amount_range"))
-            code = (t.get("asset_type") or "").strip("[] ").upper()
-            rows.append({
-                "owner": norm_owner(t.get("owner")),
-                "asset_name": (t.get("asset_name") or "").strip(),
-                "ticker": norm_ticker(t.get("ticker")),
-                "asset_type": ASSET_CODES.get(code, t.get("asset_type", "")),
-                "tx_type": norm_tx_type(t.get("tx_type")),
-                "tx_date": parse_date(t.get("tx_date")),
-                "notification_date": parse_date(t.get("notification_date")),
-                "amount_min": lo,
-                "amount_max": hi,
-                "comment": (t.get("comment") or "").strip(),
-            })
+    for blocks, pages in chunks:
+        answers = [_call(client, blocks, pages) for _ in range(reads)]
+        first = _rows(answers[0])
+        if reads > 1:
+            mark_agreement(first, _rows(answers[1]))
+        rows += first
+        confs.append(float(answers[0].get("confidence", 0) or 0))
+        if answers[0].get("notes"):
+            notes.append(answers[0]["notes"])
     return rows, min(confs) if confs else 0.0, " | ".join(notes)
+
+
+def extract_pdf(pdf_bytes, client=None, reads=READS):
+    """A PDF, read in chunks of PAGES_PER_CALL pages."""
+    try:
+        parts = split_pdf(pdf_bytes)
+    except Exception:  # unreadable by pypdf: send it whole and let the model try
+        parts = [(pdf_bytes, PAGES_PER_CALL)]
+    return extract([([pdf_block(b)], n) for b, n in parts], client, reads)
+
+
+def extract_images(images, client=None, reads=READS):
+    """Page images [(bytes, media_type)] (Senate paper filings), PAGES_PER_CALL per call."""
+    chunks = [([image_block(b, m) for b, m in images[i:i + PAGES_PER_CALL]], len(images[i:i + PAGES_PER_CALL]))
+              for i in range(0, len(images), PAGES_PER_CALL)]
+    return extract(chunks, client, reads)
 
 
 def cost_usd():

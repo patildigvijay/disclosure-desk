@@ -21,6 +21,7 @@ TRADE_FIELDS = [
     "asset_name", "ticker", "asset_type", "tx_type", "amount_range", "amount_min",
     "amount_max", "comment", "sector", "member_committees", "overlap", "overlap_committees",
     "filing_lag_days", "late", "parse_method", "confidence", "issues", "status", "source_url",
+    "double_read",
 ]
 FILING_FIELDS = [
     "chamber", "filing_id", "filer_name", "state", "district", "filing_date",
@@ -41,7 +42,11 @@ OWNERS = {"": "Self", "SELF": "Self", "SP": "Spouse", "SPOUSE": "Spouse",
 
 TX_TYPES = {"P": "Purchase", "PURCHASE": "Purchase", "S": "Sale", "SALE": "Sale",
             "SALE (FULL)": "Sale", "S (PARTIAL)": "Sale (Partial)",
-            "SALE (PARTIAL)": "Sale (Partial)", "E": "Exchange", "EXCHANGE": "Exchange"}
+            "SALE (PARTIAL)": "Sale (Partial)", "E": "Exchange", "EXCHANGE": "Exchange",
+            # wordings seen in scanned filings / AI answers
+            "BUY": "Purchase", "BOUGHT": "Purchase", "SELL": "Sale", "SOLD": "Sale",
+            "S (FULL)": "Sale", "PARTIAL SALE": "Sale (Partial)", "SALE - PARTIAL": "Sale (Partial)",
+            "SALE - FULL": "Sale"}
 
 # House asset-type codes -> plain labels.
 ASSET_CODES = {"ST": "Stock", "OP": "Option", "EF": "ETF", "MF": "Mutual Fund",
@@ -72,10 +77,14 @@ def get(s, url, tries=3, **kw):
     return r
 
 
+DATE_FORMATS = ("%m/%d/%Y", "%Y-%m-%d", "%m/%d/%y", "%m-%d-%Y", "%m-%d-%y", "%b %d, %Y", "%B %d, %Y",
+                "%d-%b-%Y", "%d-%b-%y")
+
+
 def parse_date(text):
-    """MM/DD/YYYY (or YYYY-MM-DD) -> date, or None."""
+    """MM/DD/YYYY (and other common spellings, e.g. 01/05/22, Jan 5, 2022) -> date, or None."""
     text = (text or "").strip()
-    for fmt in ("%m/%d/%Y", "%Y-%m-%d"):
+    for fmt in DATE_FORMATS:
         try:
             return datetime.strptime(text, fmt).date()
         except ValueError:
@@ -86,7 +95,8 @@ def parse_date(text):
 def parse_amount(text):
     """'$1,001 - $15,000' -> (1001, 15000); 'Over $50,000,000' -> (50000001, None)."""
     t = (text or "").replace("–", "-").replace("—", "-")
-    nums = [float(n.replace(",", "")) for n in re.findall(r"\$\s*([\d,]+(?:\.\d+)?)", t)]
+    # "$" is optional: scans and AI answers often drop it ("1,001 - 15,000")
+    nums = [float(n.replace(",", "")) for n in re.findall(r"\$?\s*(\d[\d,]*(?:\.\d+)?)", t)]
     nums = [int(n) if n.is_integer() else n for n in nums]
     if not nums:
         return None, None
@@ -94,7 +104,10 @@ def parse_amount(text):
         return nums[0] + 1, None
     if len(nums) == 1:
         return nums[0], nums[0]
-    return nums[0], nums[1]
+    lo, hi = nums[0], nums[1]
+    if (lo + 1, hi) in AMOUNT_RANGES:  # "$1,000 - $15,000" is a misread of $1,001 - $15,000
+        lo += 1
+    return lo, hi
 
 
 def amount_ok(lo, hi):
