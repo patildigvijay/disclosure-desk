@@ -3167,7 +3167,7 @@ House,20020161,Lori Trahan,MA,03,2022-01-11,efile,https://disclosures-clerk.hous
 House,20020189,Daniel Crenshaw,TX,02,2022-01-10,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020189.pdf,parsed,3,,2026-11-15T16:43:05,ai-2,0
 House,20020197,Daniel Crenshaw,TX,02,2022-01-10,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020197.pdf,parsed,1,,2026-11-15T16:43:12,ai-2,0
 House,20020191,Lloyd Doggett,TX,35,2022-01-10,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020191.pdf,parsed,4,,2026-11-15T16:43:18,ai-2,0
-House,20020154,Josh Gottheimer,NJ,05,2022-01-10,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020154.pdf,error,0,'str' object has no attribute 'get',2026-11-15T16:43:25,,1
+House,20020154,Josh Gottheimer,NJ,05,2022-01-10,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020154.pdf,parsed,31,,2026-11-15T22:14:30,ai-2,0
 House,8218527,David Kustoff,TN,08,2022-01-10,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/8218527.pdf,review,1,,2026-11-15T16:44:05,ai-2,0
 House,20020196,David E. Price,NC,04,2022-01-10,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020196.pdf,parsed,1,,2026-11-15T16:44:23,ai-2,0
 House,20020194,"Robert C. ""Bobby"" Scott",VA,03,2022-01-10,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20020194.pdf,parsed,9,,2026-11-13T10:49:58,text-2,0
