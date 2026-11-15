@@ -455,7 +455,7 @@ B001248,B001248,Michael C. Burgess,CC,Chemours Company,Materials,23724,11.88,202
 B001248,B001248,Michael C. Burgess,AAP,Advance Auto Parts Inc.,Consumer Discretionary,17426,8.72,2023-02-24,2023-02-24,Reduce,Spouse=50;Self=50,False,,2026-11-13
 B001248,B001248,Michael C. Burgess,RY,Royal Bank Of Canada Common Stock,Financials,15670,7.85,2023-08-09,2024-07-25,Reduce,Self=100,False,,2026-11-13
 B001248,B001248,Michael C. Burgess,STLA,Stellantis N.V. Common Shares,Consumer Discretionary,7798,3.9,2023-08-22,2023-08-22,Buy,Spouse=100,False,,2026-11-13
-B001248,B001248,Michael C. Burgess,F,Ford Motor Company,Consumer Discretionary,7090,3.55,2022-02-09,2022-02-09,Buy,Self=100,False,,2026-11-13
+B001248,B001248,Michael C. Burgess,F,Ford Motor Company (F),Consumer Discretionary,7090,3.55,2022-02-09,2022-02-09,Buy,Self=100,False,,2026-11-13
 B001248,B001248,Michael C. Burgess,UPS,"United Parcel Service, Inc. Common Stock",Transportation,6499,3.25,2023-08-09,2024-07-22,Reduce,Self=100,False,,2026-11-13
 B001248,B001248,Michael C. Burgess,BRK.B,Berkshire Hathaway Inc. New,Financials,3497,1.75,2022-02-09,2023-08-14,Reduce,Self=100,False,,2026-11-13
 B001274,B001274,Mo Brooks,AATC,Autoscope Technologies Corporation,Technology,18932,100.0,2022-07-22,2022-07-22,Buy,Joint=100,False,,2025-03-21
@@ -463,9 +463,8 @@ B001277,B001277,RICHARD BLUMENTHAL,APG,API Group Corp (Stock),Industrials,157280
 B001277,B001277,RICHARD BLUMENTHAL,ADMR,Admiral Acquisition LTD (Stock),,1132502,39.75,2023-05-22,2023-05-22,Add,Spouse=100,False,,cost
 B001277,B001277,RICHARD BLUMENTHAL,SG,Sweetgreen Inc (Stock) [SG] [closed short position],Consumer Discretionary,144032,5.05,2024-05-13,2024-05-21,Buy,Spouse=100,False,,2026-11-13
 B001291,B001291,Brian Babin,BHP,BHP Group Limited American Depositary Shares,Materials,70134,100.0,2022-03-29,2022-06-27,Add,Joint=82;Self=18,False,,2026-11-13
-B001292,B001292,Donald Sternoff Beyer Jr.,IXJ,iShares global Healthcare ETF,,10983,33.81,2021-12-22,2021-12-22,Buy,Joint=100,False,,2026-11-13
-B001292,B001292,Donald Sternoff Beyer Jr.,BBH,VanEck Biotech ETF,,10867,33.45,2021-12-22,2021-12-22,Buy,Joint=100,False,,2026-11-13
-B001292,B001292,Donald Sternoff Beyer Jr.,IYZ,iShares U.S. Telecommunications ETF,,10638,32.74,2021-12-22,2021-12-22,Buy,Joint=100,False,,2026-11-13
+B001292,B001292,Donald Sternoff Beyer Jr.,IXJ,iShares global Healthcare ETF,,10983,50.8,2021-12-22,2021-12-22,Buy,Joint=100,False,,2026-11-13
+B001292,B001292,Donald Sternoff Beyer Jr.,IYZ,iShares U.S. Telecommunications ETF,,10638,49.2,2021-12-22,2021-12-22,Buy,Joint=100,False,,2026-11-13
 B001299,B001299,James E Hon Banks,YUM,"Yum! Brands, Inc.",Consumer Discretionary,9833,100.0,2024-08-08,2024-08-08,Buy,Joint=100,False,,2026-11-13
 B001319,B001319,Katie Britt,V,Visa Inc,Industrials,20535,17.19,2025-04-14,2025-11-07,Add,Spouse=100,False,,2026-11-13
 B001319,B001319,Katie Britt,AAPL,Apple Inc,Technology,17014,14.24,2025-04-14,2025-11-07,Reduce,Spouse=100,True,Senate Judiciary: Antitrust,2026-11-13
@@ -1071,7 +1070,7 @@ F000450,F000450,Virginia Foxx,ASC,Ardmore Shipping Corporation Common Stock,Tran
 F000450,F000450,Virginia Foxx,PBA,Pembina Pipeline Corp. Ordinary Shares,Energy,57777,4.06,2022-07-14,2025-03-07,Reduce,Joint=100,False,,2026-11-13
 F000450,F000450,Virginia Foxx,VIASP,"Via Renewables, Inc. - 8.75% Series A Fixed-to-Floating Rate Cumulative Redeemable Perpetual Preferred Stock",,55550,3.9,2022-01-24,2024-12-06,Reduce,Joint=100,False,,2026-06-30
 F000450,F000450,Virginia Foxx,T,AT&T Inc.,Communications,37379,2.62,2022-01-26,2023-08-02,Add,Joint=100,False,,2026-11-13
-F000450,F000450,Virginia Foxx,DUK$A,"Duke Energy Corporation Depositary Shares, each representing a 1/1,000th interest in a share of 5.75% Series A Cumulative Redeemable Perpetual Preferred Stock (DUK$A)",,32500,2.28,2021-03-25,2021-03-25,Buy,Joint=100,False,,cost
+F000450,F000450,Virginia Foxx,DUK$A,"Duke Energy Corporation Depositary Shares, each representing a 1/1,000th interest in a share of 5.75% Series A Cumulative Redeemable Perpetual Preferred Stock",,32500,2.28,2021-03-25,2021-03-25,Buy,Joint=100,False,,cost
 F000450,F000450,Virginia Foxx,EFC,Ellington Financial Inc. Common Stock,Real Estate,32223,2.26,2024-09-30,2025-12-30,Add,Self=100,False,,2026-11-13
 F000450,F000450,Virginia Foxx,MOS,Mosaic Company,Materials,30671,2.15,2022-07-28,2022-08-05,Add,Joint=100,False,,2026-11-13
 F000450,F000450,Virginia Foxx,SJT,San Juan Basin Royalty Trust,Financials,26289,1.85,2022-08-11,2022-09-01,Add,Joint=100,False,,2026-11-13
@@ -1085,13 +1084,14 @@ F000450,F000450,Virginia Foxx,DUK,Duke Energy Corporation,Utilities,9885,0.69,20
 F000450,F000450,Virginia Foxx,SIRE,Sisecam Resources LP Common Units representing limited partner interests,,8000,0.56,2021-03-30,2023-05-26,Reduce,Dependent=100,False,,cost
 F000450,F000450,Virginia Foxx,AAIC$B,Arlington Asset Investment Corp 7.00% (AAIC$B),,8000,0.56,2021-03-31,2021-03-31,Buy,Joint=100,False,,cost
 F000450,F000450,Virginia Foxx,DISCA,"Discovery, Inc. - Series A",,7048,0.49,2022-02-24,2022-02-24,Buy,Joint=100,False,,2022-04-08
-F000459,F000459,"Charles J. ""Chuck"" Fleischmann",UNH,United Health Group Inc Com,Health Care,46567,25.6,2026-02-20,2026-02-20,Buy,Joint=100,True,"House Approps: Labor, HHS, Education",2026-11-13
-F000459,F000459,"Charles J. ""Chuck"" Fleischmann",ACN,Accenture PLC Ireland SHS CL A,Industrials,41336,22.72,2026-02-23,2026-02-23,Buy,Joint=100,False,,2026-11-13
-F000459,F000459,"Charles J. ""Chuck"" Fleischmann",ZTS,Zoetis Inc,Health Care,33599,18.47,2026-06-09,2026-06-09,Buy,Joint=100,True,"House Approps: Labor, HHS, Education",2026-11-13
-F000459,F000459,"Charles J. ""Chuck"" Fleischmann",ADBE,Adobe Sys Inc Com,Technology,25360,13.94,2025-01-28,2026-02-20,Add,Joint=100,True,"House Science, Space, and Technology",2026-11-13
-F000459,F000459,"Charles J. ""Chuck"" Fleischmann",SNOW,Snowflake Inc - SNOW,Technology,16937,9.31,2024-07-09,2024-07-09,Buy,Joint=100,True,"House Science, Space, and Technology",2026-11-13
-F000459,F000459,"Charles J. ""Chuck"" Fleischmann",VZ,Verizon Communications Inc - VZ,Communications,10289,5.66,2025-01-28,2025-01-28,Buy,Joint=100,False,,2026-11-13
-F000459,F000459,"Charles J. ""Chuck"" Fleischmann",NOW,Servicenow Inc Com,Technology,7846,4.31,2026-02-20,2026-02-20,Buy,Joint=100,True,"House Science, Space, and Technology",2026-11-13
+F000459,F000459,"Charles J. ""Chuck"" Fleischmann",UNH,United Health Group Inc Com,Health Care,46567,24.52,2026-02-20,2026-02-20,Buy,Joint=100,True,"House Approps: Labor, HHS, Education",2026-11-13
+F000459,F000459,"Charles J. ""Chuck"" Fleischmann",ACN,Accenture PLC Ireland SHS CL A,Industrials,41336,21.76,2026-02-23,2026-02-23,Buy,Joint=100,False,,2026-11-13
+F000459,F000459,"Charles J. ""Chuck"" Fleischmann",ZTS,Zoetis Inc,Health Care,33599,17.69,2026-06-09,2026-06-09,Buy,Joint=100,True,"House Approps: Labor, HHS, Education",2026-11-13
+F000459,F000459,"Charles J. ""Chuck"" Fleischmann",ADBE,Adobe Sys Inc Com,Technology,25360,13.35,2025-01-28,2026-02-20,Add,Joint=100,True,"House Science, Space, and Technology",2026-11-13
+F000459,F000459,"Charles J. ""Chuck"" Fleischmann",SNOW,Snowflake Inc - SNOW,Technology,16937,8.92,2024-07-09,2024-07-09,Buy,Joint=100,True,"House Science, Space, and Technology",2026-11-13
+F000459,F000459,"Charles J. ""Chuck"" Fleischmann",VZ,Verizon Communications Inc - VZ,Communications,10289,5.42,2025-01-28,2025-01-28,Buy,Joint=100,False,,2026-11-13
+F000459,F000459,"Charles J. ""Chuck"" Fleischmann",DKNG,DRAFTKINGS INC CL A,Communications,8000,4.21,2022-01-19,2022-01-19,Buy,Self=100,False,,cost
+F000459,F000459,"Charles J. ""Chuck"" Fleischmann",NOW,Servicenow Inc Com,Technology,7846,4.13,2026-02-20,2026-02-20,Buy,Joint=100,True,"House Science, Space, and Technology",2026-11-13
 F000462,F000462,Lois Frankel,SHV,iShares Short Treasury Bond ETF,,27705,100.0,2023-08-04,2023-08-09,Add,Self=100,False,,2026-11-13
 F000472,F000472,Scott Scott Franklin,LMT,Lockheed Martin Corporation Common Stock,Defense & Aerospace,202073,10.81,2022-09-12,2025-02-18,Add,Self=90;Spouse=10,True,"House Approps: Military Construction and VA; House Science, Space, and Technology",2026-11-13
 F000472,F000472,Scott Scott Franklin,AMGN,Amgen Inc. - Common Stock,Health Care,144211,7.71,2024-08-02,2024-08-07,Add,Self=91;Spouse=9,True,House Approps: Agriculture and FDA; House Approps: Military Construction and VA,2026-11-13
@@ -1106,9 +1106,9 @@ F000472,F000472,Scott Scott Franklin,ACN,Accenture plc Class A Ordinary Shares,I
 F000472,F000472,Scott Scott Franklin,JNJ,Johnson & Johnson Common Stock,Health Care,92279,4.94,2023-09-11,2025-06-16,Reduce,Self=83;Spouse=17,True,House Approps: Agriculture and FDA; House Approps: Military Construction and VA,2026-11-13
 F000472,F000472,Scott Scott Franklin,NVO,Novo Nordisk A/S Common Stock,Health Care,82633,4.42,2025-03-27,2026-08-26,Add,Self=91;Spouse=9,True,House Approps: Agriculture and FDA; House Approps: Military Construction and VA,2026-11-13
 F000472,F000472,Scott Scott Franklin,HD,"Home Depot, Inc.",Consumer Discretionary,60891,3.26,2022-09-09,2025-06-16,Reduce,Self=86;Spouse=14,False,,2026-11-13
-F000472,F000472,Scott Scott Franklin,WMT,Walmart Inc. Common Stock,Consumer Discretionary,58483,3.13,2022-09-13,2025-06-16,Reduce,Self=73;Spouse=27,False,,2026-11-13
-F000472,F000472,Scott Mr Franklin,MDT,Medtronic plc. Ordinary Shares,Health Care,51654,2.76,2022-09-13,2023-02-15,Reduce,Self=100,True,House Approps: Agriculture and FDA; House Approps: Military Construction and VA,2026-11-13
-F000472,F000472,Scott Scott Franklin,MSFT,Microsoft Corporation - Common Stock,Technology,37164,1.99,2022-09-13,2025-06-16,Reduce,Self=71;Spouse=29,True,"House Science, Space, and Technology",2026-11-13
+F000472,F000472,Scott Scott Franklin,WMT,Walmart Inc. Common Stock,Consumer Discretionary,58483,3.13,2022-03-11,2025-06-16,Reduce,Self=73;Spouse=27,False,,2026-11-13
+F000472,F000472,Scott Mr Franklin,MDT,Medtronic plc. Ordinary Shares,Health Care,51654,2.76,2022-03-15,2023-02-15,Reduce,Self=100,True,House Approps: Agriculture and FDA; House Approps: Military Construction and VA,2026-11-13
+F000472,F000472,Scott Scott Franklin,MSFT,Microsoft Corporation - Common Stock,Technology,37164,1.99,2022-03-21,2025-06-16,Reduce,Self=71;Spouse=29,True,"House Science, Space, and Technology",2026-11-13
 F000472,F000472,Scott Scott Franklin,MCD,McDonald's Corporation Common Stock,Consumer Discretionary,33569,1.8,2023-09-11,2026-08-26,Add,Self=50;Spouse=50,False,,2026-11-13
 F000472,F000472,Scott Scott Franklin,PEP,"Pepsico, Inc.",Consumer Staples,31034,1.66,2023-09-11,2026-08-26,Add,Spouse=50;Self=50,True,House Approps: Agriculture and FDA,2026-11-13
 F000472,F000472,Scott Scott Franklin,MRK,"Merck & Company, Inc. Common Stock",Health Care,22321,1.19,2023-09-11,2025-06-16,Reduce,Spouse=51;Self=49,True,House Approps: Agriculture and FDA; House Approps: Military Construction and VA,2026-11-13
@@ -1117,12 +1117,12 @@ F000472,F000472,Scott Franklin,IVW,iShares S&P 500 Growth ETF,,17116,0.92,2022-0
 F000472,F000472,Scott Scott Franklin,PG,Procter & Gamble Company,Consumer Staples,16975,0.91,2023-09-11,2025-06-16,Reduce,Spouse=50;Self=50,True,House Approps: Agriculture and FDA,2026-11-13
 F000472,F000472,Scott Mr Franklin,IVV,iShares Core S&P 500 ETF,,15262,0.82,2023-04-19,2023-04-19,Buy,Spouse=100,False,,2026-11-13
 F000472,F000472,Scott Mr Franklin,FQAL,Fidelity Quality Factor ETF,,14574,0.78,2023-04-19,2023-04-19,Buy,Spouse=100,False,,2026-11-13
-F000472,F000472,Scott Scott Franklin,V,Visa Inc.,Industrials,13531,0.72,2023-09-11,2025-06-16,Reduce,Spouse=100,False,,2026-11-13
+F000472,F000472,Scott Scott Franklin,V,Visa Inc.,Industrials,13531,0.72,2022-03-10,2025-06-16,Reduce,Spouse=100,False,,2026-11-13
 F000472,F000472,Scott Scott Franklin,BRK.B,Berkshire Hathaway Inc. New Common Stock,Financials,11109,0.59,2023-02-15,2025-06-16,Reduce,Spouse=100,False,,2026-11-13
 F000472,F000472,Scott Scott Franklin,GOOG,Alphabet Inc. - Class C Capital Stock,Technology,7756,0.41,2023-09-11,2026-08-20,Reduce,Spouse=100,True,"House Science, Space, and Technology",2026-11-13
 F000472,F000472,Scott Scott Franklin,JPM,JP Morgan Chase & Co. Common Stock,Financials,6555,0.35,2023-02-15,2026-08-20,Reduce,Spouse=100,False,,2026-11-13
-F000472,F000472,Scott Scott Franklin,UNH,UnitedHealth Group Incorporated Common Stock,Health Care,6062,0.32,2023-02-15,2024-08-07,Buy,Spouse=100,True,House Approps: Agriculture and FDA; House Approps: Military Construction and VA,2026-11-13
-F000472,F000472,Scott Scott Franklin,AAPL,Apple Inc. - Common Stock,Technology,4561,0.24,2023-02-15,2026-08-20,Reduce,Spouse=100,True,"House Science, Space, and Technology",2026-11-13
+F000472,F000472,Scott Scott Franklin,UNH,UnitedHealth Group Incorporated Common Stock,Health Care,6062,0.32,2022-03-11,2024-08-07,Buy,Spouse=100,True,House Approps: Agriculture and FDA; House Approps: Military Construction and VA,2026-11-13
+F000472,F000472,Scott Scott Franklin,AAPL,Apple Inc. - Common Stock,Technology,4561,0.24,2022-03-21,2026-08-20,Reduce,Spouse=100,True,"House Science, Space, and Technology",2026-11-13
 F000479,F000479,John Fetterman,MSFT,Microsoft Corporation - Common Stock,Technology,23519,24.86,2026-03-27,2026-03-30,Add,Dependent=100,True,"Senate Commerce, Science, and Transportation",2026-11-13
 F000479,F000479,John Fetterman,GOOG,Alphabet Inc. - Class C Capital Stock,Technology,22795,24.1,2025-05-15,2026-03-30,Add,Dependent=100,True,"Senate Commerce, Science, and Transportation",2026-11-13
 F000479,F000479,John Fetterman,MU,"Micron Technology, Inc. - Common Stock",Technology,19356,20.46,2026-03-30,2026-03-30,Buy,Dependent=100,True,"Senate Commerce, Science, and Transportation",2026-11-13
@@ -1136,7 +1136,7 @@ G000359,G000359,Lindsey Graham,BSCV,Invesco BulletShares 2031 Corporate Bond ETF
 G000359,G000359,Lindsey Graham,IBDO,iShares iBonds Dec 2023 Term Corporate ETF,,8476,2.37,2022-06-30,2022-06-30,Buy,Self=100,False,,2023-12-15
 G000563,G000563,Bob Gibbs,GOOGL,Alphabet Inc. - Class A (GOOGL),Technology,65571,43.8,2022-02-02,2022-02-02,Buy,Self=100,False,,2026-11-13
 G000563,G000563,Bob Gibbs,AAPL,Apple Inc.,Technology,57520,38.43,2022-05-11,2022-09-06,Add,Self=100,False,,2026-11-13
-G000563,G000563,Bob Gibbs,TGT,Target Corporation (TGT),Consumer Discretionary,26599,17.77,2022-01-06,2022-01-06,Buy,Self=100,False,,2026-11-13
+G000563,G000563,Bob Gibbs,TGT,Target Corporation,Consumer Discretionary,26599,17.77,2022-01-06,2022-01-06,Buy,Self=100,False,,2026-11-13
 G000581,G000581,Vicente Gonzalez,AAPL,APPLE INC (COMMON STOCK),Technology,308972,100.0,2025-04-01,2025-04-03,Buy,Self=100,False,,2026-11-13
 G000583,G000583,Josh Gottheimer,NVDA,NVIDIA Corporation - Common Stock,Technology,144578,6.48,2022-01-26,2025-06-24,Add,Joint=100,False,,2026-11-13
 G000583,G000583,Josh Gottheimer,TSLA,"Tesla, Inc. - Common Stock",Consumer Discretionary,90283,4.04,2022-01-26,2025-06-05,Reduce,Joint=100,False,,2026-11-13
@@ -1386,7 +1386,7 @@ G000596,G000596,Marjorie Taylor Greene,SBUX,Starbucks Corporation - Common Stock
 G000596,G000596,Marjorie Taylor Greene,WMT,Walmart Inc. Common Stock,Consumer Discretionary,10453,0.18,2025-05-05,2025-05-05,Buy,Self=100,False,,2026-11-13
 G000596,G000596,Marjorie Taylor Greene,BAC,Bank of America Corporation Common Stock,Financials,10256,0.17,2025-05-05,2025-05-05,Buy,Self=100,False,,2026-11-13
 G000596,G000596,Marjorie Taylor Greene,AXP,American Express Company Common Stock,Financials,9377,0.16,2025-05-05,2025-05-05,Buy,Self=100,False,,2026-11-13
-G000596,G000596,Marjorie Taylor Greene,MDT,Medtronic plc. Ordinary Shares (MDT) [ST],Health Care,8670,0.15,2022-01-19,2022-01-19,Buy,Joint=100,False,,2026-11-13
+G000596,G000596,Marjorie Taylor Greene,MDT,Medtronic plc. Ordinary Shares (MDT),Health Care,8670,0.15,2022-01-19,2022-01-19,Buy,Joint=100,False,,2026-11-13
 G000596,G000596,Marjorie Taylor Greene,XMEX,Xemex Group Inc. Common stock,,8000,0.14,2025-10-15,2025-10-15,Buy,Self=100,False,,cost
 G000596,G000596,Marjorie Taylor Greene,CLX,Clorox Company,Consumer Staples,7034,0.12,2022-02-22,2022-02-22,Buy,Self=100,False,,2026-11-13
 G000596,G000596,Marjorie Taylor Greene,RH,RH Common Stock,Consumer Discretionary,7107,0.12,2025-04-04,2025-04-04,Buy,Self=100,False,,2026-11-13
@@ -1486,15 +1486,19 @@ H001082,H001082,Kevin Hern,KO,Coca-Cola Company,Consumer Staples,9009,0.82,2023-
 H001082,H001082,Kevin Hern,TIP,iShares TIPS Bond ETF,,8559,0.77,2022-07-08,2022-07-08,Buy,Joint=100,False,,2026-11-13
 H001082,H001082,Kevin Hern,ARGO,"Argo Group International Holdings, Ltd.",,8120,0.74,2023-06-20,2023-06-20,Buy,Joint=100,False,,2023-11-15
 H001082,H001082,Kevin Hern,RTN,Raytheon Company,,8000,0.72,2022-12-15,2022-12-15,Buy,Joint=100,False,,cost
-H001086,H001086,Diana Harshbarger,MCK,MCKESSON CORP,Health Care,72789,25.82,2022-10-21,2022-10-21,Add,Spouse=33;Self=33;Joint=33,True,House Energy and Commerce,2026-11-13
-H001086,H001086,Diana Harshbarger,ADI,Analog Devices Inc,Technology,63574,22.55,2022-11-21,2022-12-28,Add,Spouse=67;Joint=33,True,House Energy and Commerce,2026-11-13
-H001086,H001086,Diana Harshbarger,LMT,LOCKHEED MARTIN CORP,Defense & Aerospace,34981,12.41,2022-10-21,2022-10-21,Add,Joint=33;Self=33;Spouse=33,False,,2026-11-13
-H001086,H001086,Diana Harshbarger,DPZ,DOMINO'S PIZZA INC,Consumer Staples,27179,9.64,2022-10-21,2022-10-21,Add,Self=33;Spouse=33;Joint=33,False,,2026-11-13
-H001086,H001086,Diana Harshbarger,ILMN,Illumina Inc,Technology,26793,9.51,2022-12-28,2022-12-28,Add,Spouse=33;Joint=33;Self=33,True,House Energy and Commerce,2026-11-13
-H001086,H001086,Diana Harshbarger,EW,Edwards Lifesciences Corp,Health Care,22069,7.83,2023-01-25,2023-01-25,Add,Joint=50;Spouse=50,True,House Energy and Commerce,2026-11-13
-H001086,H001086,Diana Harshbarger,ORCL,ORACLE CORP,Technology,14596,5.18,2022-06-06,2022-06-08,Reduce,Joint=100,True,House Energy and Commerce,2026-11-13
-H001086,H001086,Diana Harshbarger,JNJ,JOHNSON & JOHNSON,Health Care,14457,5.13,2022-06-07,2022-06-07,Buy,Joint=100,True,House Energy and Commerce,2026-11-13
-H001086,H001086,Diana Harshbarger,ADBE,Adobe Inc,Technology,5430,1.93,2023-01-25,2023-01-25,Buy,Joint=100,True,House Energy and Commerce,2026-11-13
+H001086,H001086,Diana Harshbarger,MCK,MCKESSON CORP,Health Care,72789,19.86,2022-10-21,2022-10-21,Add,Spouse=33;Self=33;Joint=33,True,House Energy and Commerce,2026-11-13
+H001086,H001086,Diana Harshbarger,ADI,Analog Devices Inc,Technology,63574,17.35,2022-11-21,2022-12-28,Add,Spouse=67;Joint=33,True,House Energy and Commerce,2026-11-13
+H001086,H001086,Diana Harshbarger,ABBV,ABBVIE INC,Health Care,43085,11.76,2021-12-20,2021-12-20,Add,Self=50;Joint=50,True,House Energy and Commerce,2026-11-13
+H001086,H001086,Diana Harshbarger,LMT,LOCKHEED MARTIN CORP,Defense & Aerospace,34981,9.54,2022-10-21,2022-10-21,Add,Joint=33;Self=33;Spouse=33,False,,2026-11-13
+H001086,H001086,Diana Harshbarger,DPZ,DOMINO'S PIZZA INC,Consumer Staples,27179,7.42,2022-10-21,2022-10-21,Add,Self=33;Spouse=33;Joint=33,False,,2026-11-13
+H001086,H001086,Diana Harshbarger,ILMN,Illumina Inc,Technology,26793,7.31,2022-12-28,2022-12-28,Add,Spouse=33;Joint=33;Self=33,True,House Energy and Commerce,2026-11-13
+H001086,H001086,Diana Harshbarger,EW,Edwards Lifesciences Corp,Health Care,22069,6.02,2023-01-25,2023-01-25,Add,Joint=50;Spouse=50,True,House Energy and Commerce,2026-11-13
+H001086,H001086,Diana Harshbarger,ACM,AECOM,Industrials,15312,4.18,2022-03-17,2022-03-17,Add,Self=50;Spouse=50,False,,2026-11-13
+H001086,H001086,Diana Harshbarger,ORCL,ORACLE CORP,Technology,14596,3.98,2022-06-06,2022-06-08,Reduce,Joint=100,True,House Energy and Commerce,2026-11-13
+H001086,H001086,Diana Harshbarger,JNJ,JOHNSON & JOHNSON,Health Care,14457,3.94,2022-06-07,2022-06-07,Buy,Joint=100,True,House Energy and Commerce,2026-11-13
+H001086,H001086,Diana Harshbarger,AMZN,AMAZON.COM INC,Consumer Discretionary,13568,3.7,2022-03-17,2022-03-17,Buy,Joint=100,False,,2026-11-13
+H001086,H001086,Diana Harshbarger,WTW,Willis Towers Watson PLC,Financials,12666,3.46,2022-02-17,2022-02-17,Buy,Joint=100,False,,2026-11-13
+H001086,H001086,Diana Harshbarger,ADBE,Adobe Inc,Technology,5430,1.48,2023-01-25,2023-01-25,Buy,Joint=100,True,House Energy and Commerce,2026-11-13
 H001094,H001094,Valerie Hoyle,VRT,"Vertiv Holdings, LLC Class A Common Stock",Technology,14236,13.3,2024-10-29,2024-10-29,Buy,Spouse=100,False,,2026-11-13
 H001094,H001094,Valerie Hoyle,CF,"CF Industries Holdings, Inc. Common Stock",Materials,12857,12.02,2024-10-29,2024-10-29,Buy,Spouse=100,True,House Natural Resources,2026-11-13
 H001094,H001094,Valerie Hoyle,KNX,Knight-Swift Transportation Holdings Inc.,Transportation,11734,10.97,2025-06-26,2025-06-26,Buy,Spouse=100,True,House Transportation and Infrastructure,2026-11-13
@@ -2136,6 +2140,7 @@ L000560,L000560,Rick Larsen,NEE,"NextEra Energy, Inc. Common Stock",Utilities,73
 L000562,L000562,Stephen F. Lynch,NVDA,NVIDIA Corporation - Common Stock,Technology,13761,100.0,2024-05-22,2024-05-22,Buy,Self=100,False,,2026-11-13
 L000566,L000566,Robert E. Latta,FMAO,"Farmers & Merchants Bancorp, Inc.",Financials,355766,95.7,2022-07-12,2026-10-20,Add,Spouse=100,False,,2026-11-13
 L000566,L000566,Robert E. Latta,FMBA,Farmers & Merchants Bancorp Inc,,16001,4.3,2023-07-20,2023-10-20,Add,Spouse=100,False,,cost
+L000576,L000576,Billy Long,AAPL,Apple,Technology,17947,100.0,2022-02-24,2022-02-24,Buy,Self=100,False,,2026-11-13
 L000579,L000579,Alan S. Lowenthal,GTLS,"Chart Industries, Inc.",,72535,23.04,2022-12-09,2022-12-09,Add,Spouse=80;Joint=20,False,,2026-07-15
 L000579,L000579,Alan S. Lowenthal,SCI,Service Corporation International,Consumer Discretionary,55515,17.63,2022-09-22,2022-09-27,Add,Spouse=60;Joint=40,False,,2026-11-13
 L000579,L000579,Alan S. Lowenthal,ATVI,"Activision Blizzard, Inc",,29652,9.42,2022-12-12,2022-12-14,Add,Spouse=67;Joint=33,False,,2023-10-13
@@ -2147,7 +2152,7 @@ L000579,L000579,Alan S. Lowenthal,BA,Boeing Company,Defense & Aerospace,20522,6.
 L000579,L000579,Alan S. Lowenthal,ZTS,Zoetis Inc. Class A,Health Care,18029,5.73,2022-08-26,2022-08-26,Buy,Spouse=100,False,,2026-11-13
 L000579,L000579,Alan S. Lowenthal,AMZN,"Amazon.com, Inc.",Consumer Discretionary,17345,5.51,2022-06-07,2022-06-07,Buy,Spouse=100,False,,2026-11-13
 L000579,L000579,Alan S. Lowenthal,TMUS,"T-Mobile US, Inc.",Communications,2408,0.76,2021-12-27,2022-11-04,Reduce,Joint=100,False,,2026-11-13
-L000579,L000579,Alan S. Lowenthal,RUN,Sunrun Inc.,Industrials,2171,0.69,2022-01-14,2022-01-14,Buy,Joint=100,False,,2026-11-13
+L000579,L000579,Alan S. Lowenthal,RUN,Sunrun Inc. (RUN),Industrials,2171,0.69,2022-01-14,2022-01-14,Buy,Joint=100,False,,2026-11-13
 L000590,L000590,Susie Lee,WYNN,"Wynn Resorts, Limited - Common Stock",Consumer Discretionary,69242,87.97,2022-01-27,2025-03-14,Reduce,Spouse=50;Dependent=50,False,,2026-11-13
 L000590,L000590,Susie Lee,RNMBY,RHEINMETALL AG UNSP/ADR,,8000,10.16,2024-05-10,2024-05-10,Buy,Dependent=100,False,,cost
 L000590,L000590,Susie Lee,FLL,"Full House Resorts, Inc. - Common Stock",Consumer Discretionary,1471,1.87,2022-05-12,2026-07-01,Reduce,Joint=50;Dependent=50,False,,2026-11-13
@@ -2216,24 +2221,24 @@ M000355,M000355,"A. Mitchell McConnell, Jr.",KR,Kroger Company (The) Common Stoc
 M000934,M000934,"Jerry Moran,",BRK.B,Berkshire Hathaway Inc. New Common Stock,Financials,98665,67.45,2021-12-21,2026-06-23,Add,Self=80;Spouse=20,False,,2026-11-13
 M000934,M000934,"Jerry Moran,",GOOG,Alphabet Inc. - Class C Capital Stock,Technology,42467,29.03,2021-12-21,2026-06-23,Add,Self=51;Spouse=49,True,"Senate Commerce, Science, and Transportation",2026-11-13
 M000934,M000934,"Jerry Moran,",PFE,"Pfizer, Inc. Common Stock",Health Care,5137,3.51,2021-12-21,2023-12-14,Reduce,Spouse=100,True,"Senate Approps: Agriculture and FDA; Senate Approps: Labor, HHS, Education; Senate Veterans' Affairs",2026-11-13
-M001135,M001135,Kathy Manning,NVDA,NVIDIA Corporation - Common Stock,Technology,740916,20.1,2022-02-18,2024-07-02,Reduce,Spouse=53;Self=47,False,,2026-11-13
-M001135,M001135,Kathy Manning,MSFT,Microsoft Corporation - Common Stock,Technology,322733,8.76,2022-07-15,2024-07-02,Add,Spouse=77;Self=23,False,,2026-11-13
-M001135,M001135,Kathy Manning,GRMN,Garmin Ltd. Common Stock,Defense & Aerospace,165305,4.49,2024-07-02,2024-07-02,Add,Spouse=100,False,,2026-11-13
+M001135,M001135,Kathy Manning,NVDA,NVIDIA Corporation - Common Stock,Technology,740916,20.08,2021-03-25,2024-07-02,Reduce,Spouse=53;Self=47,False,,2026-11-13
+M001135,M001135,Kathy Manning,MSFT,Microsoft Corporation - Common Stock,Technology,322733,8.75,2021-12-31,2024-07-02,Add,Spouse=77;Self=23,False,,2026-11-13
+M001135,M001135,Kathy Manning,GRMN,Garmin Ltd. Common Stock,Defense & Aerospace,165305,4.48,2024-07-02,2024-07-02,Add,Spouse=100,False,,2026-11-13
 M001135,M001135,Kathy Manning,CFG,"Citizens Financial Group, Inc.",Financials,143462,3.89,2022-07-27,2024-01-23,Add,Spouse=74;Self=26,False,,2026-11-13
 M001135,M001135,Kathy Manning,MA,Mastercard Incorporated Common Stock,Industrials,133884,3.63,2022-07-15,2024-07-02,Add,Spouse=100,False,,2026-11-13
-M001135,M001135,Kathy Manning,COST,Costco Wholesale Corporation - Common Stock,Consumer Discretionary,104865,2.85,2022-07-15,2024-07-02,Add,Spouse=100,False,,2026-11-13
-M001135,M001135,Kathy Manning,JNJ,Johnson & Johnson Common Stock,Health Care,93457,2.54,2022-07-15,2024-07-02,Add,Spouse=100,False,,2026-11-13
+M001135,M001135,Kathy Manning,COST,Costco Wholesale Corporation - Common Stock,Consumer Discretionary,104865,2.84,2022-07-15,2024-07-02,Add,Spouse=100,False,,2026-11-13
+M001135,M001135,Kathy Manning,JNJ,Johnson & Johnson Common Stock,Health Care,93457,2.53,2022-07-15,2024-07-02,Add,Spouse=100,False,,2026-11-13
 M001135,M001135,Kathy Manning,LRCX,Lam Research Corporation - Common Stock,Industrials,93023,2.52,2022-07-27,2024-07-02,Add,Self=82;Spouse=18,False,,2026-11-13
 M001135,M001135,Kathy Manning,MRK,"Merck & Company, Inc. Common Stock",Health Care,90221,2.45,2022-07-15,2024-07-02,Add,Spouse=100,False,,2026-11-13
-M001135,M001135,Kathy Manning,CRM,"Salesforce, Inc. Common Stock",Technology,82768,2.25,2022-07-15,2024-07-02,Add,Spouse=100,False,,2026-11-13
-M001135,M001135,Kathy Manning,MSCI,MSCI Inc. Common Stock,Industrials,80974,2.2,2024-01-23,2024-07-02,Add,Spouse=100,False,,2026-11-13
-M001135,M001135,Kathy Manning,AAPL,Apple Inc. - Common Stock,Technology,76142,2.07,2022-07-15,2024-07-02,Add,Spouse=78;Self=22,False,,2026-11-13
-M001135,M001135,Kathy Manning,AMZN,"Amazon.com, Inc.",Consumer Discretionary,75013,2.04,2022-05-27,2022-10-12,Add,Spouse=75;Joint=25,False,,2026-11-13
+M001135,M001135,Kathy Manning,CRM,"Salesforce, Inc. Common Stock",Technology,82768,2.24,2022-07-15,2024-07-02,Add,Spouse=100,False,,2026-11-13
+M001135,M001135,Kathy Manning,MSCI,MSCI Inc. Common Stock,Industrials,80974,2.19,2024-01-23,2024-07-02,Add,Spouse=100,False,,2026-11-13
+M001135,M001135,Kathy Manning,AAPL,Apple Inc. - Common Stock,Technology,76142,2.06,2022-07-15,2024-07-02,Add,Spouse=78;Self=22,False,,2026-11-13
+M001135,M001135,Kathy Manning,AMZN,"Amazon.com, Inc.",Consumer Discretionary,75013,2.03,2021-10-19,2022-10-12,Add,Spouse=75;Joint=25,False,,2026-11-13
 M001135,M001135,Kathy Manning,WMT,Walmart Inc. Common Stock,Consumer Discretionary,74083,2.01,2022-07-15,2024-07-02,Reduce,Spouse=100,False,,2026-11-13
 M001135,M001135,Kathy Manning,PG,Procter & Gamble Company,Consumer Staples,71131,1.93,2022-07-15,2024-07-02,Add,Spouse=99;Self=1,False,,2026-11-13
 M001135,M001135,Kathy Manning,MDT,Medtronic plc. Ordinary Shares,Health Care,70444,1.91,2022-07-27,2024-07-02,Reduce,Spouse=72;Self=28,False,,2026-11-13
-M001135,M001135,Kathy Manning,PKG,Packaging Corporation of America Common Stock,Materials,64310,1.75,2022-07-27,2024-07-02,Add,Self=51;Spouse=49,False,,2026-11-13
-M001135,M001135,Kathy Manning,TJX,"TJX Companies, Inc.",Consumer Discretionary,58798,1.6,2022-07-27,2024-07-02,Add,Spouse=92;Self=8,False,,2026-11-13
+M001135,M001135,Kathy Manning,PKG,Packaging Corporation of America Common Stock,Materials,64310,1.74,2022-07-27,2024-07-02,Add,Self=51;Spouse=49,False,,2026-11-13
+M001135,M001135,Kathy Manning,TJX,"TJX Companies, Inc.",Consumer Discretionary,58798,1.59,2022-07-27,2024-07-02,Add,Spouse=92;Self=8,False,,2026-11-13
 M001135,M001135,Kathy Manning,AVGO,Broadcom Inc.,Technology,57766,1.57,2022-07-15,2022-09-12,Reduce,Spouse=100,False,,2026-11-13
 M001135,M001135,Kathy Manning,HD,"Home Depot, Inc.",Consumer Discretionary,46561,1.26,2022-07-15,2024-07-02,Add,Spouse=100,False,,2026-11-13
 M001135,M001135,Kathy Manning,ABT,Abbott Laboratories Common Stock,Health Care,44617,1.21,2022-07-15,2024-07-02,Add,Spouse=62;Self=38,False,,2026-11-13
@@ -2248,10 +2253,10 @@ M001135,M001135,Kathy Manning,ABBV,AbbVie Inc. Common Stock,Health Care,32710,0.
 M001135,M001135,Kathy Manning,INTC,Intel Corporation,Technology,32926,0.89,2022-07-15,2022-10-12,Add,Spouse=100,False,,2026-11-13
 M001135,M001135,Kathy Manning,META,"Meta Platforms, Inc. - Class A",Technology,31016,0.84,2022-08-05,2022-08-05,Buy,Spouse=100,False,,2026-11-13
 M001135,M001135,Kathy Manning,EXPD,"Expeditors International of Washington, Inc.",Transportation,29402,0.8,2022-07-27,2024-07-02,Add,Spouse=100,False,,2026-11-13
-M001135,M001135,Kathy Manning,JPM,JP Morgan Chase & Co.,Financials,28952,0.79,2022-07-15,2024-01-23,Reduce,Spouse=83;Self=17,False,,2026-11-13
+M001135,M001135,Kathy Manning,JPM,JP Morgan Chase & Co.,Financials,28952,0.78,2022-07-15,2024-01-23,Reduce,Spouse=83;Self=17,False,,2026-11-13
 M001135,M001135,Kathy Manning,CVX,Chevron Corporation,Energy,28730,0.78,2022-07-15,2022-08-05,Add,Spouse=100,False,,2026-11-13
 M001135,M001135,Kathy Manning,TSLA,"Tesla, Inc.",Consumer Discretionary,27954,0.76,2022-07-15,2022-10-12,Add,Spouse=100,False,,2026-11-13
-M001135,M001135,Kathy Manning,V,Visa Inc.,Industrials,26829,0.73,2022-04-27,2024-07-02,Add,Spouse=100,False,,2026-11-13
+M001135,M001135,Kathy Manning,V,Visa Inc.,Industrials,26829,0.73,2021-02-02,2024-07-02,Add,Spouse=100,False,,2026-11-13
 M001135,M001135,Kathy Manning,QCOM,QUALCOMM Incorporated - Common Stock,Technology,26494,0.72,2022-07-15,2024-07-02,Add,Spouse=52;Self=48,False,,2026-11-13
 M001135,M001135,Kathy Manning,GOOG,Alphabet Inc. - Class C Capital Stock,Technology,25457,0.69,2022-07-15,2024-07-02,Reduce,Self=82;Spouse=18,False,,2026-11-13
 M001135,M001135,Kathy Manning,VZ,Verizon Communications Inc.,Communications,23230,0.63,2022-07-15,2022-10-12,Add,Spouse=100,False,,2026-11-13
@@ -2259,19 +2264,19 @@ M001135,M001135,Kathy Manning,FDX,FedEx Corporation,Transportation,22885,0.62,20
 M001135,M001135,Kathy Manning,ACN,Accenture plc Class A Ordinary Shares,Industrials,22398,0.61,2022-07-15,2024-07-02,Reduce,Self=66;Spouse=34,False,,2026-11-13
 M001135,M001135,Kathy Manning,TMO,Thermo Fisher Scientific Inc,Technology,21856,0.59,2022-07-15,2022-10-12,Add,Spouse=100,False,,2026-11-13
 M001135,M001135,Kathy Manning,PM,Philip Morris International Inc,Consumer Staples,21355,0.58,2022-07-15,2022-07-15,Buy,Spouse=100,False,,2026-11-13
-M001135,M001135,Kathy Manning,MMM,3M Company,Health Care,19367,0.53,2022-10-12,2022-10-12,Buy,Spouse=100,False,,2026-11-13
+M001135,M001135,Kathy Manning,MMM,3M Company,Health Care,19367,0.52,2022-10-12,2022-10-12,Buy,Spouse=100,False,,2026-11-13
 M001135,M001135,Kathy Manning,WFC,Wells Fargo & Company,Financials,18759,0.51,2022-07-15,2022-08-03,Reduce,Spouse=100,False,,2026-11-13
 M001135,M001135,Kathy Manning,TXN,Texas Instruments Incorporated,Technology,18079,0.49,2022-10-12,2022-10-12,Buy,Spouse=100,False,,2026-11-13
 M001135,M001135,Kathy Manning,LIN,Linde plc Ordinary Share,Materials,16141,0.44,2022-07-15,2022-07-15,Buy,Spouse=100,False,,2026-11-13
 M001135,M001135,Kathy Manning,PEP,"Pepsico, Inc.",Consumer Staples,15519,0.42,2022-07-15,2022-08-05,Add,Spouse=100,False,,2026-11-13
-M001135,M001135,Kathy Manning,BRK.B,Berkshire Hathaway Inc. New,Financials,15308,0.42,2022-07-15,2022-10-12,Reduce,Spouse=100,False,,2026-11-13
+M001135,M001135,Kathy Manning,BRK.B,Berkshire Hathaway Inc. New,Financials,15308,0.41,2022-07-15,2022-10-12,Reduce,Spouse=100,False,,2026-11-13
 M001135,M001135,Kathy Manning,AEP,"American Electric Power Company, Inc.",Utilities,14745,0.4,2022-10-12,2022-10-12,Buy,Spouse=100,False,,2026-11-13
 M001135,M001135,Kathy Manning,APD,"Air Products and Chemicals, Inc. Common Stock",Materials,14228,0.39,2022-07-27,2024-07-02,Reduce,Self=83;Spouse=17,False,,2026-11-13
 M001135,M001135,Kathy Manning,AEE,Ameren Corporation,Utilities,13837,0.38,2022-10-12,2022-10-12,Buy,Spouse=100,False,,2026-11-13
 M001135,M001135,Kathy Manning,PPL,PPL Corporation,Utilities,13615,0.37,2022-10-12,2022-10-12,Buy,Spouse=100,False,,2026-11-13
-M001135,M001135,Kathy Manning,INTU,Intuit Inc. - Common Stock,Technology,12886,0.35,2022-07-27,2024-07-02,Reduce,Self=100,False,,2026-11-13
-M001135,M001135,Kathy Manning,BAC,Bank of America Corporation,Financials,12351,0.34,2022-07-15,2022-10-12,Reduce,Spouse=100,False,,2026-11-13
-M001135,M001135,Kathy Manning,PYPL,"PayPal Holdings, Inc.",Industrials,11859,0.32,2022-03-03,2023-12-12,Reduce,Self=100,False,,2026-11-13
+M001135,M001135,Kathy Manning,INTU,Intuit Inc. - Common Stock,Technology,12886,0.35,2021-08-24,2024-07-02,Reduce,Self=100,False,,2026-11-13
+M001135,M001135,Kathy Manning,BAC,Bank of America Corporation,Financials,12351,0.33,2022-07-15,2022-10-12,Reduce,Spouse=100,False,,2026-11-13
+M001135,M001135,Kathy Manning,PYPL,"PayPal Holdings, Inc.",Industrials,11859,0.32,2021-01-22,2023-12-12,Reduce,Self=100,False,,2026-11-13
 M001135,M001135,Kathy Manning,LOW,"Lowe's Companies, Inc.",Consumer Discretionary,10800,0.29,2022-07-15,2022-08-03,Reduce,Spouse=100,False,,2026-11-13
 M001135,M001135,Kathy Manning,ALLY,Ally Financial Inc.,Financials,10587,0.29,2022-07-20,2022-07-20,Buy,Joint=100,False,,2026-11-13
 M001135,M001135,Kathy Manning,NEE,"NextEra Energy, Inc.",Utilities,9743,0.26,2022-07-15,2022-07-15,Buy,Spouse=100,False,,2026-11-13
@@ -2287,10 +2292,11 @@ M001135,M001135,Kathy Manning,INVH,Invitation Homes Inc.,Real Estate,7763,0.21,2
 M001135,M001135,Kathy Manning,PFE,"Pfizer, Inc. Common Stock",Health Care,7475,0.2,2022-07-15,2024-08-09,Reduce,Self=100,False,,2026-11-13
 M001135,M001135,Kathy Manning,UNH,UnitedHealth Group Incorporated Common Stock,Health Care,6229,0.17,2022-07-15,2022-10-12,Reduce,Spouse=100,False,,2026-11-13
 M001135,M001135,Kathy Manning,MU,"Micron Technology, Inc.",Technology,4571,0.12,2022-07-27,2024-01-23,Reduce,Self=100,False,,2026-11-13
-M001135,M001135,Kathy Manning,EL,"Estee Lauder Companies, Inc.",Consumer Staples,3810,0.1,2022-05-27,2023-12-12,Reduce,Joint=100,False,,2026-11-13
+M001135,M001135,Kathy Manning,ADBE,Adobe Inc.,Technology,3769,0.1,2021-03-25,2022-10-12,Reduce,Joint=100,False,,2026-11-13
+M001135,M001135,Kathy Manning,EL,"Estee Lauder Companies, Inc.",Consumer Staples,3810,0.1,2021-03-25,2023-12-12,Reduce,Joint=100,False,,2026-11-13
 M001135,M001135,Kathy Manning,CHTR,"Charter Communications, Inc. - Class A",Communications,2724,0.07,2022-07-20,2022-09-12,Buy,Spouse=100,False,,2026-11-13
 M001135,M001135,Kathy Manning,LMT,Lockheed Martin Corporation Common Stock,Defense & Aerospace,1611,0.04,2022-07-27,2024-07-02,Reduce,Spouse=100,False,,2026-11-13
-M001135,M001135,Kathy Manning,CME,CME Group Inc. - Class A Common Stock,Financials,1169,0.03,2022-03-03,2024-07-02,Reduce,Spouse=100,False,,2026-11-13
+M001135,M001135,Kathy Manning,CME,CME Group Inc. - Class A Common Stock,Financials,1169,0.03,2021-03-08,2024-07-02,Reduce,Spouse=100,False,,2026-11-13
 M001136,M001136,Lisa McClain,STX,Seagate Technology Holdings PLC - Ordinary Shares,Technology,164489,37.89,2025-09-08,2026-09-30,Reduce,Spouse=100,False,,2026-11-13
 M001136,M001136,Lisa McClain,OLN,Olin Corporation Common Stock,Materials,33617,7.74,2026-09-14,2026-09-14,Buy,Spouse=100,False,,2026-11-13
 M001136,M001136,Lisa McClain,RIG,Transocean Ltd,Energy,33037,7.61,2026-09-14,2026-09-14,Buy,Spouse=100,False,,2026-11-13
@@ -2315,56 +2321,66 @@ M001136,M001136,Lisa McClain,HIMS,"Hims & Hers Health, Inc. Class A Common Stock
 M001136,M001136,Lisa McClain,SMR,NuScale Power Corporation Class A Common Stock,Industrials,1522,0.35,2024-11-08,2024-11-08,Buy,Spouse=100,False,,2026-11-13
 M001136,M001136,Lisa McClain,RVTY,"Revvity, Inc. Common Stock",Technology,279,0.06,2025-06-17,2025-07-22,Reduce,Spouse=100,False,,2026-11-13
 M001136,M001136,Lisa McClain,NBIX,"Neurocrine Biosciences, Inc. - Common Stock",Health Care,61,0.01,2025-06-11,2025-06-17,Reduce,Spouse=100,False,,2026-11-13
-M001157,M001157,Michael T. McCaul,PAYX,PAYCHEX INC,Industrials,683968,14.08,2026-03-04,2026-06-01,Add,Spouse=100,False,,2026-11-13
-M001157,M001157,Michael T. McCaul,BAX,BAXTER INTERNATIONAL INC,Health Care,367321,7.56,2026-01-13,2026-03-23,Add,Spouse=100,False,,2026-11-13
-M001157,M001157,Michael T. McCaul,GPC,GENUINE PARTS CO,Industrials,293398,6.04,2024-12-13,2026-06-18,Add,Spouse=100,False,,2026-11-13
-M001157,M001157,Michael T. McCaul,SPGI,S&P GLOBAL INC,Industrials,237579,4.89,2026-03-18,2026-08-27,Add,Spouse=100,False,,2026-11-13
-M001157,M001157,Michael T. McCaul,IFF,INTERNATIONAL FLAVORS & FRAGRANCES,Materials,207313,4.27,2026-01-13,2026-01-13,Buy,Spouse=100,False,,2026-11-13
-M001157,M001157,Michael T. McCaul,ACN,ACCENTURE PLC,Industrials,200784,4.13,2026-08-25,2026-08-28,Add,Spouse=100,False,,2026-11-13
-M001157,M001157,Michael T. McCaul,HAYW,"Hayward Holdings, Inc.",Industrials,198505,4.09,2024-12-19,2025-03-04,Add,Spouse=59;Dependent=41,False,,2026-11-13
-M001157,M001157,Michael T. McCaul,MELI,MERCADOLIBRE INC,Industrials,198657,4.09,2025-12-15,2026-06-09,Add,Spouse=100,False,,2026-11-13
-M001157,M001157,Michael T. McCaul,ARE,ALEXANDRIA REAL ESTATE EQUITIES,Real Estate,166457,3.43,2026-02-06,2026-03-23,Buy,Spouse=100,False,,2026-11-13
-M001157,M001157,Michael T. McCaul,COP,CONOCOPHILLIPS,Energy,150407,3.1,2024-08-26,2026-08-26,Reduce,Dependent=100,False,,2026-11-13
-M001157,M001157,Michael T. McCaul,AA,ALCOA CORP,Materials,148916,3.07,2024-04-19,2026-06-03,Reduce,Dependent=100,False,,2026-11-13
-M001157,M001157,Michael T. McCaul,HUM,HUMANA INC,Health Care,147161,3.03,2024-04-10,2026-05-07,Add,Dependent=67;Spouse=33,False,,2026-11-13
-M001157,M001157,Michael T. McCaul,TSN,TYSON FOODS INC,Consumer Staples,115225,2.37,2024-01-23,2026-06-18,Add,Spouse=100,False,,2026-11-13
-M001157,M001157,Michael T. McCaul,WDAY,WORKDAY INC CL A,Technology,112995,2.33,2024-06-04,2026-08-28,Reduce,Dependent=100,False,,2026-11-13
-M001157,M001157,Michael T. McCaul,SNPS,SYNOPSYS INC,Technology,107985,2.22,2024-08-08,2024-08-23,Add,Dependent=94;Spouse=6,False,,2026-11-13
-M001157,M001157,Michael T. McCaul,BSX,BOSTON SCIENTIFIC CORP,Health Care,98943,2.04,2024-04-12,2026-03-27,Add,Dependent=95;Spouse=5,False,,2026-11-13
-M001157,M001157,Michael T. McCaul,CACI,CACI INTERNATIONAL INC,Technology,97719,2.01,2026-05-20,2026-05-20,Buy,Spouse=100,False,,2026-11-13
-M001157,M001157,Michael T. McCaul,VVV,VALVOLINE INC,Energy,76144,1.57,2024-01-17,2026-08-19,Buy,Spouse=100,False,,2026-11-13
-M001157,M001157,Michael T. McCaul,APH,AMPHENOL CORP CLASS A,Technology,75169,1.55,2026-05-22,2026-05-26,Add,Spouse=100,False,,2026-11-13
-M001157,M001157,Michael T. McCaul,ANET,ARISTA NETWORKS INC,Technology,74411,1.53,2024-06-20,2026-08-04,Reduce,Dependent=100,False,,2026-11-13
-M001157,M001157,Michael T. McCaul,NFG,NATIONAL FUEL GAS CO,Utilities,74390,1.53,2026-06-26,2026-06-26,Buy,Spouse=100,False,,2026-11-13
-M001157,M001157,Michael T. McCaul,WWD,WOODWARD INC,Industrials,70829,1.46,2024-08-07,2026-06-09,Reduce,Dependent=100,False,,2026-11-13
-M001157,M001157,Michael T. McCaul,HWM,HOWMET AEROSPACE INC,Materials,60954,1.26,2024-12-06,2026-06-18,Reduce,Dependent=100,False,,2026-11-13
-M001157,M001157,Michael T. McCaul,GE,General Electric Co,Industrials,54398,1.12,2022-05-04,2022-05-04,Buy,Dependent=100,False,,2026-11-13
-M001157,M001157,Michael T. McCaul,SWK,STANLEY BLACK & DECKER INC,Industrials,53500,1.1,2025-10-27,2026-03-13,Buy,Spouse=100,False,,2026-11-13
-M001157,M001157,Michael T. McCaul,P,"EVERPURE, INC. CLASS A",Technology,51865,1.07,2026-04-27,2026-05-11,Add,Spouse=100,False,,2026-11-13
-M001157,M001157,Michael T. McCaul,DHR,DANAHER CORPORATION,Technology,43464,0.9,2025-10-27,2026-05-22,Add,Spouse=100,False,,2026-11-13
-M001157,M001157,Michael T. McCaul,FCN,FTI CONSULTING INC,Industrials,43172,0.89,2022-05-05,2026-08-12,Buy,Spouse=100,False,,2026-11-13
-M001157,M001157,Michael T. McCaul,KEYS,KEYSIGHT TECHNOLOGIES INC,Technology,42504,0.88,2026-04-17,2026-05-26,Add,Spouse=100,False,,2026-11-13
-M001157,M001157,Michael T. McCaul,GPN,GLOBAL PAYMENTS INC,Industrials,42312,0.87,2026-03-23,2026-03-23,Buy,Spouse=100,False,,2026-11-13
-M001157,M001157,Michael T. McCaul,UNH,UNITEDHEALTH GROUP INC,Health Care,41094,0.85,2022-05-04,2025-11-04,Buy,Spouse=100,False,,2026-11-13
-M001157,M001157,Michael T. McCaul,SPOT,SPOTIFY TECHNOLOGY S.A.,Communications,40369,0.83,2026-02-04,2026-05-22,Add,Spouse=100,False,,2026-11-13
-M001157,M001157,Michael T. McCaul,INTU,INTUIT INC,Technology,38738,0.8,2024-06-10,2026-08-31,Add,Spouse=100,False,,2026-11-13
-M001157,M001157,Michael T. McCaul,ISRG,INTUITIVE SURGICAL INC,Health Care,38058,0.78,2026-08-07,2026-08-07,Buy,Spouse=100,False,,2026-11-13
-M001157,M001157,Michael T. McCaul,ENTG,ENTEGRIS INC,Materials,36414,0.75,2026-02-04,2026-05-26,Add,Spouse=100,False,,2026-11-13
-M001157,M001157,Michael T. McCaul,MUR,MURPHY OIL CORP,Energy,34919,0.72,2024-01-19,2026-06-26,Buy,Spouse=100,False,,2026-11-13
-M001157,M001157,Michael T. McCaul,TER,TERADYNE INC,Technology,33925,0.7,2026-02-04,2026-04-29,Add,Spouse=100,False,,2026-11-13
-M001157,M001157,Michael T. McCaul,NTAP,NETAPP INC,Technology,34000,0.7,2026-05-29,2026-05-29,Buy,Spouse=100,False,,2026-11-13
-M001157,M001157,Michael T. McCaul,LPX,LOUISIANA PACIFIC CORP,Materials,33426,0.69,2026-02-27,2026-08-20,Buy,Spouse=100,False,,2026-11-13
-M001157,M001157,Michael T. McCaul,DELL,DELL TECHNOLOGIES INC CL C,Technology,33035,0.68,2026-05-29,2026-06-02,Add,Spouse=100,False,,2026-11-13
-M001157,M001157,Michael T. McCaul,MWA,MUELLER WATER PRODUCTS INC,Industrials,31373,0.65,2026-02-03,2026-08-24,Buy,Spouse=100,False,,2026-11-13
-M001157,M001157,Michael T. McCaul,COHR,COHERENT CORP,Technology,26038,0.54,2026-05-06,2026-05-07,Add,Spouse=100,False,,2026-11-13
-M001157,M001157,Michael T. McCaul,EL,ESTEE LAUDER COMPANIES INC CLASS A,Consumer Staples,25342,0.52,2025-03-04,2026-04-08,Add,Spouse=100,False,,2026-11-13
-M001157,M001157,Michael T. McCaul,AMZN,AMAZON COM,Consumer Discretionary,24458,0.5,2022-05-04,2026-08-28,Add,Spouse=100,False,,2026-11-13
-M001157,M001157,Michael T. McCaul,HLT,Hilton Worldwide Holdings Inc.,Consumer Discretionary,19991,0.41,2022-05-04,2022-05-04,Buy,Dependent=100,False,,2026-11-13
-M001157,M001157,Michael T. McCaul,TSEM,TOWER SEMICONDUCTOR LTD,Technology,18908,0.39,2026-08-07,2026-08-07,Buy,Spouse=100,False,,2026-11-13
-M001157,M001157,Michael T. McCaul,V,VISA INC,Industrials,16467,0.34,2022-05-04,2026-05-29,Reduce,Dependent=100,False,,2026-11-13
+M001157,M001157,Michael T. McCaul,PAYX,PAYCHEX INC,Industrials,683968,13.83,2026-03-04,2026-06-01,Add,Spouse=100,False,,2026-11-13
+M001157,M001157,Michael T. McCaul,BAX,BAXTER INTERNATIONAL INC,Health Care,367321,7.42,2026-01-13,2026-03-23,Add,Spouse=100,False,,2026-11-13
+M001157,M001157,Michael T. McCaul,GPC,GENUINE PARTS CO,Industrials,293398,5.93,2024-12-13,2026-06-18,Add,Spouse=100,False,,2026-11-13
+M001157,M001157,Michael T. McCaul,SPGI,S&P GLOBAL INC,Industrials,237579,4.8,2026-03-18,2026-08-27,Add,Spouse=100,False,,2026-11-13
+M001157,M001157,Michael T. McCaul,IFF,INTERNATIONAL FLAVORS & FRAGRANCES,Materials,207313,4.19,2026-01-13,2026-01-13,Buy,Spouse=100,False,,2026-11-13
+M001157,M001157,Michael T. McCaul,ACN,ACCENTURE PLC,Industrials,200784,4.06,2026-08-25,2026-08-28,Add,Spouse=100,False,,2026-11-13
+M001157,M001157,Michael T. McCaul,MELI,MERCADOLIBRE INC,Industrials,198657,4.02,2025-12-15,2026-06-09,Add,Spouse=100,False,,2026-11-13
+M001157,M001157,Michael T. McCaul,HAYW,"Hayward Holdings, Inc.",Industrials,198505,4.01,2024-12-19,2025-03-04,Add,Spouse=59;Dependent=41,False,,2026-11-13
+M001157,M001157,Michael T. McCaul,ARE,ALEXANDRIA REAL ESTATE EQUITIES,Real Estate,166457,3.36,2026-02-06,2026-03-23,Buy,Spouse=100,False,,2026-11-13
+M001157,M001157,Michael T. McCaul,COP,CONOCOPHILLIPS,Energy,150407,3.04,2024-08-26,2026-08-26,Reduce,Dependent=100,False,,2026-11-13
+M001157,M001157,Michael T. McCaul,AA,ALCOA CORP,Materials,148916,3.01,2024-04-19,2026-06-03,Reduce,Dependent=100,False,,2026-11-13
+M001157,M001157,Michael T. McCaul,HUM,HUMANA INC,Health Care,147161,2.97,2024-04-10,2026-05-07,Add,Dependent=67;Spouse=33,False,,2026-11-13
+M001157,M001157,Michael T. McCaul,TSN,TYSON FOODS INC,Consumer Staples,115225,2.33,2024-01-23,2026-06-18,Add,Spouse=100,False,,2026-11-13
+M001157,M001157,Michael T. McCaul,WDAY,WORKDAY INC CL A,Technology,112995,2.28,2024-06-04,2026-08-28,Reduce,Dependent=100,False,,2026-11-13
+M001157,M001157,Michael T. McCaul,SNPS,SYNOPSYS INC,Technology,107985,2.18,2024-08-08,2024-08-23,Add,Dependent=94;Spouse=6,False,,2026-11-13
+M001157,M001157,Michael T. McCaul,BSX,BOSTON SCIENTIFIC CORP,Health Care,98943,2.0,2022-02-07,2026-03-27,Add,Dependent=95;Spouse=5,False,,2026-11-13
+M001157,M001157,Michael T. McCaul,CACI,CACI INTERNATIONAL INC,Technology,97719,1.98,2026-05-20,2026-05-20,Buy,Spouse=100,False,,2026-11-13
+M001157,M001157,Michael T. McCaul,VVV,VALVOLINE INC,Energy,76144,1.54,2024-01-17,2026-08-19,Buy,Spouse=100,False,,2026-11-13
+M001157,M001157,Michael T. McCaul,APH,AMPHENOL CORP CLASS A,Technology,75169,1.52,2026-05-22,2026-05-26,Add,Spouse=100,False,,2026-11-13
+M001157,M001157,Michael T. McCaul,NFG,NATIONAL FUEL GAS CO,Utilities,74390,1.5,2021-12-22,2026-06-26,Buy,Spouse=100,False,,2026-11-13
+M001157,M001157,Michael T. McCaul,ANET,ARISTA NETWORKS INC,Technology,74411,1.5,2024-06-20,2026-08-04,Reduce,Dependent=100,False,,2026-11-13
+M001157,M001157,Michael T. McCaul,WWD,WOODWARD INC,Industrials,70829,1.43,2024-08-07,2026-06-09,Reduce,Dependent=100,False,,2026-11-13
+M001157,M001157,Michael T. McCaul,HWM,HOWMET AEROSPACE INC,Materials,60954,1.23,2024-12-06,2026-06-18,Reduce,Dependent=100,False,,2026-11-13
+M001157,M001157,Michael T. McCaul,GE,General Electric Co,Industrials,54398,1.1,2022-05-04,2022-05-04,Buy,Dependent=100,False,,2026-11-13
+M001157,M001157,Michael T. McCaul,SWK,STANLEY BLACK & DECKER INC,Industrials,53500,1.08,2025-10-27,2026-03-13,Buy,Spouse=100,False,,2026-11-13
+M001157,M001157,Michael T. McCaul,P,"EVERPURE, INC. CLASS A",Technology,51865,1.05,2026-04-27,2026-05-11,Add,Spouse=100,False,,2026-11-13
+M001157,M001157,Michael T. McCaul,DHR,DANAHER CORPORATION,Technology,43464,0.88,2025-10-27,2026-05-22,Add,Spouse=100,False,,2026-11-13
+M001157,M001157,Michael T. McCaul,FCN,FTI CONSULTING INC,Industrials,43172,0.87,2022-02-15,2026-08-12,Buy,Spouse=100,False,,2026-11-13
+M001157,M001157,Michael T. McCaul,GPN,GLOBAL PAYMENTS INC,Industrials,42312,0.86,2026-03-23,2026-03-23,Buy,Spouse=100,False,,2026-11-13
+M001157,M001157,Michael T. McCaul,KEYS,KEYSIGHT TECHNOLOGIES INC,Technology,42504,0.86,2026-04-17,2026-05-26,Add,Spouse=100,False,,2026-11-13
+M001157,M001157,Michael T. McCaul,UNH,UNITEDHEALTH GROUP INC,Health Care,41094,0.83,2022-05-04,2025-11-04,Buy,Spouse=100,False,,2026-11-13
+M001157,M001157,Michael T. McCaul,SPOT,SPOTIFY TECHNOLOGY S.A.,Communications,40369,0.82,2026-02-04,2026-05-22,Add,Spouse=100,False,,2026-11-13
+M001157,M001157,Michael T. McCaul,INTU,INTUIT INC,Technology,38738,0.78,2024-06-10,2026-08-31,Add,Spouse=100,False,,2026-11-13
+M001157,M001157,Michael T. McCaul,ISRG,INTUITIVE SURGICAL INC,Health Care,38058,0.77,2026-08-07,2026-08-07,Buy,Spouse=100,False,,2026-11-13
+M001157,M001157,Michael T. McCaul,ENTG,ENTEGRIS INC,Materials,36414,0.74,2026-02-04,2026-05-26,Add,Spouse=100,False,,2026-11-13
+M001157,M001157,Michael T. McCaul,MUR,MURPHY OIL CORP,Energy,34919,0.71,2022-02-03,2026-06-26,Buy,Spouse=100,False,,2026-11-13
+M001157,M001157,Michael T. McCaul,TER,TERADYNE INC,Technology,33925,0.69,2026-02-04,2026-04-29,Add,Spouse=100,False,,2026-11-13
+M001157,M001157,Michael T. McCaul,NTAP,NETAPP INC,Technology,34000,0.69,2026-05-29,2026-05-29,Buy,Spouse=100,False,,2026-11-13
+M001157,M001157,Michael T. McCaul,LPX,LOUISIANA PACIFIC CORP,Materials,33426,0.68,2026-02-27,2026-08-20,Buy,Spouse=100,False,,2026-11-13
+M001157,M001157,Michael T. McCaul,DELL,DELL TECHNOLOGIES INC CL C,Technology,33035,0.67,2026-05-29,2026-06-02,Add,Spouse=100,False,,2026-11-13
+M001157,M001157,Michael T. McCaul,MWA,MUELLER WATER PRODUCTS INC,Industrials,31373,0.63,2026-02-03,2026-08-24,Buy,Spouse=100,False,,2026-11-13
+M001157,M001157,Michael T. McCaul,COHR,COHERENT CORP,Technology,26038,0.53,2026-05-06,2026-05-07,Add,Spouse=100,False,,2026-11-13
+M001157,M001157,Michael T. McCaul,EL,ESTEE LAUDER COMPANIES INC CLASS A,Consumer Staples,25342,0.51,2025-03-04,2026-04-08,Add,Spouse=100,False,,2026-11-13
+M001157,M001157,Michael T. McCaul,AMZN,AMAZON COM,Consumer Discretionary,24458,0.49,2022-05-04,2026-08-28,Add,Spouse=100,False,,2026-11-13
+M001157,M001157,Michael T. McCaul,HLT,Hilton Worldwide Holdings Inc.,Consumer Discretionary,19991,0.4,2022-05-04,2022-05-04,Buy,Dependent=100,False,,2026-11-13
+M001157,M001157,Michael T. McCaul,IBM,INTERNATIONAL BUSINESS MACHINES CORP,Technology,19256,0.39,2022-02-23,2022-02-23,Buy,Dependent=100,False,,2026-11-13
+M001157,M001157,Michael T. McCaul,TSEM,TOWER SEMICONDUCTOR LTD,Technology,18908,0.38,2026-08-07,2026-08-07,Buy,Spouse=100,False,,2026-11-13
+M001157,M001157,Michael T. McCaul,V,VISA INC,Industrials,16467,0.33,2022-05-04,2026-05-29,Reduce,Dependent=100,False,,2026-11-13
 M001157,M001157,Michael T. McCaul,NOW,SERVICENOW INC,Technology,15195,0.31,2026-03-04,2026-05-22,Add,Spouse=100,False,,2026-11-13
-M001157,M001157,Michael T. McCaul,FORM,FORMFACTOR INC,Technology,11940,0.25,2026-08-04,2026-08-05,Add,Spouse=100,False,,2026-11-13
-M001157,M001157,Michael T. McCaul,LYB,Lyondell Basell Industries NV,Materials,6115,0.13,2022-05-04,2022-05-04,Buy,Dependent=100,False,,2026-11-13
+M001157,M001157,Michael T. McCaul,HII,Huntington Ingalls Industries Inc,Defense & Aerospace,15057,0.3,2022-02-15,2022-02-15,Buy,Dependent=100,True,House Homeland Security,2026-11-13
+M001157,M001157,Michael T. McCaul,AIG,American International Group Inc,Financials,12007,0.24,2022-02-23,2022-02-23,Buy,Dependent=100,False,,2026-11-13
+M001157,M001157,Michael T. McCaul,FORM,FORMFACTOR INC,Technology,11940,0.24,2026-08-04,2026-08-05,Add,Spouse=100,False,,2026-11-13
+M001157,M001157,Michael T. McCaul,PRGO,PERRIGO CO,Health Care,8000,0.16,2022-02-01,2022-02-01,Buy,Dependent=100,False,,cost
+M001157,M001157,Michael T. McCaul,AOS,A O SMITH CORP,Consumer Discretionary,7803,0.16,2022-02-10,2022-02-10,Buy,Dependent=100,False,,2026-11-13
+M001157,M001157,Michael T. McCaul,CNXC,Concentrix Corporation,Industrials,8000,0.16,2022-02-15,2022-02-15,Buy,Dependent=100,False,,cost
+M001157,M001157,Michael T. McCaul,FLS,Flowserve Corp,Industrials,8000,0.16,2022-02-15,2022-02-15,Buy,Dependent=100,False,,cost
+M001157,M001157,Michael T. McCaul,ALLY,Ally Financial,Financials,7510,0.15,2022-02-23,2022-02-23,Buy,Dependent=100,False,,2026-11-13
+M001157,M001157,Michael T. McCaul,LYB,Lyondell Basell Industries NV,Materials,6115,0.12,2022-05-04,2022-05-04,Buy,Dependent=100,False,,2026-11-13
+M001157,M001157,Michael T. McCaul,MAN,ManpowerGroup Inc.,Industrials,3898,0.08,2022-02-15,2022-02-15,Buy,Dependent=100,False,,2026-11-13
+M001157,M001157,Michael T. McCaul,XRAY,DENTSPLY SIRONA Inc,Health Care,1438,0.03,2022-02-15,2022-02-15,Buy,Dependent=100,False,,2026-11-13
 M001180,M001180,David B. McKinley,LIN,Linde plc Ordinary Share,Materials,70168,53.42,2021-12-06,2021-12-06,Add,Joint=80;Self=20,False,,2026-11-13
 M001180,M001180,David B. McKinley,GWW,"W.W. Grainger, Inc.",Industrials,23945,18.23,2022-09-21,2022-09-21,Buy,Self=100,False,,2026-11-13
 M001180,M001180,David B. McKinley,AJG,Arthur J. Gallagher & Co.,Financials,13509,10.28,2022-09-21,2022-09-21,Buy,Self=100,False,,2026-11-13
@@ -2457,9 +2473,9 @@ M001205,M001205,Carol Devine Miller,GD,General Dynamics Corporation,Defense & Ae
 M001205,M001205,Carol Devine Miller,VYM,Vanguard High Dividend Yield ETF,,57076,4.44,2022-11-02,2022-11-02,Buy,Self=100,False,,2026-11-13
 M001205,M001205,Carol Devine Miller,BLK,"BlackRock, Inc.",Financials,52360,4.07,2021-07-28,2021-07-28,Buy,Spouse=100,False,,2026-11-13
 M001205,M001205,Carol Devine Miller,EOG,"EOG Resources, Inc.",Energy,44669,3.47,2023-11-03,2023-11-03,Buy,Self=100,False,,2026-11-13
-M001205,M001205,Carol Devine Miller,APD,"Air Products and Chemicals, Inc.",Materials,39154,3.04,2021-12-14,2021-12-14,Buy,Self=100,False,,2026-11-13
+M001205,M001205,Carol Devine Miller,APD,"Air Products and Chemicals, Inc. (APD)",Materials,39154,3.04,2021-12-14,2021-12-14,Buy,Self=100,False,,2026-11-13
 M001205,M001205,Carol Devine Miller,IRM,Iron Mountain Incorporated,Real Estate,32890,2.56,2021-03-04,2021-03-04,Buy,Spouse=100,False,,2026-11-13
-M001205,M001205,Carol Devine Miller,CLX,Clorox Company,Consumer Staples,24442,1.9,2021-03-04,2021-12-14,Reduce,Spouse=100,False,,2026-11-13
+M001205,M001205,Carol Devine Miller,CLX,Clorox Company (CLX),Consumer Staples,24442,1.9,2021-03-04,2021-12-14,Reduce,Spouse=100,False,,2026-11-13
 M001205,M001205,Carol Devine Miller,VIAC,ViacomCBS Inc. - Class B,,23408,1.82,2021-07-28,2021-07-28,Buy,Spouse=100,False,,2022-02-16
 M001205,M001205,Carol Devine Miller,UPS,"United Parcel Service, Inc. Common Stock",Transportation,23115,1.8,2022-08-08,2025-03-10,Reduce,Spouse=100,False,,2026-11-13
 M001205,M001205,Carol Devine Miller,CSCO,"Cisco Systems, Inc.",Technology,20104,1.56,2021-03-04,2021-03-04,Buy,Spouse=100,False,,2026-11-13
@@ -2649,13 +2665,13 @@ P000197,P000197,Nancy Pelosi,PANW,"Palo Alto Networks, Inc.",Technology,5175716,
 P000197,P000197,Nancy Pelosi,AVGO,Broadcom Inc. - Common Stock,Technology,4202447,14.53,2025-06-20,2025-06-20,Buy,Spouse=100,False,,2026-11-13
 P000197,P000197,Nancy Pelosi,BE,Bloom Energy Corporation Class A Common Stock,Industrials,3978262,13.75,2026-07-24,2026-07-28,Add,Spouse=100,False,,2026-11-13
 P000197,P000197,Nancy Pelosi,NVDA,NVIDIA Corporation - Common Stock,Technology,3202810,11.07,2022-06-17,2026-01-16,Add,Spouse=100,False,,2026-11-13
-P000197,P000197,Nancy Pelosi,AXP,American Express Company (AXP),Financials,1606644,5.55,2022-01-21,2022-01-21,Add,Spouse=100,False,,2026-11-13
+P000197,P000197,Nancy Pelosi,AXP,American Express Company,Financials,1606644,5.55,2022-01-21,2022-01-21,Add,Spouse=100,False,,2026-11-13
 P000197,P000197,Nancy Pelosi,AMZN,"Amazon.com, Inc. - Common Stock",Consumer Discretionary,836380,2.89,2025-12-24,2026-01-16,Buy,Spouse=100,False,,2026-11-13
 P000197,P000197,Nancy Pelosi,GOOGL,Alphabet Inc. - Class A Common Stock,Technology,673511,2.33,2022-12-20,2026-01-16,Buy,Spouse=100,False,,2026-11-13
 P000197,P000197,Nancy Pelosi,INTC,Intel Corporation - Common Stock,Technology,484673,1.68,2026-07-24,2026-07-24,Buy,Spouse=100,False,,2026-11-13
 P000197,P000197,Nancy Pelosi,VST,Vistra Corp. Common Stock,Utilities,140332,0.49,2026-01-16,2026-01-16,Buy,Spouse=100,False,,2026-11-13
 P000197,P000197,Nancy Pelosi,TEM,"Tempus AI, Inc. - Class A Common Stock",Technology,76355,0.26,2026-01-16,2026-01-16,Buy,Spouse=100,False,,2026-11-13
-P000523,P000523,David E. Price,YUM,"Yum! Brands, Inc.",Consumer Discretionary,11462,100.0,2022-02-16,2022-02-16,Buy,Self=100,False,,2026-11-13
+P000523,P000523,David E. Price,YUM,"Yum! Brands, Inc. (YUM)",Consumer Discretionary,11462,100.0,2022-02-16,2022-02-16,Buy,Self=100,False,,2026-11-13
 P000593,P000593,Ed Perlmutter,AMZN,"Amazon.com, Inc.",Consumer Discretionary,22078,30.05,2022-05-13,2022-11-10,Buy,Spouse=100,False,,2026-11-13
 P000593,P000593,Ed Perlmutter,AAPL,Apple Inc.,Technology,19769,26.91,2022-05-13,2022-11-10,Buy,Spouse=100,False,,2026-11-13
 P000593,P000593,Ed Perlmutter,COST,Costco Wholesale Corporation,Consumer Discretionary,18076,24.6,2022-04-22,2022-11-10,Buy,Spouse=100,False,,2026-11-13
@@ -2725,20 +2741,24 @@ S000929,S000929,Victoria Spartz,SPG,"Simon Property Group, Inc. Common Stock",Re
 S001148,S001148,Michael K. Simpson,USB,U.S. Bancorp,Financials,62688,62.01,2023-03-14,2023-03-14,Buy,Self=100,False,,2026-11-13
 S001148,S001148,Michael K. Simpson,TROW,"T. Rowe Price Group, Inc.",Financials,34140,33.77,2022-08-03,2022-08-03,Buy,Self=100,False,,2026-11-13
 S001148,S001148,Michael K. Simpson,AAL,"American Airlines Group, Inc.",Transportation,4266,4.22,2021-03-18,2021-03-18,Buy,Self=100,False,,2026-11-13
-S001180,S001180,Kurt Schrader,AVGO,Broadcom Inc,Technology,61070,20.76,2022-11-08,2022-11-08,Buy,Self=100,False,,2026-11-13
-S001180,S001180,Kurt Schrader,HWM,HOWMET AEROSPACE INC,Materials,49681,16.89,2022-07-28,2022-07-28,Buy,Self=100,False,,2026-11-13
-S001180,S001180,Kurt Schrader,MSI,MOTOROLA SOLUTIONS INC,Technology,36742,12.49,2022-08-01,2022-08-09,Add,Self=100,False,,2026-11-13
-S001180,S001180,Kurt Schrader,ETR,Entergy Corp,Utilities,19026,6.47,2022-11-08,2022-11-08,Buy,Self=100,False,,2026-11-13
-S001180,S001180,Kurt Schrader,CPRT,COPART INC,Consumer Discretionary,17571,5.97,2022-07-19,2022-10-19,Add,Self=100,False,,2026-11-13
-S001180,S001180,Kurt Schrader,TXN,Texas Instruments,Technology,16169,5.5,2022-11-08,2022-11-08,Buy,Self=100,False,,2026-11-13
-S001180,S001180,Kurt Schrader,JNJ,Johnson & Johnson,Health Care,14733,5.01,2022-11-08,2022-11-08,Buy,Self=100,False,,2026-11-13
-S001180,S001180,Kurt Schrader,PEP,PEPSICO INC,Consumer Staples,14742,5.01,2022-11-08,2022-11-08,Add,Self=100,False,,2026-11-13
-S001180,S001180,Kurt Schrader,CCI,CROWN CASTLE INC,Real Estate,13869,4.71,2022-11-08,2022-11-08,Add,Self=100,False,,2026-11-13
-S001180,S001180,Kurt Schrader,AEE,AMEREN CORP,Utilities,13434,4.57,2022-10-13,2022-10-13,Buy,Self=100,False,,2026-11-13
-S001180,S001180,Kurt Schrader,MDT,Medtronic,Health Care,11401,3.87,2022-11-08,2022-11-08,Buy,Self=100,False,,2026-11-13
-S001180,S001180,Kurt Schrader,TRU,TRANSUNION,Industrials,11264,3.83,2022-12-09,2022-12-09,Buy,Self=100,False,,2026-11-13
-S001180,S001180,Kurt Schrader,HD,Home Depot,Consumer Discretionary,9482,3.22,2022-11-25,2022-11-25,Buy,Self=100,False,,2026-11-13
-S001180,S001180,Kurt Schrader,DG,Dollar General,Consumer Discretionary,5047,1.72,2022-06-13,2022-06-13,Buy,Self=100,False,,2026-11-13
+S001180,S001180,Kurt Schrader,AVGO,Broadcom Inc,Technology,61070,15.49,2022-11-08,2022-11-08,Buy,Self=100,False,,2026-11-13
+S001180,S001180,Kurt Schrader,NVDA,NVIDIA CORP,Technology,55942,14.19,2022-02-22,2022-02-22,Buy,Self=100,False,,2026-11-13
+S001180,S001180,Kurt Schrader,HWM,HOWMET AEROSPACE INC,Materials,49681,12.6,2022-07-28,2022-07-28,Buy,Self=100,False,,2026-11-13
+S001180,S001180,Kurt Schrader,MSI,MOTOROLA SOLUTIONS INC,Technology,36742,9.32,2022-08-01,2022-08-09,Add,Self=100,False,,2026-11-13
+S001180,S001180,Kurt Schrader,ETR,Entergy Corp,Utilities,19026,4.83,2022-11-08,2022-11-08,Buy,Self=100,False,,2026-11-13
+S001180,S001180,Kurt Schrader,ROST,ROSS STORES INC,Consumer Discretionary,17806,4.52,2022-01-05,2022-01-05,Buy,Self=100,False,,2026-11-13
+S001180,S001180,Kurt Schrader,CPRT,COPART INC,Consumer Discretionary,17571,4.46,2022-07-19,2022-10-19,Add,Self=100,False,,2026-11-13
+S001180,S001180,Kurt Schrader,TXN,Texas Instruments,Technology,16169,4.1,2022-02-22,2022-11-08,Buy,Self=100,False,,2026-11-13
+S001180,S001180,Kurt Schrader,JNJ,Johnson & Johnson,Health Care,14733,3.74,2022-11-08,2022-11-08,Buy,Self=100,False,,2026-11-13
+S001180,S001180,Kurt Schrader,PEP,PEPSICO INC,Consumer Staples,14742,3.74,2022-11-08,2022-11-08,Add,Self=100,False,,2026-11-13
+S001180,S001180,Kurt Schrader,CCI,CROWN CASTLE INC,Real Estate,13869,3.52,2022-11-08,2022-11-08,Add,Self=100,False,,2026-11-13
+S001180,S001180,Kurt Schrader,AEE,AMEREN CORP,Utilities,13434,3.41,2022-10-13,2022-10-13,Buy,Self=100,False,,2026-11-13
+S001180,S001180,Kurt Schrader,MDT,Medtronic,Health Care,11401,2.89,2022-11-08,2022-11-08,Buy,Self=100,False,,2026-11-13
+S001180,S001180,Kurt Schrader,TRU,TRANSUNION,Industrials,11264,2.86,2022-12-09,2022-12-09,Buy,Self=100,False,,2026-11-13
+S001180,S001180,Kurt Schrader,SPGI,S&P GLOBAL,Industrials,11083,2.81,2022-02-28,2022-02-28,Buy,Self=100,False,,2026-11-13
+S001180,S001180,Kurt Schrader,MELI,MERCADOLIBRE INC,Industrials,10628,2.7,2022-01-14,2022-01-14,Buy,Self=100,False,,2026-11-13
+S001180,S001180,Kurt Schrader,DG,Dollar General,Consumer Discretionary,9604,2.44,2022-04-21,2022-06-13,Add,Self=100,False,,2026-11-13
+S001180,S001180,Kurt Schrader,HD,Home Depot,Consumer Discretionary,9482,2.41,2022-01-20,2022-11-25,Buy,Self=100,False,,2026-11-13
 S001185,S001185,Terri A. Sewell,AAPL,Apple Inc. - Common Stock,Technology,15072,55.38,2025-04-10,2025-04-10,Buy,Self=100,False,,2026-11-13
 S001185,S001185,Terri A. Sewell,NVDA,NVIDIA Corporation - Common Stock,Technology,12142,44.62,2025-04-10,2025-04-10,Buy,Self=100,False,,2026-11-13
 S001198,S001198,Daniel S Sullivan,NVDA,NVIDIA Corporation - Common Stock,Technology,244596,35.72,2022-11-22,2022-11-22,Add,Dependent=100,True,"Senate Commerce, Science, and Transportation",2026-11-13
@@ -2753,7 +2773,7 @@ S001201,S001201,Thomas Suozzi,ETN,Eaton Corp. PLC common stock,Industrials,16978
 S001201,S001201,Thomas Suozzi,MLM,"Martin Marietta Materials, Inc.",Materials,65001,11.31,2018-10-01,2018-10-02,Add,Self=100,False,,cost
 S001201,S001201,Thomas Suozzi,GS,"Goldman Sachs Group, Inc.",Financials,53954,9.39,2022-05-16,2022-05-16,Add,Self=100,False,,2026-11-13
 S001201,S001201,Thomas Suozzi,IP,International Paper Company,Materials,34500,6.0,2018-10-01,2021-06-04,Reduce,Self=100,False,,cost
-S001201,S001201,Thomas Suozzi,GE,General Electric Company (GE),Industrials,32500,5.65,2018-05-08,2021-06-01,Buy,Self=100,False,,cost
+S001201,S001201,Thomas Suozzi,GE,General Electric Company (GE) [ST],Industrials,32500,5.65,2018-05-08,2021-06-01,Buy,Self=100,False,,cost
 S001201,S001201,Thomas Suozzi,GM,General Motors Company,Consumer Discretionary,32500,5.65,2018-06-27,2022-03-04,Buy,Self=100,False,,cost
 S001201,S001201,Thomas Suozzi,MP,MP Materials Corp.,Materials,31691,5.51,2022-05-05,2022-05-05,Buy,Self=100,False,,2026-11-13
 S001201,S001201,Thomas Suozzi,CCK,"Crown Holdings, Inc.",Industrials,26499,4.61,2018-10-02,2019-09-24,Reduce,Self=100,False,,cost
