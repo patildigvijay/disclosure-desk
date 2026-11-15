@@ -67,12 +67,22 @@ def _marketstack(s, key, symbols, frm, to):
 
 def _yfinance(symbols, frm, to):
     """{symbol: {date: adjusted close}}. Yahoo writes BRK.B as BRK-B."""
+    import time
     import yfinance as yf
     out = {}
-    for i in range(0, len(symbols), 200):
-        ymap = {sym.replace(".", "-"): sym for sym in symbols[i:i + 200]}
-        df = yf.download(list(ymap), start=frm.isoformat(), end=(to + timedelta(days=1)).isoformat(),
-                         auto_adjust=True, progress=False, threads=True)
+    # Yahoo throttles bursts from cloud servers: small batches, one at a time, a pause between,
+    # and the S&P 500 benchmark first on its own (every performance figure needs it).
+    order = sorted(symbols, key=lambda x: x != BENCHMARK)
+    batches = [order[:1]] + [order[i:i + 50] for i in range(1, len(order), 50)]
+    for n, batch in enumerate(batches):
+        ymap = {sym.replace(".", "-"): sym for sym in batch}
+        for attempt in range(3 if n == 0 else 1):
+            df = yf.download(list(ymap), start=frm.isoformat(), end=(to + timedelta(days=1)).isoformat(),
+                             auto_adjust=True, progress=False, threads=False)
+            if df is not None and not df.empty:
+                break
+            time.sleep(20)
+        time.sleep(2)
         if df is None or df.empty:
             continue
         close = df["Close"]

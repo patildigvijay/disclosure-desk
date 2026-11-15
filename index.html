@@ -157,8 +157,10 @@ async function load() {
   else {
     const get = u => fetch(u, { cache: "no-cache" }).then(r => (r.ok ? r.text() : ""));
     const names = ["trades", "members", "holdings", "portfolios", "committee_sectors"];
-    const urls = ["data/trades.csv", "data/members.csv", "data/holdings.csv", "data/portfolios.csv", "config/committee_sectors.csv"];
+    // site_trades.csv: shown trades and the columns the pages use (trades.csv is the full record)
+    const urls = ["data/site_trades.csv", "data/members.csv", "data/holdings.csv", "data/portfolios.csv", "config/committee_sectors.csv"];
     const texts = await Promise.all(urls.map(get));
+    if (!texts[0]) texts[0] = await get("data/trades.csv");
     raw = Object.fromEntries(names.map((n, i) => [n, texts[i]]));
     raw.meta = await fetch("data/meta.json", { cache: "no-cache" }).then(r => (r.ok ? r.json() : {})).catch(() => ({}));
   }
@@ -537,9 +539,20 @@ function pageMethod() {
       <p>Members disclose each trade with a dollar range, not a share count. A position's size uses the midpoint of each range: buys add, partial sales reduce, a full sale closes it. Only individual stocks are included. Stocks bought before the start of our data and never traded since do not show.</p>
       <h2>Performance</h2>
       <p>For each member: every stock they bought in the last 12 months, held until today or until they sold it all, weighted by the midpoint of the range, compared with the S&amp;P 500 over the same days. That is why each member's S&amp;P figure is different: someone who bought in January is measured against the S&amp;P from January, someone who bought last month against last month. One fixed 12-month S&amp;P figure would make a recent buyer look worse than they did. The plain 12-month S&amp;P return is shown on the home page for context. "If copied on filing date" starts each position on the day the trade became public, which is what a follower could have done. Members with fewer than 3 purchases are not ranked.</p>
+      <h2>Scanned filings</h2>
+      <p>Most trades are filed electronically and are read with fixed rules. Some members file on paper, which arrives as scanned images. Those are read by an AI model, twice, independently. A trade is shown only when both readings agree on the owner, security, type, date and amount, and it passes the same checks as every other trade: a real date, an official amount range, a known buy or sell. Trades that fail are held back rather than guessed.</p>
+      <h2>Coverage</h2>
+      <p>${S.meta.trades_shown != null ? `${S.meta.trades_shown.toLocaleString()} trades shown from ${S.meta.filings.toLocaleString()} filings since ${fdate(S.meta.first_filing)}. ${S.meta.trades_held.toLocaleString()} more are held back because they failed a check. ` : ""}Data is refreshed weekly${S.meta.generated ? `; last update ${fdate(S.meta.generated.slice(0, 10))}` : ""}.</p>
+      <h2>Known limits</h2>
+      <ul>
+        <li>Amounts are disclosed as ranges, so position sizes and returns are estimates.</li>
+        <li>Holdings start from our first filing (${S.meta.first_filing ? fdate(S.meta.first_filing) : "2022"}); anything bought earlier and never traded since is missing.</li>
+        <li>Committee seats are today's assignments, applied to past trades. Former members have no committee flags.</li>
+        <li>A filing can be amended later; amendments are read as new filings.</li>
+      </ul>
       <h2>Committee overlap and late filings</h2>
       <p>A holding is flagged when its sector falls under a committee the member sits on (table on this page). A flag marks a potential conflict of interest worth reading about, not evidence of wrongdoing. Late means filed more than 45 days after the trade.</p>
-      <p class="note">Not financial advice. This site reports public disclosures and does not recommend buying or selling any security. Found an error? Report it and we'll correct it.</p>
+      <p class="note">Not financial advice. This site reports public disclosures as news and information and does not recommend buying or selling any security. It is not affiliated with the US Congress or any government body. Found an error? <a href="https://github.com/patildigvijay/disclosure-desk/issues">Report it</a> with a link to the filing and we'll correct it.</p>
     </div>
     <div class="panel"><h2>Committee to sector map</h2>${table([
       { label: "Committee", v: r => r.committee_name },

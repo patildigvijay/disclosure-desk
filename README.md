@@ -59,7 +59,9 @@ as the methodology.
    the next run picks up the rest, so the first load spreads over a few runs. Later runs take minutes.
 5. **Settings → Pages** → Source: **Deploy from a branch**, branch `main`, folder `/ (root)` → Save.
    The site is live at `https://YOUR-USERNAME.github.io/REPO-NAME/` within ~2 min.
-6. From then on it runs every 3 hours, commits fresh CSVs, and the site updates itself.
+6. From then on it runs **weekly** (Monday 07:17 Brisbane), commits fresh CSVs, and the site updates itself.
+   A run that hits the 150-minute limit starts the next run itself, so a backlog never waits a week.
+   The website loads `data/site_trades.csv` (shown trades, needed columns: ~9 MB vs 21 MB); `data/trades.csv` stays the full record.
 
 If a source breaks (site layout change, block), the run fails and GitHub emails you.
 
@@ -71,7 +73,7 @@ How runs handle problems:
 | More than 5% of filings (min 5) error | Run is marked failed (email) |
 | AI API hiccups (5xx, overloaded, rate limit) 3 times in a row | AI paused 10 min, affected filings wait as `needs_ai` (no attempt counted); after 3 pauses AI is off for the run and the run is marked failed |
 | AI API unusable (bad key, wrong model) | AI off for the rest of the run, filings wait as `needs_ai`, run marked failed |
-| AI credit used up | AI off for the run, filings wait as `needs_ai`; **not** a run failure (no email every 3 hours) |
+| AI credit used up | AI off for the run, filings wait as `needs_ai`; **not** a run failure (no failure email every run) |
 | AI monthly budget reached (`AI_MONTHLY_BUDGET`, default $3, in the workflow) | No more AI calls that month; filings wait as `needs_ai`. Spend per month is kept in `data/ai_spend.json` |
 | AI answer cut off even in 5-page chunks | Filing goes to `needs_review`; never retried (it was paid for) |
 | Scanned filing read by AI | Read **twice**; a trade goes on the site only if both reads agree on owner, security, type, date and amount **and** it passes the checks (`double_read` column). Mismatches go to review as `reads_differ` |

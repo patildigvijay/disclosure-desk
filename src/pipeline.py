@@ -37,6 +37,11 @@ AI_BUDGETS = {"2026-11": 10.0}  # one-off months: Nov 2026 catch-up (double-read
 AI_VERSION = "2"  # bump when AI reading changes: filings read by an older version are read again
 FUND_WORDS = re.compile(r"\b(etf|fund|trust|index|bond|notes?|treasury|option|call|put)\b", re.I)
 MEMBER_FIELDS = ["bioguide", "name", "chamber", "party", "state", "district", "leadership", "committees"]
+# What the website loads on every visit: shown trades only, only the columns its pages use.
+# The full record stays in trades.csv (all trades, all columns, incl. held-back ones).
+SITE_TRADE_FIELDS = ["trade_id", "chamber", "filer_name", "state", "district", "bioguide", "party", "filing_date",
+                     "tx_date", "owner", "asset_name", "ticker", "tx_type", "amount_min", "amount_max", "sector",
+                     "overlap", "filing_lag_days", "late", "source_url", "status"]
 
 
 def parsed_with(method):
@@ -162,6 +167,9 @@ def run(since, chambers, max_filings=None, use_llm=True, strict=False, retry_err
     for chamber, f in todo:
         if time.monotonic() - started > budget_min * 60:
             print(f"Time budget of {budget_min} min reached: {len(todo) - processed} filings left for the next run")
+            if os.environ.get("GITHUB_ENV"):  # the workflow then starts the next run straight away
+                with open(os.environ["GITHUB_ENV"], "a") as env:
+                    env.write("MORE_WORK=1\n")
             break
         processed += 1
         prev = filings_db.get((f["chamber"], f["filing_id"]), {})
@@ -244,6 +252,7 @@ def run(since, chambers, max_filings=None, use_llm=True, strict=False, retry_err
     trades = sorted(trades_db.values(), key=lambda t: (str(t["filing_date"]), t["trade_id"]), reverse=True)
     filings = sorted(filings_db.values(), key=lambda r: str(r["filing_date"]), reverse=True)
     write_csv(DATA / "trades.csv", trades, TRADE_FIELDS)
+    write_csv(DATA / "site_trades.csv", [t for t in trades if t.get("status") == "ok"], SITE_TRADE_FIELDS)
     write_csv(DATA / "filings.csv", filings, FILING_FIELDS)
     member_rows = list(members.rows())
     write_csv(DATA / "members.csv", member_rows, MEMBER_FIELDS)
@@ -251,7 +260,8 @@ def run(since, chambers, max_filings=None, use_llm=True, strict=False, retry_err
     # Estimated holdings and (if a price key is set) performance, from all ok trades
     ok = [t for t in trades if t.get("status") == "ok"]
     stock_dates = [str(t["tx_date"]) for t in ok if portfolio.is_stock(t) and t.get("tx_date")]
-    start = date.fromisoformat(min(stock_dates)) if stock_dates else date.today()
+    # Prices from 2021 at the earliest: an older trade date is almost always a misread (data starts 2022)
+    start = max(date.fromisoformat(min(stock_dates)), date(2021, 1, 1)) if stock_dates else date.today()
     px = prices.load(s, {t["ticker"] for t in ok if portfolio.is_stock(t)}, start)
     hold = portfolio.holdings(ok, px)
     perf = portfolio.performance(ok, px, date.today())
@@ -261,7 +271,9 @@ def run(since, chambers, max_filings=None, use_llm=True, strict=False, retry_err
     # Site-wide facts: which price source, and the plain S&P 500 12-month return for context
     (DATA / "meta.json").write_text(json.dumps({
         "price_source": getattr(px, "source", ""), "spy_12m": portfolio.benchmark_12m(px, date.today()),
-        "generated": datetime.now().isoformat(timespec="seconds")}))
+        "generated": datetime.now().isoformat(timespec="seconds"),
+        "trades_shown": len(ok), "trades_held": len(trades) - len(ok), "filings": len(filings),
+        "first_filing": min((str(r["filing_date"]) for r in filings if r.get("filing_date")), default="")}))
     print(f"Holdings: {len(hold)} positions, {len(port)} members | "
           + (f"performance for {len(perf)} members ({px.source})" if px else "prices off: valued at cost, no performance"))
     review = [t for t in trades if t.get("status") == "review"]

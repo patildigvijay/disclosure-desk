@@ -436,8 +436,9 @@ def test_yfinance_source_parses_download(tmp_path, monkeypatch):
     monkeypatch.setattr(prices, "STATE", tmp_path / "_state.json")
     monkeypatch.delenv("MARKETSTACK_API_KEY", raising=False)
     monkeypatch.delenv("PRICE_SOURCE", raising=False)
+    monkeypatch.setattr("time.sleep", lambda n: None)
     px = prices.load(None, ["BRK.B"], date(2026, 1, 1), today=date(2026, 6, 2))
-    assert calls == [["BRK-B", "SPY"]]  # Yahoo spelling requested
+    assert calls == [["SPY"], ["BRK-B"]]  # benchmark first on its own; Yahoo spelling requested
     assert px.close_on("BRK.B", date(2026, 6, 2)) == 410.0 and "yfinance" in px.source
 
 
@@ -795,3 +796,22 @@ def test_ai_rows_with_sec_ticker_count_as_stock(tmp_path, monkeypatch, members, 
     pipeline.run(date(2026, 1, 1), ["house"])
     ai = [t for t in csv.DictReader(open(tmp_path / "trades.csv")) if t["parse_method"] == "ai"]
     assert sorted((t["ticker"], t["asset_type"], t["status"]) for t in ai) == [("AAPL", "Stock", "ok"), ("SPY", "", "ok")]
+
+
+def test_site_file_and_backlog_continuation(tmp_path, monkeypatch, members, sectors):
+    import csv
+    import json
+    pipeline = e2e_setup(tmp_path, monkeypatch, members, sectors)
+    env = tmp_path / "github_env"
+    monkeypatch.setenv("GITHUB_ENV", str(env))
+    pipeline.run(date(2026, 1, 1), ["house"], budget_min=0)  # time limit hit straight away
+    assert env.read_text() == "MORE_WORK=1\n"
+    env.unlink()
+    pipeline.run(date(2026, 1, 1), ["house"])
+    assert not env.exists()  # finished: no follow-on run
+    site = list(csv.DictReader(open(tmp_path / "site_trades.csv")))
+    full = list(csv.DictReader(open(tmp_path / "trades.csv")))
+    assert list(site[0].keys()) == pipeline.SITE_TRADE_FIELDS
+    assert len(site) == sum(t["status"] == "ok" for t in full) and all(t["status"] == "ok" for t in site)
+    meta = json.loads((tmp_path / "meta.json").read_text())
+    assert meta["trades_shown"] == len(site) and meta["trades_held"] == len(full) - len(site)

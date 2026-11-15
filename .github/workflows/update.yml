@@ -2,16 +2,21 @@ name: Update trades
 
 on:
   schedule:
-    - cron: "17 */3 * * *"   # every 3 hours (UTC)
+    - cron: "17 21 * * 0"    # weekly: Sunday 21:17 UTC = Monday 07:17 Brisbane
   workflow_dispatch:
     inputs:
       since:
         description: "Process filings submitted on/after (YYYY-MM-DD)"
         required: false
         default: ""
+      chained:
+        description: "Set by a run that hit its time limit and started this one (leave blank)"
+        required: false
+        default: ""
 
 permissions:
   contents: write
+  actions: write   # a run that hits its time limit starts the next one, so a backlog doesn't wait a week
 
 # One run at a time: a long catch-up run makes the next scheduled run wait instead of clashing.
 concurrency:
@@ -46,7 +51,7 @@ jobs:
         run: |
           SINCE="${{ github.event.inputs.since }}"
           # Manual runs ("Run workflow") also retry filings that already failed 3 times
-          RETRY="${{ github.event_name == 'workflow_dispatch' && '--retry-errors' || '' }}"
+          RETRY="${{ github.event_name == 'workflow_dispatch' && github.event.inputs.chained != '1' && '--retry-errors' || '' }}"
           python src/pipeline.py --strict $RETRY ${SINCE:+--since $SINCE} || echo "FAILED=1" >> "$GITHUB_ENV"
       - name: Commit data
         run: |
@@ -60,6 +65,11 @@ jobs:
           # Code may have been pushed while this run was going: put the data commit on top
           git pull --rebase --no-edit origin main
           git push
+      - name: Continue the backlog in a new run
+        if: env.MORE_WORK == '1'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run update.yml --ref main -f chained=1
       - name: Fail loudly if a source broke (GitHub emails you)
         if: env.FAILED == '1'
         run: exit 1
