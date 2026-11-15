@@ -875,3 +875,11 @@ def test_alpaca_prices_paging_and_bad_symbols(tmp_path, monkeypatch):
     assert ("-- WBD",) not in [a for a, _ in asked]          # malformed ticker never sent
     assert px.close_on("BRK.B", date(2026, 6, 2)) == 11.0 and px.close_on("SPY", date(2026, 6, 1)) == 10.0
     assert "Alpaca" in px.source
+
+
+def test_ai_rows_tolerate_malformed_answers():
+    row = {"asset_name": "Apple Inc", "tx_type": "P", "tx_date": "01/05/2022", "amount_range": "$1,001 - $15,000"}
+    import json as _json
+    assert len(llm._rows({"transactions": _json.dumps([row])})) == 1           # list sent as a string
+    assert len(llm._rows({"transactions": ["Apple Inc P 01/05/2022", row]})) == 1  # a row sent as text
+    assert llm._rows({"transactions": "not json"}) == [] and llm._rows({}) == []

@@ -5,6 +5,7 @@ Needs ANTHROPIC_API_KEY in the environment. Model is set by ANTHROPIC_MODEL.
 """
 import base64
 import io
+import json
 import os
 import re
 from collections import Counter
@@ -164,7 +165,15 @@ def _call(client, blocks, pages):
 
 def _rows(data):
     out = []
-    for t in data.get("transactions", []):
+    txs = data.get("transactions") or []
+    if isinstance(txs, str):  # the model sometimes sends the list as a JSON string
+        try:
+            txs = json.loads(txs)
+        except ValueError:
+            txs = []
+    for t in txs if isinstance(txs, list) else []:
+        if not isinstance(t, dict):  # a row sent as plain text can't be checked: skip it
+            continue
         lo, hi = parse_amount(t.get("amount_range"))
         code = (t.get("asset_type") or "").strip("[] ").upper()
         out.append({
