@@ -100,7 +100,9 @@ def _alpaca(s, symbols, frm, to):
                     fetch(batch[:len(batch) // 2])
                     fetch(batch[len(batch) // 2:])
                 return
-            r.raise_for_status()  # 401/403 = bad key: the caller keeps cached prices and logs it
+            if r.status_code in (401, 403):  # bad/regenerated key or plan limit: say which, keep cached prices
+                raise RuntimeError(f"Alpaca refused ({r.status_code}): {r.text[:200]}")
+            r.raise_for_status()
             body = r.json()
             for sym, bars in (body.get("bars") or {}).items():
                 for b in bars:
