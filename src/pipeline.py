@@ -34,7 +34,8 @@ AI_PAUSE_MIN = 10  # ... for this many minutes
 AI_MAX_PAUSES = 3  # ... and after this many pauses it is off for the rest of the run
 AI_MONTHLY_BUDGET = 3.0  # USD of AI per calendar month (env AI_MONTHLY_BUDGET overrides); spend kept in data/ai_spend.json
 AI_BUDGETS = {"2026-11": 15.0}  # one-off months: Nov 2026 catch-up (double-read re-check + Senate paper), approved 15 Nov ($10, raised to $12, then $15)
-AI_VERSION = "2"  # bump when AI reading changes: filings read by an older version are read again
+AI_VERSION = "2"
+OUTAGE_GRACE_DAYS = 14  # a source that's down (5xx / no connection) only fails the run after this long  # bump when AI reading changes: filings read by an older version are read again
 FUND_WORDS = re.compile(r"\b(etf|fund|trust|index|bond|notes?|treasury|option|call|put)\b", re.I)
 MEMBER_FIELDS = ["bioguide", "name", "chamber", "party", "state", "district", "leadership", "committees"]
 # What the website loads on every visit: shown trades only, only the columns its pages use.
@@ -42,6 +43,16 @@ MEMBER_FIELDS = ["bioguide", "name", "chamber", "party", "state", "district", "l
 SITE_TRADE_FIELDS = ["trade_id", "chamber", "filer_name", "state", "district", "bioguide", "party", "filing_date",
                      "tx_date", "owner", "asset_name", "ticker", "tx_type", "amount_min", "amount_max", "sector",
                      "overlap", "filing_lag_days", "late", "source_url", "status"]
+
+
+def is_outage(e):
+    """Site down, unreachable or refusing us for now (5xx, 403, 429, timeout, connection), as opposed
+    to a changed site (404, other 4xx, parse error). eFD answered 503 and then 403 for hours on 16 Nov."""
+    import requests
+    if isinstance(e, (requests.ConnectionError, requests.Timeout)):
+        return True
+    resp = getattr(e, "response", None)
+    return resp is not None and (resp.status_code >= 500 or resp.status_code in (403, 429))
 
 
 def parsed_with(method):
@@ -137,20 +148,34 @@ def run(since, chambers, max_filings=None, use_llm=True, strict=False, retry_err
                 and (r["status"] not in ("needs_ai", "needs_review") or use_llm):
             start[r["chamber"]] = min(start[r["chamber"]], date.fromisoformat(str(r["filing_date"])))
 
+    # Last good fetch per source: a short outage is a warning, not a failed run (and an email).
+    # Missed filings come in on the next run, which searches from the start of the year.
+    status_path = DATA / "source_status.json"
+    sources = json.loads(status_path.read_text()) if status_path.exists() else {}
+
+    def source_failed(name, e):
+        last = sources.get(name)
+        if is_outage(e) and last and (date.today() - date.fromisoformat(last)).days <= OUTAGE_GRACE_DAYS:
+            print(f"WARNING: {name} unavailable ({e}); last good fetch {last}; next run catches up", file=sys.stderr)
+        else:
+            failures.append(f"{name}: {e}")
+
     todo = []
     if "house" in chambers:
         try:
             for year in range(start["House"].year, date.today().year + 1):
                 todo += [("house", f) for f in house.fetch_index(s, year)
                          if f["filing_date"] and f["filing_date"] >= start["House"]]
+            sources["House index"] = date.today().isoformat()
         except Exception as e:
-            failures.append(f"House index: {e}")
+            source_failed("House index", e)
     if "senate" in chambers:
         try:
             senate.open_session(s)
             todo += [("senate", f) for f in senate.search_ptrs(s, start["Senate"])]
+            sources["Senate search"] = date.today().isoformat()
         except Exception as e:
-            failures.append(f"Senate search: {e}")
+            source_failed("Senate search", e)
 
     def wanted(f):
         rec = filings_db.get((f["chamber"], f["filing_id"]))
@@ -283,6 +308,7 @@ def run(since, chambers, max_filings=None, use_llm=True, strict=False, retry_err
     write_csv(DATA / "holdings.csv", hold, portfolio.HOLDING_FIELDS)
     write_csv(DATA / "portfolios.csv", port, portfolio.PORTFOLIO_FIELDS)
     # Site-wide facts: which price source, and the plain S&P 500 12-month return for context
+    status_path.write_text(json.dumps(sources, indent=1))
     (DATA / "meta.json").write_text(json.dumps({
         "price_source": getattr(px, "source", ""), "spy_12m": portfolio.benchmark_12m(px, date.today()),
         "generated": datetime.now().isoformat(timespec="seconds"),

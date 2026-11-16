@@ -862,7 +862,7 @@ def test_alpaca_prices_paging_and_bad_symbols(tmp_path, monkeypatch):
     def fake_get(url, params, headers, timeout):
         syms = params["symbols"].split(",")
         asked.append((tuple(syms), params.get("page_token")))
-        assert headers["APCA-API-KEY-ID"] == "k" and params["feed"] == "sip" and params["end"] == "2026-06-01"
+        assert headers["APCA-API-KEY-ID"] == "k" and params["feed"] == "sip" and params["end"] == "2026-06-02T00:00:00Z"
         if "ZZZZ" in syms:  # Alpaca rejects the whole request for one unknown symbol
             return types.SimpleNamespace(status_code=422, raise_for_status=lambda: None)
         page2 = params.get("page_token") == "p2"
@@ -883,3 +883,29 @@ def test_ai_rows_tolerate_malformed_answers():
     assert len(llm._rows({"transactions": _json.dumps([row])})) == 1           # list sent as a string
     assert len(llm._rows({"transactions": ["Apple Inc P 01/05/2022", row]})) == 1  # a row sent as text
     assert llm._rows({"transactions": "not json"}) == [] and llm._rows({}) == []
+
+
+def test_short_source_outage_is_a_warning_not_a_failure(tmp_path, monkeypatch, members, sectors):
+    import json
+    import requests
+    pipeline = e2e_setup(tmp_path, monkeypatch, members, sectors)
+
+    def down(s):
+        raise requests.HTTPError("503 Server Error", response=types.SimpleNamespace(status_code=503))
+    monkeypatch.setattr(pipeline.senate, "open_session", down)
+    assert pipeline.run(date(2026, 1, 1), ["house", "senate"], strict=True) == 1   # never fetched OK: fail
+    status = json.loads((tmp_path / "source_status.json").read_text())
+    assert "House index" in status and "Senate search" not in status
+    status["Senate search"] = date.today().isoformat()
+    (tmp_path / "source_status.json").write_text(json.dumps(status))
+    assert pipeline.run(date(2026, 1, 1), ["house", "senate"], strict=True) == 0   # recent good fetch: warning
+
+    def blocked(s):
+        raise requests.HTTPError("403 Forbidden", response=types.SimpleNamespace(status_code=403))
+    monkeypatch.setattr(pipeline.senate, "open_session", blocked)
+    assert pipeline.run(date(2026, 1, 1), ["house", "senate"], strict=True) == 0   # refused for now: warning
+
+    def changed(s):
+        raise requests.HTTPError("404 Not Found", response=types.SimpleNamespace(status_code=404))
+    monkeypatch.setattr(pipeline.senate, "open_session", changed)
+    assert pipeline.run(date(2026, 1, 1), ["house", "senate"], strict=True) == 1   # site changed: always fail

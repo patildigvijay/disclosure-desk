@@ -19,7 +19,7 @@ import os
 import re
 import time
 from collections import defaultdict
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta, timezone
 
 from common import DATA, get
 from portfolio import BENCHMARK, Prices
@@ -86,8 +86,7 @@ def _alpaca(s, symbols, frm, to):
         token, tries = None, 0
         while True:
             params = {"symbols": ",".join(batch), "timeframe": "1Day", "start": frm.isoformat(),
-                      "end": (to - timedelta(days=1)).isoformat(), "adjustment": "all", "feed": "sip",
-                      "limit": 10000}
+                      "end": end, "adjustment": "all", "feed": "sip", "limit": 10000}
             if token:
                 params["page_token"] = token
             r = s.get(ALPACA_BARS, params=params, headers=headers, timeout=60)
@@ -112,6 +111,10 @@ def _alpaca(s, symbols, frm, to):
                 return
             time.sleep(0.35)  # free plan: 200 requests a minute
 
+    # End as an exact UTC time: a bare date means end of that day in New York, which for runs
+    # before 05:00 UTC is still in the future -> "subscription does not permit querying recent SIP data".
+    midnight = datetime(to.year, to.month, to.day, tzinfo=timezone.utc)
+    end = min(midnight, datetime.now(timezone.utc) - timedelta(minutes=20)).strftime("%Y-%m-%dT%H:%M:%SZ")
     symbols = [x for x in symbols if ALPACA_SYMBOL.match(x)]
     for i in range(0, len(symbols), BATCH):
         fetch(symbols[i:i + BATCH])
