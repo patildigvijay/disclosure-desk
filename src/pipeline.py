@@ -25,7 +25,7 @@ import senate
 from common import (DATA, FILING_FIELDS, TRADE_FIELDS, amount_label, amount_ok, get, read_csv,
                     session, write_csv)
 from enrich import Members, Sectors, enrich, load_committee_sectors, set_sector
-from validate import check
+from validate import HARD, check
 
 DONE = {"parsed", "review"}  # statuses that are not retried
 MAX_ATTEMPTS = 3   # scheduled runs stop retrying a filing that errored this many times
@@ -34,8 +34,9 @@ AI_PAUSE_MIN = 10  # ... for this many minutes
 AI_MAX_PAUSES = 3  # ... and after this many pauses it is off for the rest of the run
 AI_MONTHLY_BUDGET = 3.0  # USD of AI per calendar month (env AI_MONTHLY_BUDGET overrides); spend kept in data/ai_spend.json
 AI_BUDGETS = {"2026-11": 15.0}  # one-off months: Nov 2026 catch-up (double-read re-check + Senate paper), approved 15 Nov ($10, raised to $12, then $15)
-AI_VERSION = "2"
-OUTAGE_GRACE_DAYS = 14  # a source that's down (5xx / no connection) only fails the run after this long  # bump when AI reading changes: filings read by an older version are read again
+AI_VERSION = "3"  # bump when AI reading changes: filings read by an older version are read again
+# (v3 = a third read settles disagreements; v2 filings are re-read only if their two reads disagreed somewhere)
+OUTAGE_GRACE_DAYS = 14  # a source that's down or refusing us only fails the run after this long
 FUND_WORDS = re.compile(r"\b(etf|fund|trust|index|bond|notes?|treasury|option|call|put)\b", re.I)
 MEMBER_FIELDS = ["bioguide", "name", "chamber", "party", "state", "district", "leadership", "committees"]
 # What the website loads on every visit: shown trades only, only the columns its pages use.
@@ -68,26 +69,33 @@ def is_old_read(parser):
     if parser in ("", "ai"):
         return True
     kind = parser.split("-")[0]
-    return kind in ("text", "ai") and parser != parsed_with(kind)
+    return kind in ("text", "ai") and parser not in (parsed_with(kind), "ai-2")
 
 
-def to_retry(rec, retry_errors=False):
-    """A filing seen before that should be processed again."""
+def to_retry(rec, retry_errors=False, rereads=frozenset()):
+    """A filing seen before that should be processed again. rereads: ids of v2 AI filings
+    with trades the two reads disagreed on (re-read with the third read)."""
     status, parser = rec.get("status"), rec.get("parser") or ""
     if status in DONE:
         # House filings read by an older rules parser or older AI reading; Senate AI reads too
         return (rec.get("chamber") == "House" and is_old_read(parser)) or \
-               (rec.get("chamber") == "Senate" and parser.startswith("ai") and is_old_read(parser))
+               (rec.get("chamber") == "Senate" and parser.startswith("ai") and is_old_read(parser)) or \
+               (parser == "ai-2" and rec.get("filing_id") in rereads)
     if status == "needs_review":
-        # Senate paper filings waited here before they had an AI reader; cut-off answers don't come back
-        return rec.get("chamber") == "Senate" and rec.get("kind") == "paper" and not rec.get("error")
+        # Senate paper filings waited here before they had an AI reader; answers cut off at
+        # 5 pages per call get one more go at one page per call
+        error = rec.get("error") or ""
+        return (rec.get("chamber") == "Senate" and rec.get("kind") == "paper" and not error) or \
+               error.startswith("answer cut off")
     if status == "error":
-        return retry_errors or int(rec.get("attempts") or 0) < MAX_ATTEMPTS
+        # free errors (network, site) don't count attempts; paid AI errors retry 3 times, then monthly
+        return retry_errors or int(rec.get("attempts") or 0) < MAX_ATTEMPTS or \
+            (rec.get("processed_at") or "")[:7] != date.today().strftime("%Y-%m")
     return status == "needs_ai"
 
 
-def parse_house(s, f, use_llm):
-    """Returns (rows, method, confidence, status)."""
+def parse_house(s, f, use_llm, dense=False):
+    """Returns (rows, method, confidence, status). dense: AI reads one page per call."""
     if f["kind"] == "paper" and not use_llm:
         return [], "", None, "needs_ai"
     pdf = get(s, f["source_url"]).content
@@ -101,11 +109,11 @@ def parse_house(s, f, use_llm):
             pass  # fall through to AI
     if not use_llm:
         return [], "", None, "needs_ai"
-    rows, conf, _ = llm.extract_pdf(pdf)  # raises llm.AIError
+    rows, conf, _ = llm.extract_pdf(pdf, dense=True) if dense else llm.extract_pdf(pdf)  # raises llm.AIError
     return rows, "ai", conf, "parsed"
 
 
-def parse_senate(s, f, use_llm):
+def parse_senate(s, f, use_llm, dense=False):
     if f["kind"] == "paper":  # scanned page images, read by AI
         if not use_llm:
             return [], "", None, "needs_review"
@@ -116,7 +124,7 @@ def parse_senate(s, f, use_llm):
         for u in urls:
             r = get(s, u)
             images.append((r.content, senate.media_type(u, r.headers.get("Content-Type", ""))))
-        rows, conf, _ = llm.extract_images(images)
+        rows, conf, _ = llm.extract_images(images, dense=True) if dense else llm.extract_images(images)
         return rows, "ai", conf, "parsed"
     rows = senate.parse_ptr_html(senate.fetch_ptr(s, f["source_url"]))
     return rows, "html", None, "parsed"
@@ -133,6 +141,7 @@ def run(since, chambers, max_filings=None, use_llm=True, strict=False, retry_err
     sectors = Sectors(s)
     sectors.load_tickers()  # fail fast (before any state changes) if SEC is unreachable
     use_llm = use_llm and llm.available()
+    rereads = frozenset(t["filing_id"] for t in trades_db.values() if t.get("double_read") == "differ")
     month = date.today().strftime("%Y-%m")
     spend_path = DATA / "ai_spend.json"
     spend = json.loads(spend_path.read_text()) if spend_path.exists() else {}
@@ -144,7 +153,7 @@ def run(since, chambers, max_filings=None, use_llm=True, strict=False, retry_err
     # Look back far enough to reach older filings that still need work (errors, stale parses)
     start = {"House": since, "Senate": since}
     for r in filings_db.values():
-        if r.get("filing_date") and r.get("chamber") in start and to_retry(r, retry_errors) \
+        if r.get("filing_date") and r.get("chamber") in start and to_retry(r, retry_errors, rereads) \
                 and (r["status"] not in ("needs_ai", "needs_review") or use_llm):
             start[r["chamber"]] = min(start[r["chamber"]], date.fromisoformat(str(r["filing_date"])))
 
@@ -179,7 +188,7 @@ def run(since, chambers, max_filings=None, use_llm=True, strict=False, retry_err
 
     def wanted(f):
         rec = filings_db.get((f["chamber"], f["filing_id"]))
-        return rec is None or to_retry(rec, retry_errors)
+        return rec is None or to_retry(rec, retry_errors, rereads)
 
     todo = [(c, f) for c, f in todo if wanted(f)]
     todo.sort(key=lambda x: x[1]["filing_date"] or date.min, reverse=True)  # newest first
@@ -207,7 +216,8 @@ def run(since, chambers, max_filings=None, use_llm=True, strict=False, retry_err
                 if not budget_hit:
                     budget_hit = True
                     print(f"AI budget of ${budget:.2f} for {month} reached: scanned filings wait")
-            rows, method, conf, status = parser(s, f, ai_ok)
+            dense = (prev.get("error") or "").startswith("answer cut off")
+            rows, method, conf, status = parser(s, f, ai_ok, dense=True) if dense else parser(s, f, ai_ok)
             if method == "ai":
                 ai_hiccups = 0
             if status == "parsed":  # replace any trades from an earlier read of this filing
@@ -234,8 +244,10 @@ def run(since, chambers, max_filings=None, use_llm=True, strict=False, retry_err
                 rec.update(status="error", n_trades=0, error=str(e)[:300],
                            attempts=int(prev.get("attempts") or 0) + 1)
                 errors.append(f"{f['chamber']} {f['filing_id']}: {e}")
-            elif e.kind == "too_long":  # paid for and still cut off: a person looks at it, no retry
-                rec.update(status="needs_review", n_trades=0, error=str(e)[:300])
+            elif e.kind == "too_long":  # cut off: next run tries one page per call; if that is cut off too, skip
+                dense = (prev.get("error") or "").startswith("answer cut off")
+                rec.update(status="skipped" if dense else "needs_review", n_trades=0,
+                           error=(str(e)[:250] + (" (one page at a time too)" if dense else "")))
                 print(f"AI answer too long on {f['chamber']} {f['filing_id']}: {e}", file=sys.stderr)
             else:
                 # Not this filing's fault: it waits for a later run, no attempt counted
@@ -257,9 +269,8 @@ def run(since, chambers, max_filings=None, use_llm=True, strict=False, retry_err
                         else:
                             ai_paused_until = time.monotonic() + AI_PAUSE_MIN * 60
                             print(f"AI paused {AI_PAUSE_MIN} min after {AI_BREAKER} API errors in a row")
-        except Exception as e:
-            rec.update(status="error", n_trades=0, error=str(e)[:300],
-                       attempts=int(prev.get("attempts") or 0) + 1)
+        except Exception as e:  # not paid for (network, site, parse): retried every run, attempts unchanged
+            rec.update(status="error", n_trades=0, error=str(e)[:300], attempts=prev.get("attempts", 0))
             errors.append(f"{f['chamber']} {f['filing_id']}: {e}")
             traceback.print_exc()
         filings_db[(f["chamber"], f["filing_id"])] = rec
@@ -272,6 +283,14 @@ def run(since, chambers, max_filings=None, use_llm=True, strict=False, retry_err
             enrich(t, {"chamber": t["chamber"], "last_name": name, "first_name": name,
                        "state": t.get("state", ""), "district": t.get("district", "")},
                    members, committee_sectors, sectors)
+
+    # Older trades held back only for a blank amount: an unreadable amount no longer hides a trade
+    for t in trades_db.values():
+        issues = (t.get("issues") or "").split("|")
+        if "amount_not_official" in issues and not t.get("amount_min") and not t.get("amount_max"):
+            issues = ["amount_unreadable" if i == "amount_not_official" else i for i in issues]
+            t["issues"] = "|".join(issues)
+            t["status"] = "review" if HARD & set(issues) else "ok"
 
     # Trades with a company name but no ticker (common in scanned filings): exact SEC name match
     named = 0

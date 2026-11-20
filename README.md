@@ -75,8 +75,10 @@ How runs handle problems:
 | AI API unusable (bad key, wrong model) | AI off for the rest of the run, filings wait as `needs_ai`, run marked failed |
 | AI credit used up | AI off for the run, filings wait as `needs_ai`; **not** a run failure (no failure email every run) |
 | AI monthly budget reached (`AI_MONTHLY_BUDGET`, default $3, in the workflow) | No more AI calls that month; filings wait as `needs_ai`. Spend per month is kept in `data/ai_spend.json` |
-| AI answer cut off even in 5-page chunks | Filing goes to `needs_review`; never retried (it was paid for) |
-| Scanned filing read by AI | Read **twice**; a trade goes on the site only if both reads agree on owner, security, type, date and amount **and** it passes the checks (`double_read` column). Mismatches go to review as `reads_differ` |
+| Scanned filing read by AI | Read **twice**, and a **third** time where the two disagree; a trade goes on the site only if at least 2 of the reads agree on owner, security, type, date and amount **and** it passes the checks (`double_read` column). Otherwise it is left out (`reads_differ`), automatically |
+| Scanned trade with no readable amount | Shown with "—" (`amount_unreadable`, not a hard check); left out of portfolio values and returns |
+| AI answer cut off at 5 pages per call | Next run reads it one page per call; if that is cut off too, the filing is `skipped` (no retry, no person needed) |
+| Filing error not caused by a paid AI call (site, network, parse) | Retried every run, no attempt counted. Paid AI errors: 3 tries, then once a month |
 | AI reading improved (`AI_VERSION` in `src/pipeline.py`) | Filings read by the older version are read again automatically |
 | One-off monthly budget (`AI_BUDGETS` in `src/pipeline.py`) | Nov 2026: $15 for the double-read re-check of ~500 House scans + 78 Senate paper filings |
 | AI cost | Each run's log ends with `AI: N calls, tokens, about $X (model); <month> so far $Y of $Z budget` |

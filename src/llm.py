@@ -19,7 +19,8 @@ MODEL = os.environ.get("ANTHROPIC_MODEL") or "claude-haiku-5-5"
 PRICES = {"claude-haiku-5-5": (0.10, 0.50), "claude-sonnet-5-5": (2.0, 10.0)}
 PAGES_PER_CALL = 5       # long scans are sent in chunks so no answer gets cut off
 TOKENS_PER_PAGE = 6000   # answer room per page (~40 rows); a 5-page chunk gets 32k
-READS = 2                # each chunk is read twice; a row goes live only if both reads agree
+READS = 2                # each chunk is read twice, and a third time if they disagree: majority wins
+DENSE_TOKENS_PER_PAGE = 16000  # retry for pages too dense for TOKENS_PER_PAGE: one page per call
 
 TOOL = {
     "name": "record_transactions",
@@ -129,10 +130,10 @@ def image_block(image_bytes, media_type):
                                         "data": base64.b64encode(image_bytes).decode()}}
 
 
-def _call(client, blocks, pages):
+def _call(client, blocks, pages, tokens_per_page=TOKENS_PER_PAGE):
     request = dict(
         model=MODEL,
-        max_tokens=TOKENS_PER_PAGE * pages + 2000,
+        max_tokens=tokens_per_page * pages + 2000,
         tools=[TOOL],
         # Sonnet 5.5 rejects forced tool use (tool_choice "tool"/"any"): offer the tool, ask for it.
         tool_choice={"type": "auto"},
@@ -197,29 +198,47 @@ def row_key(r):
     return (r["owner"], r["ticker"] or name, r["tx_type"], r["tx_date"], r["amount_min"], r["amount_max"])
 
 
-def mark_agreement(first, second):
-    """Sets double_read on each row of the first read: "agree" if the second read has the same row."""
-    left = Counter(row_key(r) for r in second)
+def majority(first, second, third=None):
+    """double_read per row: "agree" when at least two reads have the row, else "differ".
+    Returns the first read's rows, plus rows the 2nd and 3rd reads share that the first missed."""
+    left2, left3 = Counter(map(row_key, second)), Counter(map(row_key, third or []))
     for r in first:
         k = row_key(r)
-        r["double_read"] = "agree" if left[k] > 0 else "differ"
-        left[k] -= 1 if left[k] > 0 else 0
-    return first
+        if left2[k] > 0:
+            left2[k] -= 1
+            r["double_read"] = "agree"
+        elif left3[k] > 0:
+            left3[k] -= 1
+            r["double_read"] = "agree"
+        else:
+            r["double_read"] = "differ"
+    extra = []
+    for r in second if third is not None else []:
+        k = row_key(r)
+        if left2[k] > 0 and left3[k] > 0:
+            left2[k] -= 1
+            left3[k] -= 1
+            extra.append({**r, "double_read": "agree"})
+    return first + extra
 
 
-def extract(chunks, client=None, reads=READS):
+def extract(chunks, client=None, reads=READS, tokens_per_page=TOKENS_PER_PAGE):
     """chunks: [(content_blocks, n_pages)]. Returns (rows, confidence, notes).
-    Each chunk is read `reads` times; rows come from the first read, marked against the second.
+    Each chunk is read `reads` times; if the first two disagree, a third read settles it (majority).
     Confidence is the lowest of the first reads. Raises AIError if a call fails."""
     if client is None:
         import anthropic
         client = anthropic.Anthropic(max_retries=6)  # waits out short rate limits / hiccups
     rows, confs, notes = [], [], []
     for blocks, pages in chunks:
-        answers = [_call(client, blocks, pages) for _ in range(reads)]
+        answers = [_call(client, blocks, pages, tokens_per_page) for _ in range(reads)]
         first = _rows(answers[0])
         if reads > 1:
-            mark_agreement(first, _rows(answers[1]))
+            second = _rows(answers[1])
+            first = majority(first, second)
+            if any(r["double_read"] == "differ" for r in first) or len(second) != len(first):
+                third = _rows(_call(client, blocks, pages, tokens_per_page))
+                first = majority(_rows(answers[0]), second, third)
         rows += first
         confs.append(float(answers[0].get("confidence", 0) or 0))
         if answers[0].get("notes"):
@@ -227,20 +246,22 @@ def extract(chunks, client=None, reads=READS):
     return rows, min(confs) if confs else 0.0, " | ".join(notes)
 
 
-def extract_pdf(pdf_bytes, client=None, reads=READS):
-    """A PDF, read in chunks of PAGES_PER_CALL pages."""
+def extract_pdf(pdf_bytes, client=None, reads=READS, dense=False):
+    """A PDF, read in chunks of PAGES_PER_CALL pages (dense: one page per call, more answer room)."""
+    per_call, tokens = (1, DENSE_TOKENS_PER_PAGE) if dense else (PAGES_PER_CALL, TOKENS_PER_PAGE)
     try:
-        parts = split_pdf(pdf_bytes)
+        parts = split_pdf(pdf_bytes, per_call)
     except Exception:  # unreadable by pypdf: send it whole and let the model try
         parts = [(pdf_bytes, PAGES_PER_CALL)]
-    return extract([([pdf_block(b)], n) for b, n in parts], client, reads)
+    return extract([([pdf_block(b)], n) for b, n in parts], client, reads, tokens)
 
 
-def extract_images(images, client=None, reads=READS):
+def extract_images(images, client=None, reads=READS, dense=False):
     """Page images [(bytes, media_type)] (Senate paper filings), PAGES_PER_CALL per call."""
-    chunks = [([image_block(b, m) for b, m in images[i:i + PAGES_PER_CALL]], len(images[i:i + PAGES_PER_CALL]))
-              for i in range(0, len(images), PAGES_PER_CALL)]
-    return extract(chunks, client, reads)
+    per_call, tokens = (1, DENSE_TOKENS_PER_PAGE) if dense else (PAGES_PER_CALL, TOKENS_PER_PAGE)
+    chunks = [([image_block(b, m) for b, m in images[i:i + per_call]], len(images[i:i + per_call]))
+              for i in range(0, len(images), per_call)]
+    return extract(chunks, client, reads, tokens)
 
 
 def cost_usd():

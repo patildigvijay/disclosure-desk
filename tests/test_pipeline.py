@@ -603,19 +603,32 @@ def test_errors_retry_limit_and_strict_threshold(tmp_path, monkeypatch, members,
     pipeline = e2e_setup(tmp_path, monkeypatch, members, sectors)
     real = pipeline.parse_house
 
+    failure = [RuntimeError("403 Forbidden")]
+
     def flaky(s, f, use_llm):
         if f["filing_id"] == "20034916":
-            raise RuntimeError("403 Forbidden")
+            raise failure[0]
         return real(s, f, use_llm)
     monkeypatch.setattr(pipeline, "parse_house", flaky)
     status = lambda: {r["filing_id"]: r for r in csv.DictReader(open(tmp_path / "filings.csv"))}["20034916"]
-    for n in (1, 2, 3):
+    for _ in (1, 2, 3, 4):  # unpaid error (site, network): retried every run, no attempts counted
         assert pipeline.run(date(2026, 1, 1), ["house"], strict=True) == 0  # 1 error: not "too many"
-        assert status()["status"] == "error" and status()["attempts"] == str(n)
+        assert status()["status"] == "error" and status()["attempts"] in ("", "0")
+    failure[0] = llm.AIError("model did not call the record_transactions tool")  # paid AI error
+    for n in (1, 2, 3):
+        pipeline.run(date(2026, 1, 1), ["house"])
+        assert status()["attempts"] == str(n)
     pipeline.run(date(2026, 1, 1), ["house"])
-    assert status()["attempts"] == "3"  # scheduled runs give up after 3 tries
+    assert status()["attempts"] == "3"  # paid errors stop after 3 tries this month...
+    rec = pipeline.read_csv(tmp_path / "filings.csv")
+    for r in rec:
+        if r["filing_id"] == "20034916":
+            r["processed_at"] = "2026-01-15T00:00:00"  # ...and try again in a later month
+    pipeline.write_csv(tmp_path / "filings.csv", rec, pipeline.FILING_FIELDS)
+    pipeline.run(date(2026, 1, 1), ["house"])
+    assert status()["attempts"] == "4"
     pipeline.run(date(2026, 1, 1), ["house"], retry_errors=True)
-    assert status()["attempts"] == "4"  # a manual run tries again
+    assert status()["attempts"] == "5"  # a manual run tries again
 
 
 def test_ai_switched_off_on_fatal_error(tmp_path, monkeypatch, members, sectors):
@@ -682,20 +695,23 @@ def test_ai_monthly_budget(tmp_path, monkeypatch, members, sectors):
     assert json.loads((tmp_path / "ai_spend.json").read_text())[month] >= 3.0
 
 
-def test_ai_answer_too_long_goes_to_review_once(tmp_path, monkeypatch, members, sectors):
+def test_ai_answer_too_long_retries_one_page_at_a_time_then_skips(tmp_path, monkeypatch, members, sectors):
     import csv
     pipeline = e2e_setup(tmp_path, monkeypatch, members, sectors)
     monkeypatch.setattr(pipeline.llm, "available", lambda: True)
     called = []
 
-    def too_long(pdf):
-        called.append(1)
-        raise llm.AIError("answer cut off", "too_long")
+    def too_long(pdf, dense=False):
+        called.append(dense)
+        raise llm.AIError("answer cut off at 32000 tokens for 5 pages", "too_long")
     monkeypatch.setattr(pipeline.llm, "extract_pdf", too_long)
+    status = lambda: {r["filing_id"]: r for r in csv.DictReader(open(tmp_path / "filings.csv"))}["9116142"]["status"]
     pipeline.run(date(2026, 1, 1), ["house"])
+    assert status() == "needs_review"
     pipeline.run(date(2026, 1, 1), ["house"])
-    filings = {r["filing_id"]: r for r in csv.DictReader(open(tmp_path / "filings.csv"))}
-    assert filings["9116142"]["status"] == "needs_review" and called == [1]  # paid once, not again
+    assert status() == "skipped"  # one page per call was cut off too
+    pipeline.run(date(2026, 1, 1), ["house"])
+    assert called == [False, True]  # no third paid attempt, no person needed
 
 
 def test_senate_fetch_renews_session_on_403(monkeypatch):
@@ -725,14 +741,20 @@ def test_double_read_marks_agreement_and_checks_use_it():
     a = {"owner": "SP", "asset_name": "Apple Inc", "ticker": "AAPL", "tx_type": "P", "tx_date": "01/05/22",
          "amount_range": "1,001 - 15,000"}
     b = {**a, "asset_name": "Microsoft", "ticker": "MSFT"}
-    read2_b = {**b, "tx_date": "01/06/2022"}  # second read disagrees on the date
-    replies = [[a, b], [a, read2_b]]
+    c = {**a, "asset_name": "Nvidia", "ticker": "NVDA"}
+    # read 2 misreads b's date; read 3 agrees with read 1 on b; c is read 3 times differently;
+    # d is missed by read 1 but found by reads 2 and 3
+    d = {**a, "asset_name": "Visa", "ticker": "V"}
+    replies = [[a, b, c], [a, {**b, "tx_date": "01/06/2022"}, {**c, "tx_date": "02/01/2022"}, d],
+               [a, b, {**c, "tx_date": "03/01/2022"}, d]]
 
     class Messages:
         def stream(self, **kw):
             return fake_client([ai_answer(replies.pop(0))]).messages.stream(**kw)
     rows, conf, _ = llm.extract_pdf(make_pages_pdf(1), client=types.SimpleNamespace(messages=Messages()))
-    assert [r["double_read"] for r in rows] == ["agree", "differ"]
+    assert [(r["ticker"], r["double_read"]) for r in rows] == [("AAPL", "agree"), ("MSFT", "agree"),
+                                                                ("NVDA", "differ"), ("V", "agree")]
+    rows = [rows[0], rows[2]]  # one agreed, one settled-against row for the checks below
     assert rows[0]["tx_date"] == date(2022, 1, 5) and (rows[0]["amount_min"], rows[0]["amount_max"]) == (1001, 15000)
     ok = check({**rows[0], "tx_type": "Purchase"}, date(2022, 2, 1), confidence=conf)
     bad = check({**rows[1], "tx_type": "Purchase"}, date(2022, 2, 1), confidence=conf)
@@ -759,7 +781,10 @@ def test_old_ai_reads_and_senate_paper_are_picked_up_again():
     assert not pipeline.to_retry({**h, "parser": f"text-{house.PARSER_VERSION}"})
     sp = {"chamber": "Senate", "status": "needs_review", "kind": "paper", "error": ""}
     assert pipeline.to_retry(sp)
-    assert not pipeline.to_retry({**sp, "error": "answer cut off at 32000 tokens"})  # paid once, not again
+    assert pipeline.to_retry({**sp, "error": "answer cut off at 32000 tokens"})  # one more go, a page at a time
+    assert not pipeline.to_retry({**sp, "status": "skipped", "error": "answer cut off (one page at a time too)"})
+    assert not pipeline.to_retry({**h, "parser": "ai-2", "filing_id": "1"})  # two reads agreed everywhere
+    assert pipeline.to_retry({**h, "parser": "ai-2", "filing_id": "1"}, rereads=frozenset({"1"}))  # disagreed
     assert not pipeline.to_retry({"chamber": "Senate", "status": "parsed", "parser": "html"})
 
 
@@ -909,3 +934,13 @@ def test_short_source_outage_is_a_warning_not_a_failure(tmp_path, monkeypatch, m
         raise requests.HTTPError("404 Not Found", response=types.SimpleNamespace(status_code=404))
     monkeypatch.setattr(pipeline.senate, "open_session", changed)
     assert pipeline.run(date(2026, 1, 1), ["house", "senate"], strict=True) == 1   # site changed: always fail
+
+
+def test_unreadable_amount_is_shown_but_not_weighted():
+    from validate import check
+    t = {"asset_name": "Apple Inc", "ticker": "AAPL", "tx_type": "Purchase", "tx_date": date(2026, 1, 5),
+         "amount_min": None, "amount_max": None, "double_read": "agree"}
+    r = check(dict(t), date(2026, 1, 20), confidence=0.4)
+    assert r["status"] == "ok" and "amount_unreadable" in r["issues"]
+    assert check({**t, "amount_min": 1500, "amount_max": 50000}, date(2026, 1, 20))["status"] == "review"
+    assert portfolio._mid({"amount_min": "", "amount_max": ""}) == 0

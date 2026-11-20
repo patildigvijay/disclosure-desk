@@ -23,7 +23,9 @@ def check(trade, filing_date, sectors=None, confidence=None):
         issues.append("tx_after_filing")
     if tx and notif and notif < tx:
         issues.append("notified_before_tx")
-    if not amount_ok(trade.get("amount_min"), trade.get("amount_max")):
+    if trade.get("amount_min") in (None, "") and trade.get("amount_max") in (None, ""):
+        issues.append("amount_unreadable")  # shown with no amount; left out of portfolio values
+    elif not amount_ok(trade.get("amount_min"), trade.get("amount_max")):
         issues.append("amount_not_official")
     if trade.get("tx_type") not in TX_TYPES:
         issues.append("bad_tx_type")

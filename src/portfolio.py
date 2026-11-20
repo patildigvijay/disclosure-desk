@@ -137,7 +137,7 @@ def performance(trades, prices, today):
             full_sales[(member_key(t), t["ticker"].upper(), t.get("owner") or "Self")].append(t["_tx"])
     acc = defaultdict(lambda: defaultdict(float))
     for t in st:
-        if t["tx_type"] != "Purchase" or t["_tx"] < since:
+        if t["tx_type"] != "Purchase" or t["_tx"] < since or not t["_mid"]:  # no amount: no weight
             continue
         key, tk = member_key(t), t["ticker"].upper()
         end = next((d for d in full_sales[(key, tk, t.get("owner") or "Self")] if d >= t["_tx"]), today)
