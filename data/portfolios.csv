@@ -14,14 +14,14 @@ J000309,J000309,Jonathan L. Jackson,House,Democrat,IL,1,19,1292439,84.7,205,2026
 T000490,T000490,David J. Taylor,House,Republican,OH,2,15,438098,85.0,262,2026-11-12,109,5.4,-0.8,6.1,4.7,-0.8
 D000399,D000399,Lloyd Doggett,House,Democrat,TX,37,6,1164917,100.0,110,2026-11-11,23,9.7,-2.5,12.2,8.6,-3.8
 A000372,A000372,Rick W. Allen,House,Republican,GA,12,31,1279635,57.9,274,2026-11-11,10,-11.2,-1.8,-9.4,-6.9,-2.3
-F000459,F000459,"Charles J. ""Chuck"" Fleischmann",House,Republican,TN,3,8,167536,100.0,254,2026-11-10,6,4.9,-0.5,5.4,8.8,2.7
+F000459,F000459,"Charles J. ""Chuck"" Fleischmann",House,Republican,TN,3,8,167536,100.0,255,2026-11-10,6,4.9,-0.5,5.4,8.8,2.7
 J000310,J000310,Julie Johnson,House,Democrat,TX,32,6,52172,100.0,588,2026-11-10,4,0.0,0.0,0.0,,
 C001123,C001123,"Gilbert Ray Cisneros, Jr.",House,Democrat,CA,31,270,6655423,23.2,1710,2026-11-10,549,-2.2,-1.5,-0.7,-3.1,-1.7
 S001201,S001201,Thomas R. Suozzi,House,Democrat,NY,3,16,536095,85.9,277,2026-11-09,,,,,,
 K000392,K000392,David Kustoff,House,Republican,TN,8,0,0,0,2,2026-11-09,,,,,,
 P000197,P000197,Nancy Pelosi,House,Democrat,CA,11,11,25820949,99.8,99,2026-11-06,8,-21.8,-4.2,-17.6,-26.0,-6.3
 M001239,M001239,John J. McGuire III,House,Republican,VA,5,9,70215,100.0,27,2026-11-06,12,-23.7,-5.5,-18.1,-18.7,-6.4
-K000389,K000389,Ro Khanna,House,Democrat,CA,17,434,15890361,14.7,10314,2026-11-05,1570,-0.5,0.2,-0.7,-1.8,-0.6
+K000389,K000389,Ro Khanna,House,Democrat,CA,17,438,15563223,15.0,10676,2026-11-05,1570,-0.5,0.2,-0.7,-1.8,-0.6
 S000168,S000168,Maria Elvira Salazar,House,Republican,FL,27,33,1389984,72.8,170,2026-11-05,77,-8.2,1.5,-9.7,-12.3,-2.5
 G000583,G000583,Josh Gottheimer,House,Democrat,NJ,5,136,2037045,31.7,2105,2026-11-05,45,0.4,-2.0,2.3,-4.8,-3.8
 M001204,M001204,Daniel Meuser,House,Republican,PA,9,1,21575,100.0,37,2026-11-05,,,,,,
@@ -39,21 +39,21 @@ M001222,M001222,Max L. Miller,House,Republican,OH,7,0,0,0,79,2026-10-27,,,,,,
 A000375,A000375,Jodey C. Arrington,House,Republican,TX,19,0,0,0,1,2026-10-27,,,,,,
 S000250,S000250,Pete Sessions,House,Republican,TX,17,1,27316,100.0,167,2026-10-27,,,,,,
 B001325,B001325,Sheri Biggs,House,Republican,SC,3,1,139443,100.0,266,2026-10-27,,,,,,
-B001277,B001277,Richard Blumenthal,Senate,Democrat,CT,,3,2797508,100.0,1042,2026-10-26,,,,,,
+B001277,B001277,Richard Blumenthal,Senate,Democrat,CT,,8,2837508,100.0,1143,2026-10-26,,,,,,
 I000056,I000056,Darrell Issa,House,Republican,CA,48,0,0,0,22,2026-10-22,,,,,,
 F000110,F000110,Cleo Fields,House,Democrat,LA,6,23,20561306,93.9,242,2026-10-22,46,-9.9,0.7,-10.6,-7.1,0.9
 Y000067,Y000067,Rudy Yakym III,House,Republican,IN,2,0,0,0,32,2026-10-20,,,,,,
 H001047,H001047,James A. Himes,House,Democrat,CT,4,0,0,0,5,2026-10-20,,,,,,
 L000597,L000597,Laurel M. Lee,House,Republican,FL,15,5,323258,100.0,24,2026-10-16,,,,,,
-M001157,M001157,Michael T. McCaul,House,Republican,TX,10,58,4341640,56.8,2407,2026-10-14,168,4.0,0.5,3.5,4.0,0.7
+M001157,M001157,Michael T. McCaul,House,Republican,TX,10,58,4341640,56.8,2514,2026-10-14,168,4.0,0.5,3.5,4.0,0.7
 M001218,M001218,Richard McCormick,House,Republican,GA,7,1,27223,100.0,127,2026-10-14,16,14.5,6.4,8.1,14.4,5.5
 L000560,L000560,Rick Larsen,House,Democrat,WA,2,26,288096,53.6,94,2026-10-12,11,-1.0,-1.2,0.2,-1.3,-3.7
-M001136,M001136,Lisa C. McClain,House,Republican,MI,9,24,382735,80.8,1535,2026-10-12,10,-27.5,-7.0,-20.5,-23.8,-8.4
+M001136,M001136,Lisa C. McClain,House,Republican,MI,9,24,388927,79.6,1546,2026-10-12,10,-27.5,-7.0,-20.5,-23.8,-8.4
 F000479,F000479,John Fetterman,Senate,Democrat,PA,,5,85143,100.0,99,2026-10-07,7,29.1,9.6,19.5,21.9,5.7
 F000480,F000480,Vince Fong,House,Republican,CA,20,0,0,0,1,2026-10-05,,,,,,
-W000829,W000829,Tony Wied,House,Republican,WI,8,9,793341,100.0,83,2026-10-02,15,-12.0,-2.8,-9.1,-11.5,-2.1
+W000829,W000829,Tony Wied,House,Republican,WI,8,10,693201,100.0,93,2026-10-02,15,-12.0,-2.8,-9.1,-11.5,-2.1
 J000312,J000312,James C. Justice,Senate,Republican,WV,,0,0,0,2,2026-09-28,,,,,,
-R000395,R000395,Harold Rogers,House,Republican,KY,5,0,0,0,41,2026-09-23,,,,,,
+R000395,R000395,Harold Rogers,House,Republican,KY,5,0,0,0,59,2026-09-23,,,,,,
 M000355,M000355,Mitch McConnell,Senate,Republican,KY,,2,258590,100.0,23,2026-09-21,4,-5.9,-6.0,0.1,-6.7,-6.2
 F000472,F000472,Scott Franklin,House,Republican,FL,18,30,1769388,67.9,284,2026-09-17,6,4.7,-9.7,14.5,6.9,-9.3
 K000383,K000383,"Angus S. King, Jr.",Senate,Independent,ME,,16,190620,74.9,48,2026-09-14,,,,,,
@@ -87,7 +87,7 @@ M000934,M000934,Jerry Moran,Senate,Republican,KS,,3,138047,100.0,99,2026-07-21,6
 T000480,T000480,William R. Timmons IV,House,Republican,SC,4,0,0,0,2,2026-07-19,,,,,,
 N000189,N000189,Dan Newhouse,House,Republican,WA,4,74,823157,32.8,211,2026-07-17,22,-4.3,-3.9,-0.4,-4.7,-3.6
 C001120,C001120,Dan Crenshaw,House,Republican,TX,2,5,69777,100.0,24,2026-07-16,,,,,,
-M000317,M000317,Nicole Malliotakis,House,Republican,NY,11,0,0,0,5,2026-07-14,,,,,,
+M000317,M000317,Nicole Malliotakis,House,Republican,NY,11,0,0,0,6,2026-07-14,,,,,,
 C001101,C001101,Katherine M. Clark,House,Democrat,MA,5,0,0,0,30,2026-07-14,,,,,,
 J000307,J000307,John James,House,Republican,MI,10,4,41146,100.0,273,2026-07-12,,,,,,
 W000804,W000804,Robert J. Wittman,House,Republican,VA,1,22,240911,67.4,163,2026-07-10,,,,,,
@@ -96,7 +96,7 @@ L000590,L000590,Susie Lee,House,Democrat,NV,3,3,74681,100.0,113,2026-07-08,,,,,,
 T000486,T000486,Ritchie Torres,House,Democrat,NY,15,22,173963,58.2,157,2026-07-08,,,,,,
 B001323,B001323,Nicholas J. Begich III,House,Republican,AK,0,0,0,0,2,2026-07-07,,,,,,
 C001114,C001114,John R. Curtis,Senate,Republican,UT,,2,13922,100.0,188,2026-06-30,,,,,,
-S001224,S001224,Keith Self,House,Republican,TX,3,3,49071,100.0,9,2026-06-30,,,,,,
+S001224,S001224,Keith Self,House,Republican,TX,3,3,49071,100.0,10,2026-06-30,,,,,,
 S001211,S001211,Greg Stanton,House,Democrat,AZ,4,1,20623,100.0,191,2026-06-26,,,,,,
 E000296,E000296,Dwight Evans,House,Democrat,PA,3,10,97047,100.0,59,2026-06-24,,,,,,
 D000628,D000628,Neal P. Dunn,House,Republican,FL,2,1,7065,100.0,42,2026-06-23,,,,,,
