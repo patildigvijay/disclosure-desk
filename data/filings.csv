@@ -1331,7 +1331,7 @@ Senate,e69e4753-8d5b-485e-8c9f-3b8fedf24b80,John Boozman,,,2024-12-17,efile,http
 House,20026250,"Neal Patrick Dunn, MD, FACS",FL,02,2024-12-16,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20026250.pdf,parsed,5,,2026-11-13T10:31:56,text-2,0
 House,20026415,Kevin Hern,OK,01,2024-12-16,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20026415.pdf,parsed,1,,2026-11-13T10:31:57,text-2,0
 House,20026408,Thomas H. Kean Jr.,NJ,07,2024-12-16,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20026408.pdf,parsed,5,,2026-11-13T10:31:57,text-2,0
-House,8220706,Michael T. McCaul,TX,10,2024-12-16,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/8220706.pdf,needs_review,0,answer cut off at 8000 tokens for 1 pages,2026-11-22T08:14:37,,
+House,8220706,Michael T. McCaul,TX,10,2024-12-16,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/8220706.pdf,review,290,,2026-11-22T09:48:09,ai-3,0
 House,20026393,Scott H. Peters,CA,50,2024-12-16,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20026393.pdf,parsed,2,,2026-11-13T10:31:58,text-2,0
 House,20026382,Lance Gooden,TX,05,2024-12-12,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20026382.pdf,parsed,1,,2026-11-13T10:31:59,text-2,0
 House,20026313,Jonathan Jackson,IL,01,2024-12-12,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20026313.pdf,parsed,5,,2026-11-13T10:32:00,text-2,0
@@ -1538,7 +1538,7 @@ House,20025634,Kevin Hern,OK,01,2024-08-10,efile,https://disclosures-clerk.house
 House,20025384,Sean Casten,IL,06,2024-08-09,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20025384.pdf,parsed,3,,2026-11-13T10:33:55,text-2,0
 House,20025632,Michael Garcia,CA,27,2024-08-09,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20025632.pdf,parsed,1,,2026-11-13T10:33:56,text-2,0
 House,20025601,Richard W. Allen,GA,12,2024-08-08,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20025601.pdf,parsed,2,,2026-11-13T10:33:57,text-2,0
-House,8220570,Rohit Khanna,CA,17,2024-08-07,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/8220570.pdf,needs_ai,0,,2026-11-20T11:50:28,,0
+House,8220570,Rohit Khanna,CA,17,2024-08-07,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/8220570.pdf,review,363,,2026-11-22T10:05:43,ai-3,0
 House,20025563,Stephen F. Lynch,MA,08,2024-08-07,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20025563.pdf,parsed,7,,2026-11-13T10:33:58,text-2,0
 House,20025576,Scott H. Peters,CA,50,2024-08-07,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20025576.pdf,parsed,8,,2026-11-13T10:33:58,text-2,0
 House,20025603,Earl Blumenauer,OR,03,2024-08-06,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20025603.pdf,parsed,5,,2026-11-13T10:33:59,text-2,0
@@ -1581,11 +1581,11 @@ Senate,66665c54-7f3f-43a4-bd64-6181a43205da,Shelley M Capito,,,2024-07-11,efile,
 Senate,17792029-d977-49d7-8d9c-042dc3d342e9,John Boozman,,,2024-07-11,efile,https://efdsearch.senate.gov/search/view/ptr/17792029-d977-49d7-8d9c-042dc3d342e9/,parsed,7,,2026-11-13T08:30:18,,
 Senate,c417b7b2-e80f-477d-9647-c22bc8c1cd1b,John Boozman,,,2024-07-11,efile,https://efdsearch.senate.gov/search/view/ptr/c417b7b2-e80f-477d-9647-c22bc8c1cd1b/,parsed,9,,2026-11-13T08:30:18,,
 House,20025411,Richard W. Allen,GA,12,2024-07-10,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20025411.pdf,parsed,3,,2026-11-13T10:34:18,text-2,0
-House,8220536,Harold Dallas Rogers,KY,05,2024-07-10,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/8220536.pdf,needs_ai,0,,2026-11-20T11:50:28,,0
+House,8220536,Harold Dallas Rogers,KY,05,2024-07-10,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/8220536.pdf,needs_review,0,answer cut off at 8000 tokens for 1 pages,2026-11-22T10:15:40,,
 House,20025437,Brandon McDonald Williams,NY,22,2024-07-10,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20025437.pdf,parsed,1,,2026-11-13T10:34:20,text-2,0
 House,20025419,Josh Gottheimer,NJ,05,2024-07-09,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20025419.pdf,parsed,120,,2026-11-13T10:34:20,text-2,0
 House,20025429,Mark Dr Green,TN,07,2024-07-09,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20025429.pdf,parsed,1,,2026-11-13T10:34:23,text-2,0
-House,8220534,Rohit Khanna,CA,17,2024-07-08,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/8220534.pdf,needs_ai,0,,2026-11-20T11:50:29,,0
+House,8220534,Rohit Khanna,CA,17,2024-07-08,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/8220534.pdf,review,187,,2026-11-22T10:16:37,ai-3,0
 House,20025403,Earl Blumenauer,OR,03,2024-07-06,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20025403.pdf,parsed,4,,2026-11-13T10:34:24,text-2,0
 House,20025373,Kathy Manning,NC,06,2024-07-06,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20025373.pdf,parsed,1,,2026-11-13T10:34:25,text-2,0
 Senate,909566de-2b97-434a-aff2-decc117f92e7,Rick Scott,,,2024-07-06,efile,https://efdsearch.senate.gov/search/view/ptr/909566de-2b97-434a-aff2-decc117f92e7/,parsed,5,,2026-11-13T08:30:07,,
@@ -1615,9 +1615,9 @@ Senate,2cd90465-7aef-4f33-881a-57cbf4f439ef,RICHARD BLUMENTHAL,,,2024-06-20,pape
 House,20025291,Thomas H. Kean Jr.,NJ,07,2024-06-18,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20025291.pdf,parsed,3,,2026-11-13T10:34:39,text-2,0
 House,20025282,Michael A. Collins,GA,10,2024-06-14,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20025282.pdf,parsed,1,,2026-11-13T10:34:39,text-2,0
 House,20025280,Mike Kelly,PA,16,2024-06-14,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20025280.pdf,parsed,11,,2026-11-13T10:34:40,text-2,0
-House,8220508,Nicole Malliotakis,NY,11,2024-06-14,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/8220508.pdf,needs_ai,0,,2026-11-20T11:50:29,,0
+House,8220508,Nicole Malliotakis,NY,11,2024-06-14,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/8220508.pdf,review,4,,2026-11-22T10:24:20,ai-3,0
 Senate,b5272e54-0ad8-462c-97f5-9af1ea47b1f1,Thomas H Tuberville,,,2024-06-14,efile,https://efdsearch.senate.gov/search/view/ptr/b5272e54-0ad8-462c-97f5-9af1ea47b1f1/,parsed,94,,2026-11-13T08:29:48,,
-House,8220516,Michael T. McCaul,TX,10,2024-06-13,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/8220516.pdf,needs_ai,0,,2026-11-20T11:50:30,,0
+House,8220516,Michael T. McCaul,TX,10,2024-06-13,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/8220516.pdf,review,41,,2026-11-22T10:25:34,ai-3,0
 Senate,33379f87-4267-4484-baa7-1f48a4375f65,"A. Mitchell McConnell, Jr.",,,2024-06-13,efile,https://efdsearch.senate.gov/search/view/ptr/33379f87-4267-4484-baa7-1f48a4375f65/,parsed,1,,2026-11-13T08:29:46,,
 House,20025257,Earl Leroy Carter,GA,01,2024-06-12,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20025257.pdf,parsed,1,,2026-11-13T10:34:42,text-2,0
 House,20025255,Mark Dr Green,TN,07,2024-06-12,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20025255.pdf,parsed,1,,2026-11-13T10:34:42,text-2,0
@@ -1641,7 +1641,7 @@ House,20025214,Pete Sessions,TX,17,2024-06-06,efile,https://disclosures-clerk.ho
 House,20025224,Abigail Spanberger,VA,07,2024-06-06,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20025224.pdf,parsed,1,,2026-11-13T10:34:53,text-2,0
 Senate,fa292fd4-a512-4dc9-99b5-0a397b1b92db,Sheldon Whitehouse,,,2024-06-06,efile,https://efdsearch.senate.gov/search/view/ptr/fa292fd4-a512-4dc9-99b5-0a397b1b92db/,parsed,2,,2026-11-13T08:29:34,,
 House,20025202,Lloyd Doggett,TX,37,2024-06-05,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20025202.pdf,parsed,1,,2026-11-13T10:34:54,text-2,0
-House,8220451,Rohit Khanna,CA,17,2024-06-05,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/8220451.pdf,needs_ai,0,,2026-11-20T11:50:30,,0
+House,8220451,Rohit Khanna,CA,17,2024-06-05,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/8220451.pdf,review,488,,2026-11-22T10:30:35,ai-3,0
 House,20025203,Carol Devine Miller,WV,01,2024-06-05,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20025203.pdf,parsed,10,,2026-11-13T10:34:55,text-2,0
 House,20025205,Abigail Spanberger,VA,07,2024-06-05,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20025205.pdf,parsed,1,,2026-11-13T10:34:56,text-2,0
 Senate,5e1f9c4d-5891-47c4-a916-297de68814fd,John Boozman,,,2024-06-05,efile,https://efdsearch.senate.gov/search/view/ptr/5e1f9c4d-5891-47c4-a916-297de68814fd/,parsed,3,,2026-11-13T08:29:29,,
@@ -1669,7 +1669,7 @@ Senate,0383f798-74f7-466c-8ecc-2cd1873526eb,Sheldon Whitehouse,,,2024-05-20,efil
 House,20025056,Debbie Dingell,MI,06,2024-05-16,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20025056.pdf,parsed,2,,2026-11-13T10:35:07,text-2,0
 House,8220317,"Charles J. ""Chuck"" Fleischmann",TN,03,2024-05-15,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/8220317.pdf,parsed,10,,2026-11-15T09:02:55,ai-2,0
 House,20025020,Josh Gottheimer,NJ,05,2024-05-15,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20025020.pdf,parsed,29,,2026-11-13T10:35:09,text-2,0
-House,8220312,Doug Lamborn,CO,05,2024-05-15,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/8220312.pdf,needs_ai,0,,2026-11-20T11:50:31,,0
+House,8220312,Doug Lamborn,CO,05,2024-05-15,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/8220312.pdf,needs_review,0,answer cut off at 8000 tokens for 1 pages,2026-11-22T10:45:53,,
 House,20025087,Mikie Sherrill,NJ,11,2024-05-15,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20025087.pdf,parsed,1,,2026-11-13T10:35:10,text-2,0
 House,20024862,Shri Thanedar,MI,13,2024-05-15,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20024862.pdf,parsed,12,,2026-11-13T10:35:11,text-2,0
 House,20024730,David Trone,MD,06,2024-05-15,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20024730.pdf,parsed,28,,2026-11-13T10:35:11,text-2,0
@@ -1685,11 +1685,11 @@ House,20025037,Scott H. Peters,CA,50,2024-05-13,efile,https://disclosures-clerk.
 House,20025065,Mikie Sherrill,NJ,11,2024-05-13,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20025065.pdf,parsed,1,,2026-11-13T10:35:18,text-2,0
 Senate,d079ab57-5156-4bf5-93a8-bbb556cf3a69,Shelley M Capito,,,2024-05-13,efile,https://efdsearch.senate.gov/search/view/ptr/d079ab57-5156-4bf5-93a8-bbb556cf3a69/,parsed,7,,2026-11-13T08:29:01,,
 House,20025040,Kevin Hern,OK,01,2024-05-12,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20025040.pdf,parsed,3,,2026-11-13T10:35:18,text-2,0
-House,8220320,Michael T. McCaul,TX,10,2024-05-11,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/8220320.pdf,needs_ai,0,,2026-11-20T11:50:31,,0
+House,8220320,Michael T. McCaul,TX,10,2024-05-11,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/8220320.pdf,review,222,,2026-11-22T10:46:29,ai-3,0
 Senate,a33e00ac-46fe-4e2f-b8ed-d8be0e4ebe33,Rick Scott,,,2024-05-10,efile,https://efdsearch.senate.gov/search/view/ptr/a33e00ac-46fe-4e2f-b8ed-d8be0e4ebe33/,parsed,13,,2026-11-13T08:28:56,,
 House,20025021,Marjorie Taylor Mrs Greene,GA,14,2024-05-09,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20025021.pdf,parsed,1,,2026-11-13T10:35:19,text-2,0
 House,20025025,Stephen F. Lynch,MA,08,2024-05-09,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20025025.pdf,parsed,1,,2026-11-13T10:35:20,text-2,0
-House,8220271,Harold Dallas Rogers,KY,05,2024-05-09,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/8220271.pdf,needs_ai,0,,2026-11-20T11:50:32,,0
+House,8220271,Harold Dallas Rogers,KY,05,2024-05-09,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/8220271.pdf,parsed,6,,2026-11-22T10:52:13,ai-3,0
 House,20025006,Chellie Pingree,ME,01,2024-05-08,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20025006.pdf,parsed,1,,2026-11-13T10:35:21,text-2,0
 House,20025014,Maria Elvira Salazar,FL,27,2024-05-08,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20025014.pdf,parsed,2,,2026-11-13T10:35:22,text-2,0
 Senate,950138d9-644e-4216-9e64-46b6f1520074,Lindsey Graham,,,2024-05-08,efile,https://efdsearch.senate.gov/search/view/ptr/950138d9-644e-4216-9e64-46b6f1520074/,parsed,2,,2026-11-13T08:28:52,,
@@ -1700,7 +1700,7 @@ House,20025000,Jonathan Jackson,IL,01,2024-05-07,efile,https://disclosures-clerk
 Senate,5ac65f38-4803-4b25-b252-5140bba4d8b5,John Boozman,,,2024-05-07,efile,https://efdsearch.senate.gov/search/view/ptr/5ac65f38-4803-4b25-b252-5140bba4d8b5/,parsed,4,,2026-11-13T08:28:50,,
 House,20024997,Lloyd Doggett,TX,37,2024-05-06,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20024997.pdf,parsed,1,,2026-11-13T10:35:24,text-2,0
 House,20024996,Virginia Foxx,NC,05,2024-05-06,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20024996.pdf,parsed,4,,2026-11-13T10:35:24,text-2,0
-House,8220252,Rohit Khanna,CA,17,2024-05-06,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/8220252.pdf,needs_ai,0,,2026-11-20T11:50:32,,0
+House,8220252,Rohit Khanna,CA,17,2024-05-06,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/8220252.pdf,review,394,,2026-11-22T10:53:00,ai-3,0
 House,20024986,Deborah Ross,NC,02,2024-05-05,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20024986.pdf,parsed,1,,2026-11-13T10:35:26,text-2,0
 House,20024984,Earl Blumenauer,OR,03,2024-05-04,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20024984.pdf,parsed,16,,2026-11-13T10:35:26,text-2,0
 House,20024982,Kathy Manning,NC,06,2024-05-03,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20024982.pdf,parsed,1,,2026-11-13T10:35:27,text-2,0
@@ -1722,14 +1722,14 @@ Senate,cf08c60c-6c0f-45ac-b8e9-3ca4c088e705,Tina Smith,,,2024-04-19,efile,https:
 House,20024836,Felix Barry Moore,AL,02,2024-04-18,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20024836.pdf,parsed,1,,2026-11-13T10:35:34,text-2,0
 House,20024837,Scott H. Peters,CA,50,2024-04-17,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20024837.pdf,parsed,2,,2026-11-13T10:35:34,text-2,0
 Senate,6b0c6fa8-5f02-4b79-92da-1cb309377091,"Angus S King, Jr.",,,2024-04-17,efile,https://efdsearch.senate.gov/search/view/ptr/6b0c6fa8-5f02-4b79-92da-1cb309377091/,parsed,1,,2026-11-13T08:28:32,,
-House,8220214,Michael T. McCaul,TX,10,2024-04-16,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/8220214.pdf,needs_ai,0,,2026-11-20T11:50:33,,0
+House,8220214,Michael T. McCaul,TX,10,2024-04-16,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/8220214.pdf,review,14,,2026-11-22T11:07:31,ai-3,0
 House,20024876,Eleanor Holmes Norton,DC,00,2024-04-15,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20024876.pdf,parsed,1,,2026-11-13T10:35:36,text-2,0
 Senate,35ffbe5d-3eb2-475c-a18b-68ebedb5bc3b,Thomas H Tuberville,,,2024-04-15,efile,https://efdsearch.senate.gov/search/view/ptr/35ffbe5d-3eb2-475c-a18b-68ebedb5bc3b/,parsed,19,,2026-11-13T08:28:30,,
 House,20024869,Kevin Hern,OK,01,2024-04-12,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20024869.pdf,parsed,15,,2026-11-13T10:35:36,text-2,0
-House,8220205,Doug Lamborn,CO,05,2024-04-12,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/8220205.pdf,needs_ai,0,,2026-11-20T11:50:33,,0
+House,8220205,Doug Lamborn,CO,05,2024-04-12,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/8220205.pdf,parsed,6,,2026-11-22T11:09:45,ai-3,0
 Senate,86d388af-9927-4890-ae41-6859521366be,Ron L Wyden,,,2024-04-12,efile,https://efdsearch.senate.gov/search/view/ptr/86d388af-9927-4890-ae41-6859521366be/,parsed,1,,2026-11-13T08:28:28,,
 Senate,173139f7-fce3-4058-8b88-94dcbb7be692,Rick Scott,,,2024-04-12,efile,https://efdsearch.senate.gov/search/view/ptr/173139f7-fce3-4058-8b88-94dcbb7be692/,parsed,18,,2026-11-13T08:28:29,,
-Senate,75a6a5f9-4076-45df-bd8e-6b884f7a2a2a,RICHARD BLUMENTHAL,,,2024-04-12,paper,https://efdsearch.senate.gov/search/view/paper/75a6a5f9-4076-45df-bd8e-6b884f7a2a2a/,needs_review,0,,2026-11-20T11:50:34,,0
+Senate,75a6a5f9-4076-45df-bd8e-6b884f7a2a2a,RICHARD BLUMENTHAL,,,2024-04-12,paper,https://efdsearch.senate.gov/search/view/paper/75a6a5f9-4076-45df-bd8e-6b884f7a2a2a/,parsed,5,,2026-11-22T11:10:44,ai-3,0
 House,20024848,Chip Roy,TX,21,2024-04-11,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20024848.pdf,parsed,7,,2026-11-13T10:35:38,text-2,0
 Senate,2f506d44-7547-4211-a8ac-26698fb8f3c4,John W Hickenlooper,,,2024-04-11,efile,https://efdsearch.senate.gov/search/view/ptr/2f506d44-7547-4211-a8ac-26698fb8f3c4/,parsed,2,,2026-11-13T08:28:26,,
 House,20024838,Michael C. Burgess,TX,26,2024-04-10,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20024838.pdf,parsed,2,,2026-11-13T10:35:38,text-2,0
@@ -1741,7 +1741,7 @@ House,20024839,Lloyd Doggett,TX,37,2024-04-09,efile,https://disclosures-clerk.ho
 House,20024801,Josh Gottheimer,NJ,05,2024-04-07,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20024801.pdf,parsed,33,,2026-11-13T10:35:42,text-2,0
 House,20024800,Mark Dr Green,TN,07,2024-04-07,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20024800.pdf,parsed,1,,2026-11-13T10:35:43,text-2,0
 House,20024787,Greg Steube,FL,17,2024-04-06,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20024787.pdf,parsed,1,,2026-11-13T10:35:44,text-2,0
-House,8220192,Rohit Khanna,CA,17,2024-04-05,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/8220192.pdf,needs_ai,0,,2026-11-20T11:50:34,,0
+House,8220192,Rohit Khanna,CA,17,2024-04-05,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/8220192.pdf,review,271,,2026-11-22T11:11:12,ai-3,0
 House,20024810,Tracey Robert Mann,KS,01,2024-04-05,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20024810.pdf,parsed,1,,2026-11-13T10:35:45,text-2,0
 House,20024797,Earl Blumenauer,OR,03,2024-04-04,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20024797.pdf,parsed,2,,2026-11-13T10:35:46,text-2,0
 House,20024795,Katherine M. Clark,MA,05,2024-04-04,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20024795.pdf,parsed,2,,2026-11-13T10:35:46,text-2,0
@@ -1751,7 +1751,7 @@ House,20024769,Donald Sternoff Beyer Jr,VA,08,2024-03-31,efile,https://disclosur
 Senate,cef7e9b3-a592-4044-80bc-4c2100a0e5cc,Thomas R Carper,,,2024-03-29,efile,https://efdsearch.senate.gov/search/view/ptr/cef7e9b3-a592-4044-80bc-4c2100a0e5cc/,parsed,30,,2026-11-13T08:28:13,,
 House,20024754,Kathy Castor,FL,14,2024-03-28,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20024754.pdf,parsed,1,,2026-11-13T10:35:49,text-2,0
 House,20024758,Mark Pocan,WI,02,2024-03-28,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20024758.pdf,parsed,2,,2026-11-13T10:35:49,text-2,0
-Senate,9a6471ce-564f-4f65-8a3d-2c12370bf870,RICHARD BLUMENTHAL,,,2024-03-28,paper,https://efdsearch.senate.gov/search/view/paper/9a6471ce-564f-4f65-8a3d-2c12370bf870/,needs_review,0,,2026-11-20T11:50:35,,0
+Senate,9a6471ce-564f-4f65-8a3d-2c12370bf870,RICHARD BLUMENTHAL,,,2024-03-28,paper,https://efdsearch.senate.gov/search/view/paper/9a6471ce-564f-4f65-8a3d-2c12370bf870/,parsed,4,,2026-11-22T11:21:38,ai-3,0
 House,20024750,Nanette Barragan,CA,44,2024-03-27,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20024750.pdf,parsed,2,,2026-11-13T10:35:50,text-2,0
 House,20024743,Brian Mast,FL,21,2024-03-26,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20024743.pdf,parsed,3,,2026-11-13T10:35:51,text-2,0
 House,20024722,Michael C. Burgess,TX,26,2024-03-22,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20024722.pdf,parsed,2,,2026-11-13T10:35:51,text-2,0
@@ -1762,13 +1762,13 @@ House,20024606,Jonathan Jackson,IL,01,2024-03-19,efile,https://disclosures-clerk
 Senate,4ab7f389-ca00-4a1e-b9e7-6eb91b8c3ebe,"A. Mitchell McConnell, Jr.",,,2024-03-19,efile,https://efdsearch.senate.gov/search/view/ptr/4ab7f389-ca00-4a1e-b9e7-6eb91b8c3ebe/,parsed,1,,2026-11-13T08:28:07,,
 House,20024685,Thomas H. Kean Jr.,NJ,07,2024-03-18,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20024685.pdf,parsed,2,,2026-11-13T10:35:55,text-2,0
 House,20024705,Max Miller,OH,07,2024-03-18,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20024705.pdf,parsed,1,,2026-11-13T10:35:55,text-2,0
-House,8220188,Michael T. McCaul,TX,10,2024-03-15,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/8220188.pdf,needs_ai,0,,2026-11-20T11:50:35,,0
+House,8220188,Michael T. McCaul,TX,10,2024-03-15,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/8220188.pdf,review,15,,2026-11-22T11:21:54,ai-3,0
 House,20024660,Greg Steube,FL,17,2024-03-15,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20024660.pdf,parsed,1,,2026-11-13T10:35:56,text-2,0
 Senate,43a6c37c-44f6-4749-9232-1e9725258b41,Rick Scott,,,2024-03-15,efile,https://efdsearch.senate.gov/search/view/ptr/43a6c37c-44f6-4749-9232-1e9725258b41/,parsed,17,,2026-11-13T08:28:03,,
 Senate,2fc8e17b-0db3-404a-b617-b180804063c6,Thomas H Tuberville,,,2024-03-15,efile,https://efdsearch.senate.gov/search/view/ptr/2fc8e17b-0db3-404a-b617-b180804063c6/,parsed,8,,2026-11-13T08:28:03,,
 Senate,94bc262a-9045-40d2-be53-18fd4ee6568c,Shelley M Capito,,,2024-03-15,efile,https://efdsearch.senate.gov/search/view/ptr/94bc262a-9045-40d2-be53-18fd4ee6568c/,parsed,4,,2026-11-13T08:28:04,,
 House,20024677,Mark Dr Green,TN,07,2024-03-13,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20024677.pdf,parsed,1,,2026-11-13T10:35:57,text-2,0
-House,8220177,Doug Lamborn,CO,05,2024-03-13,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/8220177.pdf,needs_ai,0,,2026-11-20T11:50:36,,0
+House,8220177,Doug Lamborn,CO,05,2024-03-13,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/8220177.pdf,parsed,4,,2026-11-22T11:24:04,ai-3,0
 House,8220176,Harold Dallas Rogers,KY,05,2024-03-13,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/8220176.pdf,parsed,0,,2026-11-15T09:31:07,ai-2,0
 House,20024671,Earl Blumenauer,OR,03,2024-03-12,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20024671.pdf,parsed,1,,2026-11-13T10:35:59,text-2,0
 House,20024673,Michael Garcia,CA,27,2024-03-12,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20024673.pdf,parsed,1,,2026-11-13T10:35:59,text-2,0
@@ -1783,7 +1783,7 @@ House,20024627,Michael C. Burgess,TX,26,2024-03-07,efile,https://disclosures-cle
 House,20024596,Virginia Foxx,NC,05,2024-03-07,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20024596.pdf,parsed,16,,2026-11-13T10:36:05,text-2,0
 House,20024612,Josh Gottheimer,NJ,05,2024-03-07,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20024612.pdf,parsed,42,,2026-11-13T10:36:06,text-2,0
 House,20024632,Pete Sessions,TX,17,2024-03-07,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20024632.pdf,review,6,,2026-11-13T10:36:08,text-2,0
-House,8220173,Rohit Khanna,CA,17,2024-03-06,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/8220173.pdf,needs_ai,0,,2026-11-20T11:50:36,,0
+House,8220173,Rohit Khanna,CA,17,2024-03-06,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/8220173.pdf,review,196,,2026-11-22T11:24:58,ai-3,0
 Senate,c56a14be-de98-45f7-8dd0-9c6e92d3619c,Christopher A Coons,,,2024-03-06,efile,https://efdsearch.senate.gov/search/view/ptr/c56a14be-de98-45f7-8dd0-9c6e92d3619c/,parsed,2,,2026-11-13T08:27:49,,
 House,20024588,Katherine M. Clark,MA,05,2024-03-05,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20024588.pdf,parsed,3,,2026-11-13T10:36:09,text-2,0
 House,20024611,Lloyd Doggett,TX,37,2024-03-05,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20024611.pdf,parsed,1,,2026-11-13T10:36:09,text-2,0
@@ -1816,7 +1816,7 @@ Senate,3dabcae6-b7fd-4dd0-9ece-e936d07def11,Thomas H Tuberville,,,2024-02-14,efi
 Senate,ea190d96-3d92-4617-b44e-467b6fc05a93,Shelley M Capito,,,2024-02-14,efile,https://efdsearch.senate.gov/search/view/ptr/ea190d96-3d92-4617-b44e-467b6fc05a93/,parsed,2,,2026-11-13T08:27:30,,
 House,20024492,Cliff Bentz,OR,02,2024-02-13,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20024492.pdf,parsed,1,,2026-11-13T10:36:24,text-2,0
 House,20024494,Mike Kelly,PA,16,2024-02-13,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20024494.pdf,parsed,2,,2026-11-13T10:36:24,text-2,0
-House,8220162,Michael T. McCaul,TX,10,2024-02-13,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/8220162.pdf,needs_ai,0,,2026-11-20T11:50:37,,0
+House,8220162,Michael T. McCaul,TX,10,2024-02-13,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/8220162.pdf,review,182,,2026-11-22T11:32:49,ai-3,0
 House,20024435,Katherine M. Clark,MA,05,2024-02-12,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20024435.pdf,parsed,1,,2026-11-13T10:36:25,text-2,0
 House,20024481,Kevin Hern,OK,01,2024-02-11,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20024481.pdf,parsed,5,,2026-11-13T10:36:26,text-2,0
 House,8220147,"Charles J. ""Chuck"" Fleischmann",TN,03,2024-02-09,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/8220147.pdf,parsed,17,,2026-11-15T09:41:24,ai-2,0
@@ -1829,13 +1829,13 @@ House,20024437,Michael C. Burgess,TX,26,2024-02-05,efile,https://disclosures-cle
 House,20024425,Suzan K. DelBene,WA,01,2024-02-05,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20024425.pdf,parsed,3,,2026-11-13T10:36:32,text-2,0
 House,20024424,Virginia Foxx,NC,05,2024-02-05,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20024424.pdf,parsed,11,,2026-11-13T10:36:33,text-2,0
 House,20024445,William R. Keating,MA,09,2024-02-05,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20024445.pdf,parsed,5,,2026-11-13T10:36:34,text-2,0
-House,8220127,Rohit Khanna,CA,17,2024-02-05,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/8220127.pdf,needs_ai,0,,2026-11-20T11:50:37,,0
+House,8220127,Rohit Khanna,CA,17,2024-02-05,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/8220127.pdf,review,485,,2026-11-22T11:37:30,ai-3,0
 Senate,9335e60a-450c-464e-8452-8602eec4d2ad,RICHARD BLUMENTHAL,,,2024-02-05,paper,https://efdsearch.senate.gov/search/view/paper/9335e60a-450c-464e-8452-8602eec4d2ad/,parsed,4,,2026-11-15T09:50:24,ai-2,0
 Senate,b4ca9424-b0ec-49dc-8fa5-12df45a24a11,Thomas R Carper,,,2024-02-02,efile,https://efdsearch.senate.gov/search/view/ptr/b4ca9424-b0ec-49dc-8fa5-12df45a24a11/,parsed,18,,2026-11-13T08:27:15,,
 House,20024413,Mark Dr Green,TN,07,2024-02-01,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20024413.pdf,parsed,1,,2026-11-13T10:36:35,text-2,0
 House,20024403,Debbie Wasserman Schultz,FL,25,2024-01-31,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20024403.pdf,parsed,2,,2026-11-13T10:36:36,text-2,0
-House,8220119,Nicole Malliotakis,NY,11,2024-01-30,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/8220119.pdf,needs_ai,0,,2026-11-20T11:50:38,,0
-House,8220118,Anna Paulina Luna,FL,13,2024-01-29,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/8220118.pdf,needs_ai,0,,2026-11-20T11:50:38,,0
+House,8220119,Nicole Malliotakis,NY,11,2024-01-30,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/8220119.pdf,parsed,1,,2026-11-22T11:49:22,ai-3,0
+House,8220118,Anna Paulina Luna,FL,13,2024-01-29,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/8220118.pdf,review,1,,2026-11-22T11:50:15,ai-3,0
 House,20024392,Rudy Yakym III,IN,02,2024-01-29,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20024392.pdf,parsed,1,,2026-11-13T10:36:37,text-2,0
 House,20024309,Thomas H. Kean Jr.,NJ,07,2024-01-26,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20024309.pdf,parsed,1,,2026-11-13T10:36:38,text-2,0
 House,20024369,Doris O. Matsui,CA,07,2024-01-26,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20024369.pdf,parsed,6,,2026-11-13T10:36:38,text-2,0
@@ -1862,7 +1862,7 @@ House,20023767,William R. Keating,MA,09,2024-01-16,efile,https://disclosures-cle
 Senate,61e98942-0ed6-491e-8f7f-5d5386b45073,Mark R Warner,,,2024-01-16,efile,https://efdsearch.senate.gov/search/view/ptr/61e98942-0ed6-491e-8f7f-5d5386b45073/,parsed,18,,2026-11-13T08:26:55,,
 Senate,750f4fe2-9632-4d95-b6e2-2248e29983d8,"Angus S King, Jr.",,,2024-01-16,efile,https://efdsearch.senate.gov/search/view/ptr/750f4fe2-9632-4d95-b6e2-2248e29983d8/,parsed,2,,2026-11-13T08:26:56,,
 House,20024305,Kevin Hern,OK,01,2024-01-13,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20024305.pdf,parsed,16,,2026-11-13T10:36:50,text-2,0
-House,8220106,Michael T. McCaul,TX,10,2024-01-12,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2023/8220106.pdf,needs_ai,0,,2026-11-20T11:50:39,,0
+House,8220106,Michael T. McCaul,TX,10,2024-01-12,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2023/8220106.pdf,review,226,,2026-11-22T11:50:34,ai-3,0
 House,20024253,Jonathan Jackson,IL,01,2024-01-12,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20024253.pdf,parsed,5,,2026-11-13T10:36:51,text-2,0
 House,20024300,Mike Kelly,PA,16,2024-01-12,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20024300.pdf,parsed,1,,2026-11-13T10:36:52,text-2,0
 House,20024231,Kathy Manning,NC,06,2024-01-12,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20024231.pdf,parsed,23,,2026-11-13T10:36:52,text-2,0
@@ -1871,7 +1871,7 @@ Senate,09ad11ea-1ccd-488f-b0b4-d545f6571714,Shelley M Capito,,,2024-01-12,efile,
 Senate,99b8e5a1-b98a-4083-a6c8-8cd634a14378,Thomas H Tuberville,,,2024-01-12,efile,https://efdsearch.senate.gov/search/view/ptr/99b8e5a1-b98a-4083-a6c8-8cd634a14378/,parsed,15,,2026-11-13T08:26:52,,
 House,20024277,Richard W. Allen,GA,12,2024-01-11,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20024277.pdf,parsed,4,,2026-11-13T10:36:54,text-2,0
 Senate,0fb62423-2e23-4ec0-ba06-c07646b316d4,John W Hickenlooper,,,2024-01-11,efile,https://efdsearch.senate.gov/search/view/ptr/0fb62423-2e23-4ec0-ba06-c07646b316d4/,parsed,1,,2026-11-13T08:26:47,,
-House,8220100,Blaine Luetkemeyer,MO,03,2024-01-10,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2023/8220100.pdf,needs_ai,0,,2026-11-20T11:50:39,,0
+House,8220100,Blaine Luetkemeyer,MO,03,2024-01-10,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2023/8220100.pdf,parsed,1,,2026-11-22T11:54:49,ai-3,0
 House,20024215,James French Hill,AR,02,2024-01-10,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20024215.pdf,parsed,2,,2026-11-13T10:36:55,text-2,0
 Senate,5cf58a0a-aa8f-4a64-972a-fcf9c5532b76,"William F Hagerty, IV",,,2024-01-10,efile,https://efdsearch.senate.gov/search/view/ptr/5cf58a0a-aa8f-4a64-972a-fcf9c5532b76/,parsed,1,,2026-11-13T08:26:45,,
 House,20024275,Michael A. Collins,GA,10,2024-01-09,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20024275.pdf,parsed,2,,2026-11-13T10:36:56,text-2,0
@@ -1880,7 +1880,7 @@ House,20024268,Lloyd Doggett,TX,37,2024-01-08,efile,https://disclosures-clerk.ho
 Senate,6a8e509d-cde7-4266-848e-a27fa42ba438,John Boozman,,,2024-01-08,efile,https://efdsearch.senate.gov/search/view/ptr/6a8e509d-cde7-4266-848e-a27fa42ba438/,parsed,5,,2026-11-13T08:26:42,,
 Senate,a7afd87e-027e-4b96-995c-fc3af98e6009,John Boozman,,,2024-01-08,efile,https://efdsearch.senate.gov/search/view/ptr/a7afd87e-027e-4b96-995c-fc3af98e6009/,parsed,5,,2026-11-13T08:26:43,,
 House,20024248,Josh Gottheimer,NJ,05,2024-01-07,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20024248.pdf,parsed,42,,2026-11-13T10:36:58,text-2,0
-House,8220092,Rohit Khanna,CA,17,2024-01-04,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2023/8220092.pdf,needs_ai,0,,2026-11-20T11:50:40,,0
+House,8220092,Rohit Khanna,CA,17,2024-01-04,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2023/8220092.pdf,needs_review,0,answer cut off at 8000 tokens for 1 pages,2026-11-22T11:55:28,,
 House,20024254,Earl Blumenauer,OR,03,2024-01-04,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20024254.pdf,parsed,4,,2026-11-13T10:36:59,text-2,0
 House,20024188,Steve Cohen,TN,09,2024-01-04,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20024188.pdf,parsed,2,,2026-11-13T10:37:00,text-2,0
 House,20024230,Virginia Foxx,NC,05,2024-01-04,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20024230.pdf,parsed,4,,2026-11-13T10:37:01,text-2,0
@@ -1905,7 +1905,7 @@ House,20024169,Michael C. Burgess,TX,26,2023-12-18,efile,https://disclosures-cle
 House,20024166,Lloyd Doggett,TX,37,2023-12-18,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2023/20024166.pdf,parsed,1,,2026-11-13T10:37:09,text-2,0
 Senate,87e49767-79f9-4e2f-8ad1-30585d4bd673,"A. Mitchell McConnell, Jr.",,,2023-12-18,efile,https://efdsearch.senate.gov/search/view/ptr/87e49767-79f9-4e2f-8ad1-30585d4bd673/,parsed,1,,2026-11-13T08:26:23,,
 House,20024152,John Curtis,UT,03,2023-12-15,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2023/20024152.pdf,parsed,57,,2026-11-13T10:37:10,text-2,0
-House,8220079,Harold Dallas Rogers,KY,05,2023-12-15,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2023/8220079.pdf,needs_ai,0,,2026-11-20T11:50:40,,0
+House,8220079,Harold Dallas Rogers,KY,05,2023-12-15,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2023/8220079.pdf,parsed,5,,2026-11-22T12:02:33,ai-3,0
 Senate,56e94501-503d-480f-96f0-354febac789e,Katie Britt,,,2023-12-15,efile,https://efdsearch.senate.gov/search/view/ptr/56e94501-503d-480f-96f0-354febac789e/,parsed,1,,2026-11-13T08:26:20,,
 Senate,d4e95f06-60b2-43c5-9084-91ae10b9fde3,Thomas H Tuberville,,,2023-12-15,efile,https://efdsearch.senate.gov/search/view/ptr/d4e95f06-60b2-43c5-9084-91ae10b9fde3/,parsed,13,,2026-11-13T08:26:21,,
 Senate,8372e04b-ed41-41f2-a780-f4ce4db9cac0,RICHARD BLUMENTHAL,,,2023-12-15,paper,https://efdsearch.senate.gov/search/view/paper/8372e04b-ed41-41f2-a780-f4ce4db9cac0/,parsed,6,,2026-11-15T10:05:37,ai-2,0
@@ -1915,17 +1915,17 @@ House,20024080,Suzan K. DelBene,WA,01,2023-12-13,efile,https://disclosures-clerk
 House,20023412,James French Hill,AR,02,2023-12-13,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2023/20023412.pdf,parsed,11,,2026-11-13T10:37:14,text-2,0
 Senate,f80f54a3-981e-4f11-8774-2a919db38389,John Boozman,,,2023-12-12,efile,https://efdsearch.senate.gov/search/view/ptr/f80f54a3-981e-4f11-8774-2a919db38389/,parsed,11,,2026-11-13T08:26:15,,
 House,20024107,Michael Patrick Guest,MS,03,2023-12-11,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2023/20024107.pdf,parsed,5,,2026-11-13T10:37:15,text-2,0
-House,8220074,Ann Wagner,MO,02,2023-12-11,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2023/8220074.pdf,needs_ai,0,,2026-11-20T11:50:41,,0
+House,8220074,Ann Wagner,MO,02,2023-12-11,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2023/8220074.pdf,review,3,,2026-11-22T12:03:25,ai-3,0
 Senate,f5f28f25-43fe-48f8-af40-ea83c8d6f0a9,Shelley M Capito,,,2023-12-11,efile,https://efdsearch.senate.gov/search/view/ptr/f5f28f25-43fe-48f8-af40-ea83c8d6f0a9/,parsed,1,,2026-11-13T08:26:14,,
 House,20024120,Mike Kelly,PA,16,2023-12-10,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2023/20024120.pdf,parsed,2,,2026-11-13T10:37:16,text-2,0
 Senate,f23ecd4c-3174-4fba-90ae-a9a825b4a22f,Rick Scott,,,2023-12-10,efile,https://efdsearch.senate.gov/search/view/ptr/f23ecd4c-3174-4fba-90ae-a9a825b4a22f/,parsed,16,,2026-11-13T08:26:12,,
-House,8220078,Michael T. McCaul,TX,10,2023-12-09,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2023/8220078.pdf,needs_ai,0,,2026-11-20T11:50:41,,0
+House,8220078,Michael T. McCaul,TX,10,2023-12-09,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2023/8220078.pdf,review,245,,2026-11-22T12:04:34,ai-3,0
 House,20024097,Josh Gottheimer,NJ,05,2023-12-08,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2023/20024097.pdf,parsed,33,,2026-11-13T10:37:17,text-2,0
 House,20024110,Michael Garcia,CA,27,2023-12-07,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2023/20024110.pdf,parsed,1,,2026-11-13T10:37:18,text-2,0
 House,20024104,Kevin Hern,OK,01,2023-12-07,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2023/20024104.pdf,parsed,8,,2026-11-13T10:37:19,text-2,0
 House,20024109,Carol Devine Miller,WV,01,2023-12-07,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2023/20024109.pdf,parsed,4,,2026-11-13T10:37:19,text-2,0
 Senate,b46702f8-b4c8-4d63-8a57-fbd4399cabab,Sheldon Whitehouse,,,2023-12-07,efile,https://efdsearch.senate.gov/search/view/ptr/b46702f8-b4c8-4d63-8a57-fbd4399cabab/,parsed,5,,2026-11-13T08:26:08,,
-House,8220067,Rohit Khanna,CA,17,2023-12-06,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2023/8220067.pdf,needs_ai,0,,2026-11-20T11:50:42,,0
+House,8220067,Rohit Khanna,CA,17,2023-12-06,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2023/8220067.pdf,review,224,,2026-11-22T12:09:33,ai-3,0
 House,8220068,Doug Lamborn,CO,05,2023-12-06,paper,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2023/8220068.pdf,needs_ai,0,,2026-11-20T11:50:42,,0
 House,20024098,Kathy Manning,NC,06,2023-12-06,efile,https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2023/20024098.pdf,parsed,4,,2026-11-13T10:37:21,text-2,0
 Senate,bd8a3776-e556-4cae-8d29-2169a54a7dd7,"Joseph Manchin, III",,,2023-12-06,efile,https://efdsearch.senate.gov/search/view/ptr/bd8a3776-e556-4cae-8d29-2169a54a7dd7/,parsed,1,,2026-11-13T08:26:05,,
