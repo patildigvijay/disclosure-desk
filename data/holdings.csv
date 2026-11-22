@@ -975,47 +975,44 @@ C001123,C001123,Gilbert Cisneros,KVUE,Kenvue Inc. Common Stock,Consumer Staples,
 C001123,C001123,Gilbert Cisneros,BRO,"Brown & Brown, Inc. Common Stock",Financials,65,0.0,2025-11-18,2026-01-09,Reduce,Self=100,False,,2026-11-20
 C001123,C001123,Gilbert Cisneros,PGR,Progressive Corporation,Financials,147,0.0,2026-01-09,2026-07-17,Reduce,Self=100,False,,2026-11-20
 C001123,C001123,Gilbert Cisneros,CME,CME Group Inc. - Class A Common Stock,Financials,244,0.0,2026-01-09,2026-06-16,Reduce,Self=100,False,,2026-11-20
-D000032,D000032,Byron Donalds,NVDA,Nvidia Corporation,Technology,47847,5.79,2023-10-19,2023-10-19,Add,Spouse=100,False,,2026-11-20
-D000032,D000032,Byron Donalds,GOOG,Alphabet Inc Cap Stock Cl C,Technology,45353,5.49,2023-10-19,2024-02-22,Add,Spouse=100,False,,2026-11-20
-D000032,D000032,Byron Donalds,HWM,Howmet Aerospace Inc. Common Stock,Materials,42026,5.09,2022-08-12,2026-08-11,Reduce,Spouse=71;Self=29,False,,2026-11-20
-D000032,D000032,Byron Donalds,MPWR,"Monolithic Power Systems, Inc. - Common Stock",Technology,38831,4.7,2022-12-07,2026-06-05,Reduce,Self=50;Spouse=50,False,,2026-11-20
-D000032,D000032,Byron Donalds,APH,Amphenol Corporation Common Stock,Technology,35148,4.26,2025-04-10,2025-04-10,Add,Self=50;Spouse=50,False,,2026-11-20
-D000032,D000032,Byron Donalds,MCK,McKesson Corporation Common Stock,Health Care,34616,4.19,2024-10-01,2024-10-01,Add,Spouse=50;Self=50,False,,2026-11-20
-D000032,D000032,Byron Donalds,ANET,"Arista Networks, Inc. Common Stock",Technology,32326,3.91,2025-03-20,2025-03-20,Add,Self=50;Spouse=50,False,,2026-11-20
-D000032,D000032,Byron Donalds,WAT,Waters Corp (WAT),Technology,32244,3.9,2022-08-12,2023-02-24,Add,Spouse=67;Self=33,False,,2026-11-20
-D000032,D000032,Byron Donalds,META,Meta Platforms Inc Cl A (META),Technology,30777,3.73,2023-07-05,2023-07-05,Add,Self=50;Spouse=50,False,,2026-11-20
-D000032,D000032,Byron Donalds,LRCX,Lam Research Corporation - Common Stock,Industrials,29772,3.61,2025-08-07,2025-08-07,Add,Spouse=50;Self=50,False,,2026-11-20
-D000032,D000032,Byron Donalds,V,Visa Inc.,Industrials,29420,3.56,2025-04-10,2025-10-24,Add,Spouse=66;Self=34,False,,2026-11-20
-D000032,D000032,Byron Donalds,AVGO,Broadcom Inc. - Common Stock,Technology,25858,3.13,2025-03-20,2025-03-20,Add,Self=50;Spouse=50,False,,2026-11-20
-D000032,D000032,Byron Donalds,PGR,Progressive Corporation,Financials,25282,3.06,2025-03-20,2025-10-24,Add,Self=68;Spouse=32,True,House Financial Services,2026-11-20
-D000032,D000032,Byron Donalds,MSFT,Microsoft Corp (MSFT),Technology,23559,2.85,2023-07-05,2023-07-05,Add,Self=50;Spouse=50,False,,2026-11-20
-D000032,D000032,Byron Donalds,FTNT,"Fortinet, Inc. - Common Stock",Technology,23124,2.8,2021-05-05,2025-10-09,Add,Spouse=50;Self=50,False,,2026-11-20
-D000032,D000032,Byron Donalds,LLY,Eli Lilly and Company Common Stock,Health Care,23140,2.8,2026-04-02,2026-04-02,Add,Spouse=50;Self=50,False,,2026-11-20
-D000032,D000032,Byron Donalds,AMZN,"Amazon.com, Inc. - Common Stock",Consumer Discretionary,20258,2.45,2025-03-20,2025-03-20,Add,Spouse=50;Self=50,False,,2026-11-20
-D000032,D000032,Byron Donalds,PYPL,"PayPal Holdings, Inc. - Common Stock",Industrials,19102,2.31,2025-03-20,2026-03-13,Add,Spouse=50;Self=50,False,,2026-11-20
-D000032,D000032,Byron Donalds,TW,Tradeweb Markets Inc. - Class A Common Stock,Financials,18684,2.26,2025-03-20,2025-10-09,Add,Self=50;Spouse=50,True,House Financial Services,2026-11-20
-D000032,D000032,Byron Donalds,TT,Trane Technologies Inc (TT),Technology,18352,2.22,2021-05-05,2021-05-05,Buy,Spouse=100,False,,2026-11-20
-D000032,D000032,Byron Donalds,MRVL,"Marvell Technology, Inc. - Common Stock",Technology,18284,2.21,2026-04-02,2026-04-02,Add,Spouse=50;Self=50,False,,2026-11-20
-D000032,D000032,Byron Donalds,PH,Parker-Hannifin Corporation Common Stock,Industrials,17140,2.08,2021-05-05,2026-08-11,Reduce,Spouse=100,False,,2026-11-20
-D000032,D000032,Byron Donalds,IDXX,"IDEXX Laboratories, Inc. - Common Stock",Health Care,16895,2.05,2025-09-04,2025-09-04,Add,Spouse=50;Self=50,False,,2026-11-20
-D000032,D000032,Byron Donalds,FIX,"Comfort Systems USA, Inc. Common Stock",Industrials,16641,2.02,2025-12-04,2025-12-04,Add,Self=50;Spouse=50,False,,2026-11-20
-D000032,D000032,Byron Donalds,CCL,Carnival Corporation Common Stock,Transportation,15272,1.85,2025-10-09,2025-10-09,Add,Self=50;Spouse=50,False,,2026-11-20
-D000032,D000032,Byron Donalds,MNST,Monster Beverage Corp (MNST),Consumer Staples,14805,1.79,2021-05-05,2021-05-05,Buy,Spouse=100,False,,2026-11-20
-D000032,D000032,Byron Donalds,MA,Mastercard Cl A (MA),Industrials,14003,1.7,2021-05-05,2021-05-05,Buy,Spouse=100,False,,2026-11-20
-D000032,D000032,Byron Donalds,NOW,"ServiceNow, Inc. Common Stock",Technology,13165,1.59,2026-02-10,2026-02-10,Add,Self=50;Spouse=50,False,,2026-11-20
-D000032,D000032,Byron Donalds,IBKR,"Interactive Brokers Group, Inc. - Class A Common Stock",Financials,12900,1.56,2026-10-02,2026-10-02,Add,Spouse=50;Self=50,True,House Financial Services,2026-11-20
-D000032,D000032,Byron Donalds,CDNS,"Cadence Design Systems, Inc. - Common Stock",Technology,11765,1.42,2021-05-05,2026-06-05,Reduce,Spouse=100,False,,2026-11-20
-D000032,D000032,Byron Donalds,EW,Edwards Life Sciences Corp,Health Care,9971,1.21,2021-03-05,2023-10-19,Reduce,Self=100,False,,2026-11-20
-D000032,D000032,Byron Donalds,CMA,Comerica Inc (CMA),,9882,1.2,2022-08-12,2022-12-07,Reduce,Spouse=100,False,,2026-01-30
-D000032,D000032,Byron Donalds,SHOP,Shopify Inc Cl A (SHOP),Technology,8835,1.07,2021-01-05,2022-05-03,Reduce,Spouse=100,False,,2026-11-20
-D000032,D000032,Byron Donalds,RVTY,Revvity Inc. (RVTY),Technology,8618,1.04,2021-05-05,2021-05-05,Buy,Spouse=100,False,,2026-11-20
-D000032,D000032,Byron Donalds,ARCH,Arch Resources Cl A (ARCH),,8251,1.0,2022-12-07,2023-07-05,Reduce,Spouse=100,False,,2025-01-13
-D000032,D000032,Byron Donalds,STLA,Stellantis NV (STLA),Consumer Discretionary,7443,0.9,2021-05-05,2022-10-07,Add,Spouse=63;Self=37,False,,2026-11-20
-D000032,D000032,Byron Donalds,RHI,Robert Half Inc (RHI),Industrials,6931,0.84,2021-08-03,2022-04-05,Add,Self=53;Spouse=47,False,,2026-11-20
-D000032,D000032,Byron Donalds,ELV,Elevance Health Inc,Health Care,6849,0.83,2022-08-12,2023-10-19,Reduce,Self=100,False,,2026-11-20
-D000032,D000032,Byron Donalds,STM,Stmicroelectronics,Technology,6789,0.82,2023-02-24,2023-10-19,Reduce,Self=100,False,,2026-11-20
-D000032,D000032,Byron Donalds,WLK,Westlake Corporation (WLK),Materials,4842,0.59,2022-05-03,2022-08-12,Buy,Spouse=100,False,,2026-11-20
-D000032,D000032,Byron Donalds,QDEL,Quidelortho Corp,Health Care,719,0.09,2022-12-07,2023-10-19,Reduce,Self=100,False,,2026-11-20
+D000032,D000032,Byron Donalds,NVDA,Nvidia Corporation (NVDA),Technology,71770,8.59,2023-10-19,2023-10-19,Add,Spouse=67;Self=33,False,,2026-11-20
+D000032,D000032,Byron Donalds,HWM,Howmet Aerospace Inc. Common Stock,Materials,42026,5.03,2022-08-12,2026-08-11,Reduce,Spouse=71;Self=29,False,,2026-11-20
+D000032,D000032,Byron Donalds,MPWR,"Monolithic Power Systems, Inc. - Common Stock",Technology,38831,4.65,2022-12-07,2026-06-05,Reduce,Self=50;Spouse=50,False,,2026-11-20
+D000032,D000032,Byron Donalds,APH,Amphenol Corporation Common Stock,Technology,35148,4.21,2025-04-10,2025-04-10,Add,Self=50;Spouse=50,False,,2026-11-20
+D000032,D000032,Byron Donalds,MCK,McKesson Corporation Common Stock,Health Care,34616,4.14,2024-10-01,2024-10-01,Add,Spouse=50;Self=50,False,,2026-11-20
+D000032,D000032,Byron Donalds,ANET,"Arista Networks, Inc. Common Stock",Technology,32326,3.87,2025-03-20,2025-03-20,Add,Self=50;Spouse=50,False,,2026-11-20
+D000032,D000032,Byron Donalds,META,Meta Platforms Inc Cl A (META),Technology,30777,3.68,2023-07-05,2023-07-05,Add,Self=50;Spouse=50,False,,2026-11-20
+D000032,D000032,Byron Donalds,GOOG,Alphabet Inc Cap Stock Cl C (GOOG),Technology,30682,3.67,2023-10-19,2023-10-19,Add,Self=50;Spouse=50,False,,2026-11-20
+D000032,D000032,Byron Donalds,LRCX,Lam Research Corporation - Common Stock,Industrials,29772,3.56,2025-08-07,2025-08-07,Add,Spouse=50;Self=50,False,,2026-11-20
+D000032,D000032,Byron Donalds,V,Visa Inc.,Industrials,29420,3.52,2025-04-10,2025-10-24,Add,Spouse=66;Self=34,False,,2026-11-20
+D000032,D000032,Byron Donalds,AVGO,Broadcom Inc. - Common Stock,Technology,25858,3.09,2025-03-20,2025-03-20,Add,Self=50;Spouse=50,False,,2026-11-20
+D000032,D000032,Byron Donalds,PGR,Progressive Corporation,Financials,25282,3.03,2025-03-20,2025-10-24,Add,Self=68;Spouse=32,True,House Financial Services,2026-11-20
+D000032,D000032,Byron Donalds,MSFT,Microsoft Corp (MSFT),Technology,23559,2.82,2023-07-05,2023-07-05,Add,Self=50;Spouse=50,False,,2026-11-20
+D000032,D000032,Byron Donalds,FTNT,"Fortinet, Inc. - Common Stock",Technology,23124,2.77,2021-05-05,2025-10-09,Add,Spouse=50;Self=50,False,,2026-11-20
+D000032,D000032,Byron Donalds,LLY,Eli Lilly and Company Common Stock,Health Care,23140,2.77,2026-04-02,2026-04-02,Add,Spouse=50;Self=50,False,,2026-11-20
+D000032,D000032,Byron Donalds,WAT,Waters Corp (WAT),Technology,21732,2.6,2022-08-12,2023-02-24,Add,Spouse=100,False,,2026-11-20
+D000032,D000032,Byron Donalds,AMZN,"Amazon.com, Inc. - Common Stock",Consumer Discretionary,20258,2.42,2025-03-20,2025-03-20,Add,Spouse=50;Self=50,False,,2026-11-20
+D000032,D000032,Byron Donalds,CMA,Comerica Inc (CMA),,19763,2.36,2022-08-12,2022-08-12,Add,Spouse=50;Self=50,False,,2026-01-30
+D000032,D000032,Byron Donalds,PYPL,"PayPal Holdings, Inc. - Common Stock",Industrials,19102,2.29,2025-03-20,2026-03-13,Add,Spouse=50;Self=50,False,,2026-11-20
+D000032,D000032,Byron Donalds,TW,Tradeweb Markets Inc. - Class A Common Stock,Financials,18684,2.24,2025-03-20,2025-10-09,Add,Self=50;Spouse=50,True,House Financial Services,2026-11-20
+D000032,D000032,Byron Donalds,TT,Trane Technologies Inc (TT),Technology,18352,2.2,2021-05-05,2021-05-05,Buy,Spouse=100,False,,2026-11-20
+D000032,D000032,Byron Donalds,MRVL,"Marvell Technology, Inc. - Common Stock",Technology,18284,2.19,2026-04-02,2026-04-02,Add,Spouse=50;Self=50,False,,2026-11-20
+D000032,D000032,Byron Donalds,APD,Air Prods & Chems Inc. (APD),Materials,18245,2.18,2021-05-05,2021-06-02,Add,Spouse=100,False,,2026-11-20
+D000032,D000032,Byron Donalds,PH,Parker-Hannifin Corporation Common Stock,Industrials,17140,2.05,2021-05-05,2026-08-11,Reduce,Spouse=100,False,,2026-11-20
+D000032,D000032,Byron Donalds,IDXX,"IDEXX Laboratories, Inc. - Common Stock",Health Care,16895,2.02,2025-09-04,2025-09-04,Add,Spouse=50;Self=50,False,,2026-11-20
+D000032,D000032,Byron Donalds,FIX,"Comfort Systems USA, Inc. Common Stock",Industrials,16641,1.99,2025-12-04,2025-12-04,Add,Self=50;Spouse=50,False,,2026-11-20
+D000032,D000032,Byron Donalds,ARCH,Arch Resources Inc Cl A (ARCH),,16502,1.97,2022-12-07,2022-12-07,Add,Self=50;Spouse=50,False,,2025-01-13
+D000032,D000032,Byron Donalds,CCL,Carnival Corporation Common Stock,Transportation,15272,1.83,2025-10-09,2025-10-09,Add,Self=50;Spouse=50,False,,2026-11-20
+D000032,D000032,Byron Donalds,MNST,Monster Beverage Corp (MNST),Consumer Staples,14805,1.77,2021-05-05,2021-05-05,Buy,Spouse=100,False,,2026-11-20
+D000032,D000032,Byron Donalds,MA,Mastercard Cl A (MA),Industrials,14003,1.68,2021-05-05,2021-05-05,Buy,Spouse=100,False,,2026-11-20
+D000032,D000032,Byron Donalds,NOW,"ServiceNow, Inc. Common Stock",Technology,13165,1.58,2026-02-10,2026-02-10,Add,Self=50;Spouse=50,False,,2026-11-20
+D000032,D000032,Byron Donalds,IBKR,"Interactive Brokers Group, Inc. - Class A Common Stock",Financials,12900,1.54,2026-10-02,2026-10-02,Add,Spouse=50;Self=50,True,House Financial Services,2026-11-20
+D000032,D000032,Byron Donalds,CDNS,"Cadence Design Systems, Inc. - Common Stock",Technology,11765,1.41,2021-05-05,2026-06-05,Reduce,Spouse=100,False,,2026-11-20
+D000032,D000032,Byron Donalds,RHI,Robert Half Inc (RHI),Industrials,10638,1.27,2021-08-03,2022-04-05,Add,Spouse=65;Self=35,False,,2026-11-20
+D000032,D000032,Byron Donalds,SHOP,Shopify Inc Cl A (SHOP),Technology,8835,1.06,2021-01-05,2022-05-03,Reduce,Spouse=100,False,,2026-11-20
+D000032,D000032,Byron Donalds,ELV,Elevance Health Inc (ELV),Health Care,6849,0.82,2022-08-12,2023-10-19,Reduce,Self=100,False,,2026-11-20
+D000032,D000032,Byron Donalds,WLK,Westlake Corporation (WLK),Materials,4842,0.58,2022-05-03,2022-08-12,Buy,Spouse=100,False,,2026-11-20
+D000032,D000032,Byron Donalds,STLA,Stellantis NV (STLA),Consumer Discretionary,4706,0.56,2021-05-05,2022-10-07,Add,Spouse=100,False,,2026-11-20
 D000399,D000399,Lloyd Doggett,KO,Coca-Cola Company,Consumer Staples,243486,20.9,2021-12-15,2026-10-01,Add,Self=100,False,,2026-11-20
 D000399,D000399,Lloyd Doggett,JNJ,Johnson & Johnson Common Stock,Health Care,226142,19.41,2022-06-07,2026-09-08,Add,Self=100,True,House Ways and Means,2026-11-20
 D000399,D000399,Lloyd Doggett,IBM,International Business Machines Corporation Common Stock,Technology,216478,18.58,2021-12-10,2026-09-10,Add,Self=100,False,,2026-11-20
@@ -1141,7 +1138,8 @@ G000359,G000359,Lindsey Graham,IBDO,iShares iBonds Dec 2023 Term Corporate ETF,,
 G000563,G000563,Bob Gibbs,GOOGL,Alphabet Inc. - Class A (GOOGL),Technology,58813,41.58,2022-02-02,2022-02-02,Buy,Self=100,False,,2026-11-20
 G000563,G000563,Bob Gibbs,AAPL,Apple Inc.,Technology,55307,39.1,2022-05-11,2022-09-06,Add,Self=100,False,,2026-11-20
 G000563,G000563,Bob Gibbs,TGT,Target Corporation,Consumer Discretionary,27321,19.32,2022-01-06,2022-01-06,Buy,Self=100,False,,2026-11-20
-G000581,G000581,Vicente Gonzalez,AAPL,APPLE INC (COMMON STOCK),Technology,297082,100.0,2025-04-01,2025-04-03,Buy,Self=100,False,,2026-11-20
+G000581,G000581,Vicente Gonzalez,AAPL,APPLE INC (COMMON STOCK),Technology,297082,67.07,2025-04-01,2025-04-03,Buy,Self=100,False,,2026-11-20
+G000581,G000581,Vicente Gonzalez,TSLA,"Tesla, Inc. (Common Stock)",Consumer Discretionary,145860,32.93,2025-03-04,2025-03-12,Add,Self=100,False,,2026-11-20
 G000583,G000583,Josh Gottheimer,NVDA,NVIDIA Corporation - Common Stock,Technology,111445,5.47,2022-01-26,2025-06-24,Add,Joint=100,False,,2026-11-20
 G000583,G000583,Josh Gottheimer,TSLA,"Tesla, Inc. - Common Stock",Consumer Discretionary,80011,3.93,2022-01-26,2025-06-05,Reduce,Joint=100,False,,2026-11-20
 G000583,G000583,Josh Gottheimer,WMT,Walmart Inc. Common Stock,Consumer Discretionary,68319,3.35,2024-12-18,2025-07-28,Reduce,Joint=100,False,,2026-11-20
@@ -1633,444 +1631,442 @@ K000383,K000383,"Angus S King, Jr.",HON,Honeywell International Inc,Defense & Ae
 K000383,K000383,"Angus S King, Jr.",LOW,"Lowe's Companies, Inc. Common Stock",Consumer Discretionary,8258,4.33,2025-07-21,2025-07-21,Buy,Spouse=100,False,,2026-11-20
 K000383,K000383,"Angus S King, Jr.",BAC,Bank of America Corp,Financials,8141,4.27,2025-07-21,2025-07-21,Buy,Spouse=100,False,,2026-11-20
 K000383,K000383,"Angus S King, Jr.",NVDA,Nvidia Corp,Technology,5874,3.08,2025-07-21,2025-07-21,Buy,Spouse=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,NVDA,NVIDIA CORPORATION CMN,Technology,431063,2.77,2022-05-10,2026-10-07,Reduce,Spouse=95;Dependent=5,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,PLTR,PALANTIR TECHNOLOGIES INC CMN CLASS A,Technology,316880,2.04,2022-05-10,2026-07-20,Add,Dependent=77;Spouse=23,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,ELAN,ELANCO ANIMAL HEALTH INCORPORATED CMN,Health Care,242503,1.56,2022-12-07,2026-08-04,Reduce,Spouse=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,PANW,PALO ALTO NETWORKS INC. CMN,Technology,230613,1.48,2024-07-01,2026-05-21,Add,Dependent=55;Spouse=37;Self=8,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,V,VISA INC. CMN CLASS A,Industrials,211991,1.36,2022-08-23,2026-09-25,Add,Dependent=48;Spouse=46;Self=5,False,,2026-11-20
-K000389,K000389,Rohit Khanna,KO,COCA COLA COMPANY (THE) CMN,Consumer Staples,208288,1.34,2022-05-10,2026-09-04,Add,Spouse=54;Dependent=46,False,,2026-11-20
-K000389,K000389,Rohit Khanna,WMT,WALMART INC CMN,Consumer Discretionary,187814,1.21,2022-11-02,2026-10-13,Add,Dependent=83;Spouse=10;Self=7,False,,2026-11-20
-K000389,K000389,Rohit Khanna,TSLA,TESLA INC. CMN,Consumer Discretionary,167401,1.08,2022-08-23,2026-09-25,Add,Dependent=77;Spouse=23,False,,2026-11-20
-K000389,K000389,Rohit Khanna,GEHC,GE HEALTHCARE TECHNOLOGIES INC CMN,Health Care,168652,1.08,2023-10-10,2026-10-08,Add,Spouse=65;Dependent=35,False,,2026-11-20
-K000389,K000389,Rohit Khanna,MU,MICRON TECHNOLOGY INC COM,Technology,164923,1.06,2022-08-23,2026-10-21,Add,Self=94;Spouse=3;Dependent=3,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,DELL,DELL TECHNOLOGIES INC CMN CLASS C,Technology,154725,0.99,2022-05-10,2026-10-28,Reduce,Dependent=99;Spouse=1,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,MPWR,MONOLITHIC POWER SYSTEMS INC CMN,Technology,151991,0.98,2022-05-10,2026-10-13,Add,Dependent=100,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,INTC,INTEL CORPORATION CMN,Technology,151548,0.97,2022-08-23,2026-09-04,Add,Dependent=40;Self=38;Spouse=21,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,AMD,ADVANCED MICRO DEVICES INC CMN,Technology,149847,0.96,2022-11-02,2026-09-04,Add,Spouse=55;Dependent=28;Self=17,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,CHWY,CHEWY INC CMN CLASS A,Consumer Discretionary,148587,0.95,2022-05-10,2026-09-28,Add,Spouse=70;Dependent=30,False,,2026-11-20
-K000389,K000389,Rohit Khanna,PEP,PEPSICO INC CMN,Consumer Staples,145997,0.94,2022-12-06,2026-10-07,Add,Spouse=72;Dependent=23;Self=5,False,,2026-11-20
-K000389,K000389,Rohit Khanna,HUM,HUMANA INC CMN,Health Care,141836,0.91,2022-05-10,2026-10-13,Add,Dependent=67;Spouse=24;Self=8,False,,2026-11-20
-K000389,K000389,Rohit Khanna,VZ,VERIZON COMMUNICATIONS INC CMN,Communications,137090,0.88,2022-11-02,2026-10-07,Reduce,Dependent=69;Spouse=23;Self=8,False,,2026-11-20
-K000389,K000389,Rohit Khanna,UBER,UBER TECHNOLOGIES INC CMN,Industrials,131161,0.84,2023-08-09,2026-10-07,Reduce,Spouse=58;Dependent=26;Self=17,False,,2026-11-20
-K000389,K000389,Rohit Khanna,ABBV,ABBVIE INC CMN,Health Care,124760,0.8,2022-05-10,2026-10-07,Add,Dependent=45;Spouse=34;Self=20,False,,2026-11-20
-K000389,K000389,Rohit Khanna,CSCO,CISCO SYSTEMS INC. CMN,Technology,125033,0.8,2022-05-23,2026-09-25,Add,Dependent=72;Self=23;Spouse=5,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,ANET,ARISTA NETWORKS INC CMN,Technology,121358,0.78,2022-05-10,2026-08-24,Add,Dependent=67;Spouse=19;Self=14,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,AXP,AMERICAN EXPRESS CO CMN,Financials,115116,0.74,2022-05-23,2026-10-02,Add,Dependent=56;Spouse=36;Self=8,False,,2026-11-20
-K000389,K000389,Rohit Khanna,AMZN,AMAZON COM INC CMN,Consumer Discretionary,106352,0.68,2022-05-05,2026-10-02,Reduce,Dependent=46;Spouse=44;Self=10,False,,2026-11-20
-K000389,K000389,Rohit Khanna,JNJ,JOHNSON & JOHNSON CMN,Health Care,101445,0.65,2022-05-10,2026-10-07,Reduce,Dependent=72;Self=28,False,,2026-11-20
-K000389,K000389,Rohit Khanna,DIS,WALT DISNEY COMPANY (THE) CMN,Communications,100715,0.65,2022-05-23,2026-08-03,Add,Dependent=41;Self=30;Spouse=29,False,,2026-11-20
-K000389,K000389,Rohit Khanna,BKNG,BOOKING HOLDINGS INC CMN,Transportation,100891,0.65,2022-05-23,2026-10-07,Add,Dependent=70;Spouse=30,False,,2026-11-20
-K000389,K000389,Rohit Khanna,CRWD,"CROWDSTRIKE HOLDINGS, INC. CMN",Technology,100424,0.65,2024-06-20,2026-04-24,Add,Self=45;Spouse=34;Dependent=21,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,CHD,CHURCH & DWIGHT CO INC CMN,Consumer Staples,98875,0.64,2022-05-23,2026-09-11,Reduce,Spouse=80;Dependent=10;Self=9,False,,2026-11-20
-K000389,K000389,Rohit Khanna,COST,COSTCO WHOLESALE CORPORATION CMN,Consumer Discretionary,95527,0.61,2022-11-02,2026-10-12,Add,Spouse=60;Dependent=40,False,,2026-11-20
-K000389,K000389,Rohit Khanna,BRK.B,BERKSHIRE HATHAWAY INC. CLASS B,Financials,95202,0.61,2023-03-24,2026-02-17,Reduce,Dependent=89;Self=11,False,,2026-11-20
-K000389,K000389,Rohit Khanna,UNH,UNITEDHEALTH GROUP INCORPORATED CMN,Health Care,91969,0.59,2022-05-10,2026-08-24,Reduce,Spouse=47;Dependent=46;Self=6,False,,2026-11-20
-K000389,K000389,Rohit Khanna,MO,ALTRIA GROUP INC. CMN,Consumer Staples,92208,0.59,2022-06-27,2026-09-04,Add,Spouse=77;Dependent=23,False,,2026-11-20
-K000389,K000389,Rohit Khanna,ST,SENSATA TECHNOLOGIES HOLDING PLC CMN,Technology,90284,0.58,2022-12-01,2025-05-08,Add,Spouse=92;Dependent=8,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,AMRZ,AMRIZE LTD CMN,Materials,90123,0.58,2025-10-01,2026-08-12,Add,Spouse=93;Dependent=7,False,,2026-11-20
-K000389,K000389,Rohit Khanna,APH,AMPHENOL CORP CL A (NEW) CMN CLASS A,Technology,86903,0.56,2022-05-23,2026-10-02,Add,Dependent=50;Spouse=29;Self=21,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,MRK,MERCK & CO INC CMN,Health Care,85637,0.55,2022-05-10,2026-10-07,Add,Dependent=53;Spouse=36;Self=12,False,,2026-11-20
-K000389,K000389,Rohit Khanna,MRNA,MODERNA INC CMN,Health Care,85045,0.55,2022-05-10,2026-10-13,Add,Self=53;Spouse=34;Dependent=13,False,,2026-11-20
-K000389,K000389,Rohit Khanna,FTV,FORTIVE CORPORATION CMN,Technology,85355,0.55,2023-03-30,2026-01-29,Add,Dependent=75;Self=13;Spouse=11,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,TFC,TRUIST FINANCIAL CORPORATION CMN,Financials,80259,0.52,2023-06-26,2025-06-26,Add,Dependent=89;Spouse=11,False,,2026-11-20
-K000389,K000389,Rohit Khanna,TJX,TJX COMPANIES INC (NEW) CMN,Consumer Discretionary,79229,0.51,2022-08-23,2026-09-25,Add,Spouse=54;Dependent=46,False,,2026-11-20
-K000389,K000389,Rohit Khanna,PWR,QUANTA SERVICES INC CMN,Industrials,77614,0.5,2022-05-10,2026-09-11,Reduce,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,URBN,URBAN OUTFITTERS INC CMN,Consumer Discretionary,78239,0.5,2023-07-07,2023-08-18,Add,Spouse=76;Dependent=24,False,,2026-11-20
-K000389,K000389,Rohit Khanna,ON,ON SEMICONDUCTOR CORPORATION CMN,Technology,75815,0.49,2022-05-10,2026-10-13,Add,Dependent=59;Spouse=41,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,GOOGL,ALPHABET INC. CMN CLASS A,Technology,75777,0.49,2023-03-06,2025-05-19,Add,Dependent=100,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,INCY,INCYTE CORPORATION CMN,Industrials,72794,0.47,2023-06-26,2026-10-07,Reduce,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,SOLV,SOLVENTUM CORPORATION CMN,Health Care,73840,0.47,2024-07-02,2026-05-01,Add,Spouse=75;Dependent=25,False,,2026-11-20
-K000389,K000389,Rohit Khanna,TRV,"THE TRAVELERS COMPANIES, INC CMN",Financials,69847,0.45,2022-08-23,2026-06-02,Add,Spouse=65;Self=19;Dependent=16,False,,2026-11-20
-K000389,K000389,Rohit Khanna,NET,"CLOUDFLARE, INC. CMN CLASS A",Technology,69992,0.45,2022-08-23,2026-05-21,Add,Dependent=100,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,DOV,DOVER CORPORATION CMN,Industrials,68437,0.44,2022-05-10,2026-09-11,Add,Spouse=88;Dependent=12,False,,2026-11-20
-K000389,K000389,Rohit Khanna,ELV,ELEVANCE HEALTH INC CMN,Health Care,68556,0.44,2022-12-06,2026-07-20,Reduce,Dependent=91;Self=9,False,,2026-11-20
-K000389,K000389,Rohit Khanna,PAYC,"PAYCOM SOFTWARE, INC. CMN",Technology,67207,0.43,2022-05-10,2026-02-24,Add,Dependent=58;Spouse=24;Self=18,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,DHI,D R HORTON INC CMN,Industrials,66826,0.43,2024-04-26,2026-10-13,Add,Spouse=78;Dependent=13;Self=10,False,,2026-11-20
-K000389,K000389,Rohit Khanna,KHC,THE KRAFT HEINZ CO CMN,Consumer Staples,65762,0.42,2023-03-24,2026-04-13,Add,Dependent=61;Spouse=29;Self=10,False,,2026-11-20
-K000389,K000389,Rohit Khanna,TPR,TAPESTRY INC. CMN,Consumer Discretionary,64266,0.41,2022-05-10,2026-09-04,Reduce,Dependent=59;Self=41,False,,2026-11-20
-K000389,K000389,Rohit Khanna,CRM,SALESFORCE INC CMN,Technology,63104,0.41,2022-05-23,2026-10-13,Add,Spouse=73;Self=18;Dependent=10,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,GENI,GENIUS SPORTS LTD CMN,Communications,64549,0.41,2026-02-05,2026-08-05,Reduce,Spouse=79;Dependent=21,False,,2026-11-20
-K000389,K000389,Rohit Khanna,ODFL,OLD DOMINION FREIGHT LINE INC CMN,Transportation,62923,0.4,2022-06-27,2026-10-07,Add,Spouse=49;Dependent=39;Self=11,False,,2026-11-20
-K000389,K000389,Rohit Khanna,BLK,BLACKROCK INC COM,Financials,61355,0.39,2022-06-16,2025-04-04,Add,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,WDC,WESTERN DIGITAL CORPORATION CMN,Technology,59408,0.38,2022-05-10,2026-09-25,Add,Self=82;Spouse=18,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,FTNT,FORTINET INC CMN,Technology,58933,0.38,2022-06-17,2026-08-10,Reduce,Dependent=61;Spouse=22;Self=17,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,ADP,AUTOMATIC DATA PROCESSING INC CMN,Technology,59638,0.38,2022-08-23,2026-05-27,Add,Dependent=81;Spouse=19,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,KR,KROGER COMPANY CMN,Consumer Staples,58639,0.38,2022-08-23,2026-10-07,Add,Spouse=48;Self=36;Dependent=16,False,,2026-11-20
-K000389,K000389,Rohit Khanna,MSI,MOTOROLA SOLUTIONS INC CMN,Technology,59062,0.38,2023-10-10,2026-09-25,Add,Dependent=68;Spouse=32,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,MA,MASTERCARD INCORPORATED CMN CLASS A,Industrials,59473,0.38,2024-07-02,2026-08-03,Add,Spouse=82;Self=18,False,,2026-11-20
-K000389,K000389,Rohit Khanna,UAL,UNITED AIRLINES HOLDINGS INC CMN,Transportation,58652,0.38,2024-08-02,2026-10-07,Add,Spouse=51;Self=34;Dependent=15,False,,2026-11-20
-K000389,K000389,Rohit Khanna,REGN,REGENERON PHARMACEUTICALS INC CMN,Health Care,58013,0.37,2022-05-10,2025-07-25,Add,Dependent=81;Self=19,False,,2026-11-20
-K000389,K000389,Rohit Khanna,NSC,NORFOLK SOUTHERN CORPORATION CMN,Transportation,57668,0.37,2022-05-23,2026-10-07,Reduce,Dependent=82;Self=18,False,,2026-11-20
-K000389,K000389,Rohit Khanna,PFE,PFIZER INC CMN,Health Care,57446,0.37,2022-11-02,2026-10-07,Add,Spouse=70;Dependent=30,False,,2026-11-20
-K000389,K000389,Rohit Khanna,PH,PARKER-HANNIFIN CORP. CMN,Industrials,57151,0.37,2023-10-10,2026-05-15,Reduce,Dependent=57;Self=43,False,,2026-11-20
-K000389,K000389,Rohit Khanna,DHR,DANAHER CORPORATION CMN,Technology,55316,0.36,2022-05-23,2026-10-13,Add,Dependent=88;Self=12,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,WFC,WELLS FARGO & COMPANY CMN,Financials,55250,0.36,2022-12-15,2025-05-19,Add,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,EMR,EMERSON ELECTRIC CO CMN,Industrials,54937,0.35,2022-08-23,2026-09-25,Add,Dependent=66;Self=20;Spouse=14,False,,2026-11-20
-K000389,K000389,Rohit Khanna,ACN,ACCENTURE PLC CMN CLASS A,Industrials,53816,0.35,2022-11-02,2026-10-13,Add,Dependent=63;Spouse=27;Self=11,False,,2026-11-20
-K000389,K000389,Rohit Khanna,AMGN,AMGEN INC CMN,Health Care,54497,0.35,2022-12-30,2026-10-07,Reduce,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,AON,AON PUBLIC LIMITED COMPANY CMN,Financials,54582,0.35,2023-10-31,2024-10-03,Add,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,LYB,LYONDELLBASELL INDUSTRIES N.V. CMN CLASS A,Materials,52994,0.34,2022-05-10,2026-05-15,Reduce,Dependent=90;Self=10,False,,2026-11-20
-K000389,K000389,Rohit Khanna,MSFT,MICROSOFT CORPORATION CMN,Technology,52340,0.34,2022-05-23,2026-10-28,Reduce,Spouse=80;Self=20,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,RTX,RTX CORPORATION COM USD1.00,Defense & Aerospace,53286,0.34,2025-04-04,2025-04-04,Add,Dependent=100,True,House Armed Services,2026-11-20
-K000389,K000389,Rohit Khanna,DASH,DOORDASH INC CMN CLASS A,Industrials,50589,0.33,2022-05-10,2026-10-13,Add,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,WBD,WARNER BROS DISCOVERY INC CMN,,50961,0.33,2022-12-06,2024-08-02,Add,Self=59;Dependent=41,False,,2026-10-05
-K000389,K000389,Rohit Khanna,CAT,CATERPILLAR INC (DELAWARE) CMN,Industrials,50927,0.33,2023-08-07,2025-05-19,Add,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,CF,"CF INDUSTRIES HOLDINGS, INC. CMN",Materials,50690,0.33,2024-07-02,2025-07-25,Add,Dependent=47;Self=26;Spouse=26,False,,2026-11-20
-K000389,K000389,Rohit Khanna,PAYX,"PAYCHEX, INC. CMN",Industrials,49638,0.32,2022-05-23,2026-04-24,Reduce,Dependent=86;Self=14,False,,2026-11-20
-K000389,K000389,Rohit Khanna,ADI,ANALOG DEVICES INC. CMN,Technology,50261,0.32,2022-06-16,2026-09-04,Add,Dependent=69;Spouse=31,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,TXN,TEXAS INSTRUMENTS INC CMN,Technology,49751,0.32,2022-06-16,2026-10-13,Add,Spouse=60;Self=25;Dependent=15,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,LIN,LINDE PLC CMN,Materials,50299,0.32,2022-08-23,2026-09-25,Reduce,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,WELL,WELLTOWER INC CMN,Real Estate,49973,0.32,2022-08-23,2026-09-04,Reduce,Dependent=64;Self=31;Spouse=5,False,,2026-11-20
-K000389,K000389,Rohit Khanna,ISRG,INTUITIVE SURGICAL INC CMN,Health Care,48346,0.31,2022-06-16,2026-10-02,Add,Spouse=52;Dependent=35;Self=13,False,,2026-11-20
-K000389,K000389,Rohit Khanna,LOW,LOWES COMPANIES INC CMN,Consumer Discretionary,47818,0.31,2022-11-02,2026-10-13,Add,Spouse=83;Self=17,False,,2026-11-20
-K000389,K000389,Rohit Khanna,MRVL,MARVELL TECHNOLOGY INC COM,Technology,46383,0.3,2022-05-10,2026-10-21,Add,Dependent=55;Spouse=45,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,BALL,BALL CORPORATION CMN,Industrials,46991,0.3,2022-05-10,2026-05-30,Add,Dependent=80;Spouse=20,False,,2026-11-20
-K000389,K000389,Rohit Khanna,NOW,SERVICENOW INC CMN,Technology,46528,0.3,2022-05-23,2026-08-10,Reduce,Dependent=55;Spouse=45,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,EW,EDWARDS LIFESCIENCES CORPORATION CMN,Health Care,46695,0.3,2022-05-23,2026-08-03,Reduce,Self=79;Dependent=21,False,,2026-11-20
-K000389,K000389,Rohit Khanna,AAPL,APPLE INC CMN,Technology,46108,0.3,2022-06-10,2026-10-02,Add,Dependent=72;Self=28,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,DE,DEERE & COMPANY CMN,Industrials,46510,0.3,2022-08-23,2026-02-17,Reduce,Spouse=49;Self=30;Dependent=21,False,,2026-11-20
-K000389,K000389,Rohit Khanna,MDLZ,MONDELEZ INTERNATIONAL INC CMN,Consumer Staples,45087,0.29,2022-05-10,2026-03-30,Add,Dependent=64;Self=36,False,,2026-11-20
-K000389,K000389,Rohit Khanna,TER,TERADYNE INC CMN,Technology,45178,0.29,2022-08-23,2026-05-01,Add,Dependent=87;Spouse=13,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,C,CITIGROUP INC. CMN,Financials,44479,0.29,2022-12-06,2025-04-09,Reduce,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,CB,CHUBB LIMITED CMN,Financials,45456,0.29,2023-03-14,2026-09-04,Add,Dependent=58;Self=23;Spouse=19,False,,2026-11-20
-K000389,K000389,Rohit Khanna,LEA,LEAR CORPORATION CMN,Consumer Discretionary,45397,0.29,2023-09-13,2024-10-23,Add,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,INVH,INVITATION HOMES INC CMN,Real Estate,43868,0.28,2022-06-27,2026-09-11,Reduce,Spouse=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,TSCO,TRACTOR SUPPLY COMPANY CMN,Consumer Discretionary,44353,0.28,2023-10-31,2026-09-25,Add,Spouse=65;Dependent=21;Self=14,False,,2026-11-20
-K000389,K000389,Rohit Khanna,CTVA,"CORTEVA, INC. CMN",Consumer Staples,42286,0.27,2022-05-10,2026-09-04,Add,Dependent=52;Self=37;Spouse=11,False,,2026-11-20
-K000389,K000389,Rohit Khanna,TMO,THERMO FISHER SCIENTIFIC INC CMN,Technology,41904,0.27,2022-05-23,2026-10-13,Reduce,Spouse=54;Self=46,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,MDT,MEDTRONIC PUBLIC LIMITED COMPANY CMN,Health Care,41990,0.27,2022-06-10,2023-10-02,Add,Dependent=53;Spouse=47,False,,2026-11-20
-K000389,K000389,Rohit Khanna,HCA,HCA HEALTHCARE INC CMN,Health Care,42417,0.27,2022-06-23,2026-09-04,Add,Spouse=46;Self=29;Dependent=25,False,,2026-11-20
-K000389,K000389,Rohit Khanna,ULTA,ULTA BEAUTY INC CMN,Consumer Discretionary,41700,0.27,2022-08-23,2026-08-03,Add,Dependent=43;Self=35;Spouse=22,False,,2026-11-20
-K000389,K000389,Rohit Khanna,UNP,UNION PACIFIC CORP. CMN,Transportation,41350,0.27,2022-11-02,2025-07-25,Add,Dependent=50;Spouse=26;Self=24,False,,2026-11-20
-K000389,K000389,Rohit Khanna,CNC,CENTENE CORPORATION CMN,Health Care,41994,0.27,2022-12-30,2026-09-04,Reduce,Dependent=63;Self=37,False,,2026-11-20
-K000389,K000389,Rohit Khanna,ALL,ALLSTATE CORPORATION COMMON STOCK,Financials,42086,0.27,2023-03-07,2024-09-25,Add,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,ICE,INTERCONTINENTAL EXCHANGE INC CMN,Financials,42071,0.27,2023-03-14,2026-07-20,Reduce,Dependent=97;Spouse=3,False,,2026-11-20
-K000389,K000389,Rohit Khanna,AIG,"AMERICAN INTL. GROUP, INC. CMN",Financials,42282,0.27,2023-10-11,2024-10-14,Add,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,GILD,GILEAD SCIENCES CMN,Health Care,41863,0.27,2024-03-25,2026-08-10,Reduce,Dependent=76;Spouse=24,False,,2026-11-20
-K000389,K000389,Rohit Khanna,HST,Host Hotels & Resorts Inc CMN,Real Estate,40300,0.26,2022-05-10,2025-03-06,Add,Dependent=66;Spouse=34,False,,2026-11-20
+K000389,K000389,Rohit Khanna,NVDA,NVIDIA CORPORATION CMN,Technology,440452,2.93,2022-05-10,2026-10-07,Reduce,Spouse=95;Dependent=5,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,PLTR,PALANTIR TECHNOLOGIES INC CMN CLASS A,Technology,284678,1.9,2022-05-10,2026-07-20,Add,Dependent=77;Spouse=23,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,PANW,PALO ALTO NETWORKS INC. CMN,Technology,212637,1.42,2024-07-01,2026-05-21,Add,Dependent=60;Spouse=40,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,KO,COCA COLA COMPANY (THE) CMN,Consumer Staples,208288,1.39,2022-05-10,2026-09-04,Add,Spouse=54;Dependent=46,False,,2026-11-20
+K000389,K000389,Rohit Khanna,V,VISA INC. CMN CLASS A,Industrials,200342,1.33,2022-08-23,2026-09-25,Add,Dependent=51;Spouse=49,False,,2026-11-20
+K000389,K000389,Rohit Khanna,AMD,ADVANCED MICRO DEVICES INC CMN,Technology,193780,1.29,2022-11-02,2026-09-04,Add,Spouse=57;Dependent=43,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,WMT,WALMART INC CMN,Consumer Discretionary,185987,1.24,2022-11-02,2026-10-13,Add,Dependent=90;Spouse=10,False,,2026-11-20
+K000389,K000389,Rohit Khanna,TSLA,TESLA INC. CMN,Consumer Discretionary,181312,1.21,2022-08-23,2026-09-25,Add,Dependent=78;Spouse=22,False,,2026-11-20
+K000389,K000389,Rohit Khanna,DELL,DELL TECHNOLOGIES INC CMN CLASS C,Technology,175507,1.17,2022-05-10,2026-10-28,Reduce,Dependent=99;Spouse=1,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,MPWR,MONOLITHIC POWER SYSTEMS INC CMN,Technology,168173,1.12,2022-05-10,2026-10-13,Add,Dependent=100,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,GEHC,GE HEALTHCARE TECHNOLOGIES INC CMN,Health Care,168652,1.12,2023-10-10,2026-10-08,Add,Spouse=65;Dependent=35,False,,2026-11-20
+K000389,K000389,Rohit Khanna,CAT,CATERPILLAR INC (DELAWARE) CMN,Industrials,165828,1.1,2023-08-07,2025-05-19,Add,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,UBER,UBER TECHNOLOGIES INC CMN,Industrials,159925,1.07,2023-08-09,2026-10-07,Reduce,Dependent=48;Spouse=47;Self=4,False,,2026-11-20
+K000389,K000389,Rohit Khanna,CHWY,CHEWY INC CMN CLASS A,Consumer Discretionary,148587,0.99,2022-05-10,2026-09-28,Add,Spouse=70;Dependent=30,False,,2026-11-20
+K000389,K000389,Rohit Khanna,PEP,PEPSICO INC CMN,Consumer Staples,139120,0.93,2022-12-06,2026-10-07,Add,Spouse=76;Dependent=24,False,,2026-11-20
+K000389,K000389,Rohit Khanna,VZ,VERIZON COMMUNICATIONS INC CMN,Communications,137637,0.92,2022-11-02,2026-10-07,Reduce,Dependent=77;Spouse=23,False,,2026-11-20
+K000389,K000389,Rohit Khanna,GOOGL,ALPHABET INC. CMN CLASS A,Technology,129180,0.86,2023-03-06,2025-05-19,Add,Dependent=100,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,BKNG,BOOKING HOLDINGS INC CMN,Transportation,126091,0.84,2022-05-23,2026-10-07,Add,Dependent=76;Spouse=24,False,,2026-11-20
+K000389,K000389,Rohit Khanna,ANET,ARISTA NETWORKS INC CMN,Technology,121358,0.81,2022-05-10,2026-08-24,Add,Dependent=67;Spouse=19;Self=14,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,AXP,AMERICAN EXPRESS CO CMN,Financials,115116,0.77,2022-05-23,2026-10-02,Add,Dependent=56;Spouse=36;Self=8,False,,2026-11-20
+K000389,K000389,Rohit Khanna,CSCO,CISCO SYSTEMS INC. CMN,Technology,108670,0.72,2022-05-23,2026-09-25,Add,Dependent=82;Self=11;Spouse=6,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,INTC,INTEL CORPORATION CMN,Technology,107709,0.72,2022-08-23,2026-09-04,Add,Dependent=51;Spouse=30;Self=18,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,BRK.B,BERKSHIRE HATHAWAY INC. CLASS B,Financials,106965,0.71,2023-03-24,2026-02-17,Reduce,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,CMI,CUMMINS INC COMMON STOCK,Industrials,105562,0.7,2024-06-20,2026-02-05,Reduce,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,WFC,WELLS FARGO & COMPANY CMN,Financials,100990,0.67,2022-12-15,2025-05-19,Add,Dependent=55;Spouse=45,False,,2026-11-20
+K000389,K000389,Rohit Khanna,ABBV,ABBVIE INC CMN,Health Care,99188,0.66,2022-05-10,2026-10-07,Add,Dependent=57;Spouse=43,False,,2026-11-20
+K000389,K000389,Rohit Khanna,CHD,CHURCH & DWIGHT CO INC CMN,Consumer Staples,98038,0.65,2022-05-23,2026-09-11,Reduce,Spouse=89;Dependent=11,False,,2026-11-20
+K000389,K000389,Rohit Khanna,AMZN,AMAZON COM INC CMN,Consumer Discretionary,95822,0.64,2022-05-05,2026-10-02,Reduce,Dependent=51;Spouse=49,False,,2026-11-20
+K000389,K000389,Rohit Khanna,COST,COSTCO WHOLESALE CORPORATION CMN,Consumer Discretionary,95527,0.64,2022-11-02,2026-10-12,Add,Spouse=60;Dependent=40,False,,2026-11-20
+K000389,K000389,Rohit Khanna,NET,"CLOUDFLARE, INC. CMN CLASS A",Technology,94860,0.63,2022-08-23,2026-05-21,Add,Dependent=100,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,HUM,HUMANA INC CMN,Health Care,93119,0.62,2022-05-10,2026-10-13,Add,Dependent=63;Spouse=37,False,,2026-11-20
+K000389,K000389,Rohit Khanna,UNH,UNITEDHEALTH GROUP INCORPORATED CMN,Health Care,91969,0.61,2022-05-10,2026-08-24,Reduce,Spouse=47;Dependent=46;Self=6,False,,2026-11-20
+K000389,K000389,Rohit Khanna,ADI,ANALOG DEVICES INC. CMN,Technology,91009,0.61,2022-06-16,2026-09-04,Add,Dependent=83;Spouse=17,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,MO,ALTRIA GROUP INC. CMN,Consumer Staples,92208,0.61,2022-06-27,2026-09-04,Add,Spouse=77;Dependent=23,False,,2026-11-20
+K000389,K000389,Rohit Khanna,ST,SENSATA TECHNOLOGIES HOLDING PLC CMN,Technology,90284,0.6,2022-12-01,2025-05-08,Add,Spouse=92;Dependent=8,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,AMRZ,AMRIZE LTD CMN,Materials,90123,0.6,2025-10-01,2026-08-12,Add,Spouse=93;Dependent=7,False,,2026-11-20
+K000389,K000389,Rohit Khanna,JNJ,JOHNSON & JOHNSON CMN,Health Care,87310,0.58,2022-05-10,2026-10-07,Reduce,Dependent=84;Self=16,False,,2026-11-20
+K000389,K000389,Rohit Khanna,APH,AMPHENOL CORP CL A (NEW) CMN CLASS A,Technology,86903,0.58,2022-05-23,2026-10-02,Add,Dependent=50;Spouse=29;Self=21,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,ELAN,ELANCO ANIMAL HEALTH INCORPORATED CMN,Health Care,81930,0.55,2022-12-07,2026-08-04,Reduce,Spouse=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,DIS,WALT DISNEY COMPANY (THE) CMN,Communications,79761,0.53,2022-05-23,2026-08-03,Add,Dependent=51;Spouse=36;Self=12,False,,2026-11-20
+K000389,K000389,Rohit Khanna,TJX,TJX COMPANIES INC (NEW) CMN,Consumer Discretionary,79229,0.53,2022-08-23,2026-09-25,Add,Spouse=54;Dependent=46,False,,2026-11-20
+K000389,K000389,Rohit Khanna,TFC,TRUIST FINANCIAL CORPORATION CMN,Financials,80259,0.53,2023-06-26,2025-06-26,Add,Dependent=89;Spouse=11,False,,2026-11-20
+K000389,K000389,Rohit Khanna,URBN,URBAN OUTFITTERS INC CMN,Consumer Discretionary,78239,0.52,2023-07-07,2023-08-18,Add,Spouse=76;Dependent=24,False,,2026-11-20
+K000389,K000389,Rohit Khanna,ON,ON SEMICONDUCTOR CORPORATION CMN,Technology,75815,0.51,2022-05-10,2026-10-13,Add,Dependent=59;Spouse=41,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,DOV,DOVER CORPORATION CMN,Industrials,76282,0.51,2022-05-10,2026-09-11,Add,Spouse=89;Dependent=11,False,,2026-11-20
+K000389,K000389,Rohit Khanna,CRWD,"CROWDSTRIKE HOLDINGS, INC. CMN",Technology,76778,0.51,2024-06-20,2026-04-24,Add,Spouse=45;Self=28;Dependent=27,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,MRK,MERCK & CO INC CMN,Health Care,75657,0.5,2022-05-10,2026-10-07,Add,Dependent=60;Spouse=40,False,,2026-11-20
+K000389,K000389,Rohit Khanna,REGN,REGENERON PHARMACEUTICALS INC CMN,Health Care,74350,0.5,2022-05-10,2025-07-25,Add,Dependent=77;Self=15;Spouse=9,False,,2026-11-20
+K000389,K000389,Rohit Khanna,KHC,THE KRAFT HEINZ CO CMN,Consumer Staples,74428,0.5,2023-03-24,2026-04-13,Add,Dependent=74;Spouse=26,False,,2026-11-20
+K000389,K000389,Rohit Khanna,FTV,FORTIVE CORPORATION CMN,Technology,74783,0.5,2023-03-30,2026-01-29,Add,Dependent=87;Spouse=13,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,SOLV,SOLVENTUM CORPORATION CMN,Health Care,73840,0.49,2024-07-02,2026-05-01,Add,Spouse=75;Dependent=25,False,,2026-11-20
+K000389,K000389,Rohit Khanna,ODFL,OLD DOMINION FREIGHT LINE INC CMN,Transportation,69851,0.47,2022-06-27,2026-10-07,Add,Dependent=55;Spouse=45,False,,2026-11-20
+K000389,K000389,Rohit Khanna,ELV,ELEVANCE HEALTH INC CMN,Health Care,70593,0.47,2022-12-06,2026-07-20,Reduce,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,KDP,KEURIG DR PEPPER INC CMN,Consumer Staples,67764,0.45,2022-12-06,2026-10-13,Reduce,Spouse=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,MSI,MOTOROLA SOLUTIONS INC CMN,Technology,68051,0.45,2023-10-10,2026-09-25,Add,Dependent=72;Spouse=28,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,GENI,GENIUS SPORTS LTD CMN,Communications,64549,0.43,2026-02-05,2026-08-05,Reduce,Spouse=79;Dependent=21,False,,2026-11-20
+K000389,K000389,Rohit Khanna,BLK,BLACKROCK INC COM,Financials,62015,0.41,2022-06-16,2025-04-04,Add,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,TER,TERADYNE INC CMN,Technology,61255,0.41,2022-08-23,2026-05-01,Add,Dependent=90;Spouse=10,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,SGOV,ISHARES TR 0-3 MNTH TREASURY,,61244,0.41,2024-08-01,2025-04-04,Add,Dependent=57;Spouse=43,False,,2026-11-20
+K000389,K000389,Rohit Khanna,WDC,WESTERN DIGITAL CORPORATION CMN,Technology,59408,0.4,2022-05-10,2026-09-25,Add,Self=82;Spouse=18,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,ADP,AUTOMATIC DATA PROCESSING INC CMN,Technology,59638,0.4,2022-08-23,2026-05-27,Add,Dependent=81;Spouse=19,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,MU,MICRON TECHNOLOGY INC COM,Technology,60342,0.4,2022-08-23,2026-10-21,Add,Self=83;Spouse=9;Dependent=9,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,DHI,D R HORTON INC CMN,Industrials,60441,0.4,2024-04-26,2026-10-13,Add,Spouse=86;Dependent=14,False,,2026-11-20
+K000389,K000389,Rohit Khanna,FTNT,FORTINET INC CMN,Technology,58933,0.39,2022-06-17,2026-08-10,Reduce,Dependent=61;Spouse=22;Self=17,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,GWW,W.W. GRAINGER INC CMN,Industrials,59222,0.39,2022-11-02,2026-04-13,Add,Dependent=84;Spouse=16,False,,2026-11-20
+K000389,K000389,Rohit Khanna,CRM,SALESFORCE INC CMN,Technology,57085,0.38,2022-05-23,2026-10-13,Add,Spouse=80;Dependent=11;Self=9,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,TRV,"THE TRAVELERS COMPANIES, INC CMN",Financials,56325,0.38,2022-08-23,2026-06-02,Add,Spouse=81;Dependent=19,False,,2026-11-20
+K000389,K000389,Rohit Khanna,PFE,PFIZER INC CMN,Health Care,57446,0.38,2022-11-02,2026-10-07,Add,Spouse=70;Dependent=30,False,,2026-11-20
+K000389,K000389,Rohit Khanna,GILD,GILEAD SCIENCES CMN,Health Care,57758,0.38,2024-03-25,2026-08-10,Reduce,Dependent=83;Spouse=17,False,,2026-11-20
+K000389,K000389,Rohit Khanna,IVZ,INVESCO LTD. CMN,Financials,55829,0.37,2022-05-10,2026-05-27,Reduce,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,PAYC,"PAYCOM SOFTWARE, INC. CMN",Technology,55225,0.37,2022-05-10,2026-02-24,Add,Dependent=71;Spouse=29,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,EMR,EMERSON ELECTRIC CO CMN,Industrials,54937,0.37,2022-08-23,2026-09-25,Add,Dependent=66;Self=20;Spouse=14,False,,2026-11-20
+K000389,K000389,Rohit Khanna,HST,Host Hotels & Resorts Inc CMN,Real Estate,54033,0.36,2022-05-10,2025-03-06,Add,Spouse=51;Dependent=49,False,,2026-11-20
+K000389,K000389,Rohit Khanna,ROP,ROPER TECHNOLOGIES INC CMN,Technology,53783,0.36,2022-06-27,2026-06-30,Add,Dependent=80;Spouse=20,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,JBL,JABIL INC CMN,Technology,54684,0.36,2022-11-02,2026-08-03,Reduce,Dependent=100,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,AMGN,AMGEN INC CMN,Health Care,54497,0.36,2022-12-30,2026-10-07,Reduce,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,RTX,RTX CORPORATION COM USD1.00,Defense & Aerospace,53286,0.36,2025-04-04,2025-04-04,Add,Dependent=100,True,House Armed Services,2026-11-20
+K000389,K000389,Rohit Khanna,MSFT,MICROSOFT CORPORATION CMN,Technology,52340,0.35,2022-05-23,2026-10-28,Reduce,Spouse=80;Self=20,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,WELL,WELLTOWER INC CMN,Real Estate,52132,0.35,2022-08-23,2026-09-04,Reduce,Dependent=61;Spouse=39,False,,2026-11-20
+K000389,K000389,Rohit Khanna,AIG,"AMERICAN INTL GROUP, INC. CMN",Financials,51814,0.35,2023-10-11,2024-11-12,Add,Dependent=83;Spouse=17,False,,2026-11-20
+K000389,K000389,Rohit Khanna,DASH,DOORDASH INC CMN CLASS A,Industrials,50589,0.34,2022-05-10,2026-10-13,Add,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,LIN,LINDE PLC CMN,Materials,50299,0.34,2022-08-23,2026-09-25,Reduce,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,AFL,AFLAC INCORPORATED CMN,Financials,48856,0.33,2022-05-10,2026-08-10,Reduce,Spouse=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,TXN,TEXAS INSTRUMENTS INC CMN,Technology,49751,0.33,2022-06-16,2026-10-13,Add,Spouse=60;Self=25;Dependent=15,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,DHR,DANAHER CORPORATION CMN,Technology,48736,0.32,2022-05-23,2026-10-13,Add,Dependent=100,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,ISRG,INTUITIVE SURGICAL INC CMN,Health Care,48346,0.32,2022-06-16,2026-10-02,Add,Spouse=52;Dependent=35;Self=13,False,,2026-11-20
+K000389,K000389,Rohit Khanna,ACN,ACCENTURE PLC CMN CLASS A,Industrials,48093,0.32,2022-11-02,2026-10-13,Add,Dependent=70;Spouse=30,False,,2026-11-20
+K000389,K000389,Rohit Khanna,LOW,LOWES COMPANIES INC CMN,Consumer Discretionary,47818,0.32,2022-11-02,2026-10-13,Add,Spouse=83;Self=17,False,,2026-11-20
+K000389,K000389,Rohit Khanna,MA,MASTERCARD INCORPORATED CMN CLASS A,Industrials,48493,0.32,2024-07-02,2026-08-03,Add,Spouse=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,WAT,WATERS CORPORATION COMMON STOCK,Technology,47111,0.31,2022-05-10,2026-06-02,Reduce,Dependent=53;Spouse=47,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,MRVL,MARVELL TECHNOLOGY INC COM,Technology,46383,0.31,2022-05-10,2026-10-21,Add,Dependent=55;Spouse=45,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,NOW,SERVICENOW INC CMN,Technology,46528,0.31,2022-05-23,2026-08-10,Reduce,Dependent=55;Spouse=45,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,AAPL,APPLE INC CMN,Technology,46108,0.31,2022-06-10,2026-10-02,Add,Dependent=72;Self=28,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,CB,CHUBB LIMITED CMN,Financials,46221,0.31,2023-03-14,2026-09-04,Add,Dependent=81;Spouse=19,False,,2026-11-20
+K000389,K000389,Rohit Khanna,C,CITIGROUP INC. CMN,Financials,44479,0.3,2022-12-06,2025-04-09,Reduce,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,PFG,"PRINCIPAL FINANCIAL GROUP, INC CMN",Financials,45118,0.3,2023-10-10,2026-04-24,Reduce,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,TSCO,TRACTOR SUPPLY COMPANY CMN,Consumer Discretionary,44353,0.3,2023-10-31,2026-09-25,Add,Spouse=65;Dependent=21;Self=14,False,,2026-11-20
+K000389,K000389,Rohit Khanna,SJM,J. M. SMUCKER COMPANY (THE) CMN,Consumer Staples,44311,0.3,2024-07-01,2025-06-23,Add,Dependent=50;Spouse=50,False,,2026-11-20
+K000389,K000389,Rohit Khanna,AKAM,"AKAMAI TECHNOLOGIES, INC. CMN",Industrials,44132,0.29,2022-05-10,2025-01-17,Add,Dependent=50;Spouse=50,False,,2026-11-20
+K000389,K000389,Rohit Khanna,INVH,INVITATION HOMES INC CMN,Real Estate,43868,0.29,2022-06-27,2026-09-11,Reduce,Spouse=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,PAYX,"PAYCHEX, INC. CMN",Industrials,42773,0.28,2022-05-23,2026-04-24,Reduce,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,MDT,MEDTRONIC PUBLIC LIMITED COMPANY CMN,Health Care,41990,0.28,2022-06-10,2025-01-17,Add,Dependent=53;Spouse=47,False,,2026-11-20
+K000389,K000389,Rohit Khanna,HCA,HCA HEALTHCARE INC CMN,Health Care,42417,0.28,2022-06-23,2026-09-04,Add,Spouse=46;Self=29;Dependent=25,False,,2026-11-20
+K000389,K000389,Rohit Khanna,MAR,MARRIOTT INTERNATIONAL INC CMN CLASS A,Consumer Discretionary,42583,0.28,2022-08-23,2026-09-25,Reduce,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,ICE,INTERCONTINENTAL EXCHANGE INC CMN,Financials,42071,0.28,2023-03-14,2026-07-20,Reduce,Dependent=97;Spouse=3,False,,2026-11-20
+K000389,K000389,Rohit Khanna,MRNA,MODERNA INC CMN,Health Care,40002,0.27,2022-05-10,2026-10-13,Add,Spouse=73;Dependent=27,False,,2026-11-20
+K000389,K000389,Rohit Khanna,LLY,ELI LILLY & CO CMN,Health Care,40285,0.27,2023-03-14,2026-09-04,Add,Spouse=75;Dependent=25,False,,2026-11-20
+K000389,K000389,Rohit Khanna,VTRS,VIATRIS INC CMN,Health Care,40247,0.27,2024-04-26,2026-05-27,Reduce,Spouse=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,NUE,NUCOR CORPORATION CMN,Materials,40832,0.27,2024-07-02,2025-03-12,Add,Dependent=63;Self=37,False,,2026-11-20
+K000389,K000389,Rohit Khanna,SOLS,SOLSTICE ADVANCED MATERIALS INC CMN,Materials,40400,0.27,2025-11-25,2025-12-17,Buy,Dependent=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,PNC,"PNC FINANCIAL SERVICES GROUP, CMN",Financials,39738,0.26,2022-05-23,2026-06-02,Add,Dependent=80;Spouse=20,False,,2026-11-20
-K000389,K000389,Rohit Khanna,GWW,W.W. GRAINGER INC CMN,Industrials,40021,0.26,2022-11-02,2026-04-13,Add,Dependent=77;Spouse=23,False,,2026-11-20
-K000389,K000389,Rohit Khanna,KDP,KEURIG DR PEPPER INC CMN,Consumer Staples,40598,0.26,2022-12-06,2026-10-13,Reduce,Spouse=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,LLY,ELI LILLY & CO CMN,Health Care,40285,0.26,2023-03-14,2026-09-04,Add,Spouse=75;Dependent=25,False,,2026-11-20
-K000389,K000389,Rohit Khanna,VTRS,VIATRIS INC CMN,Health Care,40247,0.26,2024-04-26,2026-05-27,Reduce,Spouse=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,SOLS,SOLSTICE ADVANCED MATERIALS INC CMN,Materials,40400,0.26,2025-11-25,2025-12-17,Buy,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,ROP,ROPER TECHNOLOGIES INC CMN,Technology,39570,0.25,2022-06-27,2026-06-30,Add,Dependent=72;Spouse=28,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,IT,GARTNER INC CMN,Industrials,38823,0.25,2023-03-06,2026-10-13,Add,Dependent=58;Spouse=42,False,,2026-11-20
-K000389,K000389,Rohit Khanna,FAST,FASTENAL COMPANY CMN,Consumer Discretionary,38785,0.25,2023-03-24,2026-09-04,Add,Dependent=50;Self=29;Spouse=21,False,,2026-11-20
-K000389,K000389,Rohit Khanna,PKG,PACKAGING CORP OF AMERICA COMMON STOCK,Materials,38764,0.25,2025-01-17,2026-04-13,Add,Dependent=51;Self=26;Spouse=23,False,,2026-11-20
-K000389,K000389,Rohit Khanna,WAT,WATERS CORPORATION COMMON STOCK,Technology,37280,0.24,2022-05-10,2026-06-02,Reduce,Spouse=60;Dependent=40,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,MGM,MGM RESORTS INTERNATIONAL CMN,Consumer Discretionary,37480,0.24,2022-05-10,2026-09-25,Reduce,Dependent=81;Self=19,False,,2026-11-20
-K000389,K000389,Rohit Khanna,HD,THE HOME DEPOT INC CMN,Consumer Discretionary,37490,0.24,2022-05-23,2026-10-13,Buy,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,LUV,SOUTHWEST AIRLINES CO CMN,Transportation,36855,0.24,2022-06-17,2026-05-27,Reduce,Dependent=67;Self=33,False,,2026-11-20
-K000389,K000389,Rohit Khanna,KEYS,KEYSIGHT TECHNOLOGIES INC CMN,Technology,37664,0.24,2022-08-23,2026-08-03,Add,Spouse=42;Self=37;Dependent=21,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,MCK,MCKESSON CORPORATION CMN,Health Care,36665,0.24,2022-12-06,2026-09-04,Add,Spouse=54;Self=46,False,,2026-11-20
-K000389,K000389,Rohit Khanna,VTR,"VENTAS, INC. CMN",Real Estate,37156,0.24,2023-03-14,2026-01-29,Add,Dependent=75;Spouse=25,False,,2026-11-20
+K000389,K000389,Rohit Khanna,IT,GARTNER INC CMN,Industrials,38823,0.26,2023-03-06,2026-10-13,Add,Dependent=58;Spouse=42,False,,2026-11-20
+K000389,K000389,Rohit Khanna,PKG,PACKAGING CORP OF AMERICA COMMON STOCK,Materials,38764,0.26,2025-01-17,2026-04-13,Add,Dependent=51;Self=26;Spouse=23,False,,2026-11-20
+K000389,K000389,Rohit Khanna,UAL,UNITED AIRLINES HOLDINGS INC CMN,Transportation,38541,0.26,2025-03-12,2026-10-07,Add,Spouse=77;Dependent=23,False,,2026-11-20
+K000389,K000389,Rohit Khanna,TPR,TAPESTRY INC. CMN,Consumer Discretionary,38074,0.25,2022-05-10,2026-09-04,Reduce,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,PWR,QUANTA SERVICES INC CMN,Industrials,37357,0.25,2022-05-10,2026-09-11,Reduce,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,MGM,MGM RESORTS INTERNATIONAL CMN,Consumer Discretionary,37782,0.25,2022-05-10,2026-09-25,Reduce,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,HD,THE HOME DEPOT INC CMN,Consumer Discretionary,37490,0.25,2022-05-23,2026-10-13,Buy,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,KEYS,KEYSIGHT TECHNOLOGIES INC CMN,Technology,37664,0.25,2022-08-23,2026-08-03,Add,Spouse=42;Self=37;Dependent=21,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,KR,KROGER COMPANY CMN,Consumer Staples,37603,0.25,2022-08-23,2026-10-07,Add,Spouse=75;Dependent=25,False,,2026-11-20
+K000389,K000389,Rohit Khanna,VTR,"VENTAS, INC. CMN",Real Estate,37156,0.25,2023-03-14,2026-01-29,Add,Dependent=75;Spouse=25,False,,2026-11-20
+K000389,K000389,Rohit Khanna,LEA,LEAR CORPORATION CMN,Consumer Discretionary,37223,0.25,2023-09-13,2024-10-23,Add,Spouse=66;Dependent=34,False,,2026-11-20
+K000389,K000389,Rohit Khanna,CF,"CF INDUSTRIES HOLDINGS, INC. CMN",Materials,37351,0.25,2024-07-02,2025-07-25,Add,Dependent=64;Spouse=36,False,,2026-11-20
+K000389,K000389,Rohit Khanna,MCO,MOODY'S CORPORATION CMN,Industrials,35352,0.24,2022-11-02,2026-06-30,Reduce,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,IRM,IRON MOUNTAIN INCORPORATED CMN,Real Estate,36640,0.24,2022-11-02,2026-01-23,Add,Spouse=76;Dependent=24,False,,2026-11-20
+K000389,K000389,Rohit Khanna,SHW,SHERWIN WILLIAMS CO CMN,Consumer Discretionary,35473,0.24,2023-03-24,2026-09-25,Add,Spouse=74;Dependent=26,False,,2026-11-20
+K000389,K000389,Rohit Khanna,KKR,KKR & CO. INC. CMN,Financials,35536,0.24,2023-10-20,2026-02-17,Reduce,Dependent=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,SPGI,S&P GLOBAL INC CMN,Industrials,36765,0.24,2024-05-29,2026-09-25,Reduce,Dependent=99;Spouse=1,False,,2026-11-20
+K000389,K000389,Rohit Khanna,CPAY,CORPAY INC CMN,Industrials,35694,0.24,2024-08-02,2026-04-13,Add,Spouse=63;Dependent=37,False,,2026-11-20
+K000389,K000389,Rohit Khanna,LYB,LYONDELLBASELL INDUSTRIES N.V. CMN CLASS A,Materials,35207,0.23,2022-05-10,2026-05-15,Reduce,Dependent=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,DDOG,DATADOG INC. CMN CLASS A,Technology,35190,0.23,2022-05-10,2026-09-04,Reduce,Spouse=59;Dependent=41,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,JBL,JABIL INC CMN,Technology,36090,0.23,2022-11-02,2026-08-03,Reduce,Dependent=100,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,MCO,MOODY'S CORPORATION CMN,Industrials,35352,0.23,2022-11-02,2026-06-30,Reduce,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,PPG,PPG INDUSTRIES INC. CMN,Materials,35068,0.23,2022-11-02,2026-09-25,Add,Spouse=51;Dependent=27;Self=22,False,,2026-11-20
-K000389,K000389,Rohit Khanna,SHW,SHERWIN WILLIAMS CO CMN,Consumer Discretionary,35473,0.23,2023-03-24,2026-09-25,Add,Spouse=74;Dependent=26,False,,2026-11-20
-K000389,K000389,Rohit Khanna,ROK,ROCKWELL AUTOMATION INC CMN,Technology,35038,0.23,2023-06-29,2026-06-05,Reduce,Dependent=45;Self=34;Spouse=21,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,KKR,KKR & CO. INC. CMN,Financials,35536,0.23,2023-10-20,2026-02-17,Reduce,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,CPAY,CORPAY INC CMN,Industrials,35694,0.23,2024-08-02,2026-04-13,Add,Spouse=63;Dependent=37,False,,2026-11-20
-K000389,K000389,Rohit Khanna,NDAQ,NASDAQ INC. CMN,Financials,33861,0.22,2022-05-23,2026-04-24,Reduce,Dependent=66;Self=34,False,,2026-11-20
-K000389,K000389,Rohit Khanna,LRCX,LAM RESEARCH CORPORATION CMN,Industrials,34428,0.22,2022-08-23,2026-08-03,Reduce,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,AZO,AUTOZONE INC. CMN,Consumer Discretionary,34195,0.22,2022-08-23,2026-09-25,Add,Spouse=52;Dependent=26;Self=21,False,,2026-11-20
-K000389,K000389,Rohit Khanna,EA,ELECTRONIC ARTS CMN,,34214,0.22,2022-12-06,2025-06-26,Add,Spouse=67;Dependent=33,False,,2026-08-04
-K000389,K000389,Rohit Khanna,PHM,PULTEGROUP INC. CMN,Industrials,34338,0.22,2024-04-26,2026-09-11,Buy,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,PSX,PHILLIPS 66 CMN,Energy,34325,0.22,2024-06-20,2025-03-21,Add,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,CME,CME GROUP INC CMN CLASS A,Financials,32805,0.21,2022-05-05,2026-08-03,Add,Spouse=59;Self=41,False,,2026-11-20
-K000389,K000389,Rohit Khanna,CVS,CVS HEALTH CORP CMN,Consumer Staples,33333,0.21,2022-05-10,2026-10-13,Add,Dependent=46;Self=32;Spouse=22,False,,2026-11-20
-K000389,K000389,Rohit Khanna,ADBE,ADOBE INC CMN,Technology,33140,0.21,2022-05-23,2026-10-13,Add,Spouse=67;Dependent=22;Self=10,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,FDX,FEDEX CORPORATION CMN,Transportation,32356,0.21,2022-11-02,2026-09-25,Reduce,Self=76;Dependent=24,False,,2026-11-20
-K000389,K000389,Rohit Khanna,SNPS,SYNOPSYS INC. CMN,Technology,32734,0.21,2022-11-02,2026-10-13,Add,Spouse=61;Dependent=20;Self=19,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,PRU,PRUDENTIAL FINANCIAL INC CMN,Financials,32368,0.21,2023-03-24,2025-03-12,Add,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,MTD,METTLER-TOLEDO INTL CMN,Technology,32892,0.21,2023-06-26,2025-05-19,Add,Dependent=100,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,ROST,ROSS STORES INC CMN,Consumer Discretionary,33162,0.21,2023-10-06,2026-09-04,Reduce,Dependent=99;Spouse=1,False,,2026-11-20
-K000389,K000389,Rohit Khanna,SJM,J. M. SMUCKER COMPANY (THE) CMN,Consumer Staples,32981,0.21,2024-07-01,2025-06-23,Add,Dependent=68;Spouse=32,False,,2026-11-20
-K000389,K000389,Rohit Khanna,SBUX,STARBUCKS CORP CMN,Consumer Discretionary,31904,0.2,2022-05-23,2026-09-25,Reduce,Self=73;Dependent=27,False,,2026-11-20
-K000389,K000389,Rohit Khanna,HLT,HILTON WORLDWIDE HOLDINGS INC CMN,Consumer Discretionary,31860,0.2,2022-08-23,2026-09-04,Reduce,Dependent=61;Self=39,False,,2026-11-20
-K000389,K000389,Rohit Khanna,CAH,"CARDINAL HEALTH, INC. CMN",Health Care,30519,0.2,2022-12-06,2026-02-05,Reduce,Self=65;Dependent=35,False,,2026-11-20
-K000389,K000389,Rohit Khanna,USB,U.S. Bancorp CMN,Financials,31484,0.2,2022-12-06,2023-06-26,Add,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,L,LOEWS CORPORATION CMN,Financials,30485,0.2,2023-03-14,2026-10-07,Reduce,Self=73;Dependent=27,False,,2026-11-20
-K000389,K000389,Rohit Khanna,ABNB,"AIRBNB, INC. CMN CLASS A",Industrials,31659,0.2,2023-10-02,2026-05-15,Add,Self=68;Spouse=32,False,,2026-11-20
-K000389,K000389,Rohit Khanna,BAC,BANK OF AMERICA CORP CMN,Financials,31183,0.2,2024-06-20,2025-06-10,Add,Dependent=73;Spouse=27,False,,2026-11-20
-K000389,K000389,Rohit Khanna,AMAT,APPLIED MATERIALS INC CMN,Technology,31228,0.2,2025-03-12,2025-05-19,Add,Dependent=100,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,SNDK,SANDISK CORPORATION CMN,Technology,31428,0.2,2026-01-23,2026-09-04,Add,Spouse=66;Dependent=34,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,IVZ,INVESCO LTD. CMN,Financials,29378,0.19,2022-05-10,2026-05-27,Reduce,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,TGT,TARGET CORPORATION CMN,Consumer Discretionary,29969,0.19,2022-05-10,2026-09-04,Reduce,Dependent=51;Self=44;Spouse=5,False,,2026-11-20
-K000389,K000389,Rohit Khanna,SWKS,SKYWORKS SOLUTIONS INC. CMN,Technology,29890,0.19,2022-05-10,2026-07-07,Add,Spouse=36;Dependent=33;Self=31,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,EPAM,"EPAM SYSTEMS, INC. CMN",Technology,29139,0.19,2022-08-23,2026-05-15,Reduce,Dependent=78;Self=22,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,GPC,GENUINE PARTS CO CMN,Industrials,29760,0.19,2022-11-02,2026-09-11,Add,Self=76;Dependent=24,False,,2026-11-20
+K000389,K000389,Rohit Khanna,EPAM,"EPAM SYSTEMS, INC. CMN",Technology,35201,0.23,2022-08-23,2026-05-15,Reduce,Dependent=82;Self=18,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,AZO,AUTOZONE INC. CMN,Consumer Discretionary,34195,0.23,2022-08-23,2026-09-25,Add,Spouse=52;Dependent=26;Self=21,False,,2026-11-20
+K000389,K000389,Rohit Khanna,EA,ELECTRONIC ARTS CMN,,34214,0.23,2022-12-06,2025-06-26,Add,Spouse=67;Dependent=33,False,,2026-08-04
+K000389,K000389,Rohit Khanna,CNC,CENTENE CORPORATION CMN,Health Care,34994,0.23,2022-12-30,2026-09-04,Reduce,Dependent=75;Self=25,False,,2026-11-20
+K000389,K000389,Rohit Khanna,PHM,PULTEGROUP INC. CMN,Industrials,34338,0.23,2024-04-26,2026-09-11,Buy,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,PSX,PHILLIPS 66 CMN,Energy,34325,0.23,2024-06-20,2025-03-21,Add,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,CVS,CVS HEALTH CORP CMN,Consumer Staples,33333,0.22,2022-05-10,2026-10-13,Add,Dependent=46;Self=32;Spouse=22,False,,2026-11-20
+K000389,K000389,Rohit Khanna,TMO,THERMO FISHER SCIENTIFIC INC CMN,Technology,32970,0.22,2022-05-23,2026-10-13,Reduce,Spouse=68;Self=32,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,LRCX,LAM RESEARCH CORPORATION CMN,Industrials,33476,0.22,2022-08-23,2026-08-03,Reduce,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,MTD,METTLER-TOLEDO INTL CMN,Technology,32892,0.22,2023-06-26,2025-05-19,Add,Dependent=100,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,ROST,ROSS STORES INC CMN,Consumer Discretionary,33162,0.22,2023-10-06,2026-09-04,Reduce,Dependent=99;Spouse=1,False,,2026-11-20
+K000389,K000389,Rohit Khanna,PH,PARKER-HANNIFIN CORP. CMN,Industrials,32323,0.22,2023-10-10,2026-05-15,Reduce,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,HLT,HILTON WORLDWIDE HOLDINGS INC CMN,Consumer Discretionary,31860,0.21,2022-08-23,2026-09-04,Reduce,Dependent=61;Self=39,False,,2026-11-20
+K000389,K000389,Rohit Khanna,DE,DEERE & COMPANY CMN,Industrials,32075,0.21,2022-08-23,2026-02-17,Reduce,Spouse=70;Dependent=30,False,,2026-11-20
+K000389,K000389,Rohit Khanna,UNP,UNION PACIFIC CORP. CMN,Transportation,31554,0.21,2022-11-02,2025-07-25,Add,Dependent=66;Spouse=34,False,,2026-11-20
+K000389,K000389,Rohit Khanna,USB,U.S. Bancorp CMN,Financials,31484,0.21,2022-12-06,2023-06-26,Add,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,ALL,ALLSTATE CORPORATION COMMON STOCK,Financials,31617,0.21,2023-03-07,2025-01-06,Reduce,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,BAC,BANK OF AMERICA CORP CMN,Financials,31183,0.21,2024-06-20,2025-06-10,Add,Dependent=73;Spouse=27,False,,2026-11-20
+K000389,K000389,Rohit Khanna,AMAT,APPLIED MATERIALS INC CMN,Technology,31228,0.21,2025-01-17,2025-05-19,Add,Dependent=100,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,SNDK,SANDISK CORPORATION CMN,Technology,31428,0.21,2026-01-23,2026-09-04,Add,Spouse=66;Dependent=34,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,TGT,TARGET CORPORATION CMN,Consumer Discretionary,29969,0.2,2022-05-10,2026-09-04,Reduce,Dependent=51;Self=44;Spouse=5,False,,2026-11-20
+K000389,K000389,Rohit Khanna,IEX,IDEX CORPORATION COMMON STOCK,Industrials,29474,0.2,2022-05-10,2026-03-10,Reduce,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,BALL,BALL CORPORATION CMN,Industrials,30386,0.2,2022-05-10,2026-05-30,Add,Dependent=69;Spouse=31,False,,2026-11-20
+K000389,K000389,Rohit Khanna,SWKS,SKYWORKS SOLUTIONS INC. CMN,Technology,29890,0.2,2022-05-10,2026-07-07,Add,Spouse=36;Dependent=33;Self=31,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,ADBE,ADOBE INC CMN,Technology,29722,0.2,2022-05-23,2026-10-13,Add,Spouse=75;Dependent=25,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,LW,LAMB WESTON HOLDINGS INC CMN,Consumer Staples,30721,0.2,2023-06-26,2026-03-23,Add,Spouse=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,GRMN,GARMIN LTD CMN,Defense & Aerospace,29942,0.2,2023-09-06,2026-07-20,Add,Dependent=71;Spouse=29,True,House Armed Services,2026-11-20
+K000389,K000389,Rohit Khanna,QCOM,QUALCOMM INC CMN,Technology,29287,0.2,2023-10-02,2026-02-17,Reduce,Dependent=100,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,FE,FirstEnergy Corp CMN,Utilities,29468,0.2,2024-06-20,2025-01-16,Add,Dependent=67;Spouse=33,False,,2026-11-20
+K000389,K000389,Rohit Khanna,EXPE,EXPEDIA GROUP INC CMN,Transportation,30598,0.2,2024-08-02,2026-05-27,Add,Dependent=73;Spouse=27,False,,2026-11-20
+K000389,K000389,Rohit Khanna,ORCL,ORACLE CORP,Technology,30613,0.2,2024-09-09,2025-04-04,Add,Dependent=100,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,MDLZ,MONDELEZ INTERNATIONAL INC CMN,Consumer Staples,28977,0.19,2022-05-10,2026-03-30,Add,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,JCI,JOHNSON CONTROLS INTERNATIONAL CMN,Industrials,28263,0.19,2022-06-27,2026-07-07,Add,Dependent=52;Self=48,False,,2026-11-20
+K000389,K000389,Rohit Khanna,ETSY,"ETSY, INC. CMN",Industrials,27869,0.19,2022-08-23,2024-09-09,Add,Spouse=74;Dependent=26,False,,2026-11-20
+K000389,K000389,Rohit Khanna,HSIC,HENRY SCHEIN INC COMMON STOCK,Industrials,28724,0.19,2022-12-06,2026-05-15,Reduce,Dependent=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,TRMB,TRIMBLE INC CMN,Technology,29185,0.19,2023-03-24,2026-07-20,Add,Spouse=54;Dependent=26;Self=21,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,QCOM,QUALCOMM INC CMN,Technology,29287,0.19,2023-10-02,2026-02-17,Reduce,Dependent=100,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,AMP,"AMERIPRISE FINANCIAL, INC. CMN",Financials,29133,0.19,2023-10-10,2026-06-30,Reduce,Self=55;Spouse=45,False,,2026-11-20
-K000389,K000389,Rohit Khanna,JPM,JPMORGAN CHASE & CO CMN,Financials,29175,0.19,2024-05-29,2026-02-17,Reduce,Self=45;Dependent=42;Spouse=14,False,,2026-11-20
-K000389,K000389,Rohit Khanna,JCI,JOHNSON CONTROLS INTERNATIONAL CMN,Industrials,28263,0.18,2022-06-27,2026-07-07,Add,Dependent=52;Self=48,False,,2026-11-20
-K000389,K000389,Rohit Khanna,DXCM,"DEXCOM, INC. CMN",Health Care,28294,0.18,2022-08-23,2026-06-30,Reduce,Self=63;Dependent=37,False,,2026-11-20
-K000389,K000389,Rohit Khanna,HSIC,HENRY SCHEIN INC COMMON STOCK,Industrials,28724,0.18,2022-12-06,2026-05-15,Reduce,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,ANSS,ANSYS INC CMN,,28666,0.18,2022-12-06,2024-08-02,Add,Dependent=65;Self=35,False,,2025-07-16
-K000389,K000389,Rohit Khanna,BRO,"BROWN & BROWN, INC. CMN",Financials,28208,0.18,2023-09-06,2026-06-30,Reduce,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,A,AGILENT TECHNOLOGIES INC CMN,Technology,27670,0.18,2023-10-31,2026-10-13,Add,Dependent=65;Self=35,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,BEN,FRANKLIN RESOURCES INC CMN,Financials,27761,0.18,2024-05-29,2024-09-09,Add,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,NUE,NUCOR CORPORATION CMN,Materials,27672,0.18,2024-07-02,2025-03-12,Add,Self=54;Dependent=46,False,,2026-11-20
-K000389,K000389,Rohit Khanna,LITE,LUMENTUM HOLDINGS INC CMN,Technology,28108,0.18,2026-03-30,2026-10-28,Add,Dependent=83;Spouse=17,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,BRO,"BROWN & BROWN, INC. CMN",Financials,28208,0.19,2023-09-06,2026-06-30,Reduce,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,LITE,LUMENTUM HOLDINGS INC CMN,Technology,28108,0.19,2026-03-30,2026-10-28,Add,Dependent=83;Spouse=17,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,ULTA,ULTA BEAUTY INC CMN,Consumer Discretionary,27254,0.18,2022-08-23,2026-08-03,Add,Dependent=66;Spouse=34,False,,2026-11-20
+K000389,K000389,Rohit Khanna,PPG,PPG INDUSTRIES INC. CMN,Materials,27357,0.18,2022-11-02,2026-09-25,Add,Spouse=66;Dependent=34,False,,2026-11-20
+K000389,K000389,Rohit Khanna,SNPS,SYNOPSYS INC. CMN,Technology,26467,0.18,2022-11-02,2026-10-13,Add,Spouse=76;Dependent=24,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,FAST,FASTENAL COMPANY CMN,Consumer Discretionary,27710,0.18,2023-03-24,2026-09-04,Add,Dependent=70;Spouse=30,False,,2026-11-20
+K000389,K000389,Rohit Khanna,HOLX,HOLOGIC INCORPORATED CMN,,26678,0.18,2023-06-26,2025-06-26,Add,Spouse=72;Dependent=28,False,,2026-04-06
+K000389,K000389,Rohit Khanna,HON,HONEYWELL INTERNATIONAL INC CMN,Defense & Aerospace,26670,0.18,2024-06-20,2026-09-25,Add,Dependent=70;Spouse=30,True,House Armed Services,2026-11-20
 K000389,K000389,Rohit Khanna,NXPI,NXP SEMICONDUCTORS N V CMN,Technology,25707,0.17,2022-05-10,2026-10-13,Add,Spouse=68;Dependent=32,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,TEL,TE CONNECTIVITY CORPORATION CMN,Industrials,26890,0.17,2022-06-27,2026-09-04,Add,Self=41;Dependent=30;Spouse=29,False,,2026-11-20
+K000389,K000389,Rohit Khanna,BBY,BEST BUY CO INC CMN,Consumer Discretionary,25511,0.17,2022-05-10,2026-05-15,Reduce,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,LUV,SOUTHWEST AIRLINES CO CMN,Transportation,24765,0.17,2022-06-17,2026-05-27,Reduce,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,AVB,AVALONBAY COMMUNITIES INC CMN,,25409,0.17,2022-12-06,2025-05-19,Add,Dependent=100,False,,2026-08-14
 K000389,K000389,Rohit Khanna,EQR,EQUITY RESIDENTIAL CMN,,25730,0.17,2022-12-06,2025-06-23,Add,Dependent=100,False,,2026-08-17
-K000389,K000389,Rohit Khanna,PG,THE PROCTER & GAMBLE COMPANY CMN,Consumer Staples,27062,0.17,2023-03-14,2026-09-25,Add,Dependent=35;Spouse=34;Self=31,False,,2026-11-20
-K000389,K000389,Rohit Khanna,HOLX,HOLOGIC INCORPORATED CMN,,26678,0.17,2023-06-26,2025-06-26,Add,Spouse=72;Dependent=28,False,,2026-04-06
 K000389,K000389,Rohit Khanna,TMUS,"T-MOBILE US, INC. CMN",Communications,25918,0.17,2023-06-26,2025-05-19,Add,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,TROW,"T. ROWE PRICE GROUP, INC. CMN",Financials,26240,0.17,2023-06-26,2025-05-19,Add,Dependent=68;Self=32,False,,2026-11-20
-K000389,K000389,Rohit Khanna,HON,HONEYWELL INTERNATIONAL INC CMN,Defense & Aerospace,26670,0.17,2024-06-20,2026-09-25,Add,Dependent=70;Spouse=30,True,House Armed Services,2026-11-20
 K000389,K000389,Rohit Khanna,XOM,EXXON MOBIL CORP COM,Energy,25879,0.17,2024-06-20,2025-04-04,Add,Dependent=50;Spouse=50,False,,2026-11-20
-K000389,K000389,Rohit Khanna,ORCL,ORACLE CORP,Technology,26180,0.17,2025-04-04,2025-04-04,Buy,Dependent=100,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,BBY,BEST BUY CO INC CMN,Consumer Discretionary,25511,0.16,2022-05-10,2026-05-15,Reduce,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,AVB,AVALONBAY COMMUNITIES INC CMN,,25409,0.16,2022-12-06,2025-05-19,Add,Dependent=100,False,,2026-08-14
-K000389,K000389,Rohit Khanna,CMCSA,COMCAST CORPORATION CMN CLASS A VOTING,Communications,24528,0.16,2022-12-06,2026-02-17,Reduce,Dependent=76;Self=24,False,,2026-11-20
-K000389,K000389,Rohit Khanna,RF,REGIONS FINANCIAL CORPORATION CMN,Financials,24428,0.16,2023-06-26,2024-09-09,Add,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,HOOD,ROBINHOOD MARKETS INC CMN CLASS A,Financials,24985,0.16,2025-09-29,2026-10-07,Add,Dependent=66;Spouse=34,False,,2026-11-20
-K000389,K000389,Rohit Khanna,CSGP,COSTAR GROUP INC CMN,Industrials,23246,0.15,2022-05-10,2026-10-13,Reduce,Spouse=73;Self=27,False,,2026-11-20
-K000389,K000389,Rohit Khanna,SCCO,SOUTHERN COPPER CORPORATION CMN,Materials,23918,0.15,2022-05-10,2022-05-10,Buy,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,SYK,STRYKER CORPORATION CMN,Health Care,22751,0.15,2022-05-23,2026-10-13,Add,Self=61;Dependent=39,False,,2026-11-20
-K000389,K000389,Rohit Khanna,CTSH,COGNIZANT TECHNOLOGY SOLUTIONS CORP CLASS A,Technology,23238,0.15,2022-06-17,2026-09-25,Add,Spouse=72;Self=28,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,CDNS,CADENCE DESIGN SYSTEMS INC CMN,Technology,23550,0.15,2022-08-23,2026-10-13,Add,Dependent=62;Self=38,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,SWK,STANLEY BLACK & DECKER INC CMN,Industrials,23366,0.15,2022-08-23,2026-10-13,Reduce,Spouse=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,CEG,CONSTELLATION ENERGY CORP CMN,Utilities,26191,0.17,2024-08-02,2026-07-20,Add,Dependent=71;Spouse=29,False,,2026-11-20
+K000389,K000389,Rohit Khanna,SNOW,SNOWFLAKE INC. CMN CLASS A,Technology,26205,0.17,2024-10-22,2026-06-16,Add,Dependent=100,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,HOOD,ROBINHOOD MARKETS INC CMN CLASS A,Financials,24985,0.17,2025-09-29,2026-10-07,Add,Dependent=66;Spouse=34,False,,2026-11-20
+K000389,K000389,Rohit Khanna,SCCO,SOUTHERN COPPER CORPORATION CMN,Materials,23918,0.16,2022-05-10,2022-05-10,Buy,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,SWK,STANLEY BLACK & DECKER INC CMN,Industrials,23366,0.16,2022-08-23,2026-10-13,Reduce,Spouse=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,KRC,Kilroy Realty Corporation Common Stock,Real Estate,23411,0.16,2023-03-24,2023-06-26,Add,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,INCY,INCYTE CORPORATION CMN,Industrials,24524,0.16,2023-06-26,2026-10-07,Reduce,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,DLTR,"DOLLAR TREE STORES, INC. CMN",Consumer Discretionary,24068,0.16,2023-06-26,2024-09-09,Add,Spouse=68;Dependent=32,False,,2026-11-20
+K000389,K000389,Rohit Khanna,WYNN,WYNN RESORTS LIMITED CMN,Consumer Discretionary,24284,0.16,2024-08-05,2026-09-25,Add,Dependent=67;Spouse=33,False,,2026-11-20
+K000389,K000389,Rohit Khanna,VYX,NCR VOYIX CORP CMN,Technology,23812,0.16,2024-09-27,2025-06-10,Add,Spouse=100,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,TDY,TELEDYNE TECHNOLOGIES INCORPORATED CMN,Defense & Aerospace,22402,0.15,2022-05-10,2026-09-25,Reduce,Dependent=100,True,House Armed Services,2026-11-20
+K000389,K000389,Rohit Khanna,CCK,CROWN HOLDINGS INC CMN,Industrials,22555,0.15,2022-05-10,2023-03-24,Add,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,NDAQ,NASDAQ INC. CMN,Financials,22223,0.15,2022-05-23,2026-04-24,Reduce,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,EBAY,EBAY INC CMN,Industrials,22257,0.15,2022-08-23,2026-09-04,Reduce,Dependent=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,BDX,"BECTON, DICKINSON AND COMPANY CMN",Health Care,22838,0.15,2022-12-06,2025-05-19,Add,Dependent=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,EQIX,"EQUINIX, INC. REIT",Real Estate,23026,0.15,2022-12-06,2024-05-29,Add,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,KRC,Kilroy Realty Corporation Common Stock,Real Estate,23411,0.15,2023-03-24,2023-06-26,Add,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,VICI,VICI PROPERTIES INC CMN,Real Estate,22860,0.15,2023-03-24,2026-09-25,Add,Spouse=36;Dependent=35;Self=29,False,,2026-11-20
 K000389,K000389,Rohit Khanna,RVTY,REVVITY INC CMN,Technology,23018,0.15,2023-06-26,2026-10-13,Reduce,Spouse=100,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,DLTR,"DOLLAR TREE STORES, INC. CMN",Consumer Discretionary,24068,0.15,2023-06-26,2024-09-09,Add,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,WDAY,WORKDAY INC CMN CLASS A,Technology,22875,0.15,2025-01-17,2026-07-07,Add,Dependent=75;Self=25,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,ROK,ROCKWELL AUTOMATION INC CMN,Technology,23160,0.15,2023-06-29,2026-06-05,Reduce,Dependent=69;Spouse=31,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,EXPD,EXPEDITORS INTERNATIONAL OF WASHINGTON CMN,Transportation,22711,0.15,2023-10-31,2026-01-29,Add,Dependent=58;Spouse=42,False,,2026-11-20
+K000389,K000389,Rohit Khanna,RL,RALPH LAUREN CORP CMN CLASS A,Consumer Discretionary,22470,0.15,2024-08-02,2026-09-04,Reduce,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,WDAY,WORKDAY INC CMN CLASS A,Technology,22875,0.15,2025-01-22,2026-07-07,Add,Dependent=75;Self=25,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,IBKR,"INTERACTIVE BROKERS GROUP, INC CMN CLASS A",Financials,22067,0.15,2026-01-23,2026-05-27,Add,Spouse=67;Dependent=33,False,,2026-11-20
+K000389,K000389,Rohit Khanna,CART,MAPLEBEAR INC. CMN,Industrials,22405,0.15,2026-02-13,2026-10-21,Reduce,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,AJG,ARTHUR J GALLAGHER & CO CMN,Financials,20681,0.14,2022-05-10,2026-06-30,Add,Dependent=53;Spouse=47,False,,2026-11-20
 K000389,K000389,Rohit Khanna,UI,UBIQUITI INC CMN,Technology,21490,0.14,2022-05-10,2022-05-10,Buy,Dependent=100,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,CCK,CROWN HOLDINGS INC CMN,Industrials,22555,0.14,2022-05-10,2023-03-24,Add,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,EW,EDWARDS LIFESCIENCES CORPORATION CMN,Health Care,21597,0.14,2022-05-23,2026-08-03,Reduce,Self=55;Dependent=45,False,,2026-11-20
 K000389,K000389,Rohit Khanna,ETN,EATON CORP PLC CMN,Industrials,21208,0.14,2022-05-23,2026-10-13,Add,Self=41;Dependent=32;Spouse=27,False,,2026-11-20
-K000389,K000389,Rohit Khanna,EBAY,EBAY INC CMN,Industrials,22257,0.14,2022-08-23,2026-09-04,Reduce,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,FISV,FISERV INC CMN,Industrials,21514,0.14,2022-11-02,2026-10-13,Add,Spouse=45;Dependent=45;Self=11,False,,2026-11-20
+K000389,K000389,Rohit Khanna,FDX,FEDEX CORPORATION CMN,Transportation,20602,0.14,2022-11-02,2026-09-25,Reduce,Self=62;Dependent=38,False,,2026-11-20
 K000389,K000389,Rohit Khanna,TRU,TRANSUNION CMN,Industrials,21626,0.14,2022-11-02,2023-03-24,Add,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,CI,CIGNA GROUP/THE CMN,Health Care,21343,0.14,2023-03-24,2026-09-25,Reduce,Self=64;Dependent=36,False,,2026-11-20
+K000389,K000389,Rohit Khanna,WBD,WARNER BROS DISCOVERY INC CMN,,21020,0.14,2022-12-06,2024-09-09,Reduce,Dependent=100,False,,2026-10-05
+K000389,K000389,Rohit Khanna,ABNB,"AIRBNB, INC. CMN CLASS A",Industrials,21030,0.14,2023-10-02,2026-05-15,Add,Self=51;Spouse=49,False,,2026-11-20
+K000389,K000389,Rohit Khanna,AMP,"AMERIPRISE FINANCIAL, INC. CMN",Financials,21292,0.14,2023-10-10,2026-06-30,Reduce,Spouse=62;Self=38,False,,2026-11-20
 K000389,K000389,Rohit Khanna,FERG,FERGUSON ENTERPRISES INC CMN,Industrials,21417,0.14,2023-10-20,2026-10-13,Reduce,Spouse=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,CPB,THE CAMPBELL'S COMPANY CMN,Consumer Staples,20614,0.14,2025-02-19,2026-01-06,Add,Dependent=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,ERIE,ERIE INDEMNITY COMPANY CL A CMN CLASS A,Financials,21598,0.14,2025-07-25,2026-03-23,Reduce,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,IBKR,"INTERACTIVE BROKERS GROUP, INC CMN CLASS A",Financials,22067,0.14,2026-01-23,2026-05-27,Add,Spouse=67;Dependent=33,False,,2026-11-20
-K000389,K000389,Rohit Khanna,CART,MAPLEBEAR INC. CMN,Industrials,22405,0.14,2026-02-13,2026-10-21,Reduce,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,AJG,ARTHUR J GALLAGHER & CO CMN,Financials,20681,0.13,2022-05-10,2026-06-30,Add,Dependent=53;Spouse=47,False,,2026-11-20
-K000389,K000389,Rohit Khanna,IEX,IDEX CORPORATION COMMON STOCK,Industrials,20035,0.13,2022-05-10,2026-03-10,Reduce,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,TTWO,TAKE TWO INTERACTIVE SOFTWARE INC,Technology,19476,0.13,2022-05-10,2026-08-10,Reduce,Self=56;Spouse=44,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,CME,CME GROUP INC CMN CLASS A,Financials,19374,0.13,2022-05-05,2026-08-03,Add,Spouse=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,CSGP,COSTAR GROUP INC CMN,Industrials,20099,0.13,2022-05-10,2026-10-13,Reduce,Spouse=85;Self=15,False,,2026-11-20
+K000389,K000389,Rohit Khanna,ZBRA,ZEBRA TECHNOLOGIES INC CMN CLASS A,Industrials,19265,0.13,2022-05-10,2026-06-16,Reduce,Dependent=55;Self=45,False,,2026-11-20
 K000389,K000389,Rohit Khanna,EFX,EQUIFAX INC. CMN,Industrials,19596,0.13,2022-05-23,2026-09-25,Reduce,Dependent=69;Self=31,False,,2026-11-20
-K000389,K000389,Rohit Khanna,DAL,DELTA AIR LINES INC. CMN,Transportation,20345,0.13,2022-06-17,2026-09-11,Add,Self=61;Dependent=39,False,,2026-11-20
-K000389,K000389,Rohit Khanna,BIIB,BIOGEN INC CMN,Health Care,19467,0.13,2022-08-23,2026-09-11,Reduce,Self=54;Spouse=46,False,,2026-11-20
-K000389,K000389,Rohit Khanna,OKTA,"OKTA, INC. CMN CLASS A",Technology,20221,0.13,2022-08-23,2025-04-08,Reduce,Dependent=100,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,BX,BLACKSTONE GROUP INC/THE CMN,Financials,18786,0.13,2022-06-10,2026-02-17,Reduce,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,IFF,International Flavors & Fragrances CMN,Materials,19203,0.13,2022-08-23,2025-09-29,Add,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,FISV,FISERV INC CMN,Industrials,19200,0.13,2022-11-02,2026-10-13,Add,Spouse=50;Dependent=50,False,,2026-11-20
+K000389,K000389,Rohit Khanna,APTV,APTIV PLC CMN,Consumer Discretionary,19891,0.13,2022-11-02,2026-10-13,Add,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,MCK,MCKESSON CORPORATION CMN,Health Care,19724,0.13,2022-12-06,2026-09-04,Add,Spouse=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,NEM,Newmont Corp CMN,Materials,18970,0.13,2022-12-06,2023-06-26,Buy,Dependent=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,EWBC,EAST WEST BANCORP INC CMN,Financials,19708,0.13,2023-03-14,2023-03-24,Buy,Dependent=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,CCI,CROWN CASTLE INTL CORP CMN,Real Estate,20153,0.13,2023-03-24,2025-05-19,Add,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,MCHP,MICROCHIP TECHNOLOGY INCORPORATED CMN,Technology,20075,0.13,2024-05-29,2025-03-12,Add,Dependent=69;Self=31,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,CEG,CONSTELLATION ENERGY CORP CMN,Utilities,20096,0.13,2024-08-02,2026-07-20,Add,Dependent=63;Spouse=37,False,,2026-11-20
-K000389,K000389,Rohit Khanna,F,FORD MOTOR COMPANY CMN,Consumer Discretionary,19868,0.13,2024-08-02,2024-09-09,Add,Self=52;Dependent=48,False,,2026-11-20
-K000389,K000389,Rohit Khanna,EG,EVEREST GROUP LTD CMN,Financials,19515,0.13,2024-10-14,2026-06-02,Add,Dependent=55;Self=45,False,,2026-11-20
-K000389,K000389,Rohit Khanna,CPB,THE CAMPBELL'S COMPANY CMN,Consumer Staples,20614,0.13,2025-01-17,2026-01-06,Add,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,EXPE,EXPEDIA GROUP INC CMN,Transportation,20068,0.13,2025-03-12,2026-05-27,Add,Dependent=58;Spouse=42,False,,2026-11-20
+K000389,K000389,Rohit Khanna,PLD,PROLOGIS INC CMN,Real Estate,19445,0.13,2023-10-31,2025-05-19,Add,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,VLTO,VERALTO CORPORATION CMN,Technology,19231,0.13,2024-04-26,2026-06-16,Reduce,Dependent=100,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,MCHP,MICROCHIP TECHNOLOGY INCORPORATED CMN,Technology,20208,0.13,2024-05-29,2025-03-12,Add,Dependent=100,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,HPE,HEWLETT PACKARD ENTERPRISE CO CMN,Technology,19073,0.13,2024-05-29,2024-05-29,Buy,Dependent=100,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,EG,EVEREST GROUP LTD CMN,Financials,20168,0.13,2024-11-15,2026-06-02,Add,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,RJF,"RAYMOND JAMES FINANCIAL, INC. CMN",Financials,17298,0.12,2022-05-10,2026-06-30,Add,Self=52;Spouse=48,False,,2026-11-20
+K000389,K000389,Rohit Khanna,CTVA,"CORTEVA, INC. CMN",Consumer Staples,18127,0.12,2022-05-10,2026-09-04,Add,Self=40;Dependent=34;Spouse=26,False,,2026-11-20
 K000389,K000389,Rohit Khanna,PEN,PENUMBRA INC CMN,Health Care,18093,0.12,2022-05-10,2022-06-27,Add,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,ZBRA,ZEBRA TECHNOLOGIES INC CMN CLASS A,Industrials,19265,0.12,2022-05-10,2026-06-16,Reduce,Dependent=55;Self=45,False,,2026-11-20
-K000389,K000389,Rohit Khanna,AFL,AFLAC INCORPORATED CMN,Financials,19019,0.12,2022-05-10,2026-08-10,Reduce,Spouse=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,BX,BLACKSTONE GROUP INC/THE CMN,Financials,18786,0.12,2022-06-10,2026-02-17,Reduce,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,GIS,GENERAL MILLS INC CMN,Consumer Staples,18135,0.12,2022-08-23,2026-06-16,Reduce,Self=51;Dependent=49,False,,2026-11-20
-K000389,K000389,Rohit Khanna,IFF,International Flavors & Fragrances CMN,Materials,19203,0.12,2022-08-23,2025-09-29,Add,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,CMG,CHIPOTLE MEXICAN GRILL INC. CMN,Consumer Discretionary,18065,0.12,2022-11-02,2026-10-07,Reduce,Self=57;Dependent=43,False,,2026-11-20
-K000389,K000389,Rohit Khanna,IRM,IRON MOUNTAIN INCORPORATED CMN,Real Estate,19080,0.12,2022-11-02,2026-01-23,Add,Spouse=53;Dependent=47,False,,2026-11-20
-K000389,K000389,Rohit Khanna,NEM,Newmont Corp CMN,Materials,18970,0.12,2022-12-06,2023-06-26,Buy,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,CPRT,COPART INC. CMN,Consumer Discretionary,18207,0.12,2023-06-26,2026-09-25,Add,Self=50;Spouse=50,False,,2026-11-20
-K000389,K000389,Rohit Khanna,GRMN,GARMIN LTD CMN,Defense & Aerospace,19322,0.12,2023-09-06,2026-07-20,Add,Dependent=54;Spouse=46,True,House Armed Services,2026-11-20
-K000389,K000389,Rohit Khanna,AME,AMETEK INC (NEW) CMN,Technology,19357,0.12,2023-10-10,2026-09-04,Add,Self=61;Spouse=39,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,PLD,PROLOGIS INC CMN,Real Estate,19445,0.12,2023-10-31,2025-05-19,Add,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,VLTO,VERALTO CORPORATION CMN,Technology,19231,0.12,2024-04-26,2026-06-16,Reduce,Dependent=100,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,HPE,HEWLETT PACKARD ENTERPRISE CO CMN,Technology,19073,0.12,2024-05-29,2024-05-29,Buy,Dependent=100,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,NYT,NEW YORK TIMES CO A CMN CLASS A,Communications,17417,0.12,2022-05-10,2022-05-10,Buy,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,NSC,NORFOLK SOUTHERN CORPORATION CMN,Transportation,18237,0.12,2022-05-23,2026-10-07,Reduce,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,VMC,VULCAN MATERIALS CO CMN,Materials,17776,0.12,2022-11-03,2026-10-13,Add,Dependent=50;Spouse=50,False,,2026-11-20
+K000389,K000389,Rohit Khanna,ZTS,ZOETIS INC CMN CLASS A,Health Care,17482,0.12,2022-12-06,2026-10-13,Add,Spouse=51;Dependent=49,False,,2026-11-20
+K000389,K000389,Rohit Khanna,ANSS,"ANSYS, INC. CMN",,18758,0.12,2022-12-06,2024-05-29,Add,Dependent=100,False,,2025-07-16
+K000389,K000389,Rohit Khanna,KMB,KIMBERLY CLARK CORPORATION CMN,Materials,17880,0.12,2022-12-06,2026-10-07,Reduce,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,PG,THE PROCTER & GAMBLE COMPANY CMN,Consumer Staples,18717,0.12,2023-03-14,2026-09-25,Add,Dependent=50;Spouse=50,False,,2026-11-20
+K000389,K000389,Rohit Khanna,A,AGILENT TECHNOLOGIES INC CMN,Technology,18072,0.12,2023-10-31,2026-10-13,Add,Dependent=100,True,House Select Committee on China,2026-11-20
 K000389,K000389,Rohit Khanna,STT,STATE STREET CORPORATION (NEW) CMN,Financials,18098,0.12,2024-05-29,2024-05-29,Buy,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,VYX,NCR VOYIX CORP CMN,Technology,18692,0.12,2024-10-11,2025-06-10,Add,Spouse=71;Dependent=29,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,ES,EVERSOURCE ENERGY CMN,Utilities,18322,0.12,2024-08-02,2026-09-25,Add,Spouse=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,VRTX,VERTEX PHARMACEUTICALS INCORPORATED CMN,Health Care,18097,0.12,2024-09-09,2025-05-19,Add,Dependent=52;Spouse=48,False,,2026-11-20
 K000389,K000389,Rohit Khanna,IOT,SAMSARA INC. CMN CLASS A,Technology,18157,0.12,2025-10-17,2026-05-21,Add,Dependent=100,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,RJF,"RAYMOND JAMES FINANCIAL, INC. CMN",Financials,17298,0.11,2022-05-10,2026-06-30,Add,Self=52;Spouse=48,False,,2026-11-20
 K000389,K000389,Rohit Khanna,IR,INGERSOLL RAND INC CMN,Industrials,16368,0.11,2022-05-10,2026-10-13,Add,Spouse=53;Self=47,False,,2026-11-20
-K000389,K000389,Rohit Khanna,NYT,NEW YORK TIMES CO A CMN CLASS A,Communications,17417,0.11,2022-05-10,2022-05-10,Buy,Dependent=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,ABT,ABBOTT LABORATORIES CMN,Health Care,16856,0.11,2022-06-16,2026-10-07,Add,Spouse=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,ETSY,"ETSY, INC. CMN",Industrials,17554,0.11,2022-08-23,2024-08-02,Add,Spouse=59;Dependent=41,False,,2026-11-20
-K000389,K000389,Rohit Khanna,BAX,BAXTER INTERNATIONAL INC. CMN,Health Care,17763,0.11,2022-11-02,2026-05-01,Add,Dependent=67;Self=33,False,,2026-11-20
-K000389,K000389,Rohit Khanna,VMC,VULCAN MATERIALS CO CMN,Materials,17776,0.11,2022-11-03,2026-10-13,Add,Dependent=50;Spouse=50,False,,2026-11-20
-K000389,K000389,Rohit Khanna,ZTS,ZOETIS INC CMN CLASS A,Health Care,17482,0.11,2022-12-06,2026-10-13,Add,Spouse=51;Dependent=49,False,,2026-11-20
-K000389,K000389,Rohit Khanna,KMB,KIMBERLY CLARK CORPORATION CMN,Materials,17880,0.11,2022-12-06,2026-10-07,Reduce,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,CTSH,COGNIZANT TECHNOLOGY SOLUTIONS CORP CLASS A,Technology,16659,0.11,2022-06-17,2026-09-25,Add,Spouse=100,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,TEL,TE CONNECTIVITY CORPORATION CMN,Industrials,15822,0.11,2022-06-27,2026-09-04,Add,Dependent=51;Spouse=49,False,,2026-11-20
+K000389,K000389,Rohit Khanna,EL,ESTEE LAUDER COS INC CL-A CMN,Consumer Staples,17247,0.11,2022-12-06,2024-11-15,Add,Dependent=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,FCX,FREEPORT MCMORAN INC CMN,Materials,17058,0.11,2022-12-30,2026-10-13,Add,Dependent=66;Spouse=34,False,,2026-11-20
 K000389,K000389,Rohit Khanna,ECL,ECOLAB INC. CMN,Consumer Staples,16996,0.11,2023-03-14,2026-09-25,Add,Dependent=50;Spouse=50,False,,2026-11-20
-K000389,K000389,Rohit Khanna,MCD,MC DONALDS CORP CMN,Consumer Discretionary,17585,0.11,2023-03-24,2026-10-13,Reduce,Spouse=53;Self=47,False,,2026-11-20
+K000389,K000389,Rohit Khanna,VICI,VICI PROPERTIES INC CMN,Real Estate,16183,0.11,2023-03-24,2026-09-25,Add,Spouse=51;Dependent=49,False,,2026-11-20
 K000389,K000389,Rohit Khanna,TT,TRANE TECHNOLOGIES PUBLIC LIMITED CMN,Technology,16995,0.11,2023-06-26,2024-06-20,Add,Dependent=100,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,TROW,"T. ROWE PRICE GROUP, INC. CMN",Financials,16507,0.11,2023-06-26,2025-05-19,Add,Dependent=54;Spouse=46,False,,2026-11-20
 K000389,K000389,Rohit Khanna,FFIV,F5 Inc CMN,Technology,16845,0.11,2023-06-26,2023-06-26,Buy,Dependent=100,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,URI,UNITED RENTALS INC CMN,Industrials,15845,0.11,2023-10-10,2026-10-07,Reduce,Dependent=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,ITW,ILLINOIS TOOL WORKS CMN,Industrials,16374,0.11,2023-10-31,2026-10-13,Add,Dependent=50;Spouse=50,False,,2026-11-20
-K000389,K000389,Rohit Khanna,LULU,LULULEMON ATHLETICA INC CMN,Consumer Discretionary,16502,0.11,2023-10-31,2026-10-13,Add,Dependent=79;Self=21,False,,2026-11-20
-K000389,K000389,Rohit Khanna,LVS,LAS VEGAS SANDS CORP CMN,Consumer Discretionary,16674,0.11,2024-04-26,2026-09-25,Add,Self=52;Spouse=48,False,,2026-11-20
+K000389,K000389,Rohit Khanna,INTU,INTUIT INC CMN,Technology,15790,0.11,2024-01-10,2026-09-25,Reduce,Dependent=100,True,House Select Committee on China,2026-11-20
 K000389,K000389,Rohit Khanna,MSCI,MSCI Inc CMN,Industrials,17242,0.11,2024-04-26,2026-07-07,Reduce,Spouse=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,ALB,ALBEMARLE CORP CMN,Materials,17457,0.11,2024-06-20,2025-03-12,Add,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,HUBB,HUBBELL INCORPORATED CMN,Technology,16838,0.11,2025-01-17,2026-09-04,Add,Self=58;Spouse=42,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,JPM,JPMORGAN CHASE & CO CMN,Financials,16110,0.11,2024-05-29,2026-02-17,Reduce,Dependent=75;Spouse=25,False,,2026-11-20
+K000389,K000389,Rohit Khanna,HUBB,HUBBELL INCORPORATED CMN,Technology,16838,0.11,2024-11-12,2026-09-04,Add,Self=58;Spouse=42,True,House Select Committee on China,2026-11-20
 K000389,K000389,Rohit Khanna,DLR,"DIGITAL REALTY TRUST, INC. CMN",Real Estate,16953,0.11,2025-03-12,2025-05-19,Add,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,BXP,BXP INC COMMON STOCK,Real Estate,15796,0.11,2025-03-12,2025-05-19,Add,Dependent=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,HPQ,HP INC. CMN,Technology,16689,0.11,2025-03-12,2025-05-19,Add,Dependent=100,True,House Select Committee on China,2026-11-20
 K000389,K000389,Rohit Khanna,BWXT,BWX TECHNOLOGIES INC CMN,Industrials,16876,0.11,2026-03-19,2026-03-19,Buy,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,PCAR,PACCAR INC CMN,Consumer Discretionary,15460,0.1,2022-11-02,2026-10-13,Reduce,Self=52;Spouse=48,False,,2026-11-20
+K000389,K000389,Rohit Khanna,SYK,STRYKER CORPORATION CMN,Health Care,15716,0.1,2022-05-23,2026-10-13,Add,Dependent=56;Self=44,False,,2026-11-20
+K000389,K000389,Rohit Khanna,CDNS,CADENCE DESIGN SYSTEMS INC CMN,Technology,14526,0.1,2022-08-23,2026-10-13,Add,Dependent=100,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,POOL,POOL CORP CMN,Industrials,14279,0.1,2022-11-02,2026-09-04,Reduce,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,GPC,GENUINE PARTS CO CMN,Industrials,15317,0.1,2022-11-02,2026-09-11,Add,Self=54;Dependent=46,False,,2026-11-20
 K000389,K000389,Rohit Khanna,HIW,HIGHWOODS PROPERTIES INC CMN,Real Estate,15165,0.1,2023-03-24,2023-03-24,Buy,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,LW,LAMB WESTON HOLDINGS INC CMN,Consumer Staples,15706,0.1,2023-06-26,2026-03-23,Add,Spouse=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,CI,CIGNA GROUP/THE CMN,Health Care,14916,0.1,2023-03-24,2026-09-25,Reduce,Dependent=52;Self=48,False,,2026-11-20
 K000389,K000389,Rohit Khanna,WRK,WestRock Company CMN,,14937,0.1,2023-06-26,2023-06-26,Buy,Dependent=100,False,,2024-07-05
 K000389,K000389,Rohit Khanna,BSX,BOSTON SCIENTIFIC CORP COMMON STOCK,Health Care,15129,0.1,2023-10-10,2026-10-13,Add,Dependent=51;Spouse=49,False,,2026-11-20
-K000389,K000389,Rohit Khanna,URI,UNITED RENTALS INC CMN,Industrials,15845,0.1,2023-10-10,2026-10-07,Reduce,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,XYL,XYLEM INC CMN,Industrials,14765,0.1,2023-10-10,2026-10-13,Add,Dependent=50;Spouse=50,False,,2026-11-20
 K000389,K000389,Rohit Khanna,MMC,MARSH & MCLENNAN CO INC CMN,,14833,0.1,2023-10-31,2024-04-23,Add,Spouse=100,False,,2026-01-13
-K000389,K000389,Rohit Khanna,INTU,INTUIT INC CMN,Technology,15790,0.1,2024-01-10,2026-09-25,Reduce,Dependent=100,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,BXP,BXP INC COMMON STOCK,Real Estate,15796,0.1,2025-03-12,2025-05-19,Add,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,MS,MORGAN STANLEY CMN,Financials,14569,0.1,2024-05-29,2025-04-09,Reduce,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,LII,LENNOX INTERNATIONAL INC CMN,Industrials,14521,0.1,2024-06-20,2026-10-13,Add,Dependent=53;Spouse=47,False,,2026-11-20
+K000389,K000389,Rohit Khanna,KLAC,KLA CORP CMN,Technology,14696,0.1,2024-08-05,2024-08-05,Buy,Dependent=100,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,GTLS,"CHART INDUSTRIES, INC. CMN",,14417,0.1,2024-08-20,2024-08-20,Buy,Dependent=100,False,,2026-07-15
+K000389,K000389,Rohit Khanna,HBAN,HUNTINGTON BANCSHARES INCORPORATED CMN,Financials,15365,0.1,2024-11-15,2025-03-12,Add,Dependent=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,GE,GE AEROSPACE COM NEW,Industrials,14970,0.1,2025-04-04,2025-04-04,Buy,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,WYNN,WYNN RESORTS LIMITED CMN,Consumer Discretionary,15309,0.1,2026-09-11,2026-09-25,Add,Spouse=52;Dependent=48,False,,2026-11-20
-K000389,K000389,Rohit Khanna,AMT,AMERICAN TOWER CORPORATION CMN,Real Estate,14766,0.09,2022-05-05,2026-10-07,Reduce,Self=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,AKAM,"AKAMAI TECHNOLOGIES, INC. CMN",Industrials,14204,0.09,2022-05-10,2024-08-02,Add,Spouse=51;Dependent=49,False,,2026-11-20
-K000389,K000389,Rohit Khanna,STZ,CONSTELLATION BRANDS INC CMN CLASS A,Consumer Staples,13896,0.09,2022-05-10,2026-10-13,Add,Dependent=65;Self=35,False,,2026-11-20
+K000389,K000389,Rohit Khanna,BBWI,"BATH & BODY WORKS, INC. CMN",Consumer Discretionary,14175,0.09,2022-05-10,2024-09-09,Add,Dependent=65;Spouse=35,False,,2026-11-20
+K000389,K000389,Rohit Khanna,W,WAYFAIR INC. CMN,Consumer Discretionary,13036,0.09,2022-05-10,2022-05-10,Buy,Dependent=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,NTAP,"NETAPP, INC. CMN",Technology,14218,0.09,2022-05-23,2026-05-27,Reduce,Self=100,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,T,AT&T INC. CMN,Communications,13762,0.09,2022-06-30,2023-10-10,Add,Dependent=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,MOS,MOSAIC COMPANY (THE) CMN,Materials,13848,0.09,2022-08-23,2026-07-20,Add,Dependent=51;Spouse=49,False,,2026-11-20
-K000389,K000389,Rohit Khanna,MNST,MONSTER BEVERAGE CORPORATION CMN,Consumer Staples,13527,0.09,2022-11-02,2026-09-11,Reduce,Self=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,APTV,APTIV PLC CMN,Consumer Discretionary,13587,0.09,2022-11-02,2026-10-13,Add,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,POOL,POOL CORP CMN,Industrials,14279,0.09,2022-11-02,2026-09-04,Reduce,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,ARE,ALEXANDRIA REAL ESTATE EQUITIES INC,Real Estate,12922,0.09,2023-03-24,2026-09-25,Add,Spouse=51;Dependent=49,False,,2026-11-20
+K000389,K000389,Rohit Khanna,RF,Regions Financial Corporation CMN,Financials,14197,0.09,2023-06-26,2023-06-26,Buy,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,CPRT,COPART INC. CMN,Consumer Discretionary,13705,0.09,2023-06-26,2026-09-25,Add,Spouse=66;Self=34,False,,2026-11-20
 K000389,K000389,Rohit Khanna,FSLR,FIRST SOLAR INC CMN,Technology,13991,0.09,2023-06-26,2026-10-13,Add,Self=58;Dependent=42,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,VRSK,VERISK ANALYTICS INC CMN,Technology,13484,0.09,2023-06-29,2026-10-07,Reduce,Dependent=55;Self=45,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,XYL,XYLEM INC CMN,Industrials,14765,0.09,2023-10-10,2026-10-13,Add,Dependent=50;Spouse=50,False,,2026-11-20
-K000389,K000389,Rohit Khanna,DRI,"DARDEN RESTAURANTS, INC. CMN",Consumer Discretionary,13451,0.09,2023-10-31,2026-06-30,Reduce,Self=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,MS,MORGAN STANLEY CMN,Financials,14569,0.09,2024-05-29,2025-04-09,Reduce,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,LULU,LULULEMON ATHLETICA INC CMN,Consumer Discretionary,13024,0.09,2023-10-31,2026-10-13,Add,Dependent=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,STLD,STEEL DYNAMICS INC CMN,Materials,13450,0.09,2024-06-20,2026-10-01,Reduce,Spouse=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,LII,LENNOX INTERNATIONAL INC CMN,Industrials,14521,0.09,2024-06-20,2026-10-13,Add,Dependent=53;Spouse=47,False,,2026-11-20
-K000389,K000389,Rohit Khanna,CMA,COMERICA INCORPORATED CMN,,14564,0.09,2024-08-02,2024-08-02,Buy,Self=100,False,,2026-01-30
+K000389,K000389,Rohit Khanna,CVX,CHEVRON CORP NEW COM,Energy,13048,0.09,2024-06-20,2025-05-08,Buy,Spouse=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,NTRS,NORTHERN TRUST CORP CMN,Financials,13779,0.09,2025-03-12,2025-03-12,Buy,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,EMN,EASTMAN CHEMICAL COMPANY CMN,Materials,11877,0.08,2022-05-10,2025-04-23,Add,Spouse=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,TDY,TELEDYNE TECHNOLOGIES INCORPORATED CMN,Defense & Aerospace,12216,0.08,2022-05-10,2026-09-25,Reduce,Dependent=100,True,House Armed Services,2026-11-20
-K000389,K000389,Rohit Khanna,W,WAYFAIR INC. CMN,Consumer Discretionary,13036,0.08,2022-05-10,2022-05-10,Buy,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,PINS,PINTEREST INC CMN CLASS A,Technology,11883,0.08,2022-06-27,2026-08-04,Reduce,Dependent=100,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,MAR,MARRIOTT INTERNATIONAL INC CMN CLASS A,Consumer Discretionary,12452,0.08,2022-08-23,2026-09-25,Reduce,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,EL,ESTEE LAUDER COS INC CL A CMN,Consumer Staples,13022,0.08,2022-12-06,2024-08-02,Add,Self=67;Dependent=33,False,,2026-11-20
+K000389,K000389,Rohit Khanna,BAX,BAXTER INTERNATIONAL INC. CMN,Health Care,11817,0.08,2022-11-02,2026-05-01,Buy,Dependent=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,DVA,DAVITA INC CMN,Health Care,12013,0.08,2023-03-24,2026-01-29,Buy,Spouse=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,ARE,ALEXANDRIA REAL ESTATE EQUITIES INC,Real Estate,12922,0.08,2023-03-24,2026-09-25,Add,Spouse=51;Dependent=49,False,,2026-11-20
 K000389,K000389,Rohit Khanna,K,Kellogg Company CMN,,11838,0.08,2023-06-26,2023-06-26,Buy,Dependent=100,False,,2025-12-10
-K000389,K000389,Rohit Khanna,CVX,CHEVRON CORP NEW COM,Energy,13048,0.08,2024-06-20,2025-05-08,Buy,Spouse=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,LNC,LINCOLN NATL CORP INC CMN,Financials,11841,0.08,2024-08-02,2024-08-02,Buy,Self=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,SPG,SIMON PROPERTY GROUP INC CMN,Real Estate,13217,0.08,2024-08-02,2024-08-02,Buy,Self=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,CINF,CINCINNATI FINANCIAL CORP CMN,Financials,12053,0.08,2024-08-02,2024-08-02,Buy,Self=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,LKQ,LKQ CORPORATION CMN,Industrials,12371,0.08,2024-08-02,2025-06-23,Add,Dependent=67;Self=33,False,,2026-11-20
-K000389,K000389,Rohit Khanna,SCHW,CHARLES SCHWAB CORPORATION CMN,Financials,11784,0.08,2024-09-09,2024-09-09,Buy,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,ENPH,"ENPHASE ENERGY, INC. CMN",Technology,12083,0.08,2023-06-26,2025-05-19,Add,Dependent=39;Spouse=39;Self=22,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,IDXX,IDEXX LABORATORIES CMN,Health Care,11888,0.08,2023-10-31,2026-02-17,Reduce,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,XEL,XCEL ENERGY INC. CMN,Utilities,11364,0.08,2024-06-20,2024-08-20,Buy,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,VRT,VERTIV HOLDINGS LLC CMN CLASS A,Technology,11392,0.08,2024-06-20,2026-10-07,Add,Spouse=50;Dependent=50,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,CNP,"CENTERPOINT ENERGY, INC CMN",Utilities,12290,0.08,2024-08-02,2024-08-02,Buy,Spouse=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,WEC,"WEC ENERGY GROUP, INC. CMN",Utilities,11312,0.08,2024-08-02,2024-08-02,Buy,Spouse=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,CFG,"CITIZENS FINANCIAL GROUP, INC. CMN",Financials,12293,0.08,2025-03-12,2025-03-12,Buy,Dependent=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,MAA,MID-AMERICA APT CMNTYS INC CMN,Real Estate,12457,0.08,2025-05-19,2025-06-23,Add,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,VEEV,VEEVA SYSTEMS INC CMN CLASS A,Technology,11643,0.08,2026-06-02,2026-06-16,Reduce,Dependent=100,True,House Select Committee on China,2026-11-20
 K000389,K000389,Rohit Khanna,BE,BLOOM ENERGY CORP CMN CLASS A,Industrials,12181,0.08,2026-09-25,2026-10-13,Add,Spouse=65;Dependent=35,False,,2026-11-20
-K000389,K000389,Rohit Khanna,DD,DUPONT DE NEMOURS INC. CMN,Materials,11094,0.07,2022-05-23,2026-09-04,Reduce,Self=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,DG,DOLLAR GENERAL CORPORATION CMN,Consumer Discretionary,9926,0.07,2022-05-10,2026-08-24,Reduce,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,DXCM,"DEXCOM, INC. CMN",Health Care,10344,0.07,2022-08-23,2026-06-30,Reduce,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,TSN,TYSON FOODS INC CL-A CMN CLASS A,Consumer Staples,9937,0.07,2022-08-23,2025-01-17,Buy,Spouse=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,BLDR,BUILDERS FIRSTSOURCE INC. CMN,Consumer Discretionary,10694,0.07,2022-11-02,2026-09-25,Reduce,Dependent=68;Self=32,False,,2026-11-20
+K000389,K000389,Rohit Khanna,CAH,"CARDINAL HEALTH, INC. CMN",Health Care,10550,0.07,2022-12-06,2026-02-05,Reduce,Dependent=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,IQV,IQVIA HOLDINGS INC CMN,Industrials,10607,0.07,2022-12-06,2026-06-30,Reduce,Self=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,BMY,BRISTOL-MYERS SQUIBB COMPANY CMN,Health Care,10692,0.07,2023-06-26,2025-05-19,Buy,Dependent=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,NWSA,News Corporation CMN Class A,Communications,10868,0.07,2023-06-26,2023-06-26,Buy,Dependent=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,CTAS,CINTAS CORPORATION CMN,Consumer Discretionary,10206,0.07,2023-06-26,2026-06-30,Reduce,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,COF,CAPITAL ONE FINANCIAL CORP CMN,Financials,10887,0.07,2023-10-10,2024-08-02,Buy,Self=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,PFG,"PRINCIPAL FINANCIAL GROUP, INC CMN",Financials,10426,0.07,2023-10-10,2026-04-24,Reduce,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,WST,WEST PHARMACEUTICAL SERVICES INC,Health Care,10645,0.07,2024-04-26,2026-06-02,Reduce,Self=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,VRT,VERTIV HOLDINGS LLC CMN CLASS A,Technology,11392,0.07,2024-06-20,2026-10-07,Add,Spouse=50;Dependent=50,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,CRL,CHARLES RIVER LABORATORIES INT CMN,Industrials,10765,0.07,2024-08-02,2025-04-09,Reduce,Self=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,DAY,DAYFORCE INC CMN,,10500,0.07,2024-08-02,2024-08-02,Buy,Self=100,False,,2026-02-03
+K000389,K000389,Rohit Khanna,RSG,REPUBLIC SERVICES INC CMN,Utilities,9843,0.07,2023-09-06,2026-06-16,Reduce,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,ATO,ATMOS ENERGY CORPORATION CMN,Utilities,10904,0.07,2024-08-02,2024-08-02,Buy,Spouse=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,COR,CENCORA INC CMN,Health Care,10283,0.07,2024-08-02,2026-10-07,Reduce,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,MTB,M&T BANK CORPORATION CMN,Financials,10446,0.07,2024-09-09,2024-09-09,Buy,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,LEN,LENNAR CORPORATION CMN CLASS A,Industrials,10310,0.07,2024-08-05,2025-05-19,Add,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,NVR,N V R INC CMN,Industrials,9775,0.07,2024-08-21,2024-08-22,Add,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,SPOT,SPOTIFY TECHNOLOGY S.A. CMN,Communications,10073,0.07,2024-11-15,2024-11-15,Buy,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,APO,APOLLO GLOBAL MANAGEMENT INC CMN CLASS A,Financials,11132,0.07,2025-01-15,2026-02-17,Reduce,Dependent=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,COHR,COHERENT CORP CMN,Technology,10229,0.07,2025-10-17,2026-10-13,Add,Dependent=50;Spouse=50,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,VEEV,VEEVA SYSTEMS INC CMN CLASS A,Technology,11643,0.07,2026-06-02,2026-06-16,Reduce,Dependent=100,True,House Select Committee on China,2026-11-20
 K000389,K000389,Rohit Khanna,YUM,YUM BRANDS INC CMN,Consumer Discretionary,8572,0.06,2022-05-10,2026-10-07,Reduce,Self=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,ENTG,"ENTEGRIS, INC. CMN",Materials,9569,0.06,2022-05-10,2022-06-27,Add,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,DG,DOLLAR GENERAL CORPORATION CMN,Consumer Discretionary,9926,0.06,2022-05-10,2026-08-24,Reduce,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,WM,WASTE MANAGEMENT INC CMN,Utilities,9261,0.06,2022-05-10,2026-10-07,Reduce,Self=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,TTWO,TAKE TWO INTERACTIVE SOFTWARE INC,Technology,8666,0.06,2022-05-10,2026-08-10,Reduce,Spouse=100,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,ALLY,ALLY FINANCIAL INC. CMN,Financials,8462,0.06,2022-05-10,2022-06-27,Add,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,SYY,SYSCO CORPORATION CMN,Consumer Staples,8557,0.06,2022-05-10,2026-09-25,Reduce,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,STZ,CONSTELLATION BRANDS INC CMN CLASS A,Consumer Staples,9004,0.06,2022-05-10,2026-10-13,Buy,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,SBUX,STARBUCKS CORP CMN,Consumer Discretionary,8760,0.06,2022-05-23,2026-09-25,Reduce,Dependent=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,PYPL,PAYPAL HOLDINGS INC. CMN,Industrials,9147,0.06,2022-06-16,2026-09-25,Reduce,Dependent=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,DOC,"HEALTHPEAK PROPERTIES, INC. CMN",Real Estate,9340,0.06,2022-06-27,2026-05-01,Reduce,Spouse=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,OTIS,OTIS WORLDWIDE CORPORATION CMN,Industrials,9042,0.06,2022-08-23,2026-10-13,Buy,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,BIIB,BIOGEN INC CMN,Health Care,9042,0.06,2022-08-23,2026-09-11,Reduce,Spouse=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,GIS,GENERAL MILLS INC CMN,Consumer Staples,8964,0.06,2022-08-23,2026-06-16,Reduce,Dependent=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,LYV,LIVE NATION ENTERTAINMENT INC CMN,Communications,9524,0.06,2022-12-06,2026-05-27,Reduce,Dependent=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,META,META PLATFORMS INC CLASS A COMMON STOCK,Technology,8933,0.06,2022-12-06,2025-04-04,Buy,Dependent=100,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,DOW,DOW INC CMN,Materials,8415,0.06,2022-12-06,2025-05-19,Buy,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,L,LOEWS CORPORATION CMN,Financials,8346,0.06,2023-03-14,2026-10-07,Reduce,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,ELS,"EQUITY LIFESTYLE PROPERTIES, I CMN",Real Estate,8541,0.06,2023-03-24,2023-03-24,Buy,Dependent=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,AVY,AVERY DENNISON CORPORATION CMN,Materials,8979,0.06,2023-03-24,2026-06-30,Buy,Spouse=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,PRU,PRUDENTIAL FINANCIAL INC CMN,Financials,9589,0.06,2023-03-24,2025-03-12,Buy,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,MCD,MC DONALDS CORP CMN,Consumer Discretionary,9243,0.06,2023-03-24,2026-10-13,Reduce,Spouse=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,MELI,"MercadoLibre, Inc. CMN",Industrials,9382,0.06,2023-06-26,2023-06-26,Buy,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,ENPH,"ENPHASE ENERGY, INC. CMN",Technology,9591,0.06,2023-06-26,2025-05-19,Add,Self=44;Dependent=34;Spouse=23,True,House Select Committee on China,2026-11-20
 K000389,K000389,Rohit Khanna,EXR,EXTRA SPACE STORAGE INC. CMN,Real Estate,8992,0.06,2023-08-29,2026-09-25,Reduce,Self=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,RSG,REPUBLIC SERVICES INC CMN,Utilities,9843,0.06,2023-09-06,2026-06-16,Reduce,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,EXPD,EXPEDITORS INTERNATIONAL OF WASHINGTON CMN,Transportation,9588,0.06,2023-10-31,2026-01-29,Buy,Spouse=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,OMC,OMNICOM GROUP CMN,Industrials,9664,0.06,2023-10-31,2026-02-17,Reduce,Dependent=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,KVUE,KENVUE INC. CMN,Consumer Staples,9093,0.06,2024-05-29,2024-05-29,Buy,Dependent=100,False,,2026-10-30
+K000389,K000389,Rohit Khanna,ALB,ALBEMARLE CORP CMN,Materials,9015,0.06,2024-06-20,2025-03-12,Buy,Dependent=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,AEE,AMEREN CORPORATION CMN,Utilities,9280,0.06,2024-06-20,2026-09-25,Reduce,Dependent=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,EXC,EXELON CORPORATION CMN,Utilities,9064,0.06,2024-08-02,2026-09-25,Buy,Spouse=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,GEN,GEN DIGITAL INC CMN,Technology,9718,0.06,2024-08-02,2024-08-02,Buy,Self=100,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,INFN,INFINERA CORPORATION CMN,,9065,0.06,2024-08-15,2024-08-15,Buy,Self=100,False,,2025-02-28
-K000389,K000389,Rohit Khanna,PTC,PTC INC. CMN,Technology,9302,0.06,2024-09-09,2026-02-17,Reduce,Dependent=100,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,AWK,"AMERICAN WATER WORKS CO, INC. CMN",Utilities,8637,0.06,2024-08-02,2024-08-02,Buy,Spouse=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,PTC,PTC INC. CMN,Technology,9281,0.06,2024-08-05,2026-02-17,Reduce,Dependent=100,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,AES,AES CORP. CMN,Utilities,8345,0.06,2024-09-09,2024-09-09,Buy,Spouse=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,DTE,DTE ENERGY COMPANY CMN,Utilities,9408,0.06,2024-09-09,2024-09-09,Buy,Spouse=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,ZS,"ZSCALER, INC. CMN",Technology,9678,0.06,2024-09-17,2026-05-15,Buy,Dependent=100,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,STE,STERIS PUBLIC LIMITED COMPANY CMN,Health Care,9463,0.06,2024-11-15,2024-11-15,Buy,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,SMCI,"SUPER MICRO COMPUTER, INC. CMN CLASS A",Technology,9322,0.06,2024-11-15,2024-11-15,Buy,Dependent=100,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,PSA,PUBLIC STORAGE CMN,Real Estate,8942,0.06,2025-01-22,2025-05-19,Buy,Dependent=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,MMM,3M COMPANY CMN,Health Care,9539,0.06,2025-05-19,2025-05-19,Buy,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,VRTX,VERTEX PHARMACEUTICALS INCORPORATED CMN,Health Care,9351,0.06,2025-05-19,2025-05-19,Buy,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,PSA,PUBLIC STORAGE CMN,Real Estate,8942,0.06,2025-05-19,2025-05-19,Buy,Dependent=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,COIN,COINBASE GLOBAL INC. CMN CLASS A,Financials,9073,0.06,2025-12-05,2026-09-11,Add,Dependent=51;Spouse=49,False,,2026-11-20
 K000389,K000389,Rohit Khanna,Q,"QNITY ELECTRONICS, INC. CMN",Technology,8940,0.06,2025-12-12,2026-05-01,Reduce,Spouse=100,True,House Select Committee on China,2026-11-20
 K000389,K000389,Rohit Khanna,WSM,"WILLIAMS-SONOMA, INC. CMN",Consumer Discretionary,9425,0.06,2026-01-13,2026-05-01,Buy,Dependent=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,EVRG,"EVERGY, INC. CMN",Utilities,9308,0.06,2026-01-29,2026-01-29,Buy,Spouse=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,ZS,"ZSCALER, INC. CMN",Technology,9678,0.06,2026-05-15,2026-05-15,Buy,Dependent=100,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,ES,EVERSOURCE ENERGY CMN,Utilities,8927,0.06,2026-09-25,2026-09-25,Buy,Spouse=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,ZBH,ZIMMER BIOMET HOLDINGS INC,Health Care,7872,0.05,2022-05-10,2026-10-30,Reduce,Self=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,AMT,AMERICAN TOWER CORPORATION CMN,Real Estate,7609,0.05,2022-05-05,2026-10-07,Reduce,Self=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,AVGO,BROADCOM INC CMN,Technology,6816,0.05,2022-05-10,2026-10-13,Buy,Spouse=100,True,House Select Committee on China,2026-11-20
 K000389,K000389,Rohit Khanna,PODD,INSULET CORPORATION CMN,Health Care,8074,0.05,2022-05-10,2026-09-25,Reduce,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,GNRC,GENERAC HOLDINGS INC. CMN,Industrials,6922,0.05,2022-05-10,2022-11-03,Reduce,Dependent=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,SBAC,SBA COMMUNICATIONS CORPORATION CMN,Real Estate,7607,0.05,2022-05-10,2026-09-25,Reduce,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,ALLY,ALLY FINANCIAL INC. CMN,Financials,8462,0.05,2022-05-10,2022-06-27,Add,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,SYY,SYSCO CORPORATION CMN,Consumer Staples,8557,0.05,2022-05-10,2026-09-25,Reduce,Dependent=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,U,UNITY SOFTWARE INC. CMN,Technology,7439,0.05,2022-05-10,2022-05-10,Buy,Dependent=100,True,House Select Committee on China,2026-11-20
 K000389,K000389,Rohit Khanna,GM,GENERAL MOTORS COMPANY CMN,Consumer Discretionary,8231,0.05,2022-05-23,2026-04-13,Buy,Spouse=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,MLM,MARTIN MARIETTA MATERIALS INC CMN,Materials,7336,0.05,2022-06-19,2026-10-13,Reduce,Self=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,DAL,DELTA AIR LINES INC. CMN,Transportation,8033,0.05,2022-06-17,2026-09-11,Buy,Dependent=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,MTCH,MATCH GROUP INC CMN,Technology,7164,0.05,2022-06-27,2022-12-06,Add,Dependent=100,True,House Select Committee on China,2026-11-20
 K000389,K000389,Rohit Khanna,CBRE,CBRE GROUP INC CMN CLASS A,Real Estate,7818,0.05,2022-08-23,2026-10-13,Buy,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,CL,COLGATE PALMOLIVE CO CMN,Consumer Staples,8263,0.05,2022-11-02,2026-09-25,Reduce,Self=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,CE,CELANESE CORPORATION COMMON STOCK,Materials,8075,0.05,2022-08-23,2025-02-25,Reduce,Spouse=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,PCAR,PACCAR INC CMN,Consumer Discretionary,7370,0.05,2022-11-02,2026-10-13,Reduce,Spouse=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,CMG,CHIPOTLE MEXICAN GRILL INC. CMN,Consumer Discretionary,7857,0.05,2022-11-02,2026-10-07,Reduce,Dependent=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,ADSK,Autodesk Inc CMN,Technology,7766,0.05,2022-12-06,2026-07-07,Reduce,Self=100,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,CPT,CAMDEN PROPERTY TRUST CMN,Real Estate,6836,0.05,2022-12-06,2025-05-19,Buy,Dependent=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,ESS,ESSEX PROPERTY TRUST INC CMN,Real Estate,7977,0.05,2022-12-06,2025-05-19,Buy,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,DOW,DOW INC CMN,Materials,8415,0.05,2022-12-06,2025-05-19,Buy,Dependent=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,UDR,UDR INC CMN,Real Estate,7178,0.05,2022-12-06,2025-05-19,Buy,Dependent=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,GPN,GLOBAL PAYMENTS INC. CMN,Industrials,8082,0.05,2023-03-14,2026-04-24,Reduce,Self=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,TECH,BIO-TECHNE CORPORATION CMN,Health Care,7972,0.05,2023-03-14,2026-06-30,Reduce,Self=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,XYZ,"BLOCK, INC. CMN CLASS A",Technology,7671,0.05,2023-03-22,2026-02-17,Reduce,Dependent=100,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,ELS,"EQUITY LIFESTYLE PROPERTIES, I CMN",Real Estate,8541,0.05,2023-03-24,2023-03-24,Buy,Dependent=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,DEI,"DOUGLAS EMMETT, INC. CMN",Real Estate,8184,0.05,2023-03-24,2023-03-24,Buy,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,VRSK,VERISK ANALYTICS INC CMN,Technology,7381,0.05,2023-06-29,2026-10-07,Reduce,Dependent=100,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,CARR,CARRIER GLOBAL CORPORATION CMN,Industrials,6987,0.05,2023-08-04,2026-09-11,Buy,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,AME,AMETEK INC (NEW) CMN,Technology,7513,0.05,2023-10-10,2026-09-04,Buy,Spouse=100,True,House Select Committee on China,2026-11-20
 K000389,K000389,Rohit Khanna,ORLY,O REILLY AUTOMOTIVE INC. CMN,Consumer Discretionary,8052,0.05,2023-10-10,2026-09-25,Reduce,Spouse=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,LVS,LAS VEGAS SANDS CORP CMN,Consumer Discretionary,8038,0.05,2024-04-26,2026-09-25,Buy,Spouse=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,CCL,CARNIVAL CORPORATION CMN,Transportation,8000,0.05,2024-07-02,2026-10-13,Buy,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,RL,RALPH LAUREN CORP CMN CLASS A,Consumer Discretionary,8049,0.05,2024-08-02,2026-09-04,Reduce,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,HBAN,HUNTINGTON BANCSHARES INCORPORATED CMN,Financials,8394,0.05,2025-03-12,2025-03-12,Buy,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,SGOV,ISHARES TR 0-3 MNTH TREASURY,,8521,0.05,2025-04-04,2025-04-04,Buy,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,EIX,EDISON INTERNATIONAL CMN,Utilities,6831,0.05,2024-08-02,2024-08-02,Buy,Spouse=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,BG,BUNGE GLOBAL SA CMN,Consumer Staples,7958,0.05,2024-08-02,2025-02-25,Reduce,Spouse=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,FIHL,FIDELIS INSURANCE HOLDINGS LTD CMN,,8000,0.05,2024-08-12,2024-08-12,Buy,Dependent=100,False,,cost
+K000389,K000389,Rohit Khanna,TFX,TELEFLEX INC. CMN,Health Care,6872,0.05,2024-11-15,2025-02-19,Reduce,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,CDW,CDW CORPORATION CMN,Consumer Discretionary,7540,0.05,2024-11-15,2025-04-09,Reduce,Dependent=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,AOS,A.O. SMITH CORP (DEL) CMN,Consumer Discretionary,8151,0.05,2025-06-23,2025-06-23,Buy,Dependent=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,MODG,TOPGOLF CALLAWAY BRANDS CORP CMN,,8000,0.05,2025-06-26,2025-06-26,Buy,Spouse=100,False,,cost
 K000389,K000389,Rohit Khanna,EXE,EXPAND ENERGY CORP CMN,Energy,7569,0.05,2025-12-17,2026-06-18,Buy,Dependent=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,AZN,ASTRAZENECA PLC CMN,Health Care,7394,0.05,2026-02-13,2026-03-13,Buy,Spouse=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,NRG,NRG ENERGY INC. CMN,Utilities,7034,0.05,2026-06-16,2026-09-25,Buy,Spouse=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,SNOW,SNOWFLAKE INC. CMN CLASS A,Technology,8554,0.05,2026-06-16,2026-06-16,Buy,Dependent=100,True,House Select Committee on China,2026-11-20
 K000389,K000389,Rohit Khanna,VYLR,VYLOR INC CMN,Consumer Staples,7178,0.05,2026-10-12,2026-10-12,Buy,Spouse=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,AVGO,BROADCOM INC CMN,Technology,6816,0.04,2022-05-10,2026-10-13,Buy,Spouse=100,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,ALGN,ALIGN TECHNOLOGY INC CMN,Health Care,5815,0.04,2022-05-10,2026-09-11,Reduce,Self=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,GNRC,GENERAC HOLDINGS INC. CMN,Industrials,6922,0.04,2022-05-10,2022-11-03,Reduce,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,EMN,EASTMAN CHEMICAL COMPANY CMN,Materials,6408,0.04,2022-05-10,2025-04-23,Buy,Spouse=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,BMRN,BIOMARIN PHARMACEUTICAL INC CMN,Health Care,6085,0.04,2022-05-10,2022-12-06,Add,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,CZR,CAESARS ENTERTAINMENT INC CMN,Consumer Discretionary,6520,0.04,2022-05-10,2025-11-03,Reduce,Spouse=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,MAT,"Mattel, Inc. CMN",Consumer Discretionary,6073,0.04,2022-11-02,2022-11-02,Buy,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,CPT,CAMDEN PROPERTY TRUST CMN,Real Estate,6836,0.04,2022-12-06,2025-05-19,Buy,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,CARR,CARRIER GLOBAL CORPORATION CMN,Industrials,6987,0.04,2023-08-04,2026-09-11,Buy,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,CMCSA,COMCAST CORPORATION CMN CLASS A VOTING,Communications,6447,0.04,2022-12-06,2026-02-17,Reduce,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,BF.B,BROWN FORMAN CORP CL B CMN,Consumer Staples,6239,0.04,2022-12-06,2024-11-15,Buy,Dependent=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,COO,COOPER COMPANIES INC (NEW) CMN,Health Care,5961,0.04,2023-10-10,2023-10-10,Buy,Spouse=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,EIX,EDISON INTERNATIONAL CMN,Utilities,6831,0.04,2024-08-02,2024-08-02,Buy,Spouse=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,IP,INTERNATIONAL PAPER CO CMN,Materials,5888,0.04,2024-08-02,2024-08-02,Buy,Self=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,GPK,GRAPHIC PACKAGING HLDG CO CMN,Materials,6952,0.04,2024-09-25,2025-06-23,Add,Spouse=57;Dependent=43,False,,2026-11-20
-K000389,K000389,Rohit Khanna,APO,APOLLO GLOBAL MANAGEMENT INC CMN CLASS A,Financials,5566,0.04,2025-01-15,2026-02-17,Reduce,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,LEN,LENNAR CORPORATION CMN CLASS A,Industrials,5992,0.04,2025-05-19,2025-05-19,Buy,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,IP,INTERNATIONAL PAPER CO. CMN,Materials,6109,0.04,2024-08-07,2024-08-07,Buy,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,DECK,DECKERS OUTDOOR CORP CMN,Materials,5766,0.04,2024-09-09,2026-04-13,Buy,Spouse=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,CLX,CLOROX CO (THE) (DELAWARE) CMN,Consumer Staples,5449,0.04,2024-11-15,2024-11-15,Buy,Dependent=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,BR,BROADRIDGE FINANCIAL SOLUTIONS INC CMN,Industrials,6712,0.04,2025-11-03,2026-05-15,Reduce,Dependent=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,CVNA,CARVANA CO CMN CLASS A,Consumer Discretionary,6021,0.04,2026-01-06,2026-10-13,Reduce,Spouse=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,VST,VISTRA CORP CMN,Utilities,6659,0.04,2026-01-29,2026-09-25,Buy,Spouse=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,DECK,DECKERS OUTDOOR CORP CMN,Materials,5766,0.04,2026-04-13,2026-04-13,Buy,Spouse=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,P,EVERPURE INC CMN CLASS A,Technology,5845,0.04,2026-09-25,2026-09-25,Buy,Spouse=100,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,CE,CELANESE CORPORATION COMMON STOCK,Materials,5309,0.03,2022-08-23,2025-02-25,Reduce,Spouse=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,LUMN,Lumen Technologies Inc CMN,Communications,4346,0.03,2022-11-02,2022-11-02,Buy,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,BBWI,"BATH & BODY WORKS, INC. CMN",Consumer Discretionary,3415,0.02,2022-05-10,2022-05-10,Buy,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,ALK,ALASKA AIR GROUP INC (DEL HLDG) CMN,Transportation,5001,0.03,2024-11-15,2024-11-15,Buy,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,LKQ,LKQ CORPORATION CMN,Industrials,4246,0.03,2025-06-23,2025-06-23,Buy,Dependent=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,GPK,GRAPHIC PACKAGING HLDG CO CMN,Materials,3948,0.03,2025-06-23,2025-06-23,Buy,Spouse=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,CHTR,"CHARTER COMMUNICATIONS, INC. CMN",Communications,2460,0.02,2022-12-06,2025-05-19,Buy,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,WBA,"Walgreens Boots Alliance, Inc. CMN",,3421,0.02,2023-06-26,2023-06-26,Buy,Dependent=100,False,,2025-08-27
+K000389,K000389,Rohit Khanna,WBA,"WALGREENS BOOTS ALLIANCE, INC. CMN",,3421,0.02,2023-06-26,2024-09-09,Reduce,Dependent=100,False,,2025-08-27
 K000389,K000389,Rohit Khanna,TDOC,Teladoc Health Inc CMN,Health Care,2500,0.02,2023-06-26,2023-06-26,Buy,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,SMCI,SUPER MICRO COMPUTER INC CMN,Technology,2773,0.02,2024-08-02,2024-08-02,Buy,Self=100,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,FDS,FACTSET RESEARCH SYSTEMS INC CMN,Technology,2570,0.02,2025-01-17,2026-10-22,Reduce,Dependent=100,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,FDS,FACTSET RESEARCH SYSTEMS INC CMN,Technology,2570,0.02,2024-08-05,2026-10-22,Reduce,Dependent=100,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,TAK,TAKEDA PHARMACEUTICAL CO LTD SPONSORED ADR CMN,Health Care,2268,0.02,2025-06-13,2026-02-13,Reduce,Spouse=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,SNAP,SNAP INC. CMN CLASS A,Technology,1590,0.01,2022-05-10,2022-08-23,Add,Dependent=100,True,House Select Committee on China,2026-11-20
 K000389,K000389,Rohit Khanna,PLUG,PLUG POWER INC. CMN,Industrials,1007,0.01,2022-05-10,2023-03-24,Add,Dependent=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,SEDG,"SolarEdge Technologies, Inc. CMN",Technology,1216,0.01,2022-05-10,2023-06-26,Add,Dependent=100,True,House Select Committee on China,2026-11-20
-K000389,K000389,Rohit Khanna,TAK,TAKEDA PHARMACEUTICAL CO LTD SPONSORED ADR CMN,Health Care,2268,0.01,2025-06-13,2026-02-13,Reduce,Spouse=100,False,,2026-11-20
+K000389,K000389,Rohit Khanna,FMC,FMC CORPORATION CMN,Materials,1181,0.01,2022-08-23,2024-11-15,Add,Dependent=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,GTM,ZoomInfo Technologies Inc CMN,Technology,717,0.0,2022-06-27,2022-11-02,Buy,Dependent=100,True,House Select Committee on China,2026-11-20
 K000389,K000389,Rohit Khanna,LCID,Lucid Group Inc CMN,Consumer Discretionary,150,0.0,2022-11-02,2022-11-02,Buy,Dependent=100,False,,2026-11-20
 K000389,K000389,Rohit Khanna,CHPT,ChargePoint Holdings Inc CMN,Industrials,311,0.0,2022-11-09,2022-11-09,Buy,Dependent=100,False,,2026-11-20
-K000389,K000389,Rohit Khanna,PARA,PARAMOUNT GLOBAL CMN CLASS B,Technology,0,0.0,2024-08-02,2024-08-02,Buy,Self=100,True,House Select Committee on China,2026-11-20
+K000389,K000389,Rohit Khanna,PARA,PARAMOUNT GLOBAL CMN CLASS B,Technology,0,0.0,2024-09-09,2024-09-09,Buy,Spouse=100,True,House Select Committee on China,2026-11-20
 K000398,K000398,Thomas H. Kean Jr,ILMN,"Illumina, Inc. - Common Stock",Technology,52876,10.39,2024-04-19,2025-04-01,Add,Self=100,True,House Energy and Commerce,2026-11-20
 K000398,K000398,Thomas H. Kean Jr,AMZN,"Amazon.com, Inc. - Common Stock",Consumer Discretionary,47133,9.26,2025-01-16,2026-07-08,Add,Self=100,False,,2026-11-20
 K000398,K000398,Thomas H. Kean Jr,NVT,nVent Electric plc Ordinary Shares,Industrials,39853,7.83,2025-03-07,2026-04-15,Reduce,Self=100,False,,2026-11-20
@@ -2133,6 +2129,7 @@ L000560,L000560,Rick Larsen,APH,Amphenol Corporation Common Stock,Technology,706
 L000560,L000560,Rick Larsen,META,"Meta Platforms, Inc. - Class A Common Stock",Technology,6935,2.41,2026-01-07,2026-01-07,Buy,Self=100,False,,2026-11-20
 L000560,L000560,Rick Larsen,ADI,"Analog Devices, Inc. - Common Stock",Technology,6818,2.37,2023-07-05,2026-10-08,Buy,Self=100,False,,2026-11-20
 L000562,L000562,Stephen F. Lynch,NVDA,NVIDIA Corporation - Common Stock,Technology,10607,100.0,2024-05-22,2024-05-22,Buy,Self=100,False,,2026-11-20
+L000564,L000564,Doug Lamborn,NTAP,NetApp Inc. (NTAP) stock,Technology,42408,100.0,2022-01-10,2024-07-24,Buy,Spouse=100,False,,2026-11-20
 L000566,L000566,Robert E. Latta,FMAO,"Farmers & Merchants Bancorp, Inc.",Financials,336726,95.46,2022-07-12,2026-10-20,Add,Spouse=100,False,,2026-11-20
 L000566,L000566,Robert E. Latta,FMBA,Farmers & Merchants Bancorp Inc,,16001,4.54,2023-07-20,2023-10-20,Add,Spouse=100,False,,cost
 L000576,L000576,Billy Long,AAPL,Apple,Technology,17256,100.0,2022-02-24,2022-02-24,Buy,Self=100,False,,2026-11-20
@@ -2316,62 +2313,59 @@ M001136,M001136,Lisa McClain,FI,"Fiserv, Inc. Common Stock",,3075,0.79,2025-07-2
 M001136,M001136,Lisa McClain,HIMS,"Hims & Hers Health, Inc. Class A Common Stock",Health Care,1844,0.47,2025-08-04,2025-08-04,Buy,Spouse=100,False,,2026-11-20
 M001136,M001136,Lisa McClain,RVTY,"Revvity, Inc. Common Stock",Technology,262,0.07,2025-06-17,2025-07-22,Reduce,Spouse=100,False,,2026-11-20
 M001136,M001136,Lisa McClain,NBIX,"Neurocrine Biosciences, Inc. - Common Stock",Health Care,55,0.01,2025-06-11,2025-06-17,Reduce,Spouse=100,False,,2026-11-20
-M001157,M001157,Michael T. McCaul,PAYX,PAYCHEX INC,Industrials,665934,15.34,2026-03-04,2026-06-01,Add,Spouse=100,False,,2026-11-20
-M001157,M001157,Michael T. McCaul,BAX,BAXTER INTERNATIONAL INC,Health Care,361344,8.32,2026-01-13,2026-03-23,Add,Spouse=100,False,,2026-11-20
-M001157,M001157,Michael T. McCaul,GPC,GENUINE PARTS CO,Industrials,315447,7.27,2024-12-13,2026-06-18,Add,Spouse=100,False,,2026-11-20
-M001157,M001157,Michael T. McCaul,IFF,INTERNATIONAL FLAVORS & FRAGRANCES,Materials,203380,4.68,2026-01-13,2026-01-13,Buy,Spouse=100,False,,2026-11-20
-M001157,M001157,Michael T. McCaul,HAYW,"Hayward Holdings, Inc.",Industrials,191144,4.4,2024-12-19,2025-03-04,Add,Spouse=59;Dependent=41,False,,2026-11-20
-M001157,M001157,Michael T. McCaul,ACN,ACCENTURE PLC,Industrials,177282,4.08,2022-12-15,2026-08-28,Add,Spouse=100,False,,2026-11-20
-M001157,M001157,Michael T. McCaul,ARE,ALEXANDRIA REAL ESTATE EQUITIES,Real Estate,152637,3.52,2026-02-06,2026-03-23,Buy,Spouse=100,False,,2026-11-20
-M001157,M001157,Michael T. McCaul,COP,CONOCOPHILLIPS,Energy,144845,3.34,2023-03-10,2026-08-26,Reduce,Dependent=100,False,,2026-11-20
-M001157,M001157,Michael T. McCaul,TSN,TYSON FOODS INC,Consumer Staples,127566,2.94,2023-08-18,2026-06-18,Add,Spouse=100,False,,2026-11-20
-M001157,M001157,Michael T. McCaul,HUM,HUMANA INC,Health Care,127540,2.94,2024-04-10,2026-05-07,Add,Dependent=67;Spouse=33,False,,2026-11-20
-M001157,M001157,Michael T. McCaul,AA,ALCOA CORP,Materials,125233,2.88,2024-04-19,2026-06-03,Reduce,Dependent=100,False,,2026-11-20
-M001157,M001157,Michael T. McCaul,MELI,MERCADOLIBRE INC,Industrials,109523,2.52,2025-12-11,2026-06-09,Add,Spouse=100,False,,2026-11-20
-M001157,M001157,Michael T. McCaul,WDAY,WORKDAY INC CL A,Technology,100381,2.31,2024-06-04,2026-08-28,Reduce,Dependent=100,False,,2026-11-20
-M001157,M001157,Michael T. McCaul,BSX,BOSTON SCIENTIFIC CORP,Health Care,93677,2.16,2022-02-07,2026-03-27,Add,Dependent=95;Spouse=5,False,,2026-11-20
-M001157,M001157,Michael T. McCaul,SNPS,SYNOPSYS INC,Technology,93982,2.16,2024-08-08,2024-08-23,Add,Dependent=94;Spouse=6,False,,2026-11-20
-M001157,M001157,Michael T. McCaul,CACI,CACI INTERNATIONAL INC,Technology,89440,2.06,2026-05-20,2026-05-20,Buy,Spouse=100,False,,2026-11-20
-M001157,M001157,Michael T. McCaul,VVV,VALVOLINE INC,Energy,79729,1.84,2024-01-17,2026-08-19,Buy,Spouse=100,False,,2026-11-20
-M001157,M001157,Michael T. McCaul,NFG,NATIONAL FUEL GAS CO,Utilities,71131,1.64,2021-12-22,2026-06-26,Buy,Spouse=100,False,,2026-11-20
-M001157,M001157,Michael T. McCaul,WWD,WOODWARD INC,Industrials,70190,1.62,2022-12-14,2026-06-09,Reduce,Dependent=100,False,,2026-11-20
-M001157,M001157,Michael T. McCaul,APH,AMPHENOL CORP CLASS A,Technology,66992,1.54,2026-05-22,2026-05-26,Add,Spouse=100,False,,2026-11-20
-M001157,M001157,Michael T. McCaul,ANET,ARISTA NETWORKS INC,Technology,63221,1.46,2023-03-27,2026-08-04,Reduce,Dependent=100,False,,2026-11-20
-M001157,M001157,Michael T. McCaul,HWM,HOWMET AEROSPACE INC,Materials,57736,1.33,2024-12-06,2026-06-18,Reduce,Dependent=100,False,,2026-11-20
-M001157,M001157,Michael T. McCaul,GE,General Electric Co,Industrials,50761,1.17,2022-05-04,2022-12-14,Add,Dependent=100,False,,2026-11-20
-M001157,M001157,Michael T. McCaul,SWK,STANLEY BLACK & DECKER INC,Industrials,50359,1.16,2025-07-24,2026-03-13,Buy,Spouse=100,False,,2026-11-20
-M001157,M001157,Michael T. McCaul,P,"EVERPURE, INC. CLASS A",Technology,44209,1.02,2026-04-27,2026-05-11,Add,Spouse=100,False,,2026-11-20
-M001157,M001157,Michael T. McCaul,FCN,FTI CONSULTING INC,Industrials,43774,1.01,2022-02-15,2026-08-12,Buy,Spouse=100,False,,2026-11-20
-M001157,M001157,Michael T. McCaul,KEYS,KEYSIGHT TECHNOLOGIES INC,Technology,43092,0.99,2026-04-17,2026-06-18,Add,Spouse=100,False,,2026-11-20
-M001157,M001157,Michael T. McCaul,GPN,GLOBAL PAYMENTS INC,Industrials,42280,0.97,2025-07-03,2026-03-23,Buy,Spouse=100,False,,2026-11-20
-M001157,M001157,Michael T. McCaul,DHR,DANAHER CORPORATION,Technology,41103,0.95,2025-07-25,2026-05-22,Add,Spouse=100,False,,2026-11-20
-M001157,M001157,Michael T. McCaul,SPOT,SPOTIFY TECHNOLOGY S.A.,Communications,38023,0.88,2026-02-04,2026-05-22,Add,Spouse=100,False,,2026-11-20
-M001157,M001157,Michael T. McCaul,UNH,UNITEDHEALTH GROUP INC,Health Care,34276,0.79,2022-05-04,2025-11-04,Buy,Spouse=100,False,,2026-11-20
-M001157,M001157,Michael T. McCaul,ISRG,INTUITIVE SURGICAL INC,Health Care,34237,0.79,2026-08-07,2026-08-07,Buy,Spouse=100,False,,2026-11-20
-M001157,M001157,Michael T. McCaul,LPX,LOUISIANA PACIFIC CORP,Materials,32279,0.74,2026-02-27,2026-08-20,Buy,Spouse=100,False,,2026-11-20
-M001157,M001157,Michael T. McCaul,DELL,DELL TECHNOLOGIES INC CL C,Technology,32106,0.74,2026-05-29,2026-06-18,Add,Spouse=100,False,,2026-11-20
-M001157,M001157,Michael T. McCaul,MUR,MURPHY OIL CORP,Energy,30786,0.71,2022-02-03,2026-06-26,Buy,Spouse=100,False,,2026-11-20
-M001157,M001157,Michael T. McCaul,ENTG,ENTEGRIS INC,Materials,30762,0.71,2022-12-15,2026-05-26,Add,Spouse=100,False,,2026-11-20
-M001157,M001157,Michael T. McCaul,MWA,MUELLER WATER PRODUCTS INC,Industrials,30621,0.71,2025-12-19,2026-08-24,Buy,Spouse=100,False,,2026-11-20
-M001157,M001157,Michael T. McCaul,NTAP,NETAPP INC,Technology,29554,0.68,2026-05-29,2026-05-29,Buy,Spouse=100,False,,2026-11-20
-M001157,M001157,Michael T. McCaul,TER,TERADYNE INC,Technology,27838,0.64,2026-02-04,2026-04-29,Add,Spouse=100,False,,2026-11-20
-M001157,M001157,Michael T. McCaul,EL,ESTEE LAUDER COMPANIES INC CLASS A,Consumer Staples,22555,0.52,2025-03-04,2026-04-08,Add,Spouse=100,False,,2026-11-20
-M001157,M001157,Michael T. McCaul,COHR,COHERENT CORP,Technology,22346,0.51,2026-05-06,2026-05-07,Add,Spouse=100,False,,2026-11-20
-M001157,M001157,Michael T. McCaul,FLS,Flowserve Corp,Industrials,20590,0.47,2022-02-15,2022-02-15,Buy,Dependent=100,False,,2026-11-20
-M001157,M001157,Michael T. McCaul,HLT,Hilton Worldwide Holdings,Consumer Discretionary,19089,0.44,2022-05-04,2022-12-15,Add,Dependent=100,False,,2026-11-20
-M001157,M001157,Michael T. McCaul,IBM,INTL BUSINESS MACHINES,Technology,17488,0.4,2022-02-23,2025-07-24,Reduce,Dependent=100,False,,2026-11-20
-M001157,M001157,Michael T. McCaul,V,VISA INC,Industrials,15543,0.36,2022-05-04,2026-05-29,Reduce,Dependent=100,False,,2026-11-20
-M001157,M001157,Michael T. McCaul,TSEM,TOWER SEMICONDUCTOR LTD,Technology,14875,0.34,2026-08-07,2026-08-07,Buy,Spouse=100,False,,2026-11-20
-M001157,M001157,Michael T. McCaul,HII,Huntington Ingalls Industries Inc,Defense & Aerospace,13784,0.32,2022-02-15,2022-02-15,Buy,Dependent=100,True,House Homeland Security,2026-11-20
-M001157,M001157,Michael T. McCaul,NOW,SERVICENOW INC,Technology,13019,0.3,2025-10-31,2026-05-22,Add,Spouse=100,False,,2026-11-20
-M001157,M001157,Michael T. McCaul,AIG,American International Group Inc,Financials,11546,0.27,2022-02-23,2022-02-23,Buy,Dependent=100,False,,2026-11-20
-M001157,M001157,Michael T. McCaul,CVS,CVS HEALTH CORPORATION,Consumer Staples,8621,0.2,2021-12-22,2026-02-20,Buy,Spouse=100,False,,2026-11-20
-M001157,M001157,Michael T. McCaul,AOS,A O SMITH CORP,Consumer Discretionary,7681,0.18,2022-02-10,2022-02-10,Buy,Dependent=100,False,,2026-11-20
-M001157,M001157,Michael T. McCaul,AMZN,AMAZON COM,Consumer Discretionary,7412,0.17,2022-05-04,2026-08-28,Buy,Spouse=100,False,,2026-11-20
-M001157,M001157,Michael T. McCaul,ALLY,Ally Financial,Financials,7120,0.16,2022-02-23,2022-02-23,Buy,Dependent=100,False,,2026-11-20
-M001157,M001157,Michael T. McCaul,LYB,Lyondell Basell Industries NV,Materials,5300,0.12,2022-05-04,2022-05-04,Buy,Dependent=100,False,,2026-11-20
-M001157,M001157,Michael T. McCaul,PRGO,PERRIGO CO,Health Care,3993,0.09,2022-02-01,2022-02-01,Buy,Dependent=100,False,,2026-11-20
-M001157,M001157,Michael T. McCaul,MAN,ManpowerGroup Inc,Industrials,3677,0.08,2022-02-15,2022-12-14,Add,Dependent=100,False,,2026-11-20
+M001157,M001157,Michael T. McCaul,PAYX,PAYCHEX INC,Industrials,665934,17.26,2026-03-04,2026-06-01,Add,Spouse=100,False,,2026-11-20
+M001157,M001157,Michael T. McCaul,BAX,BAXTER INTERNATIONAL INC,Health Care,361344,9.37,2026-01-13,2026-03-23,Add,Spouse=100,False,,2026-11-20
+M001157,M001157,Michael T. McCaul,GPC,GENUINE PARTS CO,Industrials,315447,8.18,2024-12-13,2026-06-18,Add,Spouse=100,False,,2026-11-20
+M001157,M001157,Michael T. McCaul,IFF,INTERNATIONAL FLAVORS & FRAGRANCES,Materials,203380,5.27,2026-01-13,2026-01-13,Buy,Spouse=100,False,,2026-11-20
+M001157,M001157,Michael T. McCaul,ACN,ACCENTURE PLC,Industrials,177282,4.59,2022-12-15,2026-08-28,Add,Spouse=100,False,,2026-11-20
+M001157,M001157,Michael T. McCaul,SNPS,SYNOPSYS INC,Technology,176211,4.57,2024-08-08,2024-08-23,Add,Spouse=50;Dependent=50,False,,2026-11-20
+M001157,M001157,Michael T. McCaul,ARE,ALEXANDRIA REAL ESTATE EQUITIES,Real Estate,152637,3.96,2026-02-06,2026-03-23,Buy,Spouse=100,False,,2026-11-20
+M001157,M001157,Michael T. McCaul,HAYW,"Hayward Holdings, Inc.",Industrials,147259,3.82,2024-12-19,2025-03-04,Add,Dependent=53;Spouse=47,False,,2026-11-20
+M001157,M001157,Michael T. McCaul,TSN,TYSON FOODS INC,Consumer Staples,127566,3.31,2023-08-18,2026-06-18,Add,Spouse=100,False,,2026-11-20
+M001157,M001157,Michael T. McCaul,MELI,MERCADOLIBRE INC,Industrials,109523,2.84,2025-12-11,2026-06-09,Add,Spouse=100,False,,2026-11-20
+M001157,M001157,Michael T. McCaul,BSX,BOSTON SCIENTIFIC CORP,Health Care,93677,2.43,2022-02-07,2026-03-27,Add,Dependent=95;Spouse=5,False,,2026-11-20
+M001157,M001157,Michael T. McCaul,CACI,CACI INTERNATIONAL INC,Technology,89440,2.32,2026-05-20,2026-05-20,Buy,Spouse=100,False,,2026-11-20
+M001157,M001157,Michael T. McCaul,VVV,VALVOLINE INC,Energy,79729,2.07,2024-01-17,2026-08-19,Buy,Spouse=100,False,,2026-11-20
+M001157,M001157,Michael T. McCaul,NFG,NATIONAL FUEL GAS CO,Utilities,71131,1.84,2021-12-22,2026-06-26,Buy,Spouse=100,False,,2026-11-20
+M001157,M001157,Michael T. McCaul,APH,AMPHENOL CORP CLASS A,Technology,66992,1.74,2026-05-22,2026-05-26,Add,Spouse=100,False,,2026-11-20
+M001157,M001157,Michael T. McCaul,HWM,HOWMET AEROSPACE INC,Materials,57736,1.5,2024-12-06,2026-06-18,Reduce,Dependent=100,False,,2026-11-20
+M001157,M001157,Michael T. McCaul,GE,General Electric Co,Industrials,50761,1.32,2022-05-04,2022-12-14,Add,Dependent=100,False,,2026-11-20
+M001157,M001157,Michael T. McCaul,SWK,STANLEY BLACK & DECKER INC,Industrials,50359,1.31,2025-07-24,2026-03-13,Buy,Spouse=100,False,,2026-11-20
+M001157,M001157,Michael T. McCaul,COP,CONOCOPHILLIPS,Energy,48487,1.26,2023-03-10,2026-08-26,Reduce,Dependent=100,False,,2026-11-20
+M001157,M001157,Michael T. McCaul,P,"EVERPURE, INC. CLASS A",Technology,44209,1.15,2026-04-27,2026-05-11,Add,Spouse=100,False,,2026-11-20
+M001157,M001157,Michael T. McCaul,FCN,FTI CONSULTING INC,Industrials,43774,1.13,2022-02-15,2026-08-12,Buy,Spouse=100,False,,2026-11-20
+M001157,M001157,Michael T. McCaul,KEYS,KEYSIGHT TECHNOLOGIES INC,Technology,43092,1.12,2026-04-17,2026-06-18,Add,Spouse=100,False,,2026-11-20
+M001157,M001157,Michael T. McCaul,GPN,GLOBAL PAYMENTS INC,Industrials,42280,1.1,2025-07-03,2026-03-23,Buy,Spouse=100,False,,2026-11-20
+M001157,M001157,Michael T. McCaul,HUM,HUMANA INC,Health Care,42165,1.09,2024-04-10,2026-05-07,Add,Spouse=100,False,,2026-11-20
+M001157,M001157,Michael T. McCaul,DHR,DANAHER CORPORATION,Technology,41103,1.07,2025-07-25,2026-05-22,Add,Spouse=100,False,,2026-11-20
+M001157,M001157,Michael T. McCaul,SPOT,SPOTIFY TECHNOLOGY S.A.,Communications,38023,0.99,2026-02-04,2026-05-22,Add,Spouse=100,False,,2026-11-20
+M001157,M001157,Michael T. McCaul,UNH,UNITEDHEALTH GROUP INC,Health Care,34276,0.89,2022-05-04,2025-11-04,Buy,Spouse=100,False,,2026-11-20
+M001157,M001157,Michael T. McCaul,ISRG,INTUITIVE SURGICAL INC,Health Care,34237,0.89,2026-08-07,2026-08-07,Buy,Spouse=100,False,,2026-11-20
+M001157,M001157,Michael T. McCaul,LPX,LOUISIANA PACIFIC CORP,Materials,32279,0.84,2026-02-27,2026-08-20,Buy,Spouse=100,False,,2026-11-20
+M001157,M001157,Michael T. McCaul,DELL,DELL TECHNOLOGIES INC CL C,Technology,32106,0.83,2026-05-29,2026-06-18,Add,Spouse=100,False,,2026-11-20
+M001157,M001157,Michael T. McCaul,MUR,MURPHY OIL CORP,Energy,30786,0.8,2022-02-03,2026-06-26,Buy,Spouse=100,False,,2026-11-20
+M001157,M001157,Michael T. McCaul,ENTG,ENTEGRIS INC,Materials,30762,0.8,2022-12-15,2026-05-26,Add,Spouse=100,False,,2026-11-20
+M001157,M001157,Michael T. McCaul,MWA,MUELLER WATER PRODUCTS INC,Industrials,30621,0.79,2025-12-19,2026-08-24,Buy,Spouse=100,False,,2026-11-20
+M001157,M001157,Michael T. McCaul,NTAP,NETAPP INC,Technology,29554,0.77,2026-05-29,2026-05-29,Buy,Spouse=100,False,,2026-11-20
+M001157,M001157,Michael T. McCaul,TER,TERADYNE INC,Technology,27838,0.72,2026-02-04,2026-04-29,Add,Spouse=100,False,,2026-11-20
+M001157,M001157,Michael T. McCaul,EL,ESTEE LAUDER COMPANIES INC CLASS A,Consumer Staples,22555,0.58,2025-03-04,2026-04-08,Add,Spouse=100,False,,2026-11-20
+M001157,M001157,Michael T. McCaul,COHR,COHERENT CORP,Technology,22346,0.58,2026-05-06,2026-05-07,Add,Spouse=100,False,,2026-11-20
+M001157,M001157,Michael T. McCaul,FLS,Flowserve Corp,Industrials,20590,0.53,2022-02-15,2022-02-15,Buy,Dependent=100,False,,2026-11-20
+M001157,M001157,Michael T. McCaul,WDAY,WORKDAY INC CL A,Technology,20639,0.53,2024-06-04,2026-08-28,Reduce,Dependent=100,False,,2026-11-20
+M001157,M001157,Michael T. McCaul,HLT,Hilton Worldwide Holdings,Consumer Discretionary,19089,0.49,2022-05-04,2022-12-15,Add,Dependent=100,False,,2026-11-20
+M001157,M001157,Michael T. McCaul,VSH,VISHAY INTERTECHNOLOGY INC,Technology,18501,0.48,2024-08-19,2026-06-18,Reduce,Dependent=100,False,,2026-11-20
+M001157,M001157,Michael T. McCaul,IBM,INTL BUSINESS MACHINES,Technology,17488,0.45,2022-02-23,2025-07-24,Reduce,Dependent=100,False,,2026-11-20
+M001157,M001157,Michael T. McCaul,TSEM,TOWER SEMICONDUCTOR LTD,Technology,14875,0.39,2026-08-07,2026-08-07,Buy,Spouse=100,False,,2026-11-20
+M001157,M001157,Michael T. McCaul,HII,Huntington Ingalls Industries Inc,Defense & Aerospace,13784,0.36,2022-02-15,2022-02-15,Buy,Dependent=100,True,House Homeland Security,2026-11-20
+M001157,M001157,Michael T. McCaul,NOW,SERVICENOW INC,Technology,13019,0.34,2025-10-31,2026-05-22,Add,Spouse=100,False,,2026-11-20
+M001157,M001157,Michael T. McCaul,CVS,CVS HEALTH CORPORATION,Consumer Staples,8621,0.22,2021-12-22,2026-02-20,Buy,Spouse=100,False,,2026-11-20
+M001157,M001157,Michael T. McCaul,AOS,A O SMITH CORP,Consumer Discretionary,7681,0.2,2022-02-10,2022-02-10,Buy,Dependent=100,False,,2026-11-20
+M001157,M001157,Michael T. McCaul,AMZN,AMAZON COM,Consumer Discretionary,7412,0.19,2022-05-04,2026-08-28,Buy,Spouse=100,False,,2026-11-20
+M001157,M001157,Michael T. McCaul,ALLY,Ally Financial,Financials,7120,0.18,2022-02-23,2022-02-23,Buy,Dependent=100,False,,2026-11-20
+M001157,M001157,Michael T. McCaul,AA,ALCOA CORP,Materials,7073,0.18,2024-04-19,2026-06-03,Reduce,Dependent=100,False,,2026-11-20
+M001157,M001157,Michael T. McCaul,LYB,Lyondell Basell Industries NV,Materials,5300,0.14,2022-05-04,2022-05-04,Buy,Dependent=100,False,,2026-11-20
+M001157,M001157,Michael T. McCaul,PRGO,PERRIGO CO,Health Care,3993,0.1,2022-02-01,2022-02-01,Buy,Dependent=100,False,,2026-11-20
+M001157,M001157,Michael T. McCaul,MAN,ManpowerGroup Inc,Industrials,3677,0.1,2022-02-15,2022-12-14,Add,Dependent=100,False,,2026-11-20
 M001157,M001157,Michael T. McCaul,CNXC,Concentrix Corporation,Industrials,1286,0.03,2022-02-15,2022-02-15,Buy,Dependent=100,False,,2026-11-20
 M001157,M001157,Michael T. McCaul,XRAY,DENTSPLY SIRONA Inc,Health Care,1301,0.03,2022-02-15,2022-02-15,Buy,Dependent=100,False,,2026-11-20
 M001180,M001180,David B. McKinley,LIN,Linde plc Ordinary Share,Materials,67070,54.07,2021-12-06,2021-12-06,Add,Joint=80;Self=20,False,,2026-11-20
@@ -2909,6 +2903,6 @@ W000829,W000829,Tony Wied,LRCX,Lam Research Corp,Industrials,83869,12.1,2025-04-
 W000829,W000829,Tony Wied,NOW,SERVICENOW INC,Technology,81617,11.77,2025-10-27,2026-09-17,Reduce,Joint=100,False,,2026-11-20
 W000829,W000829,Tony Wied,ADBE,ADOBE INC,Technology,60752,8.76,2025-04-30,2026-07-14,Reduce,Joint=100,False,,2026-11-20
 W000829,W000829,Tony Wied,MU,Micron Technology Inc,Technology,46331,6.68,2026-02-19,2026-02-19,Buy,Joint=100,False,,2026-11-20
-W000829,W000829,Tony Wied,HIMS,Hims & Hers Health Inc,Health Care,42874,6.18,2025-02-25,2026-02-03,Buy,Joint=100,False,,2026-11-20
+W000829,W000829,Tony Wied,HIMS,Hims & Hers Health Inc,Health Care,42874,6.18,2025-02-24,2026-02-03,Buy,Joint=100,False,,2026-11-20
 W000829,W000829,Tony Wied,LH,Labcorp Holdings Inc,Health Care,42553,6.14,2026-02-19,2026-02-19,Buy,Joint=100,False,,2026-11-20
 W000829,W000829,Tony Wied,KNSL,Kinsale Cap Group Inc,Financials,32500,4.69,2025-04-30,2025-04-30,Buy,Joint=100,False,,cost
